@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hans" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>03.Java基础知识-HelloWorld - 秃头小王子</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="秃头小王子的个人博客,一、开发步骤
+将Java代码编写到扩展名为.java的文件中
+通过javac命令对该java文件进行编译。
+通过java命令对生成的class文件进行运行二、步骤一：编写
+
+
+选择最简单的编辑器:记,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="秃头小王子" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">秃头小王子</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://yoursite.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">03.Java基础知识-HelloWorld</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">03.Java基础知识-HelloWorld</h1>
+        <div class="stuff">
+            <span>七月 03, 2020</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Java%E5%9F%BA%E7%A1%80/" rel="tag">Java基础</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h2 id="一、开发步骤"><a href="#一、开发步骤" class="headerlink" title="一、开发步骤"></a>一、开发步骤</h2><ol>
+<li><h5 id="将Java代码编写到扩展名为-java的文件中"><a href="#将Java代码编写到扩展名为-java的文件中" class="headerlink" title="将Java代码编写到扩展名为.java的文件中"></a>将Java代码编写到扩展名为.java的文件中</h5></li>
+<li><h5 id="通过javac命令对该java文件进行编译。"><a href="#通过javac命令对该java文件进行编译。" class="headerlink" title="通过javac命令对该java文件进行编译。"></a>通过javac命令对该java文件进行编译。</h5></li>
+<li><h5 id="通过java命令对生成的class文件进行运行"><a href="#通过java命令对生成的class文件进行运行" class="headerlink" title="通过java命令对生成的class文件进行运行"></a>通过java命令对生成的class文件进行运行</h5><h2 id="二、步骤一：编写"><a href="#二、步骤一：编写" class="headerlink" title="二、步骤一：编写"></a>二、步骤一：编写</h2></li>
+</ol>
+<ul>
+<li>选择最简单的编辑器:记事本。敲入代码  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">class Test&#123; &#125;</span><br></pre></td></tr></table></figure></li>
+<li>将文件保存成Test.java,这个文件是存放java代码的文件，称为源文件。</li>
+<li>注意拓展名是否隐藏<br><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/346939038BBD427ABBFB641BF569B224/2202" alt=""><h2 id="三、步骤二：编译"><a href="#三、步骤二：编译" class="headerlink" title="三、步骤二：编译"></a>三、步骤二：编译</h2><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/5A68EBF692DE4587804070655058A42F/2229" alt=""></li>
+<li>有了java源文件，通过编译器将其编译成JVM可以识别的字节码文件。</li>
+<li>在该源文件目录下，通过javac编译工具对Test.java文件进行编译。</li>
+<li>如果程序没有错误，没有任何提示，但在当前目录下会出现一个Test.class文件，该文件称为字节码文件，也是可以执行的java的程序。<h2 id="四、步骤三：运行"><a href="#四、步骤三：运行" class="headerlink" title="四、步骤三：运行"></a>四、步骤三：运行</h2></li>
+<li>有了可执行的java程序(Test.class字节码文件)</li>
+<li>通过运行工具java.exe对字节码文件进行执行。</li>
+<li>出现提示:缺少一个名称为main的方法。<br><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/A2FABB30A9974F52A7EFCD555CF04898/2231" alt=""></li>
+<li>因为一个程序的执行需要-一个起始点或者入口，所以在Test类中的加入  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">public static void</span><br><span class="line">main(String] args)&#123; &#125;</span><br></pre></td></tr></table></figure></li>
+<li>对修改后的Test.java源文件需要重新编译，生成新的class文件后，再进行执行。</li>
+<li>发现没有编译失败，但也没有任何效果，因为并没有告诉JVM要帮我们做什么事情，也就是没有可以具体执行的语句。</li>
+<li>想要和JVM来个互动，只要在main方法中加入一句  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.printn(&quot;Hello World&quot;);</span><br></pre></td></tr></table></figure></li>
+<li>因为程序进行改动，所以再重新编译，运行即可。<h2 id="五、总结"><a href="#五、总结" class="headerlink" title="五、总结"></a>五、总结</h2></li>
+<li>学习编程最容易犯的错是语法错误。</li>
+<li>Java要求你必须按照语法规则编写代码。</li>
+<li>如果你的程序违反了语法规则。例如:忘记了分号、大括号、引号，或者拼错了单词，java编译器都会报语法错误。</li>
+<li>尝试着去看懂编译器会报告的错误信息。</li>
+</ul>
+<p><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/B5F7F7C478644F4A9C740EAC4852D842/2233" alt=""><br><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/B48B4B0D63C548A1B1F0843F634B2F1B/2235" alt=""></p>
+<h2 id="六、代码示例"><a href="#六、代码示例" class="headerlink" title="六、代码示例"></a>六、代码示例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*</span><br><span class="line">对第一个java程序进行总结</span><br><span class="line">1. java程序编写-编译-运行的过程</span><br><span class="line">编写：我们将编写的java代码保存在以&quot;.java&quot;结尾的源文件中</span><br><span class="line">编译：使用javac.exe命令编译我们的java源文件。格式：javac 源文件名.java</span><br><span class="line">运行：使用java.exe命令解释运行我们的字节码文件。 格式：java 类名</span><br><span class="line"></span><br><span class="line">2.</span><br><span class="line">在一个java源文件中可以声明多个class。但是，只能最多有一个类声明为public的。</span><br><span class="line">而且要求声明为public的类的类名必须与源文件名相同。</span><br><span class="line"></span><br><span class="line">3. 程序的入口是main()方法。格式是固定的。</span><br><span class="line"></span><br><span class="line">4. 输出语句：</span><br><span class="line">System.out.println():先输出数据，然后换行</span><br><span class="line">System.out.print():只输出数据</span><br><span class="line"></span><br><span class="line">5.每一行执行语句都以&quot;;&quot;结束。</span><br><span class="line"></span><br><span class="line">6.编译的过程：编译以后，会生成一个或多个字节码文件。字节码文件的文件名与java源文件中的类名相同。</span><br><span class="line"></span><br><span class="line">*&#x2F;</span><br><span class="line">public class Hello &#123;</span><br><span class="line">	public static void main(String[] args) &#123;&#x2F;&#x2F;public static void main(String a[]) &#123;&#x2F;&#x2F;arguments:参数</span><br><span class="line">		System.out.print(&quot;Hello World!&quot;);</span><br><span class="line">		System.out.println();&#x2F;&#x2F;换行</span><br><span class="line">		System.out.println(&quot;Hello World!&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Person&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Animal&#123;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='true'
+        data-ae='true'
+        data-ci='98d8392c61bba8a9f87d'
+        data-cs='a5b47de553739830db015b176764355577df22bf'
+        data-r='Comment'
+        data-o='Programmingmakesmebald'
+        data-a='Programmingmakesmebald'
+        data-d='true'
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class='side'>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、开发步骤"><span class="toc-number">1.</span> <span class="toc-text">一、开发步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#将Java代码编写到扩展名为-java的文件中"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">将Java代码编写到扩展名为.java的文件中</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#通过javac命令对该java文件进行编译。"><span class="toc-number">1.0.0.2.</span> <span class="toc-text">通过javac命令对该java文件进行编译。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#通过java命令对生成的class文件进行运行"><span class="toc-number">1.0.0.3.</span> <span class="toc-text">通过java命令对生成的class文件进行运行</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、步骤一：编写"><span class="toc-number">2.</span> <span class="toc-text">二、步骤一：编写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、步骤二：编译"><span class="toc-number">3.</span> <span class="toc-text">三、步骤二：编译</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、步骤三：运行"><span class="toc-number">4.</span> <span class="toc-text">四、步骤三：运行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、总结"><span class="toc-number">5.</span> <span class="toc-text">五、总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六、代码示例"><span class="toc-number">6.</span> <span class="toc-text">六、代码示例</span></a></li></ol>	
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
