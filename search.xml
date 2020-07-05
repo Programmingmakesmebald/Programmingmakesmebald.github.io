@@ -1,6 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>01.Java语言概述</title>
+    <url>/2020/07/03/01-Java%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/</url>
+    <content><![CDATA[<h2 id="一、Java基础知识图解"><a href="#一、Java基础知识图解" class="headerlink" title="一、Java基础知识图解"></a>一、Java基础知识图解</h2><p><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/75CCFC6508AF4C9ABEAB575A1F23E569/1753" alt=""></p>
+<h2 id="二、Windows操作cmd"><a href="#二、Windows操作cmd" class="headerlink" title="二、Windows操作cmd"></a>二、Windows操作cmd</h2><h4 id="1-常用DOS命令"><a href="#1-常用DOS命令" class="headerlink" title="1. 常用DOS命令"></a>1. 常用DOS命令</h4><ul>
+<li>dir：列出当前目录下的文件及文件夹</li>
+<li>md：创建目录</li>
+<li>rd：删除目录</li>
+<li>d：进入D盘</li>
+<li>cd：进入到指定目录</li>
+<li>cd..：返回上级目录</li>
+<li>cd\：退回到根目录</li>
+<li>echo&gt;xxx.xxx：创建xxx.xxx文件</li>
+<li>echo xxx &gt;xxx.xxx：创建xxx.xxx文件并写入xxx</li>
+<li>echo &gt;xxx.xxx xxx：创建xxx.xxx文件并写入xxx</li>
+<li>del：删除文件</li>
+<li>exit：退出dos命令行即退出cmd<h4 id="2-常用快捷键"><a href="#2-常用快捷键" class="headerlink" title="2. 常用快捷键"></a>2. 常用快捷键</h4></li>
+<li>← →：移动光标</li>
+<li>↑ ↓：调阅历史操作命令</li>
+<li>Delete Backspace：删除字符<h2 id="三、Java语言"><a href="#三、Java语言" class="headerlink" title="三、Java语言"></a>三、Java语言</h2><h4 id="1-来源"><a href="#1-来源" class="headerlink" title="1. 来源"></a>1. 来源</h4>Java语言是SUN(Stanford University Network,斯坦福大学网络公司) 1995年推出的一门高级编程语言。<h4 id="2-特点"><a href="#2-特点" class="headerlink" title="2. 特点"></a>2. 特点</h4>Java语言是一种面向Internet的编程语言。Java一开始富有吸引力是因为Java程序可以在Web浏览器中运行。这些Java程序被称为Java小程序(applet)。applet使用现代的图形用户界面与Web用户进行交互。applet内嵌在HTML代码中。<h4 id="3-现状"><a href="#3-现状" class="headerlink" title="3. 现状"></a>3. 现状</h4>随着Java技术在web方面的不断成熟，已经成为Web应用程序的首选开发语言。<h4 id="4-简史"><a href="#4-简史" class="headerlink" title="4. 简史"></a>4. 简史</h4></li>
+<li>1991年Green项目，开发语言最初命名为Oak (橡树)</li>
+<li>1994年，开发组意识到Oak非常适合于互联网</li>
+<li>1996年，发布JDK 1.0，约8.3万 个网页应用Java技术来制作</li>
+<li>1997年，发布JDK 1.1，JavaOne会议召开，创当时全球同类会议规模之最</li>
+<li>1998年，发布JDK 1.2，同年发布企业平台J2EE</li>
+<li>1999年，Java分成J2SE、J2EE和J2ME，JSP/Servlet技 术诞生</li>
+<li>2004年，发布里程碑式版本: JDK 1.5，为突出此版本的重要性，更名为JDK 5.0</li>
+<li>2005年，J2SE -&gt; JavaSE，J2EE -&gt; JavaEE, J2ME -&gt; JavaME</li>
+<li>2009年，Oracle公司收购SUN，交易价格74亿美元</li>
+<li>2011年，发布JDK 7.0</li>
+<li>2014年，发布JDK 8.0，是继JDK 5.0以来变化最大的版本</li>
+<li>2017年，发布JDK 9.0，最大限度实现模块化</li>
+<li>2018年3月，发布JDK 10.0，版本号也称为18.3</li>
+<li>2018年9月，发布JDK 11.0，版本号也称为18.9<h4 id="5-Java语言的诞生"><a href="#5-Java语言的诞生" class="headerlink" title="5. Java语言的诞生"></a>5. Java语言的诞生</h4></li>
+<li>java之父James Gosl ing团队在开发”Green”项目时，发现c缺少垃圾回收系统，还有可移植的安全性、分布程序设计和多线程功能。最后，他们想要一种易于移植到各种设备上的平台。</li>
+<li>Java确实是从c语言和C++语言继承了许多成份，甚至可以将Java看成是类c语言发展和衍生的产物。比如Java语言的变量声明，操作符形式，参数传递，流程控制等方面和C语言、C++语言完全相同。但同时，Java是一个纯粹的面向对象的程序设计语言，它继承了C++语言面向对象技术的核心。Java舍弃了c语言中容易引起错误的指针(以引用取代)、运算符重载(operator overloading)、多重继承<br>(以接口取代)等特性，增加了垃圾回收器功能用于回收不再被引用的对象所占据的内存空间。JDK1.5又引入了泛型编程(GenericProgramming)、类型安全的枚举、不定长参数和自动装/拆箱<h4 id="6-Java的主要特性"><a href="#6-Java的主要特性" class="headerlink" title="6. Java的主要特性"></a>6. Java的主要特性</h4></li>
+<li><h5 id="Java语言是易学的"><a href="#Java语言是易学的" class="headerlink" title="Java语言是易学的"></a>Java语言是易学的</h5>  Java语言的语法与c语言和C++语言很接近，使得大多数程序员很容易学习和使用Java。</li>
+<li><h5 id="Java语言是强制面向对象的"><a href="#Java语言是强制面向对象的" class="headerlink" title="Java语言是强制面向对象的"></a>Java语言是强制面向对象的</h5>  Java语言提供类、接口和继承等原语，为了简单起见，只支持类之间的单继承，但支持接口之间的多继承，并支持类与接口之间的实现机制<br>(关键字为implements)。</li>
+<li><h5 id="Java语言是分布式的"><a href="#Java语言是分布式的" class="headerlink" title="Java语言是分布式的"></a>Java语言是分布式的</h5>  Java语 言支持Internet应用的开发，在基本的Java应用编程接口中有一个网络应用编程接口(java net) ，它提供了用于网络应用编程的类<br>库，包括URL、URLConnection、 Socket、 ServerSocket等。 Java 的RMI (远程<br>方法激活)机制也是开发分布式应用的重要手段。</li>
+<li><h5 id="Java语言是健壮的"><a href="#Java语言是健壮的" class="headerlink" title="Java语言是健壮的"></a>Java语言是健壮的</h5>  Java的强类型机制、异常处理、垃圾的自动收集等是Java程序健壮性的重要保证。对指针的丢弃是Java的明智选择。</li>
+<li><h5 id="Java语言是安全的"><a href="#Java语言是安全的" class="headerlink" title="Java语言是安全的"></a>Java语言是安全的</h5>  Java通常被用在网络环境中，为此，Java提供了一个安全机制以防恶意代码的攻击。如:安全防范机制(类ClassLoader)，如分配不同的名字空间以防替代本地的同名类、字节代码检查。</li>
+<li><h5 id="Java语言是体系结构中立的"><a href="#Java语言是体系结构中立的" class="headerlink" title="Java语言是体系结构中立的"></a>Java语言是体系结构中立的</h5>  Java程序(后缀为java的文件)在Java平台上被<br>编译为体系结构中立的字节码格式(后缀为class的文件)，然后可以在实现这个</li>
+<li><h5 id="Java平台的任何系统中运行"><a href="#Java平台的任何系统中运行" class="headerlink" title="Java平台的任何系统中运行"></a>Java平台的任何系统中运行</h5>  Java语言是解释型的。如前所述，Java程序在Java平台上被编译为字节码格式，然后可以在实现这个Java平台的任何系统的解释器中运行。</li>
+<li><h5 id="Java是性能略高的"><a href="#Java是性能略高的" class="headerlink" title="Java是性能略高的"></a>Java是性能略高的</h5>  与那些解释型的高级脚本语言相比，Java的性能还是较优的。</li>
+<li><h5 id="Java语言是原生支持多线程的"><a href="#Java语言是原生支持多线程的" class="headerlink" title="Java语言是原生支持多线程的"></a>Java语言是原生支持多线程的</h5>  在Java语言中，线程是一-种特殊的对象，它必须<br>由Thread类或其子(孙)类来创建。</li>
+</ul>
+<h4 id="7-Java技术平台"><a href="#7-Java技术平台" class="headerlink" title="7. Java技术平台"></a>7. Java技术平台</h4><ul>
+<li><h5 id="Java-SE-Java-Standard-Edition-标准版"><a href="#Java-SE-Java-Standard-Edition-标准版" class="headerlink" title="Java SE(Java Standard Edition)标准版"></a>Java SE(Java Standard Edition)标准版</h5>  支持面向桌面级应用(如Windows’下的应用程序)的Java平台，提供了完整的Java核心API，此版本以前称为J2SE</li>
+<li><h5 id="Java-EE-Java-Enterprise-Edition-企业版"><a href="#Java-EE-Java-Enterprise-Edition-企业版" class="headerlink" title="Java EE(Java Enterprise Edition)企业版"></a>Java EE(Java Enterprise Edition)企业版</h5>  是为开发企业环境下的应用程序提供的一套解决方案。该技术体系中包含的技术如:Servlet、Jsp等 ,主要针对于Web应用程序开发。版本以前称为J2EE<h4 id="8-Java应用领域"><a href="#8-Java应用领域" class="headerlink" title="8.Java应用领域"></a>8.Java应用领域</h4>从Java的应用领域来分，Java语言的应用方向主要表现在以下几个方面:</li>
+<li><h5 id="企业级应用"><a href="#企业级应用" class="headerlink" title="企业级应用"></a>企业级应用</h5>  主要指复杂的大企业的软件系统、各种类型的网站。Java的安全机制以及它的跨平台的优势，使它在分布式系统领域开发中有广泛应用。应用领域包括金融、电信、交通、电子商务等。</li>
+<li><h5 id="Android平台应用"><a href="#Android平台应用" class="headerlink" title="Android平台应用"></a>Android平台应用</h5>  Android应用程序使用Java语言编写。Android开发水平的高低很大程度上取决于Java语言核心能力是否扎实。</li>
+<li><h5 id="大数据平台开发"><a href="#大数据平台开发" class="headerlink" title="大数据平台开发"></a>大数据平台开发</h5>  各类框架有Hadoop, spark, storm,flink等，就这类技术生态圈来讲，还有各种中间件如flume, kafka, sqoop等等 ，这些框架以及工具大多数是用Java编写而成，但提供诸如Java, sscala,Python,R等各种语言API供编程。</li>
+<li><h5 id="移动领域应用"><a href="#移动领域应用" class="headerlink" title="移动领域应用"></a>移动领域应用</h5>  主要表现在消费和嵌入式领域，是指在各种小型设备上的应用，包括手机、PDA、机顶盒、汽车通信设备等。<h2 id="四、Java语言运行机制及运行过程"><a href="#四、Java语言运行机制及运行过程" class="headerlink" title="四、Java语言运行机制及运行过程"></a>四、Java语言运行机制及运行过程</h2></li>
+</ul>
+<ol>
+<li><h4 id="Java语言特点"><a href="#Java语言特点" class="headerlink" title="Java语言特点"></a>Java语言特点</h4><ol>
+<li><h5 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h5><ul>
+<li>两个基本概念：类、对象</li>
+<li>三大特性：封装、继承、多肽</li>
+</ul>
+</li>
+<li><h5 id="健壮性"><a href="#健壮性" class="headerlink" title="健壮性"></a>健壮性</h5><ul>
+<li>吸收了C/C++语言的优点，但是去掉了其影响程序健壮性的部分（如指针、内存的申请与释放等），提供一个相对安全的内存管理和访问机制</li>
+</ul>
+</li>
+<li><h5 id="跨平台性"><a href="#跨平台性" class="headerlink" title="跨平台性"></a>跨平台性</h5><ul>
+<li>跨平台性：通过Java语言编程的应用程序在不同平台上都可以运行。“Write once，Run Anywhere”</li>
+<li>原理:只要在需要运行java应用程序的操作系统上，先安装一个Java虚拟机(Java Virtual Machine)即可。由JVM来负责Java程序在该系统中的运行。<br><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/66425C3F4D6C4416AA35914AF5BDF473/2003" alt=""></li>
+</ul>
+</li>
+</ol>
+</li>
+<li><h4 id="Java两种核心机制"><a href="#Java两种核心机制" class="headerlink" title="Java两种核心机制"></a>Java两种核心机制</h4></li>
+</ol>
+<ul>
+<li>Java虚拟机（Java Virtual Machine）</li>
+<li>垃圾收集机制（Garbage Collection）</li>
+</ul>
+<ol start="3">
+<li><h4 id="核心机制——Java虚拟机"><a href="#核心机制——Java虚拟机" class="headerlink" title="核心机制——Java虚拟机"></a>核心机制——Java虚拟机</h4></li>
+</ol>
+<ul>
+<li>JVM是一个虚拟的计算机，具有指令集并使用不同的存储区域。负责执行指令，管理数据、内存、寄存器。<br><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/30FFBBDE8BCE487E84A1E54933064199/2047" alt=""></li>
+<li>对于不同的平台，有不同的虚拟机。</li>
+<li>只有某平台提供了对应的java虚拟机，java程序才可在此平台运行</li>
+<li>Java虛拟机机制屏蔽了底层运行平台的差别，实现了“一次编译，到处运行”<br><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/21C50C05C06B404E8E09614FC5433A48/2049" alt=""></li>
+</ul>
+<ol start="4">
+<li><h4 id="核心机制——垃圾回收"><a href="#核心机制——垃圾回收" class="headerlink" title="核心机制——垃圾回收"></a>核心机制——垃圾回收</h4></li>
+</ol>
+<ul>
+<li><p>不再使用的内存空间应回收一垃圾回收。</p>
+<ul>
+<li>在C/C++等语言中，由程序员负责回收无用内存。</li>
+<li>Java语言消除了程序员回收无用内存空间的责任:它提供一种系统级线程跟踪存储空间的分配情况。并在JVM空闲时，检查并释放那些可被释放的存储空间。</li>
+</ul>
+</li>
+<li><p>垃圾回收在Java程序运行过程中自动进行，程序员无法精确控制和干预。</p>
+</li>
+<li><p>Java程序还会出现内存泄漏和内存溢出问题吗?会!</p>
+<h2 id="五、Java语言的环境搭建"><a href="#五、Java语言的环境搭建" class="headerlink" title="五、Java语言的环境搭建"></a>五、Java语言的环境搭建</h2></li>
+<li><h4 id="JDK-Java-Development-Kit-Java开发工具包"><a href="#JDK-Java-Development-Kit-Java开发工具包" class="headerlink" title="JDK(Java Development Kit Java开发工具包)"></a>JDK(Java Development Kit Java开发工具包)</h4><p>  JDK是提供给Java开发人员使用的，其中包含了java的开发工具，也包括了JRE。所以安装了JDK，就不用在单独安装JRE了。</p>
+<h5 id="其中的开发工具"><a href="#其中的开发工具" class="headerlink" title="其中的开发工具:"></a>其中的开发工具:</h5><ul>
+<li>译工具(javac.exe)</li>
+<li>打包工具(jar.exe)等</li>
+</ul>
+</li>
+<li><h4 id="JRE-Java-Runtime-Environment-Java运-行环境"><a href="#JRE-Java-Runtime-Environment-Java运-行环境" class="headerlink" title="JRE(Java Runtime Environment Java运 行环境)"></a>JRE(Java Runtime Environment Java运 行环境)</h4><p>  包括Java虛拟机(JVM Java Virtual Machine)和Java程序所需的核心类库等，如果想要运行一个开发好的Java程序，计算机中只需要安装JRE即可。</p>
+</li>
+<li><h4 id="JDK、JRE、JVM的关系"><a href="#JDK、JRE、JVM的关系" class="headerlink" title="JDK、JRE、JVM的关系"></a>JDK、JRE、JVM的关系</h4><p>  <img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/BFAF4FD048524CA3807B138AF3C45CC4/2085" alt=""><br>  <img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/B08C7243C65E43B4B016B553FAA3B5EC/2087" alt=""></p>
+</li>
+<li><h4 id="JDK安装"><a href="#JDK安装" class="headerlink" title="JDK安装"></a>JDK安装</h4><p>  <img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/63C95BA1A3F84F2D8ADBAE374CB8DBEE/2095" alt=""><br>  <img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/0288F0463E9A413980DEDF37C6567413/2097" alt=""></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>01.数据结构</title>
     <url>/2020/07/04/01-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
     <content><![CDATA[<h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><p>数据结构包括：线性结构和非线性结构。</p>
@@ -240,6 +362,208 @@
       </tags>
   </entry>
   <entry>
+    <title>04.Java基础知识-关键字、保留字与标识符</title>
+    <url>/2020/07/05/04-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E5%85%B3%E9%94%AE%E5%AD%97%E3%80%81%E4%BF%9D%E7%95%99%E5%AD%97%E4%B8%8E%E6%A0%87%E8%AF%86%E7%AC%A6/</url>
+    <content><![CDATA[<h2 id="关键字与保留字"><a href="#关键字与保留字" class="headerlink" title="关键字与保留字"></a>关键字与保留字</h2><ul>
+<li><h4 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h4><ul>
+<li><strong>定义</strong>：被Java 语言赋予了特殊含义，用做专门用途的字符串（单词）</li>
+<li><strong>特点</strong>：关键字中所有字母都为小写</li>
+<li><strong>官方地址</strong>： <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html" target="_blank" rel="noopener">https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html</a><br><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/CC4BE9A8398A48D7A28195BFE62437B2/2416" alt=""><br><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/F7B6BE2FF852413398DC2E1E6DC18478/2419" alt=""></li>
+<li><strong>注</strong>：true、false、null虽然不是关键字，但是命名时不可用。</li>
+</ul>
+</li>
+<li><h4 id="保留字"><a href="#保留字" class="headerlink" title="保留字"></a>保留字</h4><ul>
+<li><strong>Java保留字</strong>：现有Java版本尚未使用，但以后版本可能会作为关键字使用。自己命名标识符时要避免使用这些保留字goto 、const<h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2></li>
+</ul>
+</li>
+<li><h4 id="标识符-1"><a href="#标识符-1" class="headerlink" title="标识符"></a>标识符</h4><ul>
+<li>Java对各种变量、方法和类等要素命名时使用的字符序列称为标识符</li>
+<li><strong>技巧</strong>：凡是自己可以起名字的地方都叫标识符。</li>
+</ul>
+</li>
+<li><h4 id="定义合法标识符规则"><a href="#定义合法标识符规则" class="headerlink" title="定义合法标识符规则"></a>定义合法标识符规则</h4><ul>
+<li>由26 个英文字母大小写，0-9，_或$组成</li>
+<li>数字不可以开头。</li>
+<li>不可以使用关键字和保留字，但能包含关键字和保留字。</li>
+<li>Java中严格区分大小写，长度无限制。</li>
+<li>标识符不能包含空格</li>
+</ul>
+</li>
+<li><h4 id="Java中的名称命名规范"><a href="#Java中的名称命名规范" class="headerlink" title="Java中的名称命名规范"></a>Java中的名称命名规范</h4><ul>
+<li><strong>包名</strong>：多单词组成时所有字母都小写：xxxyyyzzz</li>
+<li><strong>类名、接口名</strong>：多单词组成时，所有单词的首字母大写：XxxYyyZzz</li>
+<li><strong>变量名、方法名</strong>：多单词组成时，第一个单词首字母小写，第二个单词开始每个单词首字母大写：xxxYyyZzz</li>
+<li><strong>常量名</strong>：所有字母都大写。多单词时每个单词用下划线连接：XXX_YYY_ZZZ</li>
+</ul>
+</li>
+<li><strong>注意1</strong>：在起名字时，为了提高阅读性，要尽量有意义，“见名知意”。</li>
+<li><strong>注意2</strong>：java采用unicode字符集，因此标识符也可以使用汉字声明，但是不建议使用。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+        <tag>关键字</tag>
+        <tag>保留字</tag>
+        <tag>标识符</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>05.Java基础知识-变量与数据类型</title>
+    <url>/2020/07/05/05-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E5%8F%98%E9%87%8F/</url>
+    <content><![CDATA[<h2 id="一、变量"><a href="#一、变量" class="headerlink" title="一、变量"></a>一、变量</h2><ul>
+<li><p><strong>变量的概念</strong>：</p>
+<ul>
+<li>内存中的一个存储区域</li>
+<li>该区域的数据可以在同一类型范围内不断变化</li>
+<li>变量是程序中最基本的存储单元。包含变量类型、变变量名和存储的值</li>
+</ul>
+</li>
+<li><p><strong>变量的作用</strong>：</p>
+<ul>
+<li>用于在内存中保存数据</li>
+</ul>
+</li>
+<li><p><strong>使用变量注意</strong>：</p>
+<ul>
+<li>Java中每个变量必须先声明，后使用</li>
+<li>使用变量名来访问这块区域的数据</li>
+<li>变量的作用域：其定义所在的一对{ }内</li>
+<li>变量只有在其作用域内才有效</li>
+<li>同一个作用域内，不能定义重名的变量</li>
+</ul>
+</li>
+<li><p><strong>声明变量</strong></p>
+<ul>
+<li>语法：&lt;数据类型&gt; &lt;变量名称&gt;</li>
+<li>例如：  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int var;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><strong>变量的赋值</strong></p>
+<ul>
+<li>语法：&lt;变量名称&gt; = &lt;值&gt;</li>
+<li>例如：  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var &#x3D; 10;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><strong>声明和赋值变量</strong></p>
+<ul>
+<li>语法： &lt;数据类型&gt; &lt;变量名&gt; = &lt;初始化值&gt;</li>
+<li>例如：  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int var &#x3D; 10;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>变量的分类-按数据类型</strong></p>
+<ul>
+<li>对于每一种数据都定义了明确的具体数据类型（强类型语言），在内存中分配了不同大小的内存空间。<br><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/B5873A62EB3544FFA7E076B8E36CF587/2483" alt=""></li>
+</ul>
+</li>
+<li><p><strong>变量的分类-按声明的位置的不同</strong></p>
+<ul>
+<li>在方法体外，类体内声明的变量称为成员变量。</li>
+<li>在方法体内部声明的变量称为局部变量<br><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/708C345927B54C2CBF5489397B6A03C4/2486" alt=""></li>
+<li>注意：二者在初始化值方面的异同:<ul>
+<li>同：都有生命周期</li>
+<li>异：局部变量除形参外，需显式初始化。<h2 id="二、整数类型"><a href="#二、整数类型" class="headerlink" title="二、整数类型"></a>二、整数类型</h2></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Java各整数类型有固定的表数范围和字段长度，不受具体OS的影响，以保证java程序的可移植性。</p>
+</li>
+<li><p>java的整型常量默认为 int 型，声明long型常量须后加‘l’或‘L’</p>
+</li>
+<li><p>java程序中变量通常声明为int型，除非不足以表示较大的数，才使用long<br><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/E2C2993C46C843C09A8F849F90C5583D/2510" alt=""></p>
+</li>
+<li><p>500MB 1MB = 1024KB 1KB= 1024B B= byte ? bit?<br>bit: 计算机中的最小存储单位。byte:计算机中基本存储单元。</p>
+<h2 id="三、浮点类型"><a href="#三、浮点类型" class="headerlink" title="三、浮点类型"></a>三、浮点类型</h2></li>
+<li><p>与整数类型类似，Java浮点类型也有固定的表数范围和字段长度，不受具体操作系统的影响。</p>
+</li>
+<li><p>浮点型常量有两种表示形式：</p>
+<ul>
+<li>十进制数形式：如：5.12、512.0f、.512 (必须有小数点）</li>
+<li>科学计数法形式:如：5.12e2、512E2、100E-2</li>
+</ul>
+</li>
+<li><p>float:单精度，尾数可以精确到7位有效数字。很多情况下，精度很难满足需求。</p>
+</li>
+<li><p>double:双精度，精度是float的两倍。通常采用此类型。</p>
+</li>
+<li><p>Java 的浮点型常量默认为double型，声明float 型常量，须后加‘f’ 或‘F’ 。<br><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/E77732E612154C8DBDEA76B53737594B/2512" alt=""></p>
+<h2 id="四、字符类型"><a href="#四、字符类型" class="headerlink" title="四、字符类型"></a>四、字符类型</h2></li>
+<li><p>char 型数据用来表示通常意义上“字符”(2字节)</p>
+</li>
+<li><p>Java中的所有字符都使用Unicode编码，故一个字符可以存储一个字母，一个汉字，或其他书面语的一个字符。</p>
+</li>
+<li><p>字符型变量的三种表现形式：</p>
+<ul>
+<li>字符常量是用单引号(‘ ‘)括起来的单个字符。例如：  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">char c1 &#x3D; &#39;a&#39;;</span><br><span class="line">char c2&#x3D; &#39;中&#39;;</span><br><span class="line">char c3 &#x3D; &#39;9&#39;;</span><br></pre></td></tr></table></figure></li>
+<li>Java中还允许使用转义字符‘\’来将其后的字符转变为特殊字符型常量。例如：  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">char c3 &#x3D; ‘\n’; &#x2F;&#x2F; &#39;\n&#39;表示换行符</span><br></pre></td></tr></table></figure>
+  <img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/5F7A6D12B93A40B79D673C525F26E328/2514" alt=""></li>
+<li>直接使用 Unicode值来表示字符型常量：‘\uXXXX’。其中，XXXX代表一个十六进制整数。如：\u000a 表示 \n。</li>
+</ul>
+</li>
+<li><p>char类型是可以进行运算的。因为它都对应有Unicode码。</p>
+<h2 id="五、布尔类型"><a href="#五、布尔类型" class="headerlink" title="五、布尔类型"></a>五、布尔类型</h2></li>
+<li><p>boolean 类型用来判断逻辑条件，一般用于程序流程控制：</p>
+<ul>
+<li>if条件控制语句；</li>
+<li>while循环控制语句；</li>
+<li>do-while循环控制语句；</li>
+<li>for循环控制语句；</li>
+</ul>
+</li>
+<li><p>boolean类型数据只允许取值true和false，无null。</p>
+<ul>
+<li>不可以使用0或非 0 的整数替代false和true，这点和C语言不同。</li>
+<li>Java虚拟机中没有任何供boolean值专用的字节码指令，Java语言表达所操作的boolean值，在编译之后都使用java虚拟机中的int数据类型来代替：true用1表示，false用0表示。———《java虚拟机规范 8版》<h2 id="六、String字符串类型"><a href="#六、String字符串类型" class="headerlink" title="六、String字符串类型"></a>六、String字符串类型</h2></li>
+</ul>
+</li>
+<li><p>String不是基本数据类型，属于引用数据类型</p>
+</li>
+<li><p>使用方式与基本数据类型一致。例如：</p>
+  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">String str &#x3D; “abcd”;</span><br></pre></td></tr></table></figure></li>
+<li><p>一个字符串可以串接另一个字符串，也可以直接串接其他类型的数据。例如：</p>
+  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">str &#x3D; str + “xyz” ;</span><br><span class="line">int n &#x3D; 100;</span><br><span class="line">str &#x3D; str + n;</span><br></pre></td></tr></table></figure>
+<h2 id="七、类型转换"><a href="#七、类型转换" class="headerlink" title="七、类型转换"></a>七、类型转换</h2></li>
+<li><p>基本数据类型转换</p>
+<ul>
+<li>自动类型转换：容量小的类型自动转换为容量大的数据类型。数据类型按容量大小排序为：<img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/7190B9BDC12F444EB401EC5A2E67BE30/2584" alt=""></li>
+<li>有多种类型的数据混合运算时，系统首先自动将所有数据转换成容量最大的那种数据类型，然后再进行计算。</li>
+<li>byte,short,char之间不会相互转换，他们三者在计算时首先转换为int类型。</li>
+<li>boolean类型不能与其它数据类型运算。</li>
+<li>当把任何基本数据类型的值和字符串(String)进行连接运算时(+)，基本数据类型的值将自动转化为字符串(String)类型。</li>
+</ul>
+</li>
+<li><p>强制类型转换</p>
+<ul>
+<li>自动类型转换的逆过程，将容量大的数据类型转换为容量小的数据类型。使用时要加上强制转换符：()，但可能造成精度降低或溢出,格外要注意。</li>
+<li>如：   <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">double a &#x3D; 1.23;</span><br><span class="line">int i &#x3D; (int)a;</span><br></pre></td></tr></table></figure></li>
+<li>通常，字符串不能直接转换为基本类型，但通过基本类型对应的包装类则可以实现把字符串转换成基本类型。</li>
+<li>如：   <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">String a &#x3D; “43”;</span><br><span class="line">int i &#x3D; Integer.parseInt(a);</span><br></pre></td></tr></table></figure></li>
+<li>boolean类型不可以转换为其它的数据类型。</li>
+</ul>
+</li>
+</ul>
+<h2 id="八、了解"><a href="#八、了解" class="headerlink" title="八、了解"></a>八、了解</h2><p><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/C1D1D0A1B8EE4D77AABF1519556CA608/2551" alt=""><br><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/E5FF3C07634B4634BAD1908CAB7A52F6/2553" alt=""><br><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/F7D16639A1D74A12BF125F2240484199/2555" alt=""></p>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+        <tag>变量</tag>
+        <tag>整数类型</tag>
+        <tag>浮点类型</tag>
+        <tag>字符类型</tag>
+        <tag>布尔类型</tag>
+        <tag>String字符串类型</tag>
+        <tag>类型转换</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>GitHub&amp;Git基础</title>
     <url>/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<h2 id="1-概述与目的"><a href="#1-概述与目的" class="headerlink" title="1.概述与目的"></a>1.概述与目的</h2><ol>
@@ -372,128 +696,6 @@
       </categories>
       <tags>
         <tag>Hexo 博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>01.Java语言概述</title>
-    <url>/2020/07/03/01-Java%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/</url>
-    <content><![CDATA[<h2 id="一、Java基础知识图解"><a href="#一、Java基础知识图解" class="headerlink" title="一、Java基础知识图解"></a>一、Java基础知识图解</h2><p><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/75CCFC6508AF4C9ABEAB575A1F23E569/1753" alt=""></p>
-<h2 id="二、Windows操作cmd"><a href="#二、Windows操作cmd" class="headerlink" title="二、Windows操作cmd"></a>二、Windows操作cmd</h2><h4 id="1-常用DOS命令"><a href="#1-常用DOS命令" class="headerlink" title="1. 常用DOS命令"></a>1. 常用DOS命令</h4><ul>
-<li>dir：列出当前目录下的文件及文件夹</li>
-<li>md：创建目录</li>
-<li>rd：删除目录</li>
-<li>d：进入D盘</li>
-<li>cd：进入到指定目录</li>
-<li>cd..：返回上级目录</li>
-<li>cd\：退回到根目录</li>
-<li>echo&gt;xxx.xxx：创建xxx.xxx文件</li>
-<li>echo xxx &gt;xxx.xxx：创建xxx.xxx文件并写入xxx</li>
-<li>echo &gt;xxx.xxx xxx：创建xxx.xxx文件并写入xxx</li>
-<li>del：删除文件</li>
-<li>exit：退出dos命令行即退出cmd<h4 id="2-常用快捷键"><a href="#2-常用快捷键" class="headerlink" title="2. 常用快捷键"></a>2. 常用快捷键</h4></li>
-<li>← →：移动光标</li>
-<li>↑ ↓：调阅历史操作命令</li>
-<li>Delete Backspace：删除字符<h2 id="三、Java语言"><a href="#三、Java语言" class="headerlink" title="三、Java语言"></a>三、Java语言</h2><h4 id="1-来源"><a href="#1-来源" class="headerlink" title="1. 来源"></a>1. 来源</h4>Java语言是SUN(Stanford University Network,斯坦福大学网络公司) 1995年推出的一门高级编程语言。<h4 id="2-特点"><a href="#2-特点" class="headerlink" title="2. 特点"></a>2. 特点</h4>Java语言是一种面向Internet的编程语言。Java一开始富有吸引力是因为Java程序可以在Web浏览器中运行。这些Java程序被称为Java小程序(applet)。applet使用现代的图形用户界面与Web用户进行交互。applet内嵌在HTML代码中。<h4 id="3-现状"><a href="#3-现状" class="headerlink" title="3. 现状"></a>3. 现状</h4>随着Java技术在web方面的不断成熟，已经成为Web应用程序的首选开发语言。<h4 id="4-简史"><a href="#4-简史" class="headerlink" title="4. 简史"></a>4. 简史</h4></li>
-<li>1991年Green项目，开发语言最初命名为Oak (橡树)</li>
-<li>1994年，开发组意识到Oak非常适合于互联网</li>
-<li>1996年，发布JDK 1.0，约8.3万 个网页应用Java技术来制作</li>
-<li>1997年，发布JDK 1.1，JavaOne会议召开，创当时全球同类会议规模之最</li>
-<li>1998年，发布JDK 1.2，同年发布企业平台J2EE</li>
-<li>1999年，Java分成J2SE、J2EE和J2ME，JSP/Servlet技 术诞生</li>
-<li>2004年，发布里程碑式版本: JDK 1.5，为突出此版本的重要性，更名为JDK 5.0</li>
-<li>2005年，J2SE -&gt; JavaSE，J2EE -&gt; JavaEE, J2ME -&gt; JavaME</li>
-<li>2009年，Oracle公司收购SUN，交易价格74亿美元</li>
-<li>2011年，发布JDK 7.0</li>
-<li>2014年，发布JDK 8.0，是继JDK 5.0以来变化最大的版本</li>
-<li>2017年，发布JDK 9.0，最大限度实现模块化</li>
-<li>2018年3月，发布JDK 10.0，版本号也称为18.3</li>
-<li>2018年9月，发布JDK 11.0，版本号也称为18.9<h4 id="5-Java语言的诞生"><a href="#5-Java语言的诞生" class="headerlink" title="5. Java语言的诞生"></a>5. Java语言的诞生</h4></li>
-<li>java之父James Gosl ing团队在开发”Green”项目时，发现c缺少垃圾回收系统，还有可移植的安全性、分布程序设计和多线程功能。最后，他们想要一种易于移植到各种设备上的平台。</li>
-<li>Java确实是从c语言和C++语言继承了许多成份，甚至可以将Java看成是类c语言发展和衍生的产物。比如Java语言的变量声明，操作符形式，参数传递，流程控制等方面和C语言、C++语言完全相同。但同时，Java是一个纯粹的面向对象的程序设计语言，它继承了C++语言面向对象技术的核心。Java舍弃了c语言中容易引起错误的指针(以引用取代)、运算符重载(operator overloading)、多重继承<br>(以接口取代)等特性，增加了垃圾回收器功能用于回收不再被引用的对象所占据的内存空间。JDK1.5又引入了泛型编程(GenericProgramming)、类型安全的枚举、不定长参数和自动装/拆箱<h4 id="6-Java的主要特性"><a href="#6-Java的主要特性" class="headerlink" title="6. Java的主要特性"></a>6. Java的主要特性</h4></li>
-<li><h5 id="Java语言是易学的"><a href="#Java语言是易学的" class="headerlink" title="Java语言是易学的"></a>Java语言是易学的</h5>  Java语言的语法与c语言和C++语言很接近，使得大多数程序员很容易学习和使用Java。</li>
-<li><h5 id="Java语言是强制面向对象的"><a href="#Java语言是强制面向对象的" class="headerlink" title="Java语言是强制面向对象的"></a>Java语言是强制面向对象的</h5>  Java语言提供类、接口和继承等原语，为了简单起见，只支持类之间的单继承，但支持接口之间的多继承，并支持类与接口之间的实现机制<br>(关键字为implements)。</li>
-<li><h5 id="Java语言是分布式的"><a href="#Java语言是分布式的" class="headerlink" title="Java语言是分布式的"></a>Java语言是分布式的</h5>  Java语 言支持Internet应用的开发，在基本的Java应用编程接口中有一个网络应用编程接口(java net) ，它提供了用于网络应用编程的类<br>库，包括URL、URLConnection、 Socket、 ServerSocket等。 Java 的RMI (远程<br>方法激活)机制也是开发分布式应用的重要手段。</li>
-<li><h5 id="Java语言是健壮的"><a href="#Java语言是健壮的" class="headerlink" title="Java语言是健壮的"></a>Java语言是健壮的</h5>  Java的强类型机制、异常处理、垃圾的自动收集等是Java程序健壮性的重要保证。对指针的丢弃是Java的明智选择。</li>
-<li><h5 id="Java语言是安全的"><a href="#Java语言是安全的" class="headerlink" title="Java语言是安全的"></a>Java语言是安全的</h5>  Java通常被用在网络环境中，为此，Java提供了一个安全机制以防恶意代码的攻击。如:安全防范机制(类ClassLoader)，如分配不同的名字空间以防替代本地的同名类、字节代码检查。</li>
-<li><h5 id="Java语言是体系结构中立的"><a href="#Java语言是体系结构中立的" class="headerlink" title="Java语言是体系结构中立的"></a>Java语言是体系结构中立的</h5>  Java程序(后缀为java的文件)在Java平台上被<br>编译为体系结构中立的字节码格式(后缀为class的文件)，然后可以在实现这个</li>
-<li><h5 id="Java平台的任何系统中运行"><a href="#Java平台的任何系统中运行" class="headerlink" title="Java平台的任何系统中运行"></a>Java平台的任何系统中运行</h5>  Java语言是解释型的。如前所述，Java程序在Java平台上被编译为字节码格式，然后可以在实现这个Java平台的任何系统的解释器中运行。</li>
-<li><h5 id="Java是性能略高的"><a href="#Java是性能略高的" class="headerlink" title="Java是性能略高的"></a>Java是性能略高的</h5>  与那些解释型的高级脚本语言相比，Java的性能还是较优的。</li>
-<li><h5 id="Java语言是原生支持多线程的"><a href="#Java语言是原生支持多线程的" class="headerlink" title="Java语言是原生支持多线程的"></a>Java语言是原生支持多线程的</h5>  在Java语言中，线程是一-种特殊的对象，它必须<br>由Thread类或其子(孙)类来创建。</li>
-</ul>
-<h4 id="7-Java技术平台"><a href="#7-Java技术平台" class="headerlink" title="7. Java技术平台"></a>7. Java技术平台</h4><ul>
-<li><h5 id="Java-SE-Java-Standard-Edition-标准版"><a href="#Java-SE-Java-Standard-Edition-标准版" class="headerlink" title="Java SE(Java Standard Edition)标准版"></a>Java SE(Java Standard Edition)标准版</h5>  支持面向桌面级应用(如Windows’下的应用程序)的Java平台，提供了完整的Java核心API，此版本以前称为J2SE</li>
-<li><h5 id="Java-EE-Java-Enterprise-Edition-企业版"><a href="#Java-EE-Java-Enterprise-Edition-企业版" class="headerlink" title="Java EE(Java Enterprise Edition)企业版"></a>Java EE(Java Enterprise Edition)企业版</h5>  是为开发企业环境下的应用程序提供的一套解决方案。该技术体系中包含的技术如:Servlet、Jsp等 ,主要针对于Web应用程序开发。版本以前称为J2EE<h4 id="8-Java应用领域"><a href="#8-Java应用领域" class="headerlink" title="8.Java应用领域"></a>8.Java应用领域</h4>从Java的应用领域来分，Java语言的应用方向主要表现在以下几个方面:</li>
-<li><h5 id="企业级应用"><a href="#企业级应用" class="headerlink" title="企业级应用"></a>企业级应用</h5>  主要指复杂的大企业的软件系统、各种类型的网站。Java的安全机制以及它的跨平台的优势，使它在分布式系统领域开发中有广泛应用。应用领域包括金融、电信、交通、电子商务等。</li>
-<li><h5 id="Android平台应用"><a href="#Android平台应用" class="headerlink" title="Android平台应用"></a>Android平台应用</h5>  Android应用程序使用Java语言编写。Android开发水平的高低很大程度上取决于Java语言核心能力是否扎实。</li>
-<li><h5 id="大数据平台开发"><a href="#大数据平台开发" class="headerlink" title="大数据平台开发"></a>大数据平台开发</h5>  各类框架有Hadoop, spark, storm,flink等，就这类技术生态圈来讲，还有各种中间件如flume, kafka, sqoop等等 ，这些框架以及工具大多数是用Java编写而成，但提供诸如Java, sscala,Python,R等各种语言API供编程。</li>
-<li><h5 id="移动领域应用"><a href="#移动领域应用" class="headerlink" title="移动领域应用"></a>移动领域应用</h5>  主要表现在消费和嵌入式领域，是指在各种小型设备上的应用，包括手机、PDA、机顶盒、汽车通信设备等。<h2 id="四、Java语言运行机制及运行过程"><a href="#四、Java语言运行机制及运行过程" class="headerlink" title="四、Java语言运行机制及运行过程"></a>四、Java语言运行机制及运行过程</h2></li>
-</ul>
-<ol>
-<li><h4 id="Java语言特点"><a href="#Java语言特点" class="headerlink" title="Java语言特点"></a>Java语言特点</h4><ol>
-<li><h5 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h5><ul>
-<li>两个基本概念：类、对象</li>
-<li>三大特性：封装、继承、多肽</li>
-</ul>
-</li>
-<li><h5 id="健壮性"><a href="#健壮性" class="headerlink" title="健壮性"></a>健壮性</h5><ul>
-<li>吸收了C/C++语言的优点，但是去掉了其影响程序健壮性的部分（如指针、内存的申请与释放等），提供一个相对安全的内存管理和访问机制</li>
-</ul>
-</li>
-<li><h5 id="跨平台性"><a href="#跨平台性" class="headerlink" title="跨平台性"></a>跨平台性</h5><ul>
-<li>跨平台性：通过Java语言编程的应用程序在不同平台上都可以运行。“Write once，Run Anywhere”</li>
-<li>原理:只要在需要运行java应用程序的操作系统上，先安装一个Java虚拟机(Java Virtual Machine)即可。由JVM来负责Java程序在该系统中的运行。<br><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/66425C3F4D6C4416AA35914AF5BDF473/2003" alt=""></li>
-</ul>
-</li>
-</ol>
-</li>
-<li><h4 id="Java两种核心机制"><a href="#Java两种核心机制" class="headerlink" title="Java两种核心机制"></a>Java两种核心机制</h4></li>
-</ol>
-<ul>
-<li>Java虚拟机（Java Virtual Machine）</li>
-<li>垃圾收集机制（Garbage Collection）</li>
-</ul>
-<ol start="3">
-<li><h4 id="核心机制——Java虚拟机"><a href="#核心机制——Java虚拟机" class="headerlink" title="核心机制——Java虚拟机"></a>核心机制——Java虚拟机</h4></li>
-</ol>
-<ul>
-<li>JVM是一个虚拟的计算机，具有指令集并使用不同的存储区域。负责执行指令，管理数据、内存、寄存器。<br><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/30FFBBDE8BCE487E84A1E54933064199/2047" alt=""></li>
-<li>对于不同的平台，有不同的虚拟机。</li>
-<li>只有某平台提供了对应的java虚拟机，java程序才可在此平台运行</li>
-<li>Java虛拟机机制屏蔽了底层运行平台的差别，实现了“一次编译，到处运行”<br><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/21C50C05C06B404E8E09614FC5433A48/2049" alt=""></li>
-</ul>
-<ol start="4">
-<li><h4 id="核心机制——垃圾回收"><a href="#核心机制——垃圾回收" class="headerlink" title="核心机制——垃圾回收"></a>核心机制——垃圾回收</h4></li>
-</ol>
-<ul>
-<li><p>不再使用的内存空间应回收一垃圾回收。</p>
-<ul>
-<li>在C/C++等语言中，由程序员负责回收无用内存。</li>
-<li>Java语言消除了程序员回收无用内存空间的责任:它提供一种系统级线程跟踪存储空间的分配情况。并在JVM空闲时，检查并释放那些可被释放的存储空间。</li>
-</ul>
-</li>
-<li><p>垃圾回收在Java程序运行过程中自动进行，程序员无法精确控制和干预。</p>
-</li>
-<li><p>Java程序还会出现内存泄漏和内存溢出问题吗?会!</p>
-<h2 id="五、Java语言的环境搭建"><a href="#五、Java语言的环境搭建" class="headerlink" title="五、Java语言的环境搭建"></a>五、Java语言的环境搭建</h2></li>
-<li><h4 id="JDK-Java-Development-Kit-Java开发工具包"><a href="#JDK-Java-Development-Kit-Java开发工具包" class="headerlink" title="JDK(Java Development Kit Java开发工具包)"></a>JDK(Java Development Kit Java开发工具包)</h4><p>  JDK是提供给Java开发人员使用的，其中包含了java的开发工具，也包括了JRE。所以安装了JDK，就不用在单独安装JRE了。</p>
-<h5 id="其中的开发工具"><a href="#其中的开发工具" class="headerlink" title="其中的开发工具:"></a>其中的开发工具:</h5><ul>
-<li>译工具(javac.exe)</li>
-<li>打包工具(jar.exe)等</li>
-</ul>
-</li>
-<li><h4 id="JRE-Java-Runtime-Environment-Java运-行环境"><a href="#JRE-Java-Runtime-Environment-Java运-行环境" class="headerlink" title="JRE(Java Runtime Environment Java运 行环境)"></a>JRE(Java Runtime Environment Java运 行环境)</h4><p>  包括Java虛拟机(JVM Java Virtual Machine)和Java程序所需的核心类库等，如果想要运行一个开发好的Java程序，计算机中只需要安装JRE即可。</p>
-</li>
-<li><h4 id="JDK、JRE、JVM的关系"><a href="#JDK、JRE、JVM的关系" class="headerlink" title="JDK、JRE、JVM的关系"></a>JDK、JRE、JVM的关系</h4><p>  <img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/BFAF4FD048524CA3807B138AF3C45CC4/2085" alt=""><br>  <img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/B08C7243C65E43B4B016B553FAA3B5EC/2087" alt=""></p>
-</li>
-<li><h4 id="JDK安装"><a href="#JDK安装" class="headerlink" title="JDK安装"></a>JDK安装</h4><p>  <img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/63C95BA1A3F84F2D8ADBAE374CB8DBEE/2095" alt=""><br>  <img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/0288F0463E9A413980DEDF37C6567413/2097" alt=""></p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Java基础</category>
-      </categories>
-      <tags>
-        <tag>Java基础</tag>
       </tags>
   </entry>
   <entry>
