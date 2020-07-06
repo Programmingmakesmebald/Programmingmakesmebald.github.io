@@ -1,128 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>01.Java语言概述</title>
-    <url>/2020/07/03/01-Java%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/</url>
-    <content><![CDATA[<h2 id="一、Java基础知识图解"><a href="#一、Java基础知识图解" class="headerlink" title="一、Java基础知识图解"></a>一、Java基础知识图解</h2><p><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/75CCFC6508AF4C9ABEAB575A1F23E569/1753" alt=""></p>
-<h2 id="二、Windows操作cmd"><a href="#二、Windows操作cmd" class="headerlink" title="二、Windows操作cmd"></a>二、Windows操作cmd</h2><h4 id="1-常用DOS命令"><a href="#1-常用DOS命令" class="headerlink" title="1. 常用DOS命令"></a>1. 常用DOS命令</h4><ul>
-<li>dir：列出当前目录下的文件及文件夹</li>
-<li>md：创建目录</li>
-<li>rd：删除目录</li>
-<li>d：进入D盘</li>
-<li>cd：进入到指定目录</li>
-<li>cd..：返回上级目录</li>
-<li>cd\：退回到根目录</li>
-<li>echo&gt;xxx.xxx：创建xxx.xxx文件</li>
-<li>echo xxx &gt;xxx.xxx：创建xxx.xxx文件并写入xxx</li>
-<li>echo &gt;xxx.xxx xxx：创建xxx.xxx文件并写入xxx</li>
-<li>del：删除文件</li>
-<li>exit：退出dos命令行即退出cmd<h4 id="2-常用快捷键"><a href="#2-常用快捷键" class="headerlink" title="2. 常用快捷键"></a>2. 常用快捷键</h4></li>
-<li>← →：移动光标</li>
-<li>↑ ↓：调阅历史操作命令</li>
-<li>Delete Backspace：删除字符<h2 id="三、Java语言"><a href="#三、Java语言" class="headerlink" title="三、Java语言"></a>三、Java语言</h2><h4 id="1-来源"><a href="#1-来源" class="headerlink" title="1. 来源"></a>1. 来源</h4>Java语言是SUN(Stanford University Network,斯坦福大学网络公司) 1995年推出的一门高级编程语言。<h4 id="2-特点"><a href="#2-特点" class="headerlink" title="2. 特点"></a>2. 特点</h4>Java语言是一种面向Internet的编程语言。Java一开始富有吸引力是因为Java程序可以在Web浏览器中运行。这些Java程序被称为Java小程序(applet)。applet使用现代的图形用户界面与Web用户进行交互。applet内嵌在HTML代码中。<h4 id="3-现状"><a href="#3-现状" class="headerlink" title="3. 现状"></a>3. 现状</h4>随着Java技术在web方面的不断成熟，已经成为Web应用程序的首选开发语言。<h4 id="4-简史"><a href="#4-简史" class="headerlink" title="4. 简史"></a>4. 简史</h4></li>
-<li>1991年Green项目，开发语言最初命名为Oak (橡树)</li>
-<li>1994年，开发组意识到Oak非常适合于互联网</li>
-<li>1996年，发布JDK 1.0，约8.3万 个网页应用Java技术来制作</li>
-<li>1997年，发布JDK 1.1，JavaOne会议召开，创当时全球同类会议规模之最</li>
-<li>1998年，发布JDK 1.2，同年发布企业平台J2EE</li>
-<li>1999年，Java分成J2SE、J2EE和J2ME，JSP/Servlet技 术诞生</li>
-<li>2004年，发布里程碑式版本: JDK 1.5，为突出此版本的重要性，更名为JDK 5.0</li>
-<li>2005年，J2SE -&gt; JavaSE，J2EE -&gt; JavaEE, J2ME -&gt; JavaME</li>
-<li>2009年，Oracle公司收购SUN，交易价格74亿美元</li>
-<li>2011年，发布JDK 7.0</li>
-<li>2014年，发布JDK 8.0，是继JDK 5.0以来变化最大的版本</li>
-<li>2017年，发布JDK 9.0，最大限度实现模块化</li>
-<li>2018年3月，发布JDK 10.0，版本号也称为18.3</li>
-<li>2018年9月，发布JDK 11.0，版本号也称为18.9<h4 id="5-Java语言的诞生"><a href="#5-Java语言的诞生" class="headerlink" title="5. Java语言的诞生"></a>5. Java语言的诞生</h4></li>
-<li>java之父James Gosl ing团队在开发”Green”项目时，发现c缺少垃圾回收系统，还有可移植的安全性、分布程序设计和多线程功能。最后，他们想要一种易于移植到各种设备上的平台。</li>
-<li>Java确实是从c语言和C++语言继承了许多成份，甚至可以将Java看成是类c语言发展和衍生的产物。比如Java语言的变量声明，操作符形式，参数传递，流程控制等方面和C语言、C++语言完全相同。但同时，Java是一个纯粹的面向对象的程序设计语言，它继承了C++语言面向对象技术的核心。Java舍弃了c语言中容易引起错误的指针(以引用取代)、运算符重载(operator overloading)、多重继承<br>(以接口取代)等特性，增加了垃圾回收器功能用于回收不再被引用的对象所占据的内存空间。JDK1.5又引入了泛型编程(GenericProgramming)、类型安全的枚举、不定长参数和自动装/拆箱<h4 id="6-Java的主要特性"><a href="#6-Java的主要特性" class="headerlink" title="6. Java的主要特性"></a>6. Java的主要特性</h4></li>
-<li><h5 id="Java语言是易学的"><a href="#Java语言是易学的" class="headerlink" title="Java语言是易学的"></a>Java语言是易学的</h5>  Java语言的语法与c语言和C++语言很接近，使得大多数程序员很容易学习和使用Java。</li>
-<li><h5 id="Java语言是强制面向对象的"><a href="#Java语言是强制面向对象的" class="headerlink" title="Java语言是强制面向对象的"></a>Java语言是强制面向对象的</h5>  Java语言提供类、接口和继承等原语，为了简单起见，只支持类之间的单继承，但支持接口之间的多继承，并支持类与接口之间的实现机制<br>(关键字为implements)。</li>
-<li><h5 id="Java语言是分布式的"><a href="#Java语言是分布式的" class="headerlink" title="Java语言是分布式的"></a>Java语言是分布式的</h5>  Java语 言支持Internet应用的开发，在基本的Java应用编程接口中有一个网络应用编程接口(java net) ，它提供了用于网络应用编程的类<br>库，包括URL、URLConnection、 Socket、 ServerSocket等。 Java 的RMI (远程<br>方法激活)机制也是开发分布式应用的重要手段。</li>
-<li><h5 id="Java语言是健壮的"><a href="#Java语言是健壮的" class="headerlink" title="Java语言是健壮的"></a>Java语言是健壮的</h5>  Java的强类型机制、异常处理、垃圾的自动收集等是Java程序健壮性的重要保证。对指针的丢弃是Java的明智选择。</li>
-<li><h5 id="Java语言是安全的"><a href="#Java语言是安全的" class="headerlink" title="Java语言是安全的"></a>Java语言是安全的</h5>  Java通常被用在网络环境中，为此，Java提供了一个安全机制以防恶意代码的攻击。如:安全防范机制(类ClassLoader)，如分配不同的名字空间以防替代本地的同名类、字节代码检查。</li>
-<li><h5 id="Java语言是体系结构中立的"><a href="#Java语言是体系结构中立的" class="headerlink" title="Java语言是体系结构中立的"></a>Java语言是体系结构中立的</h5>  Java程序(后缀为java的文件)在Java平台上被<br>编译为体系结构中立的字节码格式(后缀为class的文件)，然后可以在实现这个</li>
-<li><h5 id="Java平台的任何系统中运行"><a href="#Java平台的任何系统中运行" class="headerlink" title="Java平台的任何系统中运行"></a>Java平台的任何系统中运行</h5>  Java语言是解释型的。如前所述，Java程序在Java平台上被编译为字节码格式，然后可以在实现这个Java平台的任何系统的解释器中运行。</li>
-<li><h5 id="Java是性能略高的"><a href="#Java是性能略高的" class="headerlink" title="Java是性能略高的"></a>Java是性能略高的</h5>  与那些解释型的高级脚本语言相比，Java的性能还是较优的。</li>
-<li><h5 id="Java语言是原生支持多线程的"><a href="#Java语言是原生支持多线程的" class="headerlink" title="Java语言是原生支持多线程的"></a>Java语言是原生支持多线程的</h5>  在Java语言中，线程是一-种特殊的对象，它必须<br>由Thread类或其子(孙)类来创建。</li>
-</ul>
-<h4 id="7-Java技术平台"><a href="#7-Java技术平台" class="headerlink" title="7. Java技术平台"></a>7. Java技术平台</h4><ul>
-<li><h5 id="Java-SE-Java-Standard-Edition-标准版"><a href="#Java-SE-Java-Standard-Edition-标准版" class="headerlink" title="Java SE(Java Standard Edition)标准版"></a>Java SE(Java Standard Edition)标准版</h5>  支持面向桌面级应用(如Windows’下的应用程序)的Java平台，提供了完整的Java核心API，此版本以前称为J2SE</li>
-<li><h5 id="Java-EE-Java-Enterprise-Edition-企业版"><a href="#Java-EE-Java-Enterprise-Edition-企业版" class="headerlink" title="Java EE(Java Enterprise Edition)企业版"></a>Java EE(Java Enterprise Edition)企业版</h5>  是为开发企业环境下的应用程序提供的一套解决方案。该技术体系中包含的技术如:Servlet、Jsp等 ,主要针对于Web应用程序开发。版本以前称为J2EE<h4 id="8-Java应用领域"><a href="#8-Java应用领域" class="headerlink" title="8.Java应用领域"></a>8.Java应用领域</h4>从Java的应用领域来分，Java语言的应用方向主要表现在以下几个方面:</li>
-<li><h5 id="企业级应用"><a href="#企业级应用" class="headerlink" title="企业级应用"></a>企业级应用</h5>  主要指复杂的大企业的软件系统、各种类型的网站。Java的安全机制以及它的跨平台的优势，使它在分布式系统领域开发中有广泛应用。应用领域包括金融、电信、交通、电子商务等。</li>
-<li><h5 id="Android平台应用"><a href="#Android平台应用" class="headerlink" title="Android平台应用"></a>Android平台应用</h5>  Android应用程序使用Java语言编写。Android开发水平的高低很大程度上取决于Java语言核心能力是否扎实。</li>
-<li><h5 id="大数据平台开发"><a href="#大数据平台开发" class="headerlink" title="大数据平台开发"></a>大数据平台开发</h5>  各类框架有Hadoop, spark, storm,flink等，就这类技术生态圈来讲，还有各种中间件如flume, kafka, sqoop等等 ，这些框架以及工具大多数是用Java编写而成，但提供诸如Java, sscala,Python,R等各种语言API供编程。</li>
-<li><h5 id="移动领域应用"><a href="#移动领域应用" class="headerlink" title="移动领域应用"></a>移动领域应用</h5>  主要表现在消费和嵌入式领域，是指在各种小型设备上的应用，包括手机、PDA、机顶盒、汽车通信设备等。<h2 id="四、Java语言运行机制及运行过程"><a href="#四、Java语言运行机制及运行过程" class="headerlink" title="四、Java语言运行机制及运行过程"></a>四、Java语言运行机制及运行过程</h2></li>
-</ul>
-<ol>
-<li><h4 id="Java语言特点"><a href="#Java语言特点" class="headerlink" title="Java语言特点"></a>Java语言特点</h4><ol>
-<li><h5 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h5><ul>
-<li>两个基本概念：类、对象</li>
-<li>三大特性：封装、继承、多肽</li>
-</ul>
-</li>
-<li><h5 id="健壮性"><a href="#健壮性" class="headerlink" title="健壮性"></a>健壮性</h5><ul>
-<li>吸收了C/C++语言的优点，但是去掉了其影响程序健壮性的部分（如指针、内存的申请与释放等），提供一个相对安全的内存管理和访问机制</li>
-</ul>
-</li>
-<li><h5 id="跨平台性"><a href="#跨平台性" class="headerlink" title="跨平台性"></a>跨平台性</h5><ul>
-<li>跨平台性：通过Java语言编程的应用程序在不同平台上都可以运行。“Write once，Run Anywhere”</li>
-<li>原理:只要在需要运行java应用程序的操作系统上，先安装一个Java虚拟机(Java Virtual Machine)即可。由JVM来负责Java程序在该系统中的运行。<br><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/66425C3F4D6C4416AA35914AF5BDF473/2003" alt=""></li>
-</ul>
-</li>
-</ol>
-</li>
-<li><h4 id="Java两种核心机制"><a href="#Java两种核心机制" class="headerlink" title="Java两种核心机制"></a>Java两种核心机制</h4></li>
-</ol>
-<ul>
-<li>Java虚拟机（Java Virtual Machine）</li>
-<li>垃圾收集机制（Garbage Collection）</li>
-</ul>
-<ol start="3">
-<li><h4 id="核心机制——Java虚拟机"><a href="#核心机制——Java虚拟机" class="headerlink" title="核心机制——Java虚拟机"></a>核心机制——Java虚拟机</h4></li>
-</ol>
-<ul>
-<li>JVM是一个虚拟的计算机，具有指令集并使用不同的存储区域。负责执行指令，管理数据、内存、寄存器。<br><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/30FFBBDE8BCE487E84A1E54933064199/2047" alt=""></li>
-<li>对于不同的平台，有不同的虚拟机。</li>
-<li>只有某平台提供了对应的java虚拟机，java程序才可在此平台运行</li>
-<li>Java虛拟机机制屏蔽了底层运行平台的差别，实现了“一次编译，到处运行”<br><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/21C50C05C06B404E8E09614FC5433A48/2049" alt=""></li>
-</ul>
-<ol start="4">
-<li><h4 id="核心机制——垃圾回收"><a href="#核心机制——垃圾回收" class="headerlink" title="核心机制——垃圾回收"></a>核心机制——垃圾回收</h4></li>
-</ol>
-<ul>
-<li><p>不再使用的内存空间应回收一垃圾回收。</p>
-<ul>
-<li>在C/C++等语言中，由程序员负责回收无用内存。</li>
-<li>Java语言消除了程序员回收无用内存空间的责任:它提供一种系统级线程跟踪存储空间的分配情况。并在JVM空闲时，检查并释放那些可被释放的存储空间。</li>
-</ul>
-</li>
-<li><p>垃圾回收在Java程序运行过程中自动进行，程序员无法精确控制和干预。</p>
-</li>
-<li><p>Java程序还会出现内存泄漏和内存溢出问题吗?会!</p>
-<h2 id="五、Java语言的环境搭建"><a href="#五、Java语言的环境搭建" class="headerlink" title="五、Java语言的环境搭建"></a>五、Java语言的环境搭建</h2></li>
-<li><h4 id="JDK-Java-Development-Kit-Java开发工具包"><a href="#JDK-Java-Development-Kit-Java开发工具包" class="headerlink" title="JDK(Java Development Kit Java开发工具包)"></a>JDK(Java Development Kit Java开发工具包)</h4><p>  JDK是提供给Java开发人员使用的，其中包含了java的开发工具，也包括了JRE。所以安装了JDK，就不用在单独安装JRE了。</p>
-<h5 id="其中的开发工具"><a href="#其中的开发工具" class="headerlink" title="其中的开发工具:"></a>其中的开发工具:</h5><ul>
-<li>译工具(javac.exe)</li>
-<li>打包工具(jar.exe)等</li>
-</ul>
-</li>
-<li><h4 id="JRE-Java-Runtime-Environment-Java运-行环境"><a href="#JRE-Java-Runtime-Environment-Java运-行环境" class="headerlink" title="JRE(Java Runtime Environment Java运 行环境)"></a>JRE(Java Runtime Environment Java运 行环境)</h4><p>  包括Java虛拟机(JVM Java Virtual Machine)和Java程序所需的核心类库等，如果想要运行一个开发好的Java程序，计算机中只需要安装JRE即可。</p>
-</li>
-<li><h4 id="JDK、JRE、JVM的关系"><a href="#JDK、JRE、JVM的关系" class="headerlink" title="JDK、JRE、JVM的关系"></a>JDK、JRE、JVM的关系</h4><p>  <img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/BFAF4FD048524CA3807B138AF3C45CC4/2085" alt=""><br>  <img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/B08C7243C65E43B4B016B553FAA3B5EC/2087" alt=""></p>
-</li>
-<li><h4 id="JDK安装"><a href="#JDK安装" class="headerlink" title="JDK安装"></a>JDK安装</h4><p>  <img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/63C95BA1A3F84F2D8ADBAE374CB8DBEE/2095" alt=""><br>  <img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/0288F0463E9A413980DEDF37C6567413/2097" alt=""></p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Java基础</category>
-      </categories>
-      <tags>
-        <tag>Java基础</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>01.数据结构</title>
     <url>/2020/07/04/01-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
     <content><![CDATA[<h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><p>数据结构包括：线性结构和非线性结构。</p>
@@ -201,96 +79,6 @@
 </ul>
 </li>
 </ul>
-]]></content>
-      <categories>
-        <category>Java基础</category>
-      </categories>
-      <tags>
-        <tag>Java基础</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>02.数据结构-稀疏sparsearray数组</title>
-    <url>/2020/07/04/02-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%A8%80%E7%96%8Fsparsearray%E6%95%B0%E7%BB%84/</url>
-    <content><![CDATA[<h2 id="稀疏sparsearray数组"><a href="#稀疏sparsearray数组" class="headerlink" title="稀疏sparsearray数组"></a>稀疏sparsearray数组</h2><ol>
-<li><h4 id="先看一个实际的需求"><a href="#先看一个实际的需求" class="headerlink" title="先看一个实际的需求"></a>先看一个实际的需求</h4><ul>
-<li>编写的五子棋程序中，有存盘退出和续上盘的功能。<br><img src="https://note.youdao.com/yws/public/resource/03d703e92a974f5336caf854bb9b1235/xmlnote/3F48A45D21D64CCE9BD81A06201A6EA4/2296" alt=""></li>
-<li>分析问题: 因为该二维数组的很多值是默认值0, 因此记录了很多没有意义的数据→稀疏数组。</li>
-</ul>
-</li>
-<li><h4 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h4><p> 当一个数组中大部分元素为０，或者为同一个值的数组时，可以使用稀疏数组来保存该数组。</p>
-<h5 id="稀疏数组的处理方法是"><a href="#稀疏数组的处理方法是" class="headerlink" title="稀疏数组的处理方法是:"></a>稀疏数组的处理方法是:</h5><ol>
-<li>记录数组一共有几行几列，有多少个不同的值</li>
-<li>把具有不同值的元素的行列及值记录在一个小规模的数组中，从而缩小程序的规模<h5 id="稀疏数组举例说明"><a href="#稀疏数组举例说明" class="headerlink" title="稀疏数组举例说明"></a>稀疏数组举例说明</h5><img src="https://note.youdao.com/yws/public/resource/03d703e92a974f5336caf854bb9b1235/xmlnote/B47D7A9A53B4448A93AD74AE279D5166/2307" alt=""><br><img src="https://note.youdao.com/yws/public/resource/03d703e92a974f5336caf854bb9b1235/xmlnote/6A7B70B908D6409DB8CD98116CC73D04/2309" alt=""></li>
-</ol>
-</li>
-<li><h4 id="应用实例"><a href="#应用实例" class="headerlink" title="应用实例"></a>应用实例</h4><ul>
-<li><p>使用稀疏数组，来保留类似前面的二维数组(棋盘、地图等等)</p>
-</li>
-<li><p>把稀疏数组存盘，并且可以从新恢复原来的二维数组数</p>
-</li>
-<li><p>整体思路分析<br><img src="https://note.youdao.com/yws/public/resource/03d703e92a974f5336caf854bb9b1235/xmlnote/186FB0433BE047EDBF03D879F2EBA82C/2326" alt=""></p>
-</li>
-<li><p>二维数组 转 稀疏数组的思路</p>
-<ol>
-<li>遍历  原始的二维数组，得到有效数据的个数 sum</li>
-<li>根据sum 就可以创建 稀疏数组 sparseArr   int[sum + 1] [3]</li>
-<li>将二维数组的有效数据数据存入到 稀疏数组</li>
-</ol>
-</li>
-<li><p>稀疏数组转原始的二维数组的思路</p>
-<ol>
-<li>先读取稀疏数组的第一行，根据第一行的数据，创建原始的二维数组，比如上面的  chessArr2 = int [11][11]</li>
-<li>在读取稀疏数组后几行的数据，并赋给 原始的二维数组 即可.</li>
-</ol>
-</li>
-<li><p>代码实现</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.wzx.sparsearray;</span><br><span class="line"></span><br><span class="line">public class SparseArray &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		&#x2F;&#x2F; 创建11*11的二维数组</span><br><span class="line">		int[][] chessArr1&#x3D;new int[11][11];</span><br><span class="line">		&#x2F;&#x2F; 0代表没有棋子，1代表黑子，2代表蓝子</span><br><span class="line">		chessArr1[1][2]&#x3D;1;</span><br><span class="line">		chessArr1[2][3]&#x3D;2;</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F; 输出原始二维数组chessArr1</span><br><span class="line">		System.out.println(&quot;输出原始的二维数组chessArr1&quot;);</span><br><span class="line">		for (int[] row : chessArr1)&#123;</span><br><span class="line">			for (int data : row)&#123;</span><br><span class="line">				System.out.printf(&quot;%d\t&quot;, data);</span><br><span class="line">			&#125;</span><br><span class="line">			System.out.println();</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F; 将二维数组 转 稀疏数组</span><br><span class="line">		&#x2F;&#x2F; 遍历chessArr1  非0数据的个数计为sum</span><br><span class="line">		int sum&#x3D;0;</span><br><span class="line">		for (int i &#x3D; 0; i &lt; chessArr1.length; i++)&#123;</span><br><span class="line">			for(int j &#x3D; 0;j &lt; chessArr1.length; j++)&#123;</span><br><span class="line">				if(chessArr1[i][j] !&#x3D; 0)&#123;</span><br><span class="line">					sum++;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F; 输出sum</span><br><span class="line">		System.out.println(&quot;sum&#x3D;&quot;+sum);</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F; 创建稀疏数组</span><br><span class="line">		int[][] sparseArr &#x3D; new int[sum+1][3];</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F; 给稀疏数组赋值</span><br><span class="line">		sparseArr[0][0] &#x3D; 11;</span><br><span class="line">		sparseArr[0][1] &#x3D; 11;</span><br><span class="line">		sparseArr[0][2] &#x3D; sum;</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F; 遍历原始二维数组，将非0的值存放到 sparseArr中</span><br><span class="line">		int count &#x3D; 0; &#x2F;&#x2F;count 用于记录是第几个非0数据</span><br><span class="line">		for (int i &#x3D; 0; i &lt; 11; i++)&#123;</span><br><span class="line">			for (int j &#x3D; 0; j &lt; 11; j++)&#123;</span><br><span class="line">				if (chessArr1[i][j] !&#x3D;0 )&#123;</span><br><span class="line">					count++;</span><br><span class="line">					sparseArr[count][0] &#x3D; i;</span><br><span class="line">					sparseArr[count][1] &#x3D; j;</span><br><span class="line">					sparseArr[count][2] &#x3D; chessArr1[i][j];</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F; 输出稀疏数组</span><br><span class="line">		System.out.println(&quot;得到稀疏数组为~~~~&quot;);</span><br><span class="line">		for (int[] row : sparseArr)&#123;</span><br><span class="line">			for (int data : row)&#123;</span><br><span class="line">				System.out.printf(&quot;%d\t&quot;, data);</span><br><span class="line">			&#125;</span><br><span class="line">			System.out.println();</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F; 将稀疏数组 --》 恢复成 原始的二维数组</span><br><span class="line">		&#x2F;*</span><br><span class="line">		 *  1. 先读取稀疏数组的第一行，根据第一行的数据，创建原始的二维数组，比如上面的  chessArr2 &#x3D; int [11][11]</span><br><span class="line">			2. 在读取稀疏数组后几行的数据，并赋给 原始的二维数组 即可.</span><br><span class="line">		 *&#x2F;</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;1. 先读取稀疏数组的第一行，根据第一行的数据，创建原始的二维数组</span><br><span class="line">		int[][] chessArr2 &#x3D; new int[sparseArr[0][0]][sparseArr[0][1]];</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;2. 在读取稀疏数组后几行的数据(从第二行开始)，并赋给 原始的二维数组 即可</span><br><span class="line">		for (int i &#x3D; 1; i &lt; sparseArr.length; i++)&#123;</span><br><span class="line">			chessArr2[sparseArr[1][0]][sparseArr[i][1]] &#x3D; sparseArr[i][2];</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F; 输出原始二维数组chessArr2</span><br><span class="line">		System.out.println(&quot;恢复后的二维数组chessArr2&quot;);</span><br><span class="line">		for (int[] row : chessArr2)&#123;</span><br><span class="line">			for (int data : row)&#123;</span><br><span class="line">				System.out.printf(&quot;%d\t&quot;, data);</span><br><span class="line">			&#125;</span><br><span class="line">			System.out.println();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>数据结构与算法</category>
-      </categories>
-      <tags>
-        <tag>数据结构与算法</tag>
-        <tag>稀疏数组</tag>
-        <tag>sparsearray</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>03.Java基础知识-HelloWorld</title>
-    <url>/2020/07/03/03-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-HelloWorld/</url>
-    <content><![CDATA[<h2 id="一、开发步骤"><a href="#一、开发步骤" class="headerlink" title="一、开发步骤"></a>一、开发步骤</h2><ol>
-<li><h5 id="将Java代码编写到扩展名为-java的文件中"><a href="#将Java代码编写到扩展名为-java的文件中" class="headerlink" title="将Java代码编写到扩展名为.java的文件中"></a>将Java代码编写到扩展名为.java的文件中</h5></li>
-<li><h5 id="通过javac命令对该java文件进行编译。"><a href="#通过javac命令对该java文件进行编译。" class="headerlink" title="通过javac命令对该java文件进行编译。"></a>通过javac命令对该java文件进行编译。</h5></li>
-<li><h5 id="通过java命令对生成的class文件进行运行"><a href="#通过java命令对生成的class文件进行运行" class="headerlink" title="通过java命令对生成的class文件进行运行"></a>通过java命令对生成的class文件进行运行</h5><h2 id="二、步骤一：编写"><a href="#二、步骤一：编写" class="headerlink" title="二、步骤一：编写"></a>二、步骤一：编写</h2></li>
-</ol>
-<ul>
-<li>选择最简单的编辑器:记事本。敲入代码  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Test&#123; &#125;</span><br></pre></td></tr></table></figure></li>
-<li>将文件保存成Test.java,这个文件是存放java代码的文件，称为源文件。</li>
-<li>注意拓展名是否隐藏<br><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/346939038BBD427ABBFB641BF569B224/2202" alt=""><h2 id="三、步骤二：编译"><a href="#三、步骤二：编译" class="headerlink" title="三、步骤二：编译"></a>三、步骤二：编译</h2><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/5A68EBF692DE4587804070655058A42F/2229" alt=""></li>
-<li>有了java源文件，通过编译器将其编译成JVM可以识别的字节码文件。</li>
-<li>在该源文件目录下，通过javac编译工具对Test.java文件进行编译。</li>
-<li>如果程序没有错误，没有任何提示，但在当前目录下会出现一个Test.class文件，该文件称为字节码文件，也是可以执行的java的程序。<h2 id="四、步骤三：运行"><a href="#四、步骤三：运行" class="headerlink" title="四、步骤三：运行"></a>四、步骤三：运行</h2></li>
-<li>有了可执行的java程序(Test.class字节码文件)</li>
-<li>通过运行工具java.exe对字节码文件进行执行。</li>
-<li>出现提示:缺少一个名称为main的方法。<br><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/A2FABB30A9974F52A7EFCD555CF04898/2231" alt=""></li>
-<li>因为一个程序的执行需要-一个起始点或者入口，所以在Test类中的加入  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public static void</span><br><span class="line">main(String] args)&#123; &#125;</span><br></pre></td></tr></table></figure></li>
-<li>对修改后的Test.java源文件需要重新编译，生成新的class文件后，再进行执行。</li>
-<li>发现没有编译失败，但也没有任何效果，因为并没有告诉JVM要帮我们做什么事情，也就是没有可以具体执行的语句。</li>
-<li>想要和JVM来个互动，只要在main方法中加入一句  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">System.out.printn(&quot;Hello World&quot;);</span><br></pre></td></tr></table></figure></li>
-<li>因为程序进行改动，所以再重新编译，运行即可。<h2 id="五、总结"><a href="#五、总结" class="headerlink" title="五、总结"></a>五、总结</h2></li>
-<li>学习编程最容易犯的错是语法错误。</li>
-<li>Java要求你必须按照语法规则编写代码。</li>
-<li>如果你的程序违反了语法规则。例如:忘记了分号、大括号、引号，或者拼错了单词，java编译器都会报语法错误。</li>
-<li>尝试着去看懂编译器会报告的错误信息。</li>
-</ul>
-<p><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/B5F7F7C478644F4A9C740EAC4852D842/2233" alt=""><br><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/B48B4B0D63C548A1B1F0843F634B2F1B/2235" alt=""></p>
-<h2 id="六、代码示例"><a href="#六、代码示例" class="headerlink" title="六、代码示例"></a>六、代码示例</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;*</span><br><span class="line">对第一个java程序进行总结</span><br><span class="line">1. java程序编写-编译-运行的过程</span><br><span class="line">编写：我们将编写的java代码保存在以&quot;.java&quot;结尾的源文件中</span><br><span class="line">编译：使用javac.exe命令编译我们的java源文件。格式：javac 源文件名.java</span><br><span class="line">运行：使用java.exe命令解释运行我们的字节码文件。 格式：java 类名</span><br><span class="line"></span><br><span class="line">2.</span><br><span class="line">在一个java源文件中可以声明多个class。但是，只能最多有一个类声明为public的。</span><br><span class="line">而且要求声明为public的类的类名必须与源文件名相同。</span><br><span class="line"></span><br><span class="line">3. 程序的入口是main()方法。格式是固定的。</span><br><span class="line"></span><br><span class="line">4. 输出语句：</span><br><span class="line">System.out.println():先输出数据，然后换行</span><br><span class="line">System.out.print():只输出数据</span><br><span class="line"></span><br><span class="line">5.每一行执行语句都以&quot;;&quot;结束。</span><br><span class="line"></span><br><span class="line">6.编译的过程：编译以后，会生成一个或多个字节码文件。字节码文件的文件名与java源文件中的类名相同。</span><br><span class="line"></span><br><span class="line">*&#x2F;</span><br><span class="line">public class Hello &#123;</span><br><span class="line">	public static void main(String[] args) &#123;&#x2F;&#x2F;public static void main(String a[]) &#123;&#x2F;&#x2F;arguments:参数</span><br><span class="line">		System.out.print(&quot;Hello World!&quot;);</span><br><span class="line">		System.out.println();&#x2F;&#x2F;换行</span><br><span class="line">		System.out.println(&quot;Hello World!&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Person&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Animal&#123;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>Java基础</category>
@@ -408,6 +196,44 @@
         <tag>关键字</tag>
         <tag>保留字</tag>
         <tag>标识符</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>04.数据结构-链表</title>
+    <url>/2020/07/06/04-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8/</url>
+    <content><![CDATA[<h2 id="一、链表-Linked-List-介绍"><a href="#一、链表-Linked-List-介绍" class="headerlink" title="一、链表(Linked List)介绍"></a>一、链表(Linked List)介绍</h2><p>链表是有序的列表，但是它在内存中是存储如下</p>
+<p><img src="https://note.youdao.com/yws/public/resource/03d703e92a974f5336caf854bb9b1235/xmlnote/4A295CFAD3F2421880E806EC6FCFE775/2630" alt=""></p>
+<p><strong>上图小结:</strong></p>
+<ul>
+<li>链表是以节点的方式来存储,是链式存储</li>
+<li>每个节点包含 data 域， next 域：指向下一个节点.</li>
+<li>如图：发现链表的各个节点不一定是连续存储.</li>
+<li>链表分带头节点的链表和没有头节点的链表，根据实际的需求来确定<ul>
+<li>单链表(带头结点) 逻辑结构示意图如下<br><img src="https://note.youdao.com/yws/public/resource/03d703e92a974f5336caf854bb9b1235/xmlnote/08F9F6D94B834BA9B033CB21AD21B1A6/2633" alt=""><h2 id="二、单链表的应用实例"><a href="#二、单链表的应用实例" class="headerlink" title="二、单链表的应用实例"></a>二、单链表的应用实例</h2>使用带 head 头的单向链表实现–水浒英雄排行榜管理完成对英雄人物的增删改查操作。<br><img src="https://note.youdao.com/yws/public/resource/03d703e92a974f5336caf854bb9b1235/xmlnote/E72DB7DE64D148A5AC84681FC422D26D/2635" alt=""></li>
+</ul>
+</li>
+</ul>
+<ol>
+<li><p>第一种方法在添加英雄时，直接添加到链表的尾部<br>思路分析示意图:<br><img src="https://note.youdao.com/yws/public/resource/03d703e92a974f5336caf854bb9b1235/xmlnote/59C578F8271F4A88B7DB55676D5E5525/2637" alt=""></p>
+</li>
+<li><p>第二种方式在添加英雄时，根据排名将英雄插入到指定位置(如果有这个排名，则添加失败，并给出提示)<br>思路的分析示意图:<br><img src="https://note.youdao.com/yws/public/resource/03d703e92a974f5336caf854bb9b1235/xmlnote/84E8198F8E5B4AEA8FC9EDEB67AEF946/2639" alt=""></p>
+</li>
+<li><p>修改节点功能<br>思路<br>先找到该节点，通过遍历</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">temp.name &#x3D; newHeroNode.name ;</span><br><span class="line">temp.nickname&#x3D; newHeroNode.nickname</span><br></pre></td></tr></table></figure></li>
+<li><p>删除节点<br>思路分析的示意图:<br><img src="https://note.youdao.com/yws/public/resource/03d703e92a974f5336caf854bb9b1235/xmlnote/3C029D923C8147359D44CD762C9904A2/2641" alt=""></p>
+</li>
+<li><p>代码演示:</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.wzx.linkedlist;</span><br><span class="line"></span><br><span class="line">public class SingleLinkedListDemo &#123;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		&#x2F;&#x2F;创建一个链表</span><br><span class="line">		SingleLinkedList singlelinkedList &#x3D; new SingleLinkedList();</span><br><span class="line">		HeroNode h1 &#x3D; new HeroNode(1,&quot;宋江&quot;,&quot;及时雨&quot;);</span><br><span class="line">		HeroNode h2 &#x3D; new HeroNode(2,&quot;吴用&quot;,&quot;智多星&quot;);</span><br><span class="line">		HeroNode h3 &#x3D; new HeroNode(3,&quot;卢俊义&quot;,&quot;玉麒麟&quot;);</span><br><span class="line">		HeroNode h4 &#x3D; new HeroNode(4,&quot;林冲&quot;,&quot;豹子头&quot;);</span><br><span class="line">		singlelinkedList.list();</span><br><span class="line">		&#x2F;&#x2F;直接添加无排序</span><br><span class="line">&#x2F;&#x2F;		singlelinkedList.add(h1);</span><br><span class="line">&#x2F;&#x2F;		singlelinkedList.add(h2);</span><br><span class="line">&#x2F;&#x2F;		singlelinkedList.add(h3);</span><br><span class="line">&#x2F;&#x2F;		singlelinkedList.add(h4);</span><br><span class="line">		&#x2F;&#x2F;按排名添加</span><br><span class="line">		singlelinkedList.addByOrder(h3);</span><br><span class="line">		singlelinkedList.addByOrder(h2);</span><br><span class="line">		singlelinkedList.addByOrder(h4);</span><br><span class="line">		singlelinkedList.addByOrder(h1);</span><br><span class="line">		singlelinkedList.list();</span><br><span class="line">		&#x2F;&#x2F;修改</span><br><span class="line">		System.out.println(&quot;修改豹子头林冲&quot;);</span><br><span class="line">		HeroNode h5 &#x3D; new HeroNode(4,&quot;林冲~~~&quot;,&quot;豹子头~~~&quot;);</span><br><span class="line">		singlelinkedList.update(h5);</span><br><span class="line">		singlelinkedList.list();</span><br><span class="line">		&#x2F;&#x2F;删除</span><br><span class="line">		System.out.println(&quot;删除豹子头林冲&quot;);</span><br><span class="line">		singlelinkedList.delete(1);</span><br><span class="line">		singlelinkedList.delete(2);</span><br><span class="line">		singlelinkedList.delete(3);</span><br><span class="line">		singlelinkedList.delete(4);</span><br><span class="line">		singlelinkedList.list();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;定义SingleLinkedList 管理我们的英雄</span><br><span class="line">class SingleLinkedList&#123;</span><br><span class="line">	&#x2F;&#x2F;先初始化一个头节点, 头节点不要动, 不存放具体的数据</span><br><span class="line">	private HeroNode head &#x3D; new HeroNode(0,&quot;&quot;,&quot;&quot;);</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;添加节点到单向链表</span><br><span class="line">	&#x2F;&#x2F;思路，当不考虑编号顺序时</span><br><span class="line">	&#x2F;&#x2F;1. 找到当前链表的最后节点</span><br><span class="line">	&#x2F;&#x2F;2. 将最后这个节点的next 指向 新的节点</span><br><span class="line">	public void add(HeroNode heroNode)&#123;</span><br><span class="line">		&#x2F;&#x2F;因为head节点不能动，因此我们需要一个辅助遍历 temp</span><br><span class="line">		HeroNode temp &#x3D; head;</span><br><span class="line">		&#x2F;&#x2F;遍历链表，找到最后</span><br><span class="line">		while (true) &#123;</span><br><span class="line">			&#x2F;&#x2F;找到链表的最后</span><br><span class="line">			if (temp.next &#x3D;&#x3D; null)&#123;&#x2F;&#x2F;遍历结束</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			&#x2F;&#x2F;如果没有找到最后, 将将temp后移</span><br><span class="line">			temp &#x3D; temp.next;</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;当退出while循环时，temp就指向了链表的最后</span><br><span class="line">		&#x2F;&#x2F;将最后这个节点的next 指向 新的节点</span><br><span class="line">		temp.next &#x3D; heroNode;</span><br><span class="line">&#x2F;&#x2F;		System.out.println(&quot;添加成功&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;第二种方式在添加英雄时，根据排名将英雄插入到指定位置</span><br><span class="line">	&#x2F;&#x2F;(如果有这个排名，则添加失败，并给出提示)</span><br><span class="line">	public void addByOrder(HeroNode heroNode)&#123;</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;因为头节点不能动，因此我们仍然通过一个辅助指针(变量)来帮助找到添加的位置</span><br><span class="line">		&#x2F;&#x2F;因为单链表，因为我们找的temp 是位于 添加位置的前一个节点，否则插入不了</span><br><span class="line">		HeroNode temp &#x3D; head;</span><br><span class="line">		boolean flag &#x3D; false;&#x2F;&#x2F; flag标志添加的编号是否存在，默认为false</span><br><span class="line">		while (true)&#123;</span><br><span class="line">			&#x2F;&#x2F;判断是否到链表最后</span><br><span class="line">			if (temp.next &#x3D;&#x3D; null)&#123;</span><br><span class="line">				break ;</span><br><span class="line">			&#125;</span><br><span class="line">			if (temp.next.no &gt; heroNode.no)&#123;</span><br><span class="line">				break;</span><br><span class="line">			&#125;else if(temp.next.no &#x3D;&#x3D; heroNode.no)&#123;</span><br><span class="line">				flag &#x3D; true;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			temp &#x3D; temp.next; &#x2F;&#x2F;后移，遍历当前链表</span><br><span class="line">		&#125;</span><br><span class="line">		if (flag)&#123;</span><br><span class="line">			System.out.printf(&quot;添加失败，排名为%d的英雄已经存在！\n&quot;,heroNode.no);</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			&#x2F;&#x2F;插入到链表中, temp的后面</span><br><span class="line">			heroNode.next &#x3D; temp.next;</span><br><span class="line">			temp.next &#x3D; heroNode;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;修改节点的信息, 根据no编号来修改，即no编号不能改.</span><br><span class="line">	&#x2F;&#x2F;说明</span><br><span class="line">	&#x2F;&#x2F;1. 根据 newHeroNode 的 no 来修改即可</span><br><span class="line">	public void update(HeroNode heroNode)&#123;</span><br><span class="line">		&#x2F;&#x2F;遍历</span><br><span class="line">		&#x2F;&#x2F;找到需要修改的节点, 根据no编号</span><br><span class="line">		&#x2F;&#x2F;定义一个辅助变量</span><br><span class="line">		HeroNode temp &#x3D; head;</span><br><span class="line">		boolean flag &#x3D; false;&#x2F;&#x2F;表示是否找到该节点</span><br><span class="line">		while (true)&#123;</span><br><span class="line">			if (temp.next &#x3D;&#x3D; null)&#123;</span><br><span class="line">				break;&#x2F;&#x2F;已经遍历完链表</span><br><span class="line">			&#125;</span><br><span class="line">			if (temp.next.no &#x3D;&#x3D; heroNode.no)&#123;</span><br><span class="line">				flag &#x3D; true;</span><br><span class="line">				break;&#x2F;&#x2F;找到</span><br><span class="line">			&#125;</span><br><span class="line">			temp &#x3D; temp.next;</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;根据flag 判断是否找到要修改的节点</span><br><span class="line">		if (flag)&#123;</span><br><span class="line">			temp.next.name &#x3D; heroNode.name;</span><br><span class="line">			temp.next.nickName &#x3D; heroNode.nickName;</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			System.out.printf(&quot;修改失败，排名为%d的不存在！\n&quot;,heroNode.no);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;删除节点</span><br><span class="line">	&#x2F;&#x2F;思路</span><br><span class="line">	&#x2F;&#x2F;1. head 不能动，因此我们需要一个temp辅助节点找到待删除节点的前一个节点</span><br><span class="line">	&#x2F;&#x2F;2. 说明我们在比较时，是temp.next.no 和  需要删除的节点的no比较</span><br><span class="line">	public void delete(int no)&#123;</span><br><span class="line">		HeroNode temp &#x3D; head;</span><br><span class="line">		boolean flag &#x3D; false; &#x2F;&#x2F; 标志是否找到待删除节点的</span><br><span class="line">		while (true)&#123;</span><br><span class="line">			if (temp.next &#x3D;&#x3D; null)&#123; &#x2F;&#x2F;已经到链表的最后</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			if (temp.next.no &#x3D;&#x3D; no)&#123;&#x2F;&#x2F;找到的待删除节点的前一个节点temp</span><br><span class="line">				flag &#x3D; true;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			temp &#x3D; temp.next; &#x2F;&#x2F;temp后移，遍历</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;判断flag</span><br><span class="line">		if (flag)&#123; &#x2F;&#x2F;找到</span><br><span class="line">			temp.next &#x3D; temp.next.next;&#x2F;&#x2F;可以删除</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			System.out.printf(&quot;修改失败，排名为%d的不存在！\n&quot;,no);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;显示链表[遍历]</span><br><span class="line">	public void list()&#123;</span><br><span class="line">		&#x2F;&#x2F;判断链表是否为空</span><br><span class="line">		if (head.next &#x3D;&#x3D; null)&#123;</span><br><span class="line">			System.out.println(&quot;链表为空，没有数据！&quot;);</span><br><span class="line">			return ;</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;因为头节点，不能动，因此我们需要一个辅助变量来遍历</span><br><span class="line">		HeroNode temp &#x3D; head;</span><br><span class="line">		while (true)&#123;</span><br><span class="line">			&#x2F;&#x2F;判断是否到链表最后</span><br><span class="line">			if (temp.next &#x3D;&#x3D; null)&#123;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			&#x2F;&#x2F;输出节点的信息</span><br><span class="line">			System.out.println(temp.next);</span><br><span class="line">			&#x2F;&#x2F;将temp后移， 一定小心</span><br><span class="line">			temp &#x3D; temp.next;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;定义HeroNode ， 每个HeroNode 对象就是一个节点</span><br><span class="line">class HeroNode &#123;</span><br><span class="line">	int no;</span><br><span class="line">	String name;</span><br><span class="line">	String nickName;</span><br><span class="line">	HeroNode next;&#x2F;&#x2F;指向下一个节点</span><br><span class="line">	&#x2F;&#x2F;构造器</span><br><span class="line">	public HeroNode(int no, String name, String nickName)&#123;</span><br><span class="line">		this.no &#x3D; no;</span><br><span class="line">		this.name &#x3D; name;</span><br><span class="line">		this.nickName &#x3D; nickName;</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;&#x2F;为了显示方法，我们重新toString</span><br><span class="line">	@Override</span><br><span class="line">	public String toString() &#123;</span><br><span class="line">		return &quot;HeroNode [no&#x3D;&quot; + no + &quot;, name&#x3D;&quot; + name + &quot;, nickName&#x3D;&quot; + nickName  + &quot;]&quot;;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>数据结构与算法</category>
+      </categories>
+      <tags>
+        <tag>数据结构与算法</tag>
+        <tag>链表</tag>
+        <tag>单链表</tag>
       </tags>
   </entry>
   <entry>
@@ -564,6 +390,218 @@
       </tags>
   </entry>
   <entry>
+    <title>01.Java语言概述</title>
+    <url>/2020/07/03/01-Java%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/</url>
+    <content><![CDATA[<h2 id="一、Java基础知识图解"><a href="#一、Java基础知识图解" class="headerlink" title="一、Java基础知识图解"></a>一、Java基础知识图解</h2><p><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/75CCFC6508AF4C9ABEAB575A1F23E569/1753" alt=""></p>
+<h2 id="二、Windows操作cmd"><a href="#二、Windows操作cmd" class="headerlink" title="二、Windows操作cmd"></a>二、Windows操作cmd</h2><h4 id="1-常用DOS命令"><a href="#1-常用DOS命令" class="headerlink" title="1. 常用DOS命令"></a>1. 常用DOS命令</h4><ul>
+<li>dir：列出当前目录下的文件及文件夹</li>
+<li>md：创建目录</li>
+<li>rd：删除目录</li>
+<li>d：进入D盘</li>
+<li>cd：进入到指定目录</li>
+<li>cd..：返回上级目录</li>
+<li>cd\：退回到根目录</li>
+<li>echo&gt;xxx.xxx：创建xxx.xxx文件</li>
+<li>echo xxx &gt;xxx.xxx：创建xxx.xxx文件并写入xxx</li>
+<li>echo &gt;xxx.xxx xxx：创建xxx.xxx文件并写入xxx</li>
+<li>del：删除文件</li>
+<li>exit：退出dos命令行即退出cmd<h4 id="2-常用快捷键"><a href="#2-常用快捷键" class="headerlink" title="2. 常用快捷键"></a>2. 常用快捷键</h4></li>
+<li>← →：移动光标</li>
+<li>↑ ↓：调阅历史操作命令</li>
+<li>Delete Backspace：删除字符<h2 id="三、Java语言"><a href="#三、Java语言" class="headerlink" title="三、Java语言"></a>三、Java语言</h2><h4 id="1-来源"><a href="#1-来源" class="headerlink" title="1. 来源"></a>1. 来源</h4>Java语言是SUN(Stanford University Network,斯坦福大学网络公司) 1995年推出的一门高级编程语言。<h4 id="2-特点"><a href="#2-特点" class="headerlink" title="2. 特点"></a>2. 特点</h4>Java语言是一种面向Internet的编程语言。Java一开始富有吸引力是因为Java程序可以在Web浏览器中运行。这些Java程序被称为Java小程序(applet)。applet使用现代的图形用户界面与Web用户进行交互。applet内嵌在HTML代码中。<h4 id="3-现状"><a href="#3-现状" class="headerlink" title="3. 现状"></a>3. 现状</h4>随着Java技术在web方面的不断成熟，已经成为Web应用程序的首选开发语言。<h4 id="4-简史"><a href="#4-简史" class="headerlink" title="4. 简史"></a>4. 简史</h4></li>
+<li>1991年Green项目，开发语言最初命名为Oak (橡树)</li>
+<li>1994年，开发组意识到Oak非常适合于互联网</li>
+<li>1996年，发布JDK 1.0，约8.3万 个网页应用Java技术来制作</li>
+<li>1997年，发布JDK 1.1，JavaOne会议召开，创当时全球同类会议规模之最</li>
+<li>1998年，发布JDK 1.2，同年发布企业平台J2EE</li>
+<li>1999年，Java分成J2SE、J2EE和J2ME，JSP/Servlet技 术诞生</li>
+<li>2004年，发布里程碑式版本: JDK 1.5，为突出此版本的重要性，更名为JDK 5.0</li>
+<li>2005年，J2SE -&gt; JavaSE，J2EE -&gt; JavaEE, J2ME -&gt; JavaME</li>
+<li>2009年，Oracle公司收购SUN，交易价格74亿美元</li>
+<li>2011年，发布JDK 7.0</li>
+<li>2014年，发布JDK 8.0，是继JDK 5.0以来变化最大的版本</li>
+<li>2017年，发布JDK 9.0，最大限度实现模块化</li>
+<li>2018年3月，发布JDK 10.0，版本号也称为18.3</li>
+<li>2018年9月，发布JDK 11.0，版本号也称为18.9<h4 id="5-Java语言的诞生"><a href="#5-Java语言的诞生" class="headerlink" title="5. Java语言的诞生"></a>5. Java语言的诞生</h4></li>
+<li>java之父James Gosl ing团队在开发”Green”项目时，发现c缺少垃圾回收系统，还有可移植的安全性、分布程序设计和多线程功能。最后，他们想要一种易于移植到各种设备上的平台。</li>
+<li>Java确实是从c语言和C++语言继承了许多成份，甚至可以将Java看成是类c语言发展和衍生的产物。比如Java语言的变量声明，操作符形式，参数传递，流程控制等方面和C语言、C++语言完全相同。但同时，Java是一个纯粹的面向对象的程序设计语言，它继承了C++语言面向对象技术的核心。Java舍弃了c语言中容易引起错误的指针(以引用取代)、运算符重载(operator overloading)、多重继承<br>(以接口取代)等特性，增加了垃圾回收器功能用于回收不再被引用的对象所占据的内存空间。JDK1.5又引入了泛型编程(GenericProgramming)、类型安全的枚举、不定长参数和自动装/拆箱<h4 id="6-Java的主要特性"><a href="#6-Java的主要特性" class="headerlink" title="6. Java的主要特性"></a>6. Java的主要特性</h4></li>
+<li><h5 id="Java语言是易学的"><a href="#Java语言是易学的" class="headerlink" title="Java语言是易学的"></a>Java语言是易学的</h5>  Java语言的语法与c语言和C++语言很接近，使得大多数程序员很容易学习和使用Java。</li>
+<li><h5 id="Java语言是强制面向对象的"><a href="#Java语言是强制面向对象的" class="headerlink" title="Java语言是强制面向对象的"></a>Java语言是强制面向对象的</h5>  Java语言提供类、接口和继承等原语，为了简单起见，只支持类之间的单继承，但支持接口之间的多继承，并支持类与接口之间的实现机制<br>(关键字为implements)。</li>
+<li><h5 id="Java语言是分布式的"><a href="#Java语言是分布式的" class="headerlink" title="Java语言是分布式的"></a>Java语言是分布式的</h5>  Java语 言支持Internet应用的开发，在基本的Java应用编程接口中有一个网络应用编程接口(java net) ，它提供了用于网络应用编程的类<br>库，包括URL、URLConnection、 Socket、 ServerSocket等。 Java 的RMI (远程<br>方法激活)机制也是开发分布式应用的重要手段。</li>
+<li><h5 id="Java语言是健壮的"><a href="#Java语言是健壮的" class="headerlink" title="Java语言是健壮的"></a>Java语言是健壮的</h5>  Java的强类型机制、异常处理、垃圾的自动收集等是Java程序健壮性的重要保证。对指针的丢弃是Java的明智选择。</li>
+<li><h5 id="Java语言是安全的"><a href="#Java语言是安全的" class="headerlink" title="Java语言是安全的"></a>Java语言是安全的</h5>  Java通常被用在网络环境中，为此，Java提供了一个安全机制以防恶意代码的攻击。如:安全防范机制(类ClassLoader)，如分配不同的名字空间以防替代本地的同名类、字节代码检查。</li>
+<li><h5 id="Java语言是体系结构中立的"><a href="#Java语言是体系结构中立的" class="headerlink" title="Java语言是体系结构中立的"></a>Java语言是体系结构中立的</h5>  Java程序(后缀为java的文件)在Java平台上被<br>编译为体系结构中立的字节码格式(后缀为class的文件)，然后可以在实现这个</li>
+<li><h5 id="Java平台的任何系统中运行"><a href="#Java平台的任何系统中运行" class="headerlink" title="Java平台的任何系统中运行"></a>Java平台的任何系统中运行</h5>  Java语言是解释型的。如前所述，Java程序在Java平台上被编译为字节码格式，然后可以在实现这个Java平台的任何系统的解释器中运行。</li>
+<li><h5 id="Java是性能略高的"><a href="#Java是性能略高的" class="headerlink" title="Java是性能略高的"></a>Java是性能略高的</h5>  与那些解释型的高级脚本语言相比，Java的性能还是较优的。</li>
+<li><h5 id="Java语言是原生支持多线程的"><a href="#Java语言是原生支持多线程的" class="headerlink" title="Java语言是原生支持多线程的"></a>Java语言是原生支持多线程的</h5>  在Java语言中，线程是一-种特殊的对象，它必须<br>由Thread类或其子(孙)类来创建。</li>
+</ul>
+<h4 id="7-Java技术平台"><a href="#7-Java技术平台" class="headerlink" title="7. Java技术平台"></a>7. Java技术平台</h4><ul>
+<li><h5 id="Java-SE-Java-Standard-Edition-标准版"><a href="#Java-SE-Java-Standard-Edition-标准版" class="headerlink" title="Java SE(Java Standard Edition)标准版"></a>Java SE(Java Standard Edition)标准版</h5>  支持面向桌面级应用(如Windows’下的应用程序)的Java平台，提供了完整的Java核心API，此版本以前称为J2SE</li>
+<li><h5 id="Java-EE-Java-Enterprise-Edition-企业版"><a href="#Java-EE-Java-Enterprise-Edition-企业版" class="headerlink" title="Java EE(Java Enterprise Edition)企业版"></a>Java EE(Java Enterprise Edition)企业版</h5>  是为开发企业环境下的应用程序提供的一套解决方案。该技术体系中包含的技术如:Servlet、Jsp等 ,主要针对于Web应用程序开发。版本以前称为J2EE<h4 id="8-Java应用领域"><a href="#8-Java应用领域" class="headerlink" title="8.Java应用领域"></a>8.Java应用领域</h4>从Java的应用领域来分，Java语言的应用方向主要表现在以下几个方面:</li>
+<li><h5 id="企业级应用"><a href="#企业级应用" class="headerlink" title="企业级应用"></a>企业级应用</h5>  主要指复杂的大企业的软件系统、各种类型的网站。Java的安全机制以及它的跨平台的优势，使它在分布式系统领域开发中有广泛应用。应用领域包括金融、电信、交通、电子商务等。</li>
+<li><h5 id="Android平台应用"><a href="#Android平台应用" class="headerlink" title="Android平台应用"></a>Android平台应用</h5>  Android应用程序使用Java语言编写。Android开发水平的高低很大程度上取决于Java语言核心能力是否扎实。</li>
+<li><h5 id="大数据平台开发"><a href="#大数据平台开发" class="headerlink" title="大数据平台开发"></a>大数据平台开发</h5>  各类框架有Hadoop, spark, storm,flink等，就这类技术生态圈来讲，还有各种中间件如flume, kafka, sqoop等等 ，这些框架以及工具大多数是用Java编写而成，但提供诸如Java, sscala,Python,R等各种语言API供编程。</li>
+<li><h5 id="移动领域应用"><a href="#移动领域应用" class="headerlink" title="移动领域应用"></a>移动领域应用</h5>  主要表现在消费和嵌入式领域，是指在各种小型设备上的应用，包括手机、PDA、机顶盒、汽车通信设备等。<h2 id="四、Java语言运行机制及运行过程"><a href="#四、Java语言运行机制及运行过程" class="headerlink" title="四、Java语言运行机制及运行过程"></a>四、Java语言运行机制及运行过程</h2></li>
+</ul>
+<ol>
+<li><h4 id="Java语言特点"><a href="#Java语言特点" class="headerlink" title="Java语言特点"></a>Java语言特点</h4><ol>
+<li><h5 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h5><ul>
+<li>两个基本概念：类、对象</li>
+<li>三大特性：封装、继承、多肽</li>
+</ul>
+</li>
+<li><h5 id="健壮性"><a href="#健壮性" class="headerlink" title="健壮性"></a>健壮性</h5><ul>
+<li>吸收了C/C++语言的优点，但是去掉了其影响程序健壮性的部分（如指针、内存的申请与释放等），提供一个相对安全的内存管理和访问机制</li>
+</ul>
+</li>
+<li><h5 id="跨平台性"><a href="#跨平台性" class="headerlink" title="跨平台性"></a>跨平台性</h5><ul>
+<li>跨平台性：通过Java语言编程的应用程序在不同平台上都可以运行。“Write once，Run Anywhere”</li>
+<li>原理:只要在需要运行java应用程序的操作系统上，先安装一个Java虚拟机(Java Virtual Machine)即可。由JVM来负责Java程序在该系统中的运行。<br><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/66425C3F4D6C4416AA35914AF5BDF473/2003" alt=""></li>
+</ul>
+</li>
+</ol>
+</li>
+<li><h4 id="Java两种核心机制"><a href="#Java两种核心机制" class="headerlink" title="Java两种核心机制"></a>Java两种核心机制</h4></li>
+</ol>
+<ul>
+<li>Java虚拟机（Java Virtual Machine）</li>
+<li>垃圾收集机制（Garbage Collection）</li>
+</ul>
+<ol start="3">
+<li><h4 id="核心机制——Java虚拟机"><a href="#核心机制——Java虚拟机" class="headerlink" title="核心机制——Java虚拟机"></a>核心机制——Java虚拟机</h4></li>
+</ol>
+<ul>
+<li>JVM是一个虚拟的计算机，具有指令集并使用不同的存储区域。负责执行指令，管理数据、内存、寄存器。<br><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/30FFBBDE8BCE487E84A1E54933064199/2047" alt=""></li>
+<li>对于不同的平台，有不同的虚拟机。</li>
+<li>只有某平台提供了对应的java虚拟机，java程序才可在此平台运行</li>
+<li>Java虛拟机机制屏蔽了底层运行平台的差别，实现了“一次编译，到处运行”<br><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/21C50C05C06B404E8E09614FC5433A48/2049" alt=""></li>
+</ul>
+<ol start="4">
+<li><h4 id="核心机制——垃圾回收"><a href="#核心机制——垃圾回收" class="headerlink" title="核心机制——垃圾回收"></a>核心机制——垃圾回收</h4></li>
+</ol>
+<ul>
+<li><p>不再使用的内存空间应回收一垃圾回收。</p>
+<ul>
+<li>在C/C++等语言中，由程序员负责回收无用内存。</li>
+<li>Java语言消除了程序员回收无用内存空间的责任:它提供一种系统级线程跟踪存储空间的分配情况。并在JVM空闲时，检查并释放那些可被释放的存储空间。</li>
+</ul>
+</li>
+<li><p>垃圾回收在Java程序运行过程中自动进行，程序员无法精确控制和干预。</p>
+</li>
+<li><p>Java程序还会出现内存泄漏和内存溢出问题吗?会!</p>
+<h2 id="五、Java语言的环境搭建"><a href="#五、Java语言的环境搭建" class="headerlink" title="五、Java语言的环境搭建"></a>五、Java语言的环境搭建</h2></li>
+<li><h4 id="JDK-Java-Development-Kit-Java开发工具包"><a href="#JDK-Java-Development-Kit-Java开发工具包" class="headerlink" title="JDK(Java Development Kit Java开发工具包)"></a>JDK(Java Development Kit Java开发工具包)</h4><p>  JDK是提供给Java开发人员使用的，其中包含了java的开发工具，也包括了JRE。所以安装了JDK，就不用在单独安装JRE了。</p>
+<h5 id="其中的开发工具"><a href="#其中的开发工具" class="headerlink" title="其中的开发工具:"></a>其中的开发工具:</h5><ul>
+<li>译工具(javac.exe)</li>
+<li>打包工具(jar.exe)等</li>
+</ul>
+</li>
+<li><h4 id="JRE-Java-Runtime-Environment-Java运-行环境"><a href="#JRE-Java-Runtime-Environment-Java运-行环境" class="headerlink" title="JRE(Java Runtime Environment Java运 行环境)"></a>JRE(Java Runtime Environment Java运 行环境)</h4><p>  包括Java虛拟机(JVM Java Virtual Machine)和Java程序所需的核心类库等，如果想要运行一个开发好的Java程序，计算机中只需要安装JRE即可。</p>
+</li>
+<li><h4 id="JDK、JRE、JVM的关系"><a href="#JDK、JRE、JVM的关系" class="headerlink" title="JDK、JRE、JVM的关系"></a>JDK、JRE、JVM的关系</h4><p>  <img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/BFAF4FD048524CA3807B138AF3C45CC4/2085" alt=""><br>  <img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/B08C7243C65E43B4B016B553FAA3B5EC/2087" alt=""></p>
+</li>
+<li><h4 id="JDK安装"><a href="#JDK安装" class="headerlink" title="JDK安装"></a>JDK安装</h4><p>  <img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/63C95BA1A3F84F2D8ADBAE374CB8DBEE/2095" alt=""><br>  <img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/0288F0463E9A413980DEDF37C6567413/2097" alt=""></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>02.数据结构-稀疏sparsearray数组</title>
+    <url>/2020/07/04/02-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%A8%80%E7%96%8Fsparsearray%E6%95%B0%E7%BB%84/</url>
+    <content><![CDATA[<h2 id="稀疏sparsearray数组"><a href="#稀疏sparsearray数组" class="headerlink" title="稀疏sparsearray数组"></a>稀疏sparsearray数组</h2><ol>
+<li><h4 id="先看一个实际的需求"><a href="#先看一个实际的需求" class="headerlink" title="先看一个实际的需求"></a>先看一个实际的需求</h4><ul>
+<li>编写的五子棋程序中，有存盘退出和续上盘的功能。<br><img src="https://note.youdao.com/yws/public/resource/03d703e92a974f5336caf854bb9b1235/xmlnote/3F48A45D21D64CCE9BD81A06201A6EA4/2296" alt=""></li>
+<li>分析问题: 因为该二维数组的很多值是默认值0, 因此记录了很多没有意义的数据→稀疏数组。</li>
+</ul>
+</li>
+<li><h4 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h4><p> 当一个数组中大部分元素为０，或者为同一个值的数组时，可以使用稀疏数组来保存该数组。</p>
+<h5 id="稀疏数组的处理方法是"><a href="#稀疏数组的处理方法是" class="headerlink" title="稀疏数组的处理方法是:"></a>稀疏数组的处理方法是:</h5><ol>
+<li>记录数组一共有几行几列，有多少个不同的值</li>
+<li>把具有不同值的元素的行列及值记录在一个小规模的数组中，从而缩小程序的规模<h5 id="稀疏数组举例说明"><a href="#稀疏数组举例说明" class="headerlink" title="稀疏数组举例说明"></a>稀疏数组举例说明</h5><img src="https://note.youdao.com/yws/public/resource/03d703e92a974f5336caf854bb9b1235/xmlnote/B47D7A9A53B4448A93AD74AE279D5166/2307" alt=""><br><img src="https://note.youdao.com/yws/public/resource/03d703e92a974f5336caf854bb9b1235/xmlnote/6A7B70B908D6409DB8CD98116CC73D04/2309" alt=""></li>
+</ol>
+</li>
+<li><h4 id="应用实例"><a href="#应用实例" class="headerlink" title="应用实例"></a>应用实例</h4><ul>
+<li><p>使用稀疏数组，来保留类似前面的二维数组(棋盘、地图等等)</p>
+</li>
+<li><p>把稀疏数组存盘，并且可以从新恢复原来的二维数组数</p>
+</li>
+<li><p>整体思路分析<br><img src="https://note.youdao.com/yws/public/resource/03d703e92a974f5336caf854bb9b1235/xmlnote/186FB0433BE047EDBF03D879F2EBA82C/2326" alt=""></p>
+</li>
+<li><p>二维数组 转 稀疏数组的思路</p>
+<ol>
+<li>遍历  原始的二维数组，得到有效数据的个数 sum</li>
+<li>根据sum 就可以创建 稀疏数组 sparseArr   int[sum + 1] [3]</li>
+<li>将二维数组的有效数据数据存入到 稀疏数组</li>
+</ol>
+</li>
+<li><p>稀疏数组转原始的二维数组的思路</p>
+<ol>
+<li>先读取稀疏数组的第一行，根据第一行的数据，创建原始的二维数组，比如上面的  chessArr2 = int [11][11]</li>
+<li>在读取稀疏数组后几行的数据，并赋给 原始的二维数组 即可.</li>
+</ol>
+</li>
+<li><p>代码实现</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.wzx.sparsearray;</span><br><span class="line"></span><br><span class="line">public class SparseArray &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		&#x2F;&#x2F; 创建11*11的二维数组</span><br><span class="line">		int[][] chessArr1&#x3D;new int[11][11];</span><br><span class="line">		&#x2F;&#x2F; 0代表没有棋子，1代表黑子，2代表蓝子</span><br><span class="line">		chessArr1[1][2]&#x3D;1;</span><br><span class="line">		chessArr1[2][3]&#x3D;2;</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F; 输出原始二维数组chessArr1</span><br><span class="line">		System.out.println(&quot;输出原始的二维数组chessArr1&quot;);</span><br><span class="line">		for (int[] row : chessArr1)&#123;</span><br><span class="line">			for (int data : row)&#123;</span><br><span class="line">				System.out.printf(&quot;%d\t&quot;, data);</span><br><span class="line">			&#125;</span><br><span class="line">			System.out.println();</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F; 将二维数组 转 稀疏数组</span><br><span class="line">		&#x2F;&#x2F; 遍历chessArr1  非0数据的个数计为sum</span><br><span class="line">		int sum&#x3D;0;</span><br><span class="line">		for (int i &#x3D; 0; i &lt; chessArr1.length; i++)&#123;</span><br><span class="line">			for(int j &#x3D; 0;j &lt; chessArr1.length; j++)&#123;</span><br><span class="line">				if(chessArr1[i][j] !&#x3D; 0)&#123;</span><br><span class="line">					sum++;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F; 输出sum</span><br><span class="line">		System.out.println(&quot;sum&#x3D;&quot;+sum);</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F; 创建稀疏数组</span><br><span class="line">		int[][] sparseArr &#x3D; new int[sum+1][3];</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F; 给稀疏数组赋值</span><br><span class="line">		sparseArr[0][0] &#x3D; 11;</span><br><span class="line">		sparseArr[0][1] &#x3D; 11;</span><br><span class="line">		sparseArr[0][2] &#x3D; sum;</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F; 遍历原始二维数组，将非0的值存放到 sparseArr中</span><br><span class="line">		int count &#x3D; 0; &#x2F;&#x2F;count 用于记录是第几个非0数据</span><br><span class="line">		for (int i &#x3D; 0; i &lt; 11; i++)&#123;</span><br><span class="line">			for (int j &#x3D; 0; j &lt; 11; j++)&#123;</span><br><span class="line">				if (chessArr1[i][j] !&#x3D;0 )&#123;</span><br><span class="line">					count++;</span><br><span class="line">					sparseArr[count][0] &#x3D; i;</span><br><span class="line">					sparseArr[count][1] &#x3D; j;</span><br><span class="line">					sparseArr[count][2] &#x3D; chessArr1[i][j];</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F; 输出稀疏数组</span><br><span class="line">		System.out.println(&quot;得到稀疏数组为~~~~&quot;);</span><br><span class="line">		for (int[] row : sparseArr)&#123;</span><br><span class="line">			for (int data : row)&#123;</span><br><span class="line">				System.out.printf(&quot;%d\t&quot;, data);</span><br><span class="line">			&#125;</span><br><span class="line">			System.out.println();</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F; 将稀疏数组 --》 恢复成 原始的二维数组</span><br><span class="line">		&#x2F;*</span><br><span class="line">		 *  1. 先读取稀疏数组的第一行，根据第一行的数据，创建原始的二维数组，比如上面的  chessArr2 &#x3D; int [11][11]</span><br><span class="line">			2. 在读取稀疏数组后几行的数据，并赋给 原始的二维数组 即可.</span><br><span class="line">		 *&#x2F;</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;1. 先读取稀疏数组的第一行，根据第一行的数据，创建原始的二维数组</span><br><span class="line">		int[][] chessArr2 &#x3D; new int[sparseArr[0][0]][sparseArr[0][1]];</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;2. 在读取稀疏数组后几行的数据(从第二行开始)，并赋给 原始的二维数组 即可</span><br><span class="line">		for (int i &#x3D; 1; i &lt; sparseArr.length; i++)&#123;</span><br><span class="line">			chessArr2[sparseArr[1][0]][sparseArr[i][1]] &#x3D; sparseArr[i][2];</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F; 输出原始二维数组chessArr2</span><br><span class="line">		System.out.println(&quot;恢复后的二维数组chessArr2&quot;);</span><br><span class="line">		for (int[] row : chessArr2)&#123;</span><br><span class="line">			for (int data : row)&#123;</span><br><span class="line">				System.out.printf(&quot;%d\t&quot;, data);</span><br><span class="line">			&#125;</span><br><span class="line">			System.out.println();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>数据结构与算法</category>
+      </categories>
+      <tags>
+        <tag>数据结构与算法</tag>
+        <tag>稀疏数组</tag>
+        <tag>sparsearray</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>03.Java基础知识-HelloWorld</title>
+    <url>/2020/07/03/03-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-HelloWorld/</url>
+    <content><![CDATA[<h2 id="一、开发步骤"><a href="#一、开发步骤" class="headerlink" title="一、开发步骤"></a>一、开发步骤</h2><ol>
+<li><h5 id="将Java代码编写到扩展名为-java的文件中"><a href="#将Java代码编写到扩展名为-java的文件中" class="headerlink" title="将Java代码编写到扩展名为.java的文件中"></a>将Java代码编写到扩展名为.java的文件中</h5></li>
+<li><h5 id="通过javac命令对该java文件进行编译。"><a href="#通过javac命令对该java文件进行编译。" class="headerlink" title="通过javac命令对该java文件进行编译。"></a>通过javac命令对该java文件进行编译。</h5></li>
+<li><h5 id="通过java命令对生成的class文件进行运行"><a href="#通过java命令对生成的class文件进行运行" class="headerlink" title="通过java命令对生成的class文件进行运行"></a>通过java命令对生成的class文件进行运行</h5><h2 id="二、步骤一：编写"><a href="#二、步骤一：编写" class="headerlink" title="二、步骤一：编写"></a>二、步骤一：编写</h2></li>
+</ol>
+<ul>
+<li>选择最简单的编辑器:记事本。敲入代码  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Test&#123; &#125;</span><br></pre></td></tr></table></figure></li>
+<li>将文件保存成Test.java,这个文件是存放java代码的文件，称为源文件。</li>
+<li>注意拓展名是否隐藏<br><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/346939038BBD427ABBFB641BF569B224/2202" alt=""><h2 id="三、步骤二：编译"><a href="#三、步骤二：编译" class="headerlink" title="三、步骤二：编译"></a>三、步骤二：编译</h2><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/5A68EBF692DE4587804070655058A42F/2229" alt=""></li>
+<li>有了java源文件，通过编译器将其编译成JVM可以识别的字节码文件。</li>
+<li>在该源文件目录下，通过javac编译工具对Test.java文件进行编译。</li>
+<li>如果程序没有错误，没有任何提示，但在当前目录下会出现一个Test.class文件，该文件称为字节码文件，也是可以执行的java的程序。<h2 id="四、步骤三：运行"><a href="#四、步骤三：运行" class="headerlink" title="四、步骤三：运行"></a>四、步骤三：运行</h2></li>
+<li>有了可执行的java程序(Test.class字节码文件)</li>
+<li>通过运行工具java.exe对字节码文件进行执行。</li>
+<li>出现提示:缺少一个名称为main的方法。<br><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/A2FABB30A9974F52A7EFCD555CF04898/2231" alt=""></li>
+<li>因为一个程序的执行需要-一个起始点或者入口，所以在Test类中的加入  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public static void</span><br><span class="line">main(String] args)&#123; &#125;</span><br></pre></td></tr></table></figure></li>
+<li>对修改后的Test.java源文件需要重新编译，生成新的class文件后，再进行执行。</li>
+<li>发现没有编译失败，但也没有任何效果，因为并没有告诉JVM要帮我们做什么事情，也就是没有可以具体执行的语句。</li>
+<li>想要和JVM来个互动，只要在main方法中加入一句  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">System.out.printn(&quot;Hello World&quot;);</span><br></pre></td></tr></table></figure></li>
+<li>因为程序进行改动，所以再重新编译，运行即可。<h2 id="五、总结"><a href="#五、总结" class="headerlink" title="五、总结"></a>五、总结</h2></li>
+<li>学习编程最容易犯的错是语法错误。</li>
+<li>Java要求你必须按照语法规则编写代码。</li>
+<li>如果你的程序违反了语法规则。例如:忘记了分号、大括号、引号，或者拼错了单词，java编译器都会报语法错误。</li>
+<li>尝试着去看懂编译器会报告的错误信息。</li>
+</ul>
+<p><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/B5F7F7C478644F4A9C740EAC4852D842/2233" alt=""><br><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/B48B4B0D63C548A1B1F0843F634B2F1B/2235" alt=""></p>
+<h2 id="六、代码示例"><a href="#六、代码示例" class="headerlink" title="六、代码示例"></a>六、代码示例</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;*</span><br><span class="line">对第一个java程序进行总结</span><br><span class="line">1. java程序编写-编译-运行的过程</span><br><span class="line">编写：我们将编写的java代码保存在以&quot;.java&quot;结尾的源文件中</span><br><span class="line">编译：使用javac.exe命令编译我们的java源文件。格式：javac 源文件名.java</span><br><span class="line">运行：使用java.exe命令解释运行我们的字节码文件。 格式：java 类名</span><br><span class="line"></span><br><span class="line">2.</span><br><span class="line">在一个java源文件中可以声明多个class。但是，只能最多有一个类声明为public的。</span><br><span class="line">而且要求声明为public的类的类名必须与源文件名相同。</span><br><span class="line"></span><br><span class="line">3. 程序的入口是main()方法。格式是固定的。</span><br><span class="line"></span><br><span class="line">4. 输出语句：</span><br><span class="line">System.out.println():先输出数据，然后换行</span><br><span class="line">System.out.print():只输出数据</span><br><span class="line"></span><br><span class="line">5.每一行执行语句都以&quot;;&quot;结束。</span><br><span class="line"></span><br><span class="line">6.编译的过程：编译以后，会生成一个或多个字节码文件。字节码文件的文件名与java源文件中的类名相同。</span><br><span class="line"></span><br><span class="line">*&#x2F;</span><br><span class="line">public class Hello &#123;</span><br><span class="line">	public static void main(String[] args) &#123;&#x2F;&#x2F;public static void main(String a[]) &#123;&#x2F;&#x2F;arguments:参数</span><br><span class="line">		System.out.print(&quot;Hello World!&quot;);</span><br><span class="line">		System.out.println();&#x2F;&#x2F;换行</span><br><span class="line">		System.out.println(&quot;Hello World!&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Person&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Animal&#123;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>GitHub&amp;Git基础</title>
     <url>/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<h2 id="1-概述与目的"><a href="#1-概述与目的" class="headerlink" title="1.概述与目的"></a>1.概述与目的</h2><ol>
@@ -657,6 +695,12 @@
       </tags>
   </entry>
   <entry>
+    <title>图片处理</title>
+    <url>/2020/07/01/%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86/</url>
+    <content><![CDATA[<p><img src="https://note.youdao.com/yws/public/resource/c787d7b896281d5ba673d153aafef5fd/xmlnote/6C868E73909342698065B61509E7587A/1687" alt=""></p>
+]]></content>
+  </entry>
+  <entry>
     <title>Hexo搭建博客及使用</title>
     <url>/2020/07/01/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%8F%8A%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h3 id="一般使用"><a href="#一般使用" class="headerlink" title="一般使用"></a>一般使用</h3><h5 id="1-新建文章"><a href="#1-新建文章" class="headerlink" title="1. 新建文章"></a>1. 新建文章</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo n &quot;blogname&quot;</span><br></pre></td></tr></table></figure>
@@ -714,11 +758,5 @@
       <tags>
         <tag>SSM文件上传</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>图片处理</title>
-    <url>/2020/07/01/%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86/</url>
-    <content><![CDATA[<p><img src="https://note.youdao.com/yws/public/resource/c787d7b896281d5ba673d153aafef5fd/xmlnote/6C868E73909342698065B61509E7587A/1687" alt=""></p>
-]]></content>
   </entry>
 </search>

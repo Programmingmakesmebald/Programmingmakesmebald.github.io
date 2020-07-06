@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hans" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>04.数据结构-链表 - 秃头小王子</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="秃头小王子的个人博客,一、链表(Linked List)介绍链表是有序的列表，但是它在内存中是存储如下
+
+上图小结:
+
+链表是以节点的方式来存储,是链式存储
+每个节点包含 data 域， next 域：指向下一个节点.
+,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="秃头小王子" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">秃头小王子</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://yoursite.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">04.数据结构-链表</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">04.数据结构-链表</h1>
+        <div class="stuff">
+            <span>七月 06, 2020</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E5%8D%95%E9%93%BE%E8%A1%A8/" rel="tag">单链表</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" rel="tag">数据结构与算法</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E9%93%BE%E8%A1%A8/" rel="tag">链表</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h2 id="一、链表-Linked-List-介绍"><a href="#一、链表-Linked-List-介绍" class="headerlink" title="一、链表(Linked List)介绍"></a>一、链表(Linked List)介绍</h2><p>链表是有序的列表，但是它在内存中是存储如下</p>
+<p><img src="https://note.youdao.com/yws/public/resource/03d703e92a974f5336caf854bb9b1235/xmlnote/4A295CFAD3F2421880E806EC6FCFE775/2630" alt=""></p>
+<p><strong>上图小结:</strong></p>
+<ul>
+<li>链表是以节点的方式来存储,是链式存储</li>
+<li>每个节点包含 data 域， next 域：指向下一个节点.</li>
+<li>如图：发现链表的各个节点不一定是连续存储.</li>
+<li>链表分带头节点的链表和没有头节点的链表，根据实际的需求来确定<ul>
+<li>单链表(带头结点) 逻辑结构示意图如下<br><img src="https://note.youdao.com/yws/public/resource/03d703e92a974f5336caf854bb9b1235/xmlnote/08F9F6D94B834BA9B033CB21AD21B1A6/2633" alt=""><h2 id="二、单链表的应用实例"><a href="#二、单链表的应用实例" class="headerlink" title="二、单链表的应用实例"></a>二、单链表的应用实例</h2>使用带 head 头的单向链表实现–水浒英雄排行榜管理完成对英雄人物的增删改查操作。<br><img src="https://note.youdao.com/yws/public/resource/03d703e92a974f5336caf854bb9b1235/xmlnote/E72DB7DE64D148A5AC84681FC422D26D/2635" alt=""></li>
+</ul>
+</li>
+</ul>
+<ol>
+<li><p>第一种方法在添加英雄时，直接添加到链表的尾部<br>思路分析示意图:<br><img src="https://note.youdao.com/yws/public/resource/03d703e92a974f5336caf854bb9b1235/xmlnote/59C578F8271F4A88B7DB55676D5E5525/2637" alt=""></p>
+</li>
+<li><p>第二种方式在添加英雄时，根据排名将英雄插入到指定位置(如果有这个排名，则添加失败，并给出提示)<br>思路的分析示意图:<br><img src="https://note.youdao.com/yws/public/resource/03d703e92a974f5336caf854bb9b1235/xmlnote/84E8198F8E5B4AEA8FC9EDEB67AEF946/2639" alt=""></p>
+</li>
+<li><p>修改节点功能<br>思路<br>先找到该节点，通过遍历</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">temp.name &#x3D; newHeroNode.name ;</span><br><span class="line">temp.nickname&#x3D; newHeroNode.nickname</span><br></pre></td></tr></table></figure></li>
+<li><p>删除节点<br>思路分析的示意图:<br><img src="https://note.youdao.com/yws/public/resource/03d703e92a974f5336caf854bb9b1235/xmlnote/3C029D923C8147359D44CD762C9904A2/2641" alt=""></p>
+</li>
+<li><p>代码演示:</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br></pre></td><td class="code"><pre><span class="line">package com.wzx.linkedlist;</span><br><span class="line"></span><br><span class="line">public class SingleLinkedListDemo &#123;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		&#x2F;&#x2F;创建一个链表</span><br><span class="line">		SingleLinkedList singlelinkedList &#x3D; new SingleLinkedList();</span><br><span class="line">		HeroNode h1 &#x3D; new HeroNode(1,&quot;宋江&quot;,&quot;及时雨&quot;);</span><br><span class="line">		HeroNode h2 &#x3D; new HeroNode(2,&quot;吴用&quot;,&quot;智多星&quot;);</span><br><span class="line">		HeroNode h3 &#x3D; new HeroNode(3,&quot;卢俊义&quot;,&quot;玉麒麟&quot;);</span><br><span class="line">		HeroNode h4 &#x3D; new HeroNode(4,&quot;林冲&quot;,&quot;豹子头&quot;);</span><br><span class="line">		singlelinkedList.list();</span><br><span class="line">		&#x2F;&#x2F;直接添加无排序</span><br><span class="line">&#x2F;&#x2F;		singlelinkedList.add(h1);</span><br><span class="line">&#x2F;&#x2F;		singlelinkedList.add(h2);</span><br><span class="line">&#x2F;&#x2F;		singlelinkedList.add(h3);</span><br><span class="line">&#x2F;&#x2F;		singlelinkedList.add(h4);</span><br><span class="line">		&#x2F;&#x2F;按排名添加</span><br><span class="line">		singlelinkedList.addByOrder(h3);</span><br><span class="line">		singlelinkedList.addByOrder(h2);</span><br><span class="line">		singlelinkedList.addByOrder(h4);</span><br><span class="line">		singlelinkedList.addByOrder(h1);</span><br><span class="line">		singlelinkedList.list();</span><br><span class="line">		&#x2F;&#x2F;修改</span><br><span class="line">		System.out.println(&quot;修改豹子头林冲&quot;);</span><br><span class="line">		HeroNode h5 &#x3D; new HeroNode(4,&quot;林冲~~~&quot;,&quot;豹子头~~~&quot;);</span><br><span class="line">		singlelinkedList.update(h5);</span><br><span class="line">		singlelinkedList.list();</span><br><span class="line">		&#x2F;&#x2F;删除</span><br><span class="line">		System.out.println(&quot;删除豹子头林冲&quot;);</span><br><span class="line">		singlelinkedList.delete(1);</span><br><span class="line">		singlelinkedList.delete(2);</span><br><span class="line">		singlelinkedList.delete(3);</span><br><span class="line">		singlelinkedList.delete(4);</span><br><span class="line">		singlelinkedList.list();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;定义SingleLinkedList 管理我们的英雄</span><br><span class="line">class SingleLinkedList&#123;</span><br><span class="line">	&#x2F;&#x2F;先初始化一个头节点, 头节点不要动, 不存放具体的数据</span><br><span class="line">	private HeroNode head &#x3D; new HeroNode(0,&quot;&quot;,&quot;&quot;);</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;添加节点到单向链表</span><br><span class="line">	&#x2F;&#x2F;思路，当不考虑编号顺序时</span><br><span class="line">	&#x2F;&#x2F;1. 找到当前链表的最后节点</span><br><span class="line">	&#x2F;&#x2F;2. 将最后这个节点的next 指向 新的节点</span><br><span class="line">	public void add(HeroNode heroNode)&#123;</span><br><span class="line">		&#x2F;&#x2F;因为head节点不能动，因此我们需要一个辅助遍历 temp</span><br><span class="line">		HeroNode temp &#x3D; head;</span><br><span class="line">		&#x2F;&#x2F;遍历链表，找到最后</span><br><span class="line">		while (true) &#123;</span><br><span class="line">			&#x2F;&#x2F;找到链表的最后</span><br><span class="line">			if (temp.next &#x3D;&#x3D; null)&#123;&#x2F;&#x2F;遍历结束</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			&#x2F;&#x2F;如果没有找到最后, 将将temp后移</span><br><span class="line">			temp &#x3D; temp.next;</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;当退出while循环时，temp就指向了链表的最后</span><br><span class="line">		&#x2F;&#x2F;将最后这个节点的next 指向 新的节点</span><br><span class="line">		temp.next &#x3D; heroNode;</span><br><span class="line">&#x2F;&#x2F;		System.out.println(&quot;添加成功&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;第二种方式在添加英雄时，根据排名将英雄插入到指定位置</span><br><span class="line">	&#x2F;&#x2F;(如果有这个排名，则添加失败，并给出提示)</span><br><span class="line">	public void addByOrder(HeroNode heroNode)&#123;</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;因为头节点不能动，因此我们仍然通过一个辅助指针(变量)来帮助找到添加的位置</span><br><span class="line">		&#x2F;&#x2F;因为单链表，因为我们找的temp 是位于 添加位置的前一个节点，否则插入不了</span><br><span class="line">		HeroNode temp &#x3D; head;</span><br><span class="line">		boolean flag &#x3D; false;&#x2F;&#x2F; flag标志添加的编号是否存在，默认为false</span><br><span class="line">		while (true)&#123;</span><br><span class="line">			&#x2F;&#x2F;判断是否到链表最后</span><br><span class="line">			if (temp.next &#x3D;&#x3D; null)&#123;</span><br><span class="line">				break ;</span><br><span class="line">			&#125;</span><br><span class="line">			if (temp.next.no &gt; heroNode.no)&#123;</span><br><span class="line">				break;</span><br><span class="line">			&#125;else if(temp.next.no &#x3D;&#x3D; heroNode.no)&#123;</span><br><span class="line">				flag &#x3D; true;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			temp &#x3D; temp.next; &#x2F;&#x2F;后移，遍历当前链表</span><br><span class="line">		&#125;</span><br><span class="line">		if (flag)&#123;</span><br><span class="line">			System.out.printf(&quot;添加失败，排名为%d的英雄已经存在！\n&quot;,heroNode.no);</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			&#x2F;&#x2F;插入到链表中, temp的后面</span><br><span class="line">			heroNode.next &#x3D; temp.next;</span><br><span class="line">			temp.next &#x3D; heroNode;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;修改节点的信息, 根据no编号来修改，即no编号不能改.</span><br><span class="line">	&#x2F;&#x2F;说明</span><br><span class="line">	&#x2F;&#x2F;1. 根据 newHeroNode 的 no 来修改即可</span><br><span class="line">	public void update(HeroNode heroNode)&#123;</span><br><span class="line">		&#x2F;&#x2F;遍历</span><br><span class="line">		&#x2F;&#x2F;找到需要修改的节点, 根据no编号</span><br><span class="line">		&#x2F;&#x2F;定义一个辅助变量</span><br><span class="line">		HeroNode temp &#x3D; head;</span><br><span class="line">		boolean flag &#x3D; false;&#x2F;&#x2F;表示是否找到该节点</span><br><span class="line">		while (true)&#123;</span><br><span class="line">			if (temp.next &#x3D;&#x3D; null)&#123;</span><br><span class="line">				break;&#x2F;&#x2F;已经遍历完链表</span><br><span class="line">			&#125;</span><br><span class="line">			if (temp.next.no &#x3D;&#x3D; heroNode.no)&#123;</span><br><span class="line">				flag &#x3D; true;</span><br><span class="line">				break;&#x2F;&#x2F;找到</span><br><span class="line">			&#125;</span><br><span class="line">			temp &#x3D; temp.next;</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;根据flag 判断是否找到要修改的节点</span><br><span class="line">		if (flag)&#123;</span><br><span class="line">			temp.next.name &#x3D; heroNode.name;</span><br><span class="line">			temp.next.nickName &#x3D; heroNode.nickName;</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			System.out.printf(&quot;修改失败，排名为%d的不存在！\n&quot;,heroNode.no);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;删除节点</span><br><span class="line">	&#x2F;&#x2F;思路</span><br><span class="line">	&#x2F;&#x2F;1. head 不能动，因此我们需要一个temp辅助节点找到待删除节点的前一个节点</span><br><span class="line">	&#x2F;&#x2F;2. 说明我们在比较时，是temp.next.no 和  需要删除的节点的no比较</span><br><span class="line">	public void delete(int no)&#123;</span><br><span class="line">		HeroNode temp &#x3D; head;</span><br><span class="line">		boolean flag &#x3D; false; &#x2F;&#x2F; 标志是否找到待删除节点的</span><br><span class="line">		while (true)&#123;</span><br><span class="line">			if (temp.next &#x3D;&#x3D; null)&#123; &#x2F;&#x2F;已经到链表的最后</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			if (temp.next.no &#x3D;&#x3D; no)&#123;&#x2F;&#x2F;找到的待删除节点的前一个节点temp</span><br><span class="line">				flag &#x3D; true;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			temp &#x3D; temp.next; &#x2F;&#x2F;temp后移，遍历</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;判断flag</span><br><span class="line">		if (flag)&#123; &#x2F;&#x2F;找到</span><br><span class="line">			temp.next &#x3D; temp.next.next;&#x2F;&#x2F;可以删除</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			System.out.printf(&quot;修改失败，排名为%d的不存在！\n&quot;,no);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;显示链表[遍历]</span><br><span class="line">	public void list()&#123;</span><br><span class="line">		&#x2F;&#x2F;判断链表是否为空</span><br><span class="line">		if (head.next &#x3D;&#x3D; null)&#123;</span><br><span class="line">			System.out.println(&quot;链表为空，没有数据！&quot;);</span><br><span class="line">			return ;</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;因为头节点，不能动，因此我们需要一个辅助变量来遍历</span><br><span class="line">		HeroNode temp &#x3D; head;</span><br><span class="line">		while (true)&#123;</span><br><span class="line">			&#x2F;&#x2F;判断是否到链表最后</span><br><span class="line">			if (temp.next &#x3D;&#x3D; null)&#123;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			&#x2F;&#x2F;输出节点的信息</span><br><span class="line">			System.out.println(temp.next);</span><br><span class="line">			&#x2F;&#x2F;将temp后移， 一定小心</span><br><span class="line">			temp &#x3D; temp.next;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;定义HeroNode ， 每个HeroNode 对象就是一个节点</span><br><span class="line">class HeroNode &#123;</span><br><span class="line">	int no;</span><br><span class="line">	String name;</span><br><span class="line">	String nickName;</span><br><span class="line">	HeroNode next;&#x2F;&#x2F;指向下一个节点</span><br><span class="line">	&#x2F;&#x2F;构造器</span><br><span class="line">	public HeroNode(int no, String name, String nickName)&#123;</span><br><span class="line">		this.no &#x3D; no;</span><br><span class="line">		this.name &#x3D; name;</span><br><span class="line">		this.nickName &#x3D; nickName;</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;&#x2F;为了显示方法，我们重新toString</span><br><span class="line">	@Override</span><br><span class="line">	public String toString() &#123;</span><br><span class="line">		return &quot;HeroNode [no&#x3D;&quot; + no + &quot;, name&#x3D;&quot; + name + &quot;, nickName&#x3D;&quot; + nickName  + &quot;]&quot;;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='true'
+        data-ae='true'
+        data-ci='98d8392c61bba8a9f87d'
+        data-cs='a5b47de553739830db015b176764355577df22bf'
+        data-r='Comment'
+        data-o='Programmingmakesmebald'
+        data-a='Programmingmakesmebald'
+        data-d='true'
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class='side'>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、链表-Linked-List-介绍"><span class="toc-number">1.</span> <span class="toc-text">一、链表(Linked List)介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、单链表的应用实例"><span class="toc-number">2.</span> <span class="toc-text">二、单链表的应用实例</span></a></li></ol>	
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
