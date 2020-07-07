@@ -72,14 +72,14 @@
         <div class="content markdown">
             <h2 id="稀疏sparsearray数组"><a href="#稀疏sparsearray数组" class="headerlink" title="稀疏sparsearray数组"></a>稀疏sparsearray数组</h2><ol>
 <li><h4 id="先看一个实际的需求"><a href="#先看一个实际的需求" class="headerlink" title="先看一个实际的需求"></a>先看一个实际的需求</h4><ul>
-<li>编写的五子棋程序中，有存盘退出和续上盘的功能。<br><img src="https://note.youdao.com/yws/public/resource/03d703e92a974f5336caf854bb9b1235/xmlnote/3F48A45D21D64CCE9BD81A06201A6EA4/2296" alt=""></li>
+<li>编写的五子棋程序中，有存盘退出和续上盘的功能。<br><img src="http://qd1ql2976.bkt.clouddn.com/2296" alt=""></li>
 <li>分析问题: 因为该二维数组的很多值是默认值0, 因此记录了很多没有意义的数据→稀疏数组。</li>
 </ul>
 </li>
 <li><h4 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h4><p> 当一个数组中大部分元素为０，或者为同一个值的数组时，可以使用稀疏数组来保存该数组。</p>
 <h5 id="稀疏数组的处理方法是"><a href="#稀疏数组的处理方法是" class="headerlink" title="稀疏数组的处理方法是:"></a>稀疏数组的处理方法是:</h5><ol>
 <li>记录数组一共有几行几列，有多少个不同的值</li>
-<li>把具有不同值的元素的行列及值记录在一个小规模的数组中，从而缩小程序的规模<h5 id="稀疏数组举例说明"><a href="#稀疏数组举例说明" class="headerlink" title="稀疏数组举例说明"></a>稀疏数组举例说明</h5><img src="https://note.youdao.com/yws/public/resource/03d703e92a974f5336caf854bb9b1235/xmlnote/B47D7A9A53B4448A93AD74AE279D5166/2307" alt=""><br><img src="https://note.youdao.com/yws/public/resource/03d703e92a974f5336caf854bb9b1235/xmlnote/6A7B70B908D6409DB8CD98116CC73D04/2309" alt=""></li>
+<li>把具有不同值的元素的行列及值记录在一个小规模的数组中，从而缩小程序的规模<h5 id="稀疏数组举例说明"><a href="#稀疏数组举例说明" class="headerlink" title="稀疏数组举例说明"></a>稀疏数组举例说明</h5><img src="http://qd1ql2976.bkt.clouddn.com/2307" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2309" alt=""></li>
 </ol>
 </li>
 <li><h4 id="应用实例"><a href="#应用实例" class="headerlink" title="应用实例"></a>应用实例</h4><ul>
@@ -87,7 +87,7 @@
 </li>
 <li><p>把稀疏数组存盘，并且可以从新恢复原来的二维数组数</p>
 </li>
-<li><p>整体思路分析<br><img src="https://note.youdao.com/yws/public/resource/03d703e92a974f5336caf854bb9b1235/xmlnote/186FB0433BE047EDBF03D879F2EBA82C/2326" alt=""></p>
+<li><p>整体思路分析<br><img src="http://qd1ql2976.bkt.clouddn.com/2326" alt=""></p>
 </li>
 <li><p>二维数组 转 稀疏数组的思路</p>
 <ol>
