@@ -1,59 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>02.Java基础知识-文档及规范</title>
-    <url>/2020/07/03/02-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E6%96%87%E6%A1%A3%E5%8F%8A%E8%A7%84%E8%8C%83/</url>
-    <content><![CDATA[<h2 id="一、Java-API文档"><a href="#一、Java-API文档" class="headerlink" title="一、Java API文档"></a>一、Java API文档</h2><ul>
-<li>API (Application Programming Interface,应用程序编程接口)是Java提供的基本编程接口。</li>
-<li>Java语言提供了大量的基础类，因此Oracle也为这些基础类提供了相应的API文档，用于告诉开发者如何使用这些类，以及这些类里包含的方法。</li>
-<li>下载API: <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a><br><img src="http://qd1ql2976.bkt.clouddn.com/2119" alt=""><h2 id="二、良好的编程风格"><a href="#二、良好的编程风格" class="headerlink" title="二、良好的编程风格"></a>二、良好的编程风格</h2></li>
-<li><h4 id="正确的注释和注释风格"><a href="#正确的注释和注释风格" class="headerlink" title="正确的注释和注释风格"></a>正确的注释和注释风格</h4><ul>
-<li>使用文档注释来注释整个类或整个方法。</li>
-<li>如果注释方法中的某一一个步骤，使用单行或多行注释。</li>
-</ul>
-</li>
-<li><h4 id="正确的缩进和空白"><a href="#正确的缩进和空白" class="headerlink" title="正确的缩进和空白"></a>正确的缩进和空白</h4><ul>
-<li>使用一次tab操作，实现缩进</li>
-<li>运算符两边习惯性各加一一个空格。比如: 2+4* 5。</li>
-</ul>
-</li>
-<li><h4 id="块的风格"><a href="#块的风格" class="headerlink" title="块的风格"></a>块的风格</h4><ul>
-<li>JavaAPI源代码选择了行尾风格<br><img src="http://qd1ql2976.bkt.clouddn.com/2135" alt=""><h2 id="三、注释"><a href="#三、注释" class="headerlink" title="三、注释"></a>三、注释</h2></li>
-</ul>
-</li>
-<li>用于注解说明解释程序的文字就是注释。</li>
-<li>Java中的注释类型:<ul>
-<li>单行注释</li>
-<li>多行注释</li>
-<li>文档注释(java特有)</li>
-</ul>
-</li>
-<li>提高了代码的阅读性;调试程序的重要方法。</li>
-<li>注释是一个程序员必须要具有的良好编程习惯。</li>
-<li>将自己的思想通过注释先整理出来，再用代码去体现</li>
-<li><h4 id="单行注释"><a href="#单行注释" class="headerlink" title="单行注释"></a>单行注释</h4>  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">格式: &#x2F;&#x2F;注释文字</span><br></pre></td></tr></table></figure></li>
-<li><h4 id="多行注释"><a href="#多行注释" class="headerlink" title="多行注释"></a>多行注释</h4>  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">格式: &#x2F;*注释文字*&#x2F;</span><br></pre></td></tr></table></figure></li>
-<li><h4 id="注"><a href="#注" class="headerlink" title="注:"></a>注:</h4><ul>
-<li>对于单行和多行注释，被注释的文字，不会被JVM (java虚拟机)解释执行。</li>
-<li>多行注释里面不允许有多行注释嵌套。</li>
-</ul>
-</li>
-<li><h4 id="文档注释-Java特有"><a href="#文档注释-Java特有" class="headerlink" title="文档注释(Java特有)"></a>文档注释(Java特有)</h4>  格式:  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line">@author指定java程序的作者</span><br><span class="line">@version指定源文件的版本</span><br><span class="line">*&#x2F;</span><br></pre></td></tr></table></figure></li>
-<li><h4 id="javadoc解析"><a href="#javadoc解析" class="headerlink" title="javadoc解析"></a>javadoc解析</h4><ul>
-<li>注释内容可以被JDK提供的工具javadoc所解析，生成一套以网页文件形式体现的该程序的说明文档。<br><img src="http://qd1ql2976.bkt.clouddn.com/2176" alt=""><h2 id="四、注释示例"><a href="#四、注释示例" class="headerlink" title="四、注释示例"></a>四、注释示例</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line">1. java规范的三种注释方式：</span><br><span class="line">单行注释</span><br><span class="line">多行注释</span><br><span class="line">文档注释(java特有)</span><br><span class="line"></span><br><span class="line">2.</span><br><span class="line">单行注释和多行注释的作用：</span><br><span class="line">① 对所写的程序进行解释说明，增强可读性。方便自己，方便别人</span><br><span class="line">② 调试所写的代码</span><br><span class="line"></span><br><span class="line">3. 特点：单行注释和多行注释，注释了的内容不参与编译。</span><br><span class="line">         换句话说，编译以后生成的.class结尾的字节码文件中不包含注释掉的信息</span><br><span class="line"></span><br><span class="line">4. 文档注释的使用：</span><br><span class="line">    注释内容可以被JDK提供的工具 javadoc 所解析，生成一套以网页文件形式体现的该程序的说明文档。</span><br><span class="line"></span><br><span class="line">5. 多行注释不可以嵌套使用</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">*&#x2F;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line">文档注释</span><br><span class="line">@author shkstart</span><br><span class="line">@version v1.0</span><br><span class="line">这是我的第一个java程序！非常的开森！</span><br><span class="line"></span><br><span class="line">*&#x2F;</span><br><span class="line">public class HelloJava&#123;</span><br><span class="line">	&#x2F;*</span><br><span class="line">	多行注释：</span><br><span class="line">	如下的main方法是程序的入口！</span><br><span class="line">	main的格式是固定的！</span><br><span class="line">	*&#x2F;</span><br><span class="line">	&#x2F;**</span><br><span class="line">	如下的方式是main()，作用：程序的入口。</span><br><span class="line">	*&#x2F;</span><br><span class="line">	public static void main(String[] args)&#123;</span><br><span class="line">		&#x2F;&#x2F;单行注释：如下的语句表示输出到控制台</span><br><span class="line">		&#x2F;&#x2F;System.out.println(&quot;Hello World!&quot;)</span><br><span class="line">		System.out.println(&quot;Hello World!&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Java基础</category>
-      </categories>
-      <tags>
-        <tag>Java基础</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>01.数据结构</title>
     <url>/2020/07/04/01-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
     <content><![CDATA[<h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><p>数据结构包括：线性结构和非线性结构。</p>
@@ -300,117 +247,6 @@
       </tags>
   </entry>
   <entry>
-    <title>03.数据结构-队列</title>
-    <url>/2020/07/05/03-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%98%9F%E5%88%97/</url>
-    <content><![CDATA[<h2 id="队列-数组实现"><a href="#队列-数组实现" class="headerlink" title="队列-数组实现"></a>队列-数组实现</h2><ol>
-<li><h4 id="队列的一个使用场景"><a href="#队列的一个使用场景" class="headerlink" title="队列的一个使用场景"></a>队列的一个使用场景</h4><p> 银行排队的案例:<br> <img src="http://qd1ql2976.bkt.clouddn.com/2346" alt=""></p>
-</li>
-<li><h4 id="队列介绍"><a href="#队列介绍" class="headerlink" title="队列介绍"></a>队列介绍</h4><ol>
-<li>队列是一个 有序列表，可以用 数组或是链表来实现。</li>
-<li>遵循 先入先出的原则。即：先存入队列的数据，要先取出。后存入的要后取出</li>
-<li>示意图：(使用数组模拟队列示意图)<br><img src="http://qd1ql2976.bkt.clouddn.com/2361" alt=""></li>
-</ol>
-</li>
-<li><h4 id="数组模拟队列思路"><a href="#数组模拟队列思路" class="headerlink" title="数组模拟队列思路"></a>数组模拟队列思路</h4><ul>
-<li><p>队列本身是有序列表，若使用数组的结构来存储队列的数据，则队列数组的声明如下图, 其中maxSize 是该队列的最大容量。</p>
-</li>
-<li><p>因为队列的输出、输入是分别从前后端来处理，因此需要两个变量 front 及 rear 分别记录队列前后端的下标，front会随着数据输出而改变，而 rear则是随着数据输入而改变，如图所示:<br><img src="http://qd1ql2976.bkt.clouddn.com/2361" alt=""></p>
-</li>
-<li><p>代码实现</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.wzx.queue;</span><br><span class="line"></span><br><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">public class ArrayQueueDemo &#123;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		&#x2F;&#x2F; 创建一个队列</span><br><span class="line">		ArrayQueue queue &#x3D; new ArrayQueue(3);</span><br><span class="line">		&#x2F;&#x2F; 接受用户输入</span><br><span class="line">		char key &#x3D; &#39; &#39;;</span><br><span class="line">		&#x2F;&#x2F; 创建输出</span><br><span class="line">		Scanner sc &#x3D; new Scanner(System.in);</span><br><span class="line">		&#x2F;&#x2F;</span><br><span class="line">		boolean loop &#x3D; true;</span><br><span class="line">		&#x2F;&#x2F;输出一个菜单</span><br><span class="line">		while (loop) &#123;</span><br><span class="line">			System.out.println(&quot;\t\ts(show): 显示队列&quot;);</span><br><span class="line">			System.out.println(&quot;\t\te(exit): 退出程序&quot;);</span><br><span class="line">			System.out.println(&quot;\t\ta(add): 添加数据到队列&quot;);</span><br><span class="line">			System.out.println(&quot;\t\tg(get): 从队列取出数据&quot;);</span><br><span class="line">			System.out.println(&quot;\t\th(head): 查看队列头的数据&quot;);</span><br><span class="line">			key &#x3D; sc.next().charAt(0);&#x2F;&#x2F;接收一个字符</span><br><span class="line">			switch (key) &#123;</span><br><span class="line">				case &#39;a&#39; : &#x2F;&#x2F; 添加数据到队列</span><br><span class="line">					System.out.println(&quot;请输入一个数据&quot;);</span><br><span class="line">					int n &#x3D; sc.nextInt();</span><br><span class="line">					queue.addQueue(n);</span><br><span class="line">					break;</span><br><span class="line">				case &#39;g&#39; : &#x2F;&#x2F; 从队列取出数据</span><br><span class="line">					try &#123;</span><br><span class="line">						System.out.printf(&quot;取出的数据是：%d\n&quot;,queue.getQueue());</span><br><span class="line">					&#125; catch (Exception e) &#123;</span><br><span class="line">						&#x2F;&#x2F; TODO: handle exception</span><br><span class="line">						System.out.println(e.getMessage());</span><br><span class="line">					&#125;</span><br><span class="line">					break;</span><br><span class="line">				case &#39;s&#39; : &#x2F;&#x2F; 显示队列</span><br><span class="line">					queue.showQueue();</span><br><span class="line">					break;</span><br><span class="line">				case &#39;h&#39; : &#x2F;&#x2F; 查看队列头的数据</span><br><span class="line">					try &#123;</span><br><span class="line">						System.out.printf(&quot;队列头的数据是：%d\n&quot;,queue.headQueue());</span><br><span class="line">					&#125; catch (Exception e) &#123;</span><br><span class="line">						&#x2F;&#x2F; TODO: handle exception</span><br><span class="line">						System.out.println(e.getMessage());</span><br><span class="line">					&#125;</span><br><span class="line">					break;</span><br><span class="line">				case &#39;e&#39; : &#x2F;&#x2F; 退出程序</span><br><span class="line">	    sc.close();</span><br><span class="line">					loop &#x3D; false;</span><br><span class="line">					break;</span><br><span class="line">				default:</span><br><span class="line">					break;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(&quot;程序退出~~&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class ArrayQueue&#123;</span><br><span class="line">	private int MaxSize; &#x2F;&#x2F; 队列的最大容量</span><br><span class="line">	private int front; &#x2F;&#x2F; 队列头</span><br><span class="line">	private int rear; &#x2F;&#x2F; 队列尾</span><br><span class="line">	private int[] arr; &#x2F;&#x2F; 该数据用于存放数据, 模拟队列</span><br><span class="line">	</span><br><span class="line">	public ArrayQueue(int arrMaxSize)&#123;</span><br><span class="line">		arr &#x3D;  new int[arrMaxSize];</span><br><span class="line">		MaxSize &#x3D; arrMaxSize;</span><br><span class="line">		front &#x3D; -1; &#x2F;&#x2F; 指向队列头部，分析出front是指向队列头的前一个位置.</span><br><span class="line">		rear &#x3D; -1; &#x2F;&#x2F; 指向队列尾，指向队列尾的数据(即就是队列最后一个数据)</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F; 判断队列是否满</span><br><span class="line">	public boolean isFull()&#123;</span><br><span class="line">		return rear &#x3D;&#x3D; MaxSize-1;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F; 判断队列是否为空</span><br><span class="line">	public boolean isEmpty()&#123;</span><br><span class="line">		return front &#x3D;&#x3D; rear;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F; 添加数据到队列</span><br><span class="line">	public void addQueue(int n)&#123;</span><br><span class="line">		if (isFull()) &#123;</span><br><span class="line">			System.out.println(&quot;队列已满，不能添加！&quot;);</span><br><span class="line">			return ;</span><br><span class="line">		&#125;</span><br><span class="line">		rear++; &#x2F;&#x2F; 进队列，rear后移一位</span><br><span class="line">		arr[rear] &#x3D; n;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F; 获取队列的数据, 出队列</span><br><span class="line">	public int getQueue()&#123;</span><br><span class="line">		if (isEmpty()) &#123;</span><br><span class="line">			&#x2F;&#x2F; 通过抛出异常</span><br><span class="line">			throw new RuntimeException(&quot;队列空，不能取数据&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		front++; &#x2F;&#x2F; 出队列，front后移一位</span><br><span class="line">		return arr[front];</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F; 显示队列的所有数据</span><br><span class="line">	public void showQueue()&#123;</span><br><span class="line">		if (isEmpty()) &#123;</span><br><span class="line">			System.out.println(&quot;队列空的，没有数据~~&quot;);</span><br><span class="line">			return;</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F; 遍历</span><br><span class="line">		for (int i &#x3D; 0; i &lt; arr.length; i++)&#123;</span><br><span class="line">			System.out.printf(&quot;arr[%d]&#x3D;%d\n&quot;, i, arr[i]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F; 显示队列的头数据， 注意不是取出数据</span><br><span class="line">	public int headQueue()&#123;</span><br><span class="line">		if (isEmpty()) &#123;</span><br><span class="line">			&#x2F;&#x2F; 通过抛出异常</span><br><span class="line">			throw new RuntimeException(&quot;队列空，不能取数据&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		return arr[front+1];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>问题分析并优化</p>
-<ol>
-<li>目前数组使用一次就不能用， 没有达到复用的效果</li>
-<li>将这个数组使用算法，改进成一个列 环形的队列 取模：%</li>
-</ol>
-</li>
-</ul>
-</li>
-<li><h4 id="数组模拟环形队列"><a href="#数组模拟环形队列" class="headerlink" title="数组模拟环形队列"></a>数组模拟环形队列</h4><p> 对前面的数组模拟队列的优化，充分利用数组。 因此将数组看做是一个环形的。(通过取模的方式来实现即可)</p>
-<ul>
-<li><p>分析说明</p>
-<ol>
-<li>尾索引的下一个为头索引时表示队列满，即将队列容量空出一个作为约定,这个在做判断队列满的时候需要注意 (rear + 1) % maxSize == front 满]</li>
-<li>rear == front [空]</li>
-<li>分析示意图<br><img src="http://qd1ql2976.bkt.clouddn.com/2361" alt=""></li>
-<li>思路如下<ol>
-<li>front 变量的含义做一个调整： front 就指向队列的第一个元素, 也就是说 arr[front] 就是队列的第一个元素<br>front 的初始值 = 0</li>
-<li>rear 变量的含义做一个调整：rear 指向队列的最后一个元素的后一个位置. 因为希望空出一个空间做为约定.<br>rear 的初始值 = 0</li>
-<li>当队列满时，条件是  (rear  + 1) % maxSize == front 【满】</li>
-<li>对队列为空的条件， rear == front 【空】</li>
-<li>当我们这样分析， 队列中有效的数据的个数   (rear + maxSize - front) % maxSize</li>
-</ol>
-</li>
-</ol>
-</li>
-<li><p>代码实现</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.wzx.queue;</span><br><span class="line"></span><br><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">public class CircleArrayQueueDemo &#123;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		&#x2F;&#x2F;测试一把</span><br><span class="line">		System.out.println(&quot;测试数组模拟环形队列的案例~~~&quot;);</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F; 创建一个环形队列</span><br><span class="line">		CircleArrayQueue queue &#x3D; new CircleArrayQueue(4); &#x2F;&#x2F;说明设置4, 其队列的有效数据最大是3</span><br><span class="line">		&#x2F;&#x2F; 接受用户输入</span><br><span class="line">		char key &#x3D; &#39; &#39;;</span><br><span class="line">		&#x2F;&#x2F; 创建输出</span><br><span class="line">		Scanner sc &#x3D; new Scanner(System.in);</span><br><span class="line">		&#x2F;&#x2F;</span><br><span class="line">		boolean loop &#x3D; true;</span><br><span class="line">		&#x2F;&#x2F;输出一个菜单</span><br><span class="line">		while (loop) &#123;</span><br><span class="line">			System.out.println(&quot;\t\ts(show): 显示队列&quot;);</span><br><span class="line">			System.out.println(&quot;\t\te(exit): 退出程序&quot;);</span><br><span class="line">			System.out.println(&quot;\t\ta(add): 添加数据到队列&quot;);</span><br><span class="line">			System.out.println(&quot;\t\tg(get): 从队列取出数据&quot;);</span><br><span class="line">			System.out.println(&quot;\t\th(head): 查看队列头的数据&quot;);</span><br><span class="line">			key &#x3D; sc.next().charAt(0);&#x2F;&#x2F;接收一个字符</span><br><span class="line">			switch (key) &#123;</span><br><span class="line">				case &#39;a&#39; : &#x2F;&#x2F; 添加数据到队列</span><br><span class="line">					System.out.println(&quot;请输入一个数据&quot;);</span><br><span class="line">					int n &#x3D; sc.nextInt();</span><br><span class="line">					queue.addQueue(n);</span><br><span class="line">					break;</span><br><span class="line">				case &#39;g&#39; : &#x2F;&#x2F; 从队列取出数据</span><br><span class="line">					try &#123;</span><br><span class="line">						System.out.printf(&quot;取出的数据是：%d\n&quot;,queue.getQueue());</span><br><span class="line">					&#125; catch (Exception e) &#123;</span><br><span class="line">						&#x2F;&#x2F; TODO: handle exception</span><br><span class="line">						System.out.println(e.getMessage());</span><br><span class="line">					&#125;</span><br><span class="line">					break;</span><br><span class="line">				case &#39;s&#39; : &#x2F;&#x2F; 显示队列</span><br><span class="line">					queue.showQueue();</span><br><span class="line">					break;</span><br><span class="line">				case &#39;h&#39; : &#x2F;&#x2F; 查看队列头的数据</span><br><span class="line">					try &#123;</span><br><span class="line">						System.out.printf(&quot;队列头的数据是：%d\n&quot;,queue.headQueue());</span><br><span class="line">					&#125; catch (Exception e) &#123;</span><br><span class="line">						&#x2F;&#x2F; TODO: handle exception</span><br><span class="line">						System.out.println(e.getMessage());</span><br><span class="line">					&#125;</span><br><span class="line">					break;</span><br><span class="line">				case &#39;e&#39; : &#x2F;&#x2F; 退出程序</span><br><span class="line">					sc.close();</span><br><span class="line">					loop &#x3D; false;</span><br><span class="line">					break;</span><br><span class="line">				default:</span><br><span class="line">					break;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(&quot;程序退出~~&quot;);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">class CircleArrayQueue&#123;</span><br><span class="line">	private int MaxSize; &#x2F;&#x2F; 表示数组的最大容量</span><br><span class="line">	&#x2F;&#x2F; front 变量的含义做一个调整： front 就指向队列的第一个元素, 也就是说 arr[front] 就是队列的第一个元素 </span><br><span class="line">	&#x2F;&#x2F; front 的初始值 &#x3D; 0</span><br><span class="line">	private int front; </span><br><span class="line">	&#x2F;&#x2F; rear 变量的含义做一个调整：rear 指向队列的最后一个元素的后一个位置. 因为希望空出一个空间做为约定.</span><br><span class="line">	&#x2F;&#x2F; rear 的初始值 &#x3D; 0</span><br><span class="line">	private int rear; &#x2F;&#x2F; 队列尾</span><br><span class="line">	private int[] arr; &#x2F;&#x2F; 该数据用于存放数据, 模拟队列</span><br><span class="line"></span><br><span class="line">	public CircleArrayQueue(int arrMaxSize) &#123;</span><br><span class="line">		arr &#x3D; new int[arrMaxSize];</span><br><span class="line">		MaxSize &#x3D; arrMaxSize;</span><br><span class="line">		front &#x3D; 0; &#x2F;&#x2F; 指向队列头部，分析出front是指向队列头的位置</span><br><span class="line">		rear &#x3D; 0; &#x2F;&#x2F; 指向队列尾，指向队列尾的后一个位置</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;&#x2F; 当前队列有效的数据的个数</span><br><span class="line">	public int size()&#123;</span><br><span class="line">		return ( rear + MaxSize - front ) % MaxSize;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	&#x2F;&#x2F; 判断队列是否满</span><br><span class="line">	public boolean isFull()&#123;</span><br><span class="line">		return ( rear + 1 ) % MaxSize &#x3D;&#x3D; front;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F; 判断队列是否为空</span><br><span class="line">	public boolean isEmpty()&#123;</span><br><span class="line">		return front &#x3D;&#x3D; rear;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F; 添加数据到队列</span><br><span class="line">	public void addQueue(int n)&#123;</span><br><span class="line">		if (isFull()) &#123;</span><br><span class="line">			System.out.println(&quot;队列已满，不能添加！&quot;);</span><br><span class="line">			return ;</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;直接将数据加入</span><br><span class="line">		arr[rear] &#x3D; n;</span><br><span class="line">		&#x2F;&#x2F;将 rear 后移, 这里必须考虑取模</span><br><span class="line">		rear &#x3D; ( rear + 1 ) % MaxSize;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F; 获取队列的数据, 出队列</span><br><span class="line">	public int getQueue()&#123;</span><br><span class="line">		if (isEmpty()) &#123;</span><br><span class="line">			&#x2F;&#x2F; 通过抛出异常</span><br><span class="line">			throw new RuntimeException(&quot;队列空，不能取数据&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F; 这里需要分析出 front是指向队列的第一个元素</span><br><span class="line">		&#x2F;&#x2F; 1. 先把 front 对应的值保留到一个临时变量</span><br><span class="line">		&#x2F;&#x2F; 2. 将 front 后移, 考虑取模</span><br><span class="line">		&#x2F;&#x2F; 3. 将临时保存的变量返回</span><br><span class="line">		int temp &#x3D; arr[front];</span><br><span class="line">		front &#x3D; ( front + 1 ) % MaxSize;</span><br><span class="line">		return temp;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F; 显示队列的所有数据</span><br><span class="line">	public void showQueue()&#123;</span><br><span class="line">		if (isEmpty()) &#123;</span><br><span class="line">			System.out.println(&quot;队列空的，没有数据~~&quot;);</span><br><span class="line">			return;</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F; 思路：从front开始遍历，遍历多少个元素</span><br><span class="line">		&#x2F;&#x2F; 动脑筋</span><br><span class="line">		for (int i &#x3D; front; i &lt; front + size(); i++)&#123;</span><br><span class="line">			System.out.printf(&quot;arr[%d]&#x3D;%d\n&quot;, i % MaxSize, arr[i % MaxSize]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F; 显示队列的头数据， 注意不是取出数据</span><br><span class="line">	public int headQueue()&#123;</span><br><span class="line">		if (isEmpty()) &#123;</span><br><span class="line">			&#x2F;&#x2F; 通过抛出异常</span><br><span class="line">			throw new RuntimeException(&quot;队列空，没有数据~~&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		return arr[front];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>数据结构与算法</category>
-      </categories>
-      <tags>
-        <tag>数据结构与算法</tag>
-        <tag>队列</tag>
-        <tag>环形队列</tag>
-        <tag>数组模拟队列</tag>
-        <tag>数组模拟环形队列</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>04.Java基础知识-关键字、保留字与标识符</title>
-    <url>/2020/07/05/04-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E5%85%B3%E9%94%AE%E5%AD%97%E3%80%81%E4%BF%9D%E7%95%99%E5%AD%97%E4%B8%8E%E6%A0%87%E8%AF%86%E7%AC%A6/</url>
-    <content><![CDATA[<h2 id="关键字与保留字"><a href="#关键字与保留字" class="headerlink" title="关键字与保留字"></a>关键字与保留字</h2><ul>
-<li><h4 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h4><ul>
-<li><strong>定义</strong>：被Java 语言赋予了特殊含义，用做专门用途的字符串（单词）</li>
-<li><strong>特点</strong>：关键字中所有字母都为小写</li>
-<li><strong>官方地址</strong>： <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html" target="_blank" rel="noopener">https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html</a><br><img src="http://qd1ql2976.bkt.clouddn.com/2416" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2419" alt=""></li>
-<li><strong>注</strong>：true、false、null虽然不是关键字，但是命名时不可用。</li>
-</ul>
-</li>
-<li><h4 id="保留字"><a href="#保留字" class="headerlink" title="保留字"></a>保留字</h4><ul>
-<li><strong>Java保留字</strong>：现有Java版本尚未使用，但以后版本可能会作为关键字使用。自己命名标识符时要避免使用这些保留字goto 、const<h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2></li>
-</ul>
-</li>
-<li><h4 id="标识符-1"><a href="#标识符-1" class="headerlink" title="标识符"></a>标识符</h4><ul>
-<li>Java对各种变量、方法和类等要素命名时使用的字符序列称为标识符</li>
-<li><strong>技巧</strong>：凡是自己可以起名字的地方都叫标识符。</li>
-</ul>
-</li>
-<li><h4 id="定义合法标识符规则"><a href="#定义合法标识符规则" class="headerlink" title="定义合法标识符规则"></a>定义合法标识符规则</h4><ul>
-<li>由26 个英文字母大小写，0-9，_或$组成</li>
-<li>数字不可以开头。</li>
-<li>不可以使用关键字和保留字，但能包含关键字和保留字。</li>
-<li>Java中严格区分大小写，长度无限制。</li>
-<li>标识符不能包含空格</li>
-</ul>
-</li>
-<li><h4 id="Java中的名称命名规范"><a href="#Java中的名称命名规范" class="headerlink" title="Java中的名称命名规范"></a>Java中的名称命名规范</h4><ul>
-<li><strong>包名</strong>：多单词组成时所有字母都小写：xxxyyyzzz</li>
-<li><strong>类名、接口名</strong>：多单词组成时，所有单词的首字母大写：XxxYyyZzz</li>
-<li><strong>变量名、方法名</strong>：多单词组成时，第一个单词首字母小写，第二个单词开始每个单词首字母大写：xxxYyyZzz</li>
-<li><strong>常量名</strong>：所有字母都大写。多单词时每个单词用下划线连接：XXX_YYY_ZZZ</li>
-</ul>
-</li>
-<li><strong>注意1</strong>：在起名字时，为了提高阅读性，要尽量有意义，“见名知意”。</li>
-<li><strong>注意2</strong>：java采用unicode字符集，因此标识符也可以使用汉字声明，但是不建议使用。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Java基础</category>
-      </categories>
-      <tags>
-        <tag>Java基础</tag>
-        <tag>关键字</tag>
-        <tag>保留字</tag>
-        <tag>标识符</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>04.数据结构-链表</title>
     <url>/2020/07/06/04-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8/</url>
     <content><![CDATA[<h2 id="一、链表-Linked-List-介绍"><a href="#一、链表-Linked-List-介绍" class="headerlink" title="一、链表(Linked List)介绍"></a>一、链表(Linked List)介绍</h2><p>链表是有序的列表，但是它在内存中是存储如下</p>
@@ -446,6 +282,59 @@
         <tag>数据结构与算法</tag>
         <tag>链表</tag>
         <tag>单链表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>02.Java基础知识-文档及规范</title>
+    <url>/2020/07/03/02-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E6%96%87%E6%A1%A3%E5%8F%8A%E8%A7%84%E8%8C%83/</url>
+    <content><![CDATA[<h2 id="一、Java-API文档"><a href="#一、Java-API文档" class="headerlink" title="一、Java API文档"></a>一、Java API文档</h2><ul>
+<li>API (Application Programming Interface,应用程序编程接口)是Java提供的基本编程接口。</li>
+<li>Java语言提供了大量的基础类，因此Oracle也为这些基础类提供了相应的API文档，用于告诉开发者如何使用这些类，以及这些类里包含的方法。</li>
+<li>下载API: <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a><br><img src="http://qd1ql2976.bkt.clouddn.com/2119" alt=""><h2 id="二、良好的编程风格"><a href="#二、良好的编程风格" class="headerlink" title="二、良好的编程风格"></a>二、良好的编程风格</h2></li>
+<li><h4 id="正确的注释和注释风格"><a href="#正确的注释和注释风格" class="headerlink" title="正确的注释和注释风格"></a>正确的注释和注释风格</h4><ul>
+<li>使用文档注释来注释整个类或整个方法。</li>
+<li>如果注释方法中的某一一个步骤，使用单行或多行注释。</li>
+</ul>
+</li>
+<li><h4 id="正确的缩进和空白"><a href="#正确的缩进和空白" class="headerlink" title="正确的缩进和空白"></a>正确的缩进和空白</h4><ul>
+<li>使用一次tab操作，实现缩进</li>
+<li>运算符两边习惯性各加一一个空格。比如: 2+4* 5。</li>
+</ul>
+</li>
+<li><h4 id="块的风格"><a href="#块的风格" class="headerlink" title="块的风格"></a>块的风格</h4><ul>
+<li>JavaAPI源代码选择了行尾风格<br><img src="http://qd1ql2976.bkt.clouddn.com/2135" alt=""><h2 id="三、注释"><a href="#三、注释" class="headerlink" title="三、注释"></a>三、注释</h2></li>
+</ul>
+</li>
+<li>用于注解说明解释程序的文字就是注释。</li>
+<li>Java中的注释类型:<ul>
+<li>单行注释</li>
+<li>多行注释</li>
+<li>文档注释(java特有)</li>
+</ul>
+</li>
+<li>提高了代码的阅读性;调试程序的重要方法。</li>
+<li>注释是一个程序员必须要具有的良好编程习惯。</li>
+<li>将自己的思想通过注释先整理出来，再用代码去体现</li>
+<li><h4 id="单行注释"><a href="#单行注释" class="headerlink" title="单行注释"></a>单行注释</h4>  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">格式: &#x2F;&#x2F;注释文字</span><br></pre></td></tr></table></figure></li>
+<li><h4 id="多行注释"><a href="#多行注释" class="headerlink" title="多行注释"></a>多行注释</h4>  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">格式: &#x2F;*注释文字*&#x2F;</span><br></pre></td></tr></table></figure></li>
+<li><h4 id="注"><a href="#注" class="headerlink" title="注:"></a>注:</h4><ul>
+<li>对于单行和多行注释，被注释的文字，不会被JVM (java虚拟机)解释执行。</li>
+<li>多行注释里面不允许有多行注释嵌套。</li>
+</ul>
+</li>
+<li><h4 id="文档注释-Java特有"><a href="#文档注释-Java特有" class="headerlink" title="文档注释(Java特有)"></a>文档注释(Java特有)</h4>  格式:  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line">@author指定java程序的作者</span><br><span class="line">@version指定源文件的版本</span><br><span class="line">*&#x2F;</span><br></pre></td></tr></table></figure></li>
+<li><h4 id="javadoc解析"><a href="#javadoc解析" class="headerlink" title="javadoc解析"></a>javadoc解析</h4><ul>
+<li>注释内容可以被JDK提供的工具javadoc所解析，生成一套以网页文件形式体现的该程序的说明文档。<br><img src="http://qd1ql2976.bkt.clouddn.com/2176" alt=""><h2 id="四、注释示例"><a href="#四、注释示例" class="headerlink" title="四、注释示例"></a>四、注释示例</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line">1. java规范的三种注释方式：</span><br><span class="line">单行注释</span><br><span class="line">多行注释</span><br><span class="line">文档注释(java特有)</span><br><span class="line"></span><br><span class="line">2.</span><br><span class="line">单行注释和多行注释的作用：</span><br><span class="line">① 对所写的程序进行解释说明，增强可读性。方便自己，方便别人</span><br><span class="line">② 调试所写的代码</span><br><span class="line"></span><br><span class="line">3. 特点：单行注释和多行注释，注释了的内容不参与编译。</span><br><span class="line">         换句话说，编译以后生成的.class结尾的字节码文件中不包含注释掉的信息</span><br><span class="line"></span><br><span class="line">4. 文档注释的使用：</span><br><span class="line">    注释内容可以被JDK提供的工具 javadoc 所解析，生成一套以网页文件形式体现的该程序的说明文档。</span><br><span class="line"></span><br><span class="line">5. 多行注释不可以嵌套使用</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">*&#x2F;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line">文档注释</span><br><span class="line">@author shkstart</span><br><span class="line">@version v1.0</span><br><span class="line">这是我的第一个java程序！非常的开森！</span><br><span class="line"></span><br><span class="line">*&#x2F;</span><br><span class="line">public class HelloJava&#123;</span><br><span class="line">	&#x2F;*</span><br><span class="line">	多行注释：</span><br><span class="line">	如下的main方法是程序的入口！</span><br><span class="line">	main的格式是固定的！</span><br><span class="line">	*&#x2F;</span><br><span class="line">	&#x2F;**</span><br><span class="line">	如下的方式是main()，作用：程序的入口。</span><br><span class="line">	*&#x2F;</span><br><span class="line">	public static void main(String[] args)&#123;</span><br><span class="line">		&#x2F;&#x2F;单行注释：如下的语句表示输出到控制台</span><br><span class="line">		&#x2F;&#x2F;System.out.println(&quot;Hello World!&quot;)</span><br><span class="line">		System.out.println(&quot;Hello World!&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
       </tags>
   </entry>
   <entry>
@@ -602,35 +491,161 @@
       </tags>
   </entry>
   <entry>
-    <title>06.Java基础知识-进制</title>
-    <url>/2020/07/06/06-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E8%BF%9B%E5%88%B6/</url>
-    <content><![CDATA[<h2 id="世界上有10人种人，认识和不认识二进制的。"><a href="#世界上有10人种人，认识和不认识二进制的。" class="headerlink" title="世界上有10人种人，认识和不认识二进制的。"></a>世界上有10人种人，认识和不认识二进制的。</h2><h4 id="所有数字在计算机底层都以-二进制形式存在。"><a href="#所有数字在计算机底层都以-二进制形式存在。" class="headerlink" title="所有数字在计算机底层都以 二进制形式存在。"></a>所有数字在计算机底层都以 二进制形式存在。</h4><h4 id="对于整数，有四种表示方式："><a href="#对于整数，有四种表示方式：" class="headerlink" title="对于整数，有四种表示方式："></a>对于整数，有四种表示方式：</h4><ul>
-<li>二进制(binary) ：0,1 ，满2进1.以0b或0B开头。</li>
-<li>十进制(decimal) ：0-9 ，满10进1。</li>
-<li>八进制(octal) ：0-7 ，满8进1. 以数字0开头表示。</li>
-<li>十六进制(hex) ：0-9及A-F，满16进1. 以0x或0X开头表示。此处的A-F不区分大小写。</li>
-<li>如：0x21AF +1= 0X21B0<br><img src="http://qd1ql2976.bkt.clouddn.com/2707" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2709" alt=""><h2 id="二进制"><a href="#二进制" class="headerlink" title="二进制"></a>二进制</h2></li>
-<li>Java整数常量默认是int类型，当用二进制定义整数时，其第32位是符号位；当是long类型时，二进制默认占64位，第64位是符号位</li>
-<li>二进制的整数有如下三种形式：<ul>
-<li>原码：直接将一个数值换成二进制数。最高位是符号位</li>
-<li>负数的反码：是对原码按位取反，只是最高位（符号位）确定为1。</li>
-<li>负数的补码：其反码加1。</li>
+    <title>05.数据结构-单链表面试题</title>
+    <url>/2020/07/08/05-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%8D%95%E9%93%BE%E8%A1%A8%E9%9D%A2%E8%AF%95%E9%A2%98/</url>
+    <content><![CDATA[<h2 id="单链表的常见面试题有如下"><a href="#单链表的常见面试题有如下" class="headerlink" title="单链表的常见面试题有如下:"></a>单链表的常见面试题有如下:</h2><ul>
+<li><p>求单链表中有效节点的个数</p>
+<ul>
+<li><p>代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">   &#x2F;&#x2F;方法：获取到单链表的节点的个数(如果是带头结点的链表，需求不统计头节点)</span><br><span class="line">public static int getLength(HeroNode head) &#123;</span><br><span class="line">	if (head.next &#x3D;&#x3D; null)&#123; &#x2F;&#x2F;空链表</span><br><span class="line">		return 0;</span><br><span class="line">	&#125;</span><br><span class="line">	int length &#x3D; 0;</span><br><span class="line">	&#x2F;&#x2F;定义一个辅助的变量, 这里我们没有统计头节点</span><br><span class="line">	HeroNode cur &#x3D; head; &#x2F;&#x2F; HeroNode cur &#x3D; head.next;</span><br><span class="line">	while (cur.next !&#x3D; null) &#123; &#x2F;&#x2F; while(cur !&#x3D; null) &#123;</span><br><span class="line">		length++;</span><br><span class="line">		cur &#x3D; cur.next;</span><br><span class="line">	&#125;</span><br><span class="line">	return length;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 </li>
-<li>计算机以二进制补码的形式保存所有的整数。<ul>
-<li>正数的原码、反码、补码都相同</li>
-<li>负数的补码是其反码+1<h2 id="为什么要使用原码、反码、补码表示形式呢？"><a href="#为什么要使用原码、反码、补码表示形式呢？" class="headerlink" title="为什么要使用原码、反码、补码表示形式呢？"></a>为什么要使用原码、反码、补码表示形式呢？</h2>计算机辨别“符号位”显然会让计算机的基础电路设计变得十分复杂! 于是<br>人们想出了将符号位也参与运算的方法. 我们知道, 根据运算法则减去一个正数等于加上一个负数, 即: 1-1 = 1 + (-1) = 0 , 所以机器可以只有加法而没有减法,这样计算机运算的设计就更简单了。<br><img src="http://qd1ql2976.bkt.clouddn.com/2726" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2728" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2730" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2732" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2734" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2736" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2738" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2740" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2742" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2744" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2746" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2748" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2750" alt=""><h2 id="进制间转化"><a href="#进制间转化" class="headerlink" title="进制间转化"></a>进制间转化</h2><h4 id="进制的基本转换"><a href="#进制的基本转换" class="headerlink" title="进制的基本转换"></a>进制的基本转换</h4></li>
+<li><p>查找单链表中的倒数第k个结点 【新浪面试题】</p>
+<ul>
+<li><p>代码如下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">   &#x2F;&#x2F;查找单链表中的倒数第k个结点 【新浪面试题】</span><br><span class="line">&#x2F;&#x2F;思路</span><br><span class="line">&#x2F;&#x2F;1. 编写一个方法，接收head节点，同时接收一个index </span><br><span class="line">&#x2F;&#x2F;2. index 表示是倒数第index个节点</span><br><span class="line">&#x2F;&#x2F;3. 先把链表从头到尾遍历，得到链表的总的长度 getLength</span><br><span class="line">&#x2F;&#x2F;4. 得到size 后，我们从链表的第一个开始遍历 (size-index)个，就可以得到</span><br><span class="line">&#x2F;&#x2F;5. 如果找到了，则返回该节点，否则返回nulll</span><br><span class="line">public static HeroNode findLastIndexNode(HeroNode head, int index)&#123;</span><br><span class="line">	&#x2F;&#x2F;判断如果链表为空，返回null</span><br><span class="line">	if (head.next &#x3D;&#x3D; null)&#123;</span><br><span class="line">		return null;</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;&#x2F;第一个遍历得到链表的长度(节点个数)</span><br><span class="line">	int length &#x3D; getLength(head);</span><br><span class="line">	&#x2F;&#x2F;第二次遍历  size-index 位置，就是我们倒数的第K个节点</span><br><span class="line">	&#x2F;&#x2F;先做一个index的校验</span><br><span class="line">	if (index &lt;&#x3D; 0 || index &gt; length)&#123;</span><br><span class="line">		return null;</span><br><span class="line">	&#125;</span><br><span class="line">	HeroNode cur &#x3D; head; &#x2F;&#x2F; HeroNode cur &#x3D; head.next;</span><br><span class="line">	for(int i &#x3D; 0; i &lt;&#x3D; length - index; i++) &#123;&#x2F;&#x2F; for(int i &#x3D;0; i&lt; size - index; i++) &#123;</span><br><span class="line">		cur &#x3D; cur.next;</span><br><span class="line">	&#125;</span><br><span class="line">	return cur;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 </li>
-<li>十进制 二进制互转<ul>
-<li>二进制转成十进制  乘以2 的幂数</li>
-<li>十进制转成二进制  除以2 取余数</li>
+<li><p>单链表的反转【腾讯面试题，有点难度】</p>
+<ul>
+<li><p>图解思路</p>
+<ol>
+<li>先定义一个节点 reverseHead = new HeroNode();</li>
+<li>从头到尾遍历原来的链表，每遍历一个节点，就将其取出，并放在新的链表reverseHead 的最前端.</li>
+<li>原来的链表的head.next = reverseHead.next</li>
+</ol>
+<p><img src="http://qd1ql2976.bkt.clouddn.com/2970" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2973" alt=""></p>
+</li>
+<li><p>代码如下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;将单链表反转</span><br><span class="line">public static void reversetList(HeroNode head)&#123;</span><br><span class="line">	&#x2F;&#x2F;如果当前链表为空，或者只有一个节点，无需反转，直接返回</span><br><span class="line">	if (head.next &#x3D;&#x3D; null || head.next.next &#x3D;&#x3D; null)&#123;</span><br><span class="line">		return ;</span><br><span class="line">	&#125;</span><br><span class="line">	HeroNode reverseHead &#x3D; new HeroNode(0,&quot;&quot;,&quot;&quot;);</span><br><span class="line">	&#x2F;&#x2F;定义一个辅助的指针(变量)，帮助我们遍历原来的链表</span><br><span class="line">	HeroNode cur &#x3D; head.next ;</span><br><span class="line">	HeroNode next &#x3D; null;&#x2F;&#x2F; 指向当前节点[cur]的下一个节点</span><br><span class="line">	&#x2F;&#x2F;遍历原来的链表，每遍历一个节点，就将其取出，并放在新的链表reverseHead 的最前端</span><br><span class="line">	while(cur !&#x3D; null) &#123;</span><br><span class="line">		next &#x3D; cur.next;&#x2F;&#x2F;先暂时保存当前节点的下一个节点，因为后面需要使用</span><br><span class="line">		cur.next &#x3D; reverseHead.next;&#x2F;&#x2F;将cur的下一个节点指向新的链表的最前端</span><br><span class="line">		reverseHead.next &#x3D; cur;&#x2F;&#x2F;将cur 连接到新的链表上</span><br><span class="line">		cur &#x3D; next;&#x2F;&#x2F;让cur后移</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;&#x2F;将head.next 指向 reverseHead.next , 实现单链表的反转</span><br><span class="line">	head.next &#x3D; reverseHead.next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 </li>
-<li>二进制 八进制互转</li>
-<li>二进制 十六进制互转</li>
-<li>十进制 八进制互转</li>
-<li>十进制 十六进制互转<br><img src="http://qd1ql2976.bkt.clouddn.com/2776" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2778" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2780" alt=""></li>
+<li><p>从尾到头打印单链表 【百度，要求方式1：反向遍历 。 方式2：Stack栈】</p>
+<ul>
+<li><p>图解思路</p>
+<p><img src="http://qd1ql2976.bkt.clouddn.com/2975" alt=""></p>
+</li>
+<li><p>代码实现</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;方式2：</span><br><span class="line">&#x2F;&#x2F;可以利用栈这个数据结构，将各个节点压入到栈中，然后利用栈的先进后出的特点，就实现了逆序打印的效果</span><br><span class="line">public static void reversePrint(HeroNode head) &#123;</span><br><span class="line">	if(head.next &#x3D;&#x3D; null) &#123;</span><br><span class="line">		return;&#x2F;&#x2F;空链表，不能打印</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;&#x2F;创建要给一个栈，将各个节点压入栈</span><br><span class="line">	Stack&lt;HeroNode&gt; stack &#x3D; new Stack&lt;HeroNode&gt;();</span><br><span class="line">	HeroNode cur &#x3D; head.next;</span><br><span class="line">	&#x2F;&#x2F;将链表的所有节点压入栈</span><br><span class="line">	while(cur !&#x3D; null) &#123;</span><br><span class="line">		stack.push(cur);</span><br><span class="line">		cur &#x3D; cur.next; &#x2F;&#x2F;cur后移，这样就可以压入下一个节点</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;&#x2F;将栈中的节点进行打印,pop 出栈</span><br><span class="line">	while (stack.size() &gt; 0) &#123;</span><br><span class="line">		System.out.println(stack.pop()); &#x2F;&#x2F;stack的特点是先进后出</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>合并两个有序的单链表，合并之后的链表依然有序</p>
+  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.wzx.linkedlist;</span><br><span class="line"></span><br><span class="line">import java.util.Stack;</span><br><span class="line"></span><br><span class="line">public class SingleLinkedListDemo &#123;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		&#x2F;&#x2F;创建一个链表</span><br><span class="line">		SingleLinkedList singlelinkedList &#x3D; new SingleLinkedList();</span><br><span class="line">		HeroNode h1 &#x3D; new HeroNode(1,&quot;宋江&quot;,&quot;及时雨&quot;);</span><br><span class="line">		HeroNode h2 &#x3D; new HeroNode(2,&quot;吴用&quot;,&quot;智多星&quot;);</span><br><span class="line">		HeroNode h3 &#x3D; new HeroNode(3,&quot;卢俊义&quot;,&quot;玉麒麟&quot;);</span><br><span class="line">		HeroNode h4 &#x3D; new HeroNode(4,&quot;林冲&quot;,&quot;豹子头&quot;);</span><br><span class="line">		singlelinkedList.list();</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;按排名添加</span><br><span class="line">		singlelinkedList.addByOrder(h3);</span><br><span class="line">		singlelinkedList.addByOrder(h2);</span><br><span class="line">		singlelinkedList.addByOrder(h4);</span><br><span class="line">		singlelinkedList.addByOrder(h1);</span><br><span class="line">		singlelinkedList.list();</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;创建第二个链表</span><br><span class="line">		SingleLinkedList singlelinkedList1 &#x3D; new SingleLinkedList();</span><br><span class="line">		HeroNode h11 &#x3D; new HeroNode(10,&quot;张三&quot;,&quot;张三&quot;);</span><br><span class="line">		HeroNode h22 &#x3D; new HeroNode(21,&quot;李四&quot;,&quot;李四&quot;);</span><br><span class="line">		HeroNode h33 &#x3D; new HeroNode(13,&quot;王五&quot;,&quot;王五&quot;);</span><br><span class="line">		HeroNode h44 &#x3D; new HeroNode(45,&quot;刘六&quot;,&quot;刘六&quot;);</span><br><span class="line">		singlelinkedList1.list();</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;按排名添加</span><br><span class="line">		singlelinkedList1.addByOrder(h11);</span><br><span class="line">		singlelinkedList1.addByOrder(h22);</span><br><span class="line">		singlelinkedList1.addByOrder(h33);</span><br><span class="line">		singlelinkedList1.addByOrder(h44);</span><br><span class="line">		singlelinkedList1.list();</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;直接添加无排序</span><br><span class="line">&#x2F;&#x2F;		singlelinkedList.add(h11);</span><br><span class="line">&#x2F;&#x2F;		singlelinkedList.add(h22);</span><br><span class="line">&#x2F;&#x2F;		singlelinkedList.add(h33);</span><br><span class="line">&#x2F;&#x2F;		singlelinkedList.add(h44);</span><br><span class="line">&#x2F;&#x2F;		singlelinkedList1.list();</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;合并两个有序的单链表，合并之后的链表依然有序</span><br><span class="line">		System.out.println(&quot;合并两个有序的单链表，合并之后的链表依然有序&quot;);</span><br><span class="line">		singlelinkedListTwo(singlelinkedList1.getHead(),singlelinkedList.getHead());</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;获取有效节点的个数</span><br><span class="line">		&#x2F;*System.out.println(&quot;有效节点个数：&quot;+getLength(singlelinkedList.getHead()));*&#x2F;</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;倒数第k个节点</span><br><span class="line">		&#x2F;*System.out.println(&quot;倒数第k个节点：&quot;+findLastIndexNode(singlelinkedList.getHead(),1));*&#x2F;</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;翻转</span><br><span class="line">		&#x2F;*System.out.println(&quot;反转&quot;);</span><br><span class="line">		reversetList(singlelinkedList.getHead());</span><br><span class="line">		singlelinkedList.list();*&#x2F;</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;逆序打印</span><br><span class="line">		&#x2F;*System.out.println(&quot;反转&quot;);</span><br><span class="line">		reversePrint(singlelinkedList.getHead());*&#x2F;</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;修改</span><br><span class="line">		&#x2F;*System.out.println(&quot;修改豹子头林冲&quot;);</span><br><span class="line">		HeroNode h5 &#x3D; new HeroNode(4,&quot;林冲~~~&quot;,&quot;豹子头~~~&quot;);</span><br><span class="line">		singlelinkedList.update(h5);</span><br><span class="line">		singlelinkedList.list();*&#x2F;</span><br><span class="line">		&#x2F;&#x2F;删除</span><br><span class="line">		&#x2F;*System.out.println(&quot;删除豹子头林冲&quot;);</span><br><span class="line">		singlelinkedList.delete(1);</span><br><span class="line">		singlelinkedList.delete(2);</span><br><span class="line">		singlelinkedList.delete(3);</span><br><span class="line">		singlelinkedList.delete(4);</span><br><span class="line">		singlelinkedList.list();*&#x2F;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	&#x2F;&#x2F;合并两个有序的单链表，合并之后的链表依然有序</span><br><span class="line">	public static void singlelinkedListTwo(HeroNode head1 , HeroNode head2)&#123;</span><br><span class="line">		SingleLinkedList singleLinkedList &#x3D; new SingleLinkedList();</span><br><span class="line">		HeroNode  head&#x3D; singleLinkedList.getHead();</span><br><span class="line">		&#x2F;&#x2F;定义一个辅助变量</span><br><span class="line">		HeroNode cur &#x3D; head;</span><br><span class="line">		HeroNode cur1 &#x3D; head1.next;</span><br><span class="line">		HeroNode cur2 &#x3D; head2.next;</span><br><span class="line">		while (cur1 !&#x3D; null &amp;&amp; cur2 !&#x3D; null) &#123;</span><br><span class="line">            if (cur1.no &lt;&#x3D; cur2.no) &#123;</span><br><span class="line">            	cur.next &#x3D; cur1;</span><br><span class="line">            	cur &#x3D; cur.next;</span><br><span class="line">                cur1 &#x3D; cur1.next;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">            	cur.next &#x3D; cur2;</span><br><span class="line">            	cur &#x3D; cur.next;</span><br><span class="line">                cur2 &#x3D; cur2.next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if (cur1 &#x3D;&#x3D; null) &#123;</span><br><span class="line">            while (cur2 !&#x3D; null) &#123;</span><br><span class="line">            	cur.next &#x3D; cur2;</span><br><span class="line">                cur &#x3D; cur.next;</span><br><span class="line">                cur2 &#x3D; cur2.next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            while (cur1 !&#x3D; null) &#123;</span><br><span class="line">            	cur.next &#x3D; cur1;</span><br><span class="line">            	cur &#x3D; cur.next;</span><br><span class="line">                cur1 &#x3D; cur1.next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">		singleLinkedList.list();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;方法：获取到单链表的节点的个数(如果是带头结点的链表，需求不统计头节点)</span><br><span class="line">	public static int getLength(HeroNode head) &#123;</span><br><span class="line">		if (head.next &#x3D;&#x3D; null)&#123; &#x2F;&#x2F;空链表</span><br><span class="line">			return 0;</span><br><span class="line">		&#125;</span><br><span class="line">		int length &#x3D; 0;</span><br><span class="line">		&#x2F;&#x2F;定义一个辅助的变量, 这里我们没有统计头节点</span><br><span class="line">		HeroNode cur &#x3D; head; &#x2F;&#x2F; HeroNode cur &#x3D; head.next;</span><br><span class="line">		while (cur.next !&#x3D; null) &#123; &#x2F;&#x2F; while(cur !&#x3D; null) &#123;</span><br><span class="line">			length++;</span><br><span class="line">			cur &#x3D; cur.next;</span><br><span class="line">		&#125;</span><br><span class="line">		return length;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;查找单链表中的倒数第k个结点 【新浪面试题】</span><br><span class="line">	&#x2F;&#x2F;思路</span><br><span class="line">	&#x2F;&#x2F;1. 编写一个方法，接收head节点，同时接收一个index </span><br><span class="line">	&#x2F;&#x2F;2. index 表示是倒数第index个节点</span><br><span class="line">	&#x2F;&#x2F;3. 先把链表从头到尾遍历，得到链表的总的长度 getLength</span><br><span class="line">	&#x2F;&#x2F;4. 得到size 后，我们从链表的第一个开始遍历 (size-index)个，就可以得到</span><br><span class="line">	&#x2F;&#x2F;5. 如果找到了，则返回该节点，否则返回null</span><br><span class="line">	public static HeroNode findLastIndexNode(HeroNode head, int index)&#123;</span><br><span class="line">		&#x2F;&#x2F;判断如果链表为空，返回null</span><br><span class="line">		if (head.next &#x3D;&#x3D; null)&#123;</span><br><span class="line">			return null;</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;第一个遍历得到链表的长度(节点个数)</span><br><span class="line">		int length &#x3D; getLength(head);</span><br><span class="line">		&#x2F;&#x2F;第二次遍历  size-index 位置，就是我们倒数的第K个节点</span><br><span class="line">		&#x2F;&#x2F;先做一个index的校验</span><br><span class="line">		if (index &lt;&#x3D; 0 || index &gt; length)&#123;</span><br><span class="line">			return null;</span><br><span class="line">		&#125;</span><br><span class="line">		HeroNode cur &#x3D; head; &#x2F;&#x2F; HeroNode cur &#x3D; head.next;</span><br><span class="line">		for(int i &#x3D; 0; i &lt;&#x3D; length - index; i++) &#123;&#x2F;&#x2F; for(int i &#x3D;0; i&lt; size - index; i++) &#123;</span><br><span class="line">			cur &#x3D; cur.next;</span><br><span class="line">		&#125;</span><br><span class="line">		return cur;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;将单链表反转</span><br><span class="line">	public static void reversetList(HeroNode head)&#123;</span><br><span class="line">		&#x2F;&#x2F;如果当前链表为空，或者只有一个节点，无需反转，直接返回</span><br><span class="line">		if (head.next &#x3D;&#x3D; null || head.next.next &#x3D;&#x3D; null)&#123;</span><br><span class="line">			return ;</span><br><span class="line">		&#125;</span><br><span class="line">		HeroNode reverseHead &#x3D; new HeroNode(0,&quot;&quot;,&quot;&quot;);</span><br><span class="line">		&#x2F;&#x2F;定义一个辅助的指针(变量)，帮助我们遍历原来的链表</span><br><span class="line">		HeroNode cur &#x3D; head.next ;</span><br><span class="line">		HeroNode next &#x3D; null;&#x2F;&#x2F; 指向当前节点[cur]的下一个节点</span><br><span class="line">		&#x2F;&#x2F;遍历原来的链表，每遍历一个节点，就将其取出，并放在新的链表reverseHead 的最前端</span><br><span class="line">		while(cur !&#x3D; null) &#123;</span><br><span class="line">			next &#x3D; cur.next;&#x2F;&#x2F;先暂时保存当前节点的下一个节点，因为后面需要使用</span><br><span class="line">			cur.next &#x3D; reverseHead.next;&#x2F;&#x2F;将cur的下一个节点指向新的链表的最前端</span><br><span class="line">			reverseHead.next &#x3D; cur;&#x2F;&#x2F;将cur 连接到新的链表上</span><br><span class="line">			cur &#x3D; next;&#x2F;&#x2F;让cur后移</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;将head.next 指向 reverseHead.next , 实现单链表的反转</span><br><span class="line">		head.next &#x3D; reverseHead.next;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;方式2：</span><br><span class="line">	&#x2F;&#x2F;可以利用栈这个数据结构，将各个节点压入到栈中，然后利用栈的先进后出的特点，就实现了逆序打印的效果</span><br><span class="line">	public static void reversePrint(HeroNode head) &#123;</span><br><span class="line">		if(head.next &#x3D;&#x3D; null) &#123;</span><br><span class="line">			return;&#x2F;&#x2F;空链表，不能打印</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;创建要给一个栈，将各个节点压入栈</span><br><span class="line">		Stack&lt;HeroNode&gt; stack &#x3D; new Stack&lt;HeroNode&gt;();</span><br><span class="line">		HeroNode cur &#x3D; head.next;</span><br><span class="line">		&#x2F;&#x2F;将链表的所有节点压入栈</span><br><span class="line">		while(cur !&#x3D; null) &#123;</span><br><span class="line">			stack.push(cur);</span><br><span class="line">			cur &#x3D; cur.next; &#x2F;&#x2F;cur后移，这样就可以压入下一个节点</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;将栈中的节点进行打印,pop 出栈</span><br><span class="line">		while (stack.size() &gt; 0) &#123;</span><br><span class="line">			System.out.println(stack.pop()); &#x2F;&#x2F;stack的特点是先进后出</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;定义SingleLinkedList 管理我们的英雄</span><br><span class="line">class SingleLinkedList&#123;</span><br><span class="line">	&#x2F;&#x2F;先初始化一个头节点, 头节点不要动, 不存放具体的数据</span><br><span class="line">	private HeroNode head &#x3D; new HeroNode(0,&quot;&quot;,&quot;&quot;);</span><br><span class="line">	</span><br><span class="line">	public HeroNode getHead() &#123;</span><br><span class="line">		return head;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public void setHead(HeroNode head) &#123;</span><br><span class="line">		this.head &#x3D; head;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	&#x2F;&#x2F;添加节点到单向链表</span><br><span class="line">	&#x2F;&#x2F;思路，当不考虑编号顺序时</span><br><span class="line">	&#x2F;&#x2F;1. 找到当前链表的最后节点</span><br><span class="line">	&#x2F;&#x2F;2. 将最后这个节点的next 指向 新的节点</span><br><span class="line">	public void add(HeroNode heroNode)&#123;</span><br><span class="line">		&#x2F;&#x2F;因为head节点不能动，因此我们需要一个辅助遍历 temp</span><br><span class="line">		HeroNode temp &#x3D; head;</span><br><span class="line">		&#x2F;&#x2F;遍历链表，找到最后</span><br><span class="line">		while (true) &#123;</span><br><span class="line">			&#x2F;&#x2F;找到链表的最后</span><br><span class="line">			if (temp.next &#x3D;&#x3D; null)&#123;&#x2F;&#x2F;遍历结束</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			&#x2F;&#x2F;如果没有找到最后, 将将temp后移</span><br><span class="line">			temp &#x3D; temp.next;</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;当退出while循环时，temp就指向了链表的最后</span><br><span class="line">		&#x2F;&#x2F;将最后这个节点的next 指向 新的节点</span><br><span class="line">		temp.next &#x3D; heroNode;</span><br><span class="line">&#x2F;&#x2F;		System.out.println(&quot;添加成功&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;第二种方式在添加英雄时，根据排名将英雄插入到指定位置</span><br><span class="line">	&#x2F;&#x2F;(如果有这个排名，则添加失败，并给出提示)</span><br><span class="line">	public void addByOrder(HeroNode heroNode)&#123;</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;因为头节点不能动，因此我们仍然通过一个辅助指针(变量)来帮助找到添加的位置</span><br><span class="line">		&#x2F;&#x2F;因为单链表，因为我们找的temp 是位于 添加位置的前一个节点，否则插入不了</span><br><span class="line">		HeroNode temp &#x3D; head;</span><br><span class="line">		boolean flag &#x3D; false;&#x2F;&#x2F; flag标志添加的编号是否存在，默认为false</span><br><span class="line">		while (true)&#123;</span><br><span class="line">			&#x2F;&#x2F;判断是否到链表最后</span><br><span class="line">			if (temp.next &#x3D;&#x3D; null)&#123;</span><br><span class="line">				break ;</span><br><span class="line">			&#125;</span><br><span class="line">			if (temp.next.no &gt; heroNode.no)&#123;</span><br><span class="line">				break;</span><br><span class="line">			&#125;else if(temp.next.no &#x3D;&#x3D; heroNode.no)&#123;</span><br><span class="line">				flag &#x3D; true;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			temp &#x3D; temp.next; &#x2F;&#x2F;后移，遍历当前链表</span><br><span class="line">		&#125;</span><br><span class="line">		if (flag)&#123;</span><br><span class="line">			System.out.printf(&quot;添加失败，排名为%d的英雄已经存在！\n&quot;,heroNode.no);</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			&#x2F;&#x2F;插入到链表中, temp的后面</span><br><span class="line">			heroNode.next &#x3D; temp.next;</span><br><span class="line">			temp.next &#x3D; heroNode;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;修改节点的信息, 根据no编号来修改，即no编号不能改.</span><br><span class="line">	&#x2F;&#x2F;说明</span><br><span class="line">	&#x2F;&#x2F;1. 根据 newHeroNode 的 no 来修改即可</span><br><span class="line">	public void update(HeroNode heroNode)&#123;</span><br><span class="line">		&#x2F;&#x2F;遍历</span><br><span class="line">		&#x2F;&#x2F;找到需要修改的节点, 根据no编号</span><br><span class="line">		&#x2F;&#x2F;定义一个辅助变量</span><br><span class="line">		HeroNode temp &#x3D; head;</span><br><span class="line">		boolean flag &#x3D; false;&#x2F;&#x2F;表示是否找到该节点</span><br><span class="line">		while (true)&#123;</span><br><span class="line">			if (temp.next &#x3D;&#x3D; null)&#123;</span><br><span class="line">				break;&#x2F;&#x2F;已经遍历完链表</span><br><span class="line">			&#125;</span><br><span class="line">			if (temp.next.no &#x3D;&#x3D; heroNode.no)&#123;</span><br><span class="line">				flag &#x3D; true;</span><br><span class="line">				break;&#x2F;&#x2F;找到</span><br><span class="line">			&#125;</span><br><span class="line">			temp &#x3D; temp.next;</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;根据flag 判断是否找到要修改的节点</span><br><span class="line">		if (flag)&#123;</span><br><span class="line">			temp.next.name &#x3D; heroNode.name;</span><br><span class="line">			temp.next.nickName &#x3D; heroNode.nickName;</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			System.out.printf(&quot;修改失败，排名为%d的不存在！\n&quot;,heroNode.no);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;删除节点</span><br><span class="line">	&#x2F;&#x2F;思路</span><br><span class="line">	&#x2F;&#x2F;1. head 不能动，因此我们需要一个temp辅助节点找到待删除节点的前一个节点</span><br><span class="line">	&#x2F;&#x2F;2. 说明我们在比较时，是temp.next.no 和  需要删除的节点的no比较</span><br><span class="line">	public void delete(int no)&#123;</span><br><span class="line">		HeroNode temp &#x3D; head;</span><br><span class="line">		boolean flag &#x3D; false; &#x2F;&#x2F; 标志是否找到待删除节点的</span><br><span class="line">		while (true)&#123;</span><br><span class="line">			if (temp.next &#x3D;&#x3D; null)&#123; &#x2F;&#x2F;已经到链表的最后</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			if (temp.next.no &#x3D;&#x3D; no)&#123;&#x2F;&#x2F;找到的待删除节点的前一个节点temp</span><br><span class="line">				flag &#x3D; true;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			temp &#x3D; temp.next; &#x2F;&#x2F;temp后移，遍历</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;判断flag</span><br><span class="line">		if (flag)&#123; &#x2F;&#x2F;找到</span><br><span class="line">			temp.next &#x3D; temp.next.next;&#x2F;&#x2F;可以删除</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			System.out.printf(&quot;修改失败，排名为%d的不存在！\n&quot;,no);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;显示链表[遍历]</span><br><span class="line">	public void list()&#123;</span><br><span class="line">		&#x2F;&#x2F;判断链表是否为空</span><br><span class="line">		if (head.next &#x3D;&#x3D; null)&#123;</span><br><span class="line">			System.out.println(&quot;链表为空，没有数据！&quot;);</span><br><span class="line">			return ;</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;因为头节点，不能动，因此我们需要一个辅助变量来遍历</span><br><span class="line">		HeroNode temp &#x3D; head;</span><br><span class="line">		while (true)&#123;</span><br><span class="line">			&#x2F;&#x2F;判断是否到链表最后</span><br><span class="line">			if (temp.next &#x3D;&#x3D; null)&#123;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			&#x2F;&#x2F;输出节点的信息</span><br><span class="line">			System.out.println(temp.next);</span><br><span class="line">			&#x2F;&#x2F;将temp后移， 一定小心</span><br><span class="line">			temp &#x3D; temp.next;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;定义HeroNode ， 每个HeroNode 对象就是一个节点</span><br><span class="line">class HeroNode &#123;</span><br><span class="line">	int no;</span><br><span class="line">	String name;</span><br><span class="line">	String nickName;</span><br><span class="line">	HeroNode next;&#x2F;&#x2F;指向下一个节点</span><br><span class="line">	&#x2F;&#x2F;构造器</span><br><span class="line">	public HeroNode(int no, String name, String nickName)&#123;</span><br><span class="line">		this.no &#x3D; no;</span><br><span class="line">		this.name &#x3D; name;</span><br><span class="line">		this.nickName &#x3D; nickName;</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;&#x2F;为了显示方法，我们重新toString</span><br><span class="line">	@Override</span><br><span class="line">	public String toString() &#123;</span><br><span class="line">		return &quot;HeroNode [no&#x3D;&quot; + no + &quot;, name&#x3D;&quot; + name + &quot;, nickName&#x3D;&quot; + nickName  + &quot;]&quot;;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>数据结构与算法</category>
+      </categories>
+      <tags>
+        <tag>数据结构与算法</tag>
+        <tag>单链表</tag>
+        <tag>面试题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>03.数据结构-队列</title>
+    <url>/2020/07/05/03-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%98%9F%E5%88%97/</url>
+    <content><![CDATA[<h2 id="队列-数组实现"><a href="#队列-数组实现" class="headerlink" title="队列-数组实现"></a>队列-数组实现</h2><ol>
+<li><h4 id="队列的一个使用场景"><a href="#队列的一个使用场景" class="headerlink" title="队列的一个使用场景"></a>队列的一个使用场景</h4><p> 银行排队的案例:<br> <img src="http://qd1ql2976.bkt.clouddn.com/2346" alt=""></p>
+</li>
+<li><h4 id="队列介绍"><a href="#队列介绍" class="headerlink" title="队列介绍"></a>队列介绍</h4><ol>
+<li>队列是一个 有序列表，可以用 数组或是链表来实现。</li>
+<li>遵循 先入先出的原则。即：先存入队列的数据，要先取出。后存入的要后取出</li>
+<li>示意图：(使用数组模拟队列示意图)<br><img src="http://qd1ql2976.bkt.clouddn.com/2361" alt=""></li>
+</ol>
+</li>
+<li><h4 id="数组模拟队列思路"><a href="#数组模拟队列思路" class="headerlink" title="数组模拟队列思路"></a>数组模拟队列思路</h4><ul>
+<li><p>队列本身是有序列表，若使用数组的结构来存储队列的数据，则队列数组的声明如下图, 其中maxSize 是该队列的最大容量。</p>
+</li>
+<li><p>因为队列的输出、输入是分别从前后端来处理，因此需要两个变量 front 及 rear 分别记录队列前后端的下标，front会随着数据输出而改变，而 rear则是随着数据输入而改变，如图所示:<br><img src="http://qd1ql2976.bkt.clouddn.com/2361" alt=""></p>
+</li>
+<li><p>代码实现</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.wzx.queue;</span><br><span class="line"></span><br><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">public class ArrayQueueDemo &#123;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		&#x2F;&#x2F; 创建一个队列</span><br><span class="line">		ArrayQueue queue &#x3D; new ArrayQueue(3);</span><br><span class="line">		&#x2F;&#x2F; 接受用户输入</span><br><span class="line">		char key &#x3D; &#39; &#39;;</span><br><span class="line">		&#x2F;&#x2F; 创建输出</span><br><span class="line">		Scanner sc &#x3D; new Scanner(System.in);</span><br><span class="line">		&#x2F;&#x2F;</span><br><span class="line">		boolean loop &#x3D; true;</span><br><span class="line">		&#x2F;&#x2F;输出一个菜单</span><br><span class="line">		while (loop) &#123;</span><br><span class="line">			System.out.println(&quot;\t\ts(show): 显示队列&quot;);</span><br><span class="line">			System.out.println(&quot;\t\te(exit): 退出程序&quot;);</span><br><span class="line">			System.out.println(&quot;\t\ta(add): 添加数据到队列&quot;);</span><br><span class="line">			System.out.println(&quot;\t\tg(get): 从队列取出数据&quot;);</span><br><span class="line">			System.out.println(&quot;\t\th(head): 查看队列头的数据&quot;);</span><br><span class="line">			key &#x3D; sc.next().charAt(0);&#x2F;&#x2F;接收一个字符</span><br><span class="line">			switch (key) &#123;</span><br><span class="line">				case &#39;a&#39; : &#x2F;&#x2F; 添加数据到队列</span><br><span class="line">					System.out.println(&quot;请输入一个数据&quot;);</span><br><span class="line">					int n &#x3D; sc.nextInt();</span><br><span class="line">					queue.addQueue(n);</span><br><span class="line">					break;</span><br><span class="line">				case &#39;g&#39; : &#x2F;&#x2F; 从队列取出数据</span><br><span class="line">					try &#123;</span><br><span class="line">						System.out.printf(&quot;取出的数据是：%d\n&quot;,queue.getQueue());</span><br><span class="line">					&#125; catch (Exception e) &#123;</span><br><span class="line">						&#x2F;&#x2F; TODO: handle exception</span><br><span class="line">						System.out.println(e.getMessage());</span><br><span class="line">					&#125;</span><br><span class="line">					break;</span><br><span class="line">				case &#39;s&#39; : &#x2F;&#x2F; 显示队列</span><br><span class="line">					queue.showQueue();</span><br><span class="line">					break;</span><br><span class="line">				case &#39;h&#39; : &#x2F;&#x2F; 查看队列头的数据</span><br><span class="line">					try &#123;</span><br><span class="line">						System.out.printf(&quot;队列头的数据是：%d\n&quot;,queue.headQueue());</span><br><span class="line">					&#125; catch (Exception e) &#123;</span><br><span class="line">						&#x2F;&#x2F; TODO: handle exception</span><br><span class="line">						System.out.println(e.getMessage());</span><br><span class="line">					&#125;</span><br><span class="line">					break;</span><br><span class="line">				case &#39;e&#39; : &#x2F;&#x2F; 退出程序</span><br><span class="line">	    sc.close();</span><br><span class="line">					loop &#x3D; false;</span><br><span class="line">					break;</span><br><span class="line">				default:</span><br><span class="line">					break;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(&quot;程序退出~~&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class ArrayQueue&#123;</span><br><span class="line">	private int MaxSize; &#x2F;&#x2F; 队列的最大容量</span><br><span class="line">	private int front; &#x2F;&#x2F; 队列头</span><br><span class="line">	private int rear; &#x2F;&#x2F; 队列尾</span><br><span class="line">	private int[] arr; &#x2F;&#x2F; 该数据用于存放数据, 模拟队列</span><br><span class="line">	</span><br><span class="line">	public ArrayQueue(int arrMaxSize)&#123;</span><br><span class="line">		arr &#x3D;  new int[arrMaxSize];</span><br><span class="line">		MaxSize &#x3D; arrMaxSize;</span><br><span class="line">		front &#x3D; -1; &#x2F;&#x2F; 指向队列头部，分析出front是指向队列头的前一个位置.</span><br><span class="line">		rear &#x3D; -1; &#x2F;&#x2F; 指向队列尾，指向队列尾的数据(即就是队列最后一个数据)</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F; 判断队列是否满</span><br><span class="line">	public boolean isFull()&#123;</span><br><span class="line">		return rear &#x3D;&#x3D; MaxSize-1;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F; 判断队列是否为空</span><br><span class="line">	public boolean isEmpty()&#123;</span><br><span class="line">		return front &#x3D;&#x3D; rear;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F; 添加数据到队列</span><br><span class="line">	public void addQueue(int n)&#123;</span><br><span class="line">		if (isFull()) &#123;</span><br><span class="line">			System.out.println(&quot;队列已满，不能添加！&quot;);</span><br><span class="line">			return ;</span><br><span class="line">		&#125;</span><br><span class="line">		rear++; &#x2F;&#x2F; 进队列，rear后移一位</span><br><span class="line">		arr[rear] &#x3D; n;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F; 获取队列的数据, 出队列</span><br><span class="line">	public int getQueue()&#123;</span><br><span class="line">		if (isEmpty()) &#123;</span><br><span class="line">			&#x2F;&#x2F; 通过抛出异常</span><br><span class="line">			throw new RuntimeException(&quot;队列空，不能取数据&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		front++; &#x2F;&#x2F; 出队列，front后移一位</span><br><span class="line">		return arr[front];</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F; 显示队列的所有数据</span><br><span class="line">	public void showQueue()&#123;</span><br><span class="line">		if (isEmpty()) &#123;</span><br><span class="line">			System.out.println(&quot;队列空的，没有数据~~&quot;);</span><br><span class="line">			return;</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F; 遍历</span><br><span class="line">		for (int i &#x3D; 0; i &lt; arr.length; i++)&#123;</span><br><span class="line">			System.out.printf(&quot;arr[%d]&#x3D;%d\n&quot;, i, arr[i]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F; 显示队列的头数据， 注意不是取出数据</span><br><span class="line">	public int headQueue()&#123;</span><br><span class="line">		if (isEmpty()) &#123;</span><br><span class="line">			&#x2F;&#x2F; 通过抛出异常</span><br><span class="line">			throw new RuntimeException(&quot;队列空，不能取数据&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		return arr[front+1];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>问题分析并优化</p>
+<ol>
+<li>目前数组使用一次就不能用， 没有达到复用的效果</li>
+<li>将这个数组使用算法，改进成一个列 环形的队列 取模：%</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><h4 id="数组模拟环形队列"><a href="#数组模拟环形队列" class="headerlink" title="数组模拟环形队列"></a>数组模拟环形队列</h4><p> 对前面的数组模拟队列的优化，充分利用数组。 因此将数组看做是一个环形的。(通过取模的方式来实现即可)</p>
+<ul>
+<li><p>分析说明</p>
+<ol>
+<li>尾索引的下一个为头索引时表示队列满，即将队列容量空出一个作为约定,这个在做判断队列满的时候需要注意 (rear + 1) % maxSize == front 满]</li>
+<li>rear == front [空]</li>
+<li>分析示意图<br><img src="http://qd1ql2976.bkt.clouddn.com/2361" alt=""></li>
+<li>思路如下<ol>
+<li>front 变量的含义做一个调整： front 就指向队列的第一个元素, 也就是说 arr[front] 就是队列的第一个元素<br>front 的初始值 = 0</li>
+<li>rear 变量的含义做一个调整：rear 指向队列的最后一个元素的后一个位置. 因为希望空出一个空间做为约定.<br>rear 的初始值 = 0</li>
+<li>当队列满时，条件是  (rear  + 1) % maxSize == front 【满】</li>
+<li>对队列为空的条件， rear == front 【空】</li>
+<li>当我们这样分析， 队列中有效的数据的个数   (rear + maxSize - front) % maxSize</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>代码实现</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.wzx.queue;</span><br><span class="line"></span><br><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">public class CircleArrayQueueDemo &#123;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		&#x2F;&#x2F;测试一把</span><br><span class="line">		System.out.println(&quot;测试数组模拟环形队列的案例~~~&quot;);</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F; 创建一个环形队列</span><br><span class="line">		CircleArrayQueue queue &#x3D; new CircleArrayQueue(4); &#x2F;&#x2F;说明设置4, 其队列的有效数据最大是3</span><br><span class="line">		&#x2F;&#x2F; 接受用户输入</span><br><span class="line">		char key &#x3D; &#39; &#39;;</span><br><span class="line">		&#x2F;&#x2F; 创建输出</span><br><span class="line">		Scanner sc &#x3D; new Scanner(System.in);</span><br><span class="line">		&#x2F;&#x2F;</span><br><span class="line">		boolean loop &#x3D; true;</span><br><span class="line">		&#x2F;&#x2F;输出一个菜单</span><br><span class="line">		while (loop) &#123;</span><br><span class="line">			System.out.println(&quot;\t\ts(show): 显示队列&quot;);</span><br><span class="line">			System.out.println(&quot;\t\te(exit): 退出程序&quot;);</span><br><span class="line">			System.out.println(&quot;\t\ta(add): 添加数据到队列&quot;);</span><br><span class="line">			System.out.println(&quot;\t\tg(get): 从队列取出数据&quot;);</span><br><span class="line">			System.out.println(&quot;\t\th(head): 查看队列头的数据&quot;);</span><br><span class="line">			key &#x3D; sc.next().charAt(0);&#x2F;&#x2F;接收一个字符</span><br><span class="line">			switch (key) &#123;</span><br><span class="line">				case &#39;a&#39; : &#x2F;&#x2F; 添加数据到队列</span><br><span class="line">					System.out.println(&quot;请输入一个数据&quot;);</span><br><span class="line">					int n &#x3D; sc.nextInt();</span><br><span class="line">					queue.addQueue(n);</span><br><span class="line">					break;</span><br><span class="line">				case &#39;g&#39; : &#x2F;&#x2F; 从队列取出数据</span><br><span class="line">					try &#123;</span><br><span class="line">						System.out.printf(&quot;取出的数据是：%d\n&quot;,queue.getQueue());</span><br><span class="line">					&#125; catch (Exception e) &#123;</span><br><span class="line">						&#x2F;&#x2F; TODO: handle exception</span><br><span class="line">						System.out.println(e.getMessage());</span><br><span class="line">					&#125;</span><br><span class="line">					break;</span><br><span class="line">				case &#39;s&#39; : &#x2F;&#x2F; 显示队列</span><br><span class="line">					queue.showQueue();</span><br><span class="line">					break;</span><br><span class="line">				case &#39;h&#39; : &#x2F;&#x2F; 查看队列头的数据</span><br><span class="line">					try &#123;</span><br><span class="line">						System.out.printf(&quot;队列头的数据是：%d\n&quot;,queue.headQueue());</span><br><span class="line">					&#125; catch (Exception e) &#123;</span><br><span class="line">						&#x2F;&#x2F; TODO: handle exception</span><br><span class="line">						System.out.println(e.getMessage());</span><br><span class="line">					&#125;</span><br><span class="line">					break;</span><br><span class="line">				case &#39;e&#39; : &#x2F;&#x2F; 退出程序</span><br><span class="line">					sc.close();</span><br><span class="line">					loop &#x3D; false;</span><br><span class="line">					break;</span><br><span class="line">				default:</span><br><span class="line">					break;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(&quot;程序退出~~&quot;);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">class CircleArrayQueue&#123;</span><br><span class="line">	private int MaxSize; &#x2F;&#x2F; 表示数组的最大容量</span><br><span class="line">	&#x2F;&#x2F; front 变量的含义做一个调整： front 就指向队列的第一个元素, 也就是说 arr[front] 就是队列的第一个元素 </span><br><span class="line">	&#x2F;&#x2F; front 的初始值 &#x3D; 0</span><br><span class="line">	private int front; </span><br><span class="line">	&#x2F;&#x2F; rear 变量的含义做一个调整：rear 指向队列的最后一个元素的后一个位置. 因为希望空出一个空间做为约定.</span><br><span class="line">	&#x2F;&#x2F; rear 的初始值 &#x3D; 0</span><br><span class="line">	private int rear; &#x2F;&#x2F; 队列尾</span><br><span class="line">	private int[] arr; &#x2F;&#x2F; 该数据用于存放数据, 模拟队列</span><br><span class="line"></span><br><span class="line">	public CircleArrayQueue(int arrMaxSize) &#123;</span><br><span class="line">		arr &#x3D; new int[arrMaxSize];</span><br><span class="line">		MaxSize &#x3D; arrMaxSize;</span><br><span class="line">		front &#x3D; 0; &#x2F;&#x2F; 指向队列头部，分析出front是指向队列头的位置</span><br><span class="line">		rear &#x3D; 0; &#x2F;&#x2F; 指向队列尾，指向队列尾的后一个位置</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;&#x2F; 当前队列有效的数据的个数</span><br><span class="line">	public int size()&#123;</span><br><span class="line">		return ( rear + MaxSize - front ) % MaxSize;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	&#x2F;&#x2F; 判断队列是否满</span><br><span class="line">	public boolean isFull()&#123;</span><br><span class="line">		return ( rear + 1 ) % MaxSize &#x3D;&#x3D; front;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F; 判断队列是否为空</span><br><span class="line">	public boolean isEmpty()&#123;</span><br><span class="line">		return front &#x3D;&#x3D; rear;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F; 添加数据到队列</span><br><span class="line">	public void addQueue(int n)&#123;</span><br><span class="line">		if (isFull()) &#123;</span><br><span class="line">			System.out.println(&quot;队列已满，不能添加！&quot;);</span><br><span class="line">			return ;</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;直接将数据加入</span><br><span class="line">		arr[rear] &#x3D; n;</span><br><span class="line">		&#x2F;&#x2F;将 rear 后移, 这里必须考虑取模</span><br><span class="line">		rear &#x3D; ( rear + 1 ) % MaxSize;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F; 获取队列的数据, 出队列</span><br><span class="line">	public int getQueue()&#123;</span><br><span class="line">		if (isEmpty()) &#123;</span><br><span class="line">			&#x2F;&#x2F; 通过抛出异常</span><br><span class="line">			throw new RuntimeException(&quot;队列空，不能取数据&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F; 这里需要分析出 front是指向队列的第一个元素</span><br><span class="line">		&#x2F;&#x2F; 1. 先把 front 对应的值保留到一个临时变量</span><br><span class="line">		&#x2F;&#x2F; 2. 将 front 后移, 考虑取模</span><br><span class="line">		&#x2F;&#x2F; 3. 将临时保存的变量返回</span><br><span class="line">		int temp &#x3D; arr[front];</span><br><span class="line">		front &#x3D; ( front + 1 ) % MaxSize;</span><br><span class="line">		return temp;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F; 显示队列的所有数据</span><br><span class="line">	public void showQueue()&#123;</span><br><span class="line">		if (isEmpty()) &#123;</span><br><span class="line">			System.out.println(&quot;队列空的，没有数据~~&quot;);</span><br><span class="line">			return;</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F; 思路：从front开始遍历，遍历多少个元素</span><br><span class="line">		&#x2F;&#x2F; 动脑筋</span><br><span class="line">		for (int i &#x3D; front; i &lt; front + size(); i++)&#123;</span><br><span class="line">			System.out.printf(&quot;arr[%d]&#x3D;%d\n&quot;, i % MaxSize, arr[i % MaxSize]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F; 显示队列的头数据， 注意不是取出数据</span><br><span class="line">	public int headQueue()&#123;</span><br><span class="line">		if (isEmpty()) &#123;</span><br><span class="line">			&#x2F;&#x2F; 通过抛出异常</span><br><span class="line">			throw new RuntimeException(&quot;队列空，没有数据~~&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		return arr[front];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>数据结构与算法</category>
+      </categories>
+      <tags>
+        <tag>数据结构与算法</tag>
+        <tag>队列</tag>
+        <tag>环形队列</tag>
+        <tag>数组模拟队列</tag>
+        <tag>数组模拟环形队列</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>04.Java基础知识-关键字、保留字与标识符</title>
+    <url>/2020/07/05/04-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E5%85%B3%E9%94%AE%E5%AD%97%E3%80%81%E4%BF%9D%E7%95%99%E5%AD%97%E4%B8%8E%E6%A0%87%E8%AF%86%E7%AC%A6/</url>
+    <content><![CDATA[<h2 id="关键字与保留字"><a href="#关键字与保留字" class="headerlink" title="关键字与保留字"></a>关键字与保留字</h2><ul>
+<li><h4 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h4><ul>
+<li><strong>定义</strong>：被Java 语言赋予了特殊含义，用做专门用途的字符串（单词）</li>
+<li><strong>特点</strong>：关键字中所有字母都为小写</li>
+<li><strong>官方地址</strong>： <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html" target="_blank" rel="noopener">https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html</a><br><img src="http://qd1ql2976.bkt.clouddn.com/2416" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2419" alt=""></li>
+<li><strong>注</strong>：true、false、null虽然不是关键字，但是命名时不可用。</li>
+</ul>
+</li>
+<li><h4 id="保留字"><a href="#保留字" class="headerlink" title="保留字"></a>保留字</h4><ul>
+<li><strong>Java保留字</strong>：现有Java版本尚未使用，但以后版本可能会作为关键字使用。自己命名标识符时要避免使用这些保留字goto 、const<h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2></li>
+</ul>
+</li>
+<li><h4 id="标识符-1"><a href="#标识符-1" class="headerlink" title="标识符"></a>标识符</h4><ul>
+<li>Java对各种变量、方法和类等要素命名时使用的字符序列称为标识符</li>
+<li><strong>技巧</strong>：凡是自己可以起名字的地方都叫标识符。</li>
+</ul>
+</li>
+<li><h4 id="定义合法标识符规则"><a href="#定义合法标识符规则" class="headerlink" title="定义合法标识符规则"></a>定义合法标识符规则</h4><ul>
+<li>由26 个英文字母大小写，0-9，_或$组成</li>
+<li>数字不可以开头。</li>
+<li>不可以使用关键字和保留字，但能包含关键字和保留字。</li>
+<li>Java中严格区分大小写，长度无限制。</li>
+<li>标识符不能包含空格</li>
+</ul>
+</li>
+<li><h4 id="Java中的名称命名规范"><a href="#Java中的名称命名规范" class="headerlink" title="Java中的名称命名规范"></a>Java中的名称命名规范</h4><ul>
+<li><strong>包名</strong>：多单词组成时所有字母都小写：xxxyyyzzz</li>
+<li><strong>类名、接口名</strong>：多单词组成时，所有单词的首字母大写：XxxYyyZzz</li>
+<li><strong>变量名、方法名</strong>：多单词组成时，第一个单词首字母小写，第二个单词开始每个单词首字母大写：xxxYyyZzz</li>
+<li><strong>常量名</strong>：所有字母都大写。多单词时每个单词用下划线连接：XXX_YYY_ZZZ</li>
+</ul>
+</li>
+<li><strong>注意1</strong>：在起名字时，为了提高阅读性，要尽量有意义，“见名知意”。</li>
+<li><strong>注意2</strong>：java采用unicode字符集，因此标识符也可以使用汉字声明，但是不建议使用。</li>
 </ul>
 ]]></content>
       <categories>
@@ -638,12 +653,9 @@
       </categories>
       <tags>
         <tag>Java基础</tag>
-        <tag>进制</tag>
-        <tag>二进制</tag>
-        <tag>十进制</tag>
-        <tag>八进制</tag>
-        <tag>十六进制</tag>
-        <tag>进制转换</tag>
+        <tag>关键字</tag>
+        <tag>保留字</tag>
+        <tag>标识符</tag>
       </tags>
   </entry>
   <entry>
@@ -889,6 +901,51 @@
       </categories>
       <tags>
         <tag>Hexo 博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>06.Java基础知识-进制</title>
+    <url>/2020/07/06/06-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E8%BF%9B%E5%88%B6/</url>
+    <content><![CDATA[<h2 id="世界上有10人种人，认识和不认识二进制的。"><a href="#世界上有10人种人，认识和不认识二进制的。" class="headerlink" title="世界上有10人种人，认识和不认识二进制的。"></a>世界上有10人种人，认识和不认识二进制的。</h2><h4 id="所有数字在计算机底层都以-二进制形式存在。"><a href="#所有数字在计算机底层都以-二进制形式存在。" class="headerlink" title="所有数字在计算机底层都以 二进制形式存在。"></a>所有数字在计算机底层都以 二进制形式存在。</h4><h4 id="对于整数，有四种表示方式："><a href="#对于整数，有四种表示方式：" class="headerlink" title="对于整数，有四种表示方式："></a>对于整数，有四种表示方式：</h4><ul>
+<li>二进制(binary) ：0,1 ，满2进1.以0b或0B开头。</li>
+<li>十进制(decimal) ：0-9 ，满10进1。</li>
+<li>八进制(octal) ：0-7 ，满8进1. 以数字0开头表示。</li>
+<li>十六进制(hex) ：0-9及A-F，满16进1. 以0x或0X开头表示。此处的A-F不区分大小写。</li>
+<li>如：0x21AF +1= 0X21B0<br><img src="http://qd1ql2976.bkt.clouddn.com/2707" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2709" alt=""><h2 id="二进制"><a href="#二进制" class="headerlink" title="二进制"></a>二进制</h2></li>
+<li>Java整数常量默认是int类型，当用二进制定义整数时，其第32位是符号位；当是long类型时，二进制默认占64位，第64位是符号位</li>
+<li>二进制的整数有如下三种形式：<ul>
+<li>原码：直接将一个数值换成二进制数。最高位是符号位</li>
+<li>负数的反码：是对原码按位取反，只是最高位（符号位）确定为1。</li>
+<li>负数的补码：其反码加1。</li>
+</ul>
+</li>
+<li>计算机以二进制补码的形式保存所有的整数。<ul>
+<li>正数的原码、反码、补码都相同</li>
+<li>负数的补码是其反码+1<h2 id="为什么要使用原码、反码、补码表示形式呢？"><a href="#为什么要使用原码、反码、补码表示形式呢？" class="headerlink" title="为什么要使用原码、反码、补码表示形式呢？"></a>为什么要使用原码、反码、补码表示形式呢？</h2>计算机辨别“符号位”显然会让计算机的基础电路设计变得十分复杂! 于是<br>人们想出了将符号位也参与运算的方法. 我们知道, 根据运算法则减去一个正数等于加上一个负数, 即: 1-1 = 1 + (-1) = 0 , 所以机器可以只有加法而没有减法,这样计算机运算的设计就更简单了。<br><img src="http://qd1ql2976.bkt.clouddn.com/2726" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2728" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2730" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2732" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2734" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2736" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2738" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2740" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2742" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2744" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2746" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2748" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2750" alt=""><h2 id="进制间转化"><a href="#进制间转化" class="headerlink" title="进制间转化"></a>进制间转化</h2><h4 id="进制的基本转换"><a href="#进制的基本转换" class="headerlink" title="进制的基本转换"></a>进制的基本转换</h4></li>
+</ul>
+</li>
+<li>十进制 二进制互转<ul>
+<li>二进制转成十进制  乘以2 的幂数</li>
+<li>十进制转成二进制  除以2 取余数</li>
+</ul>
+</li>
+<li>二进制 八进制互转</li>
+<li>二进制 十六进制互转</li>
+<li>十进制 八进制互转</li>
+<li>十进制 十六进制互转<br><img src="http://qd1ql2976.bkt.clouddn.com/2776" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2778" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2780" alt=""></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+        <tag>进制</tag>
+        <tag>二进制</tag>
+        <tag>十进制</tag>
+        <tag>八进制</tag>
+        <tag>十六进制</tag>
+        <tag>进制转换</tag>
       </tags>
   </entry>
   <entry>
