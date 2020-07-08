@@ -1,40 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>01.数据结构</title>
-    <url>/2020/07/04/01-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
-    <content><![CDATA[<h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><p>数据结构包括：线性结构和非线性结构。</p>
-<ul>
-<li><h4 id="线性结构"><a href="#线性结构" class="headerlink" title="线性结构"></a>线性结构</h4><ol>
-<li>线性结构作为最常用的数据结构，其特点是数据元素之间存在一对一的线性关系。</li>
-<li>线性结构有两种不同的存储结构，即顺序存储结构和链式存储结构。</li>
-<li>顺序存储的线性表称为顺序表，顺序表中的存储元素是连续的。</li>
-<li>链式存储的线性表称为链表，链表中的存储元素不一定是连续的，元素节点中存放数据元素以及相邻元素的地址信息。</li>
-<li>线性结构常见的有：数组、队列、链表和栈。</li>
-</ol>
-</li>
-<li><h4 id="非线性结构"><a href="#非线性结构" class="headerlink" title="非线性结构"></a>非线性结构</h4><ol>
-<li>二维数组</li>
-<li>多维数组</li>
-<li>广义表</li>
-<li>树结构</li>
-<li>图结构</li>
-</ol>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>数据结构与算法</category>
-      </categories>
-      <tags>
-        <tag>数据结构与算法</tag>
-        <tag>线性结构</tag>
-        <tag>非线性结构</tag>
-        <tag>顺序存储结构</tag>
-        <tag>链式存储结构</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>01.Java语言概述</title>
     <url>/2020/07/03/01-Java%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/</url>
     <content><![CDATA[<h2 id="一、Java基础知识图解"><a href="#一、Java基础知识图解" class="headerlink" title="一、Java基础知识图解"></a>一、Java基础知识图解</h2><p><img src="http://qd1ql2976.bkt.clouddn.com/1753" alt=""></p>
@@ -146,6 +112,93 @@
 <li><h4 id="JDK、JRE、JVM的关系"><a href="#JDK、JRE、JVM的关系" class="headerlink" title="JDK、JRE、JVM的关系"></a>JDK、JRE、JVM的关系</h4><p>  <img src="http://qd1ql2976.bkt.clouddn.com/2085" alt=""><br>  <img src="http://qd1ql2976.bkt.clouddn.com/2087" alt=""></p>
 </li>
 <li><h4 id="JDK安装"><a href="#JDK安装" class="headerlink" title="JDK安装"></a>JDK安装</h4><p>  <img src="http://qd1ql2976.bkt.clouddn.com/2095" alt=""><br>  <img src="http://qd1ql2976.bkt.clouddn.com/2097" alt=""></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>01.数据结构</title>
+    <url>/2020/07/04/01-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
+    <content><![CDATA[<h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><p>数据结构包括：线性结构和非线性结构。</p>
+<ul>
+<li><h4 id="线性结构"><a href="#线性结构" class="headerlink" title="线性结构"></a>线性结构</h4><ol>
+<li>线性结构作为最常用的数据结构，其特点是数据元素之间存在一对一的线性关系。</li>
+<li>线性结构有两种不同的存储结构，即顺序存储结构和链式存储结构。</li>
+<li>顺序存储的线性表称为顺序表，顺序表中的存储元素是连续的。</li>
+<li>链式存储的线性表称为链表，链表中的存储元素不一定是连续的，元素节点中存放数据元素以及相邻元素的地址信息。</li>
+<li>线性结构常见的有：数组、队列、链表和栈。</li>
+</ol>
+</li>
+<li><h4 id="非线性结构"><a href="#非线性结构" class="headerlink" title="非线性结构"></a>非线性结构</h4><ol>
+<li>二维数组</li>
+<li>多维数组</li>
+<li>广义表</li>
+<li>树结构</li>
+<li>图结构</li>
+</ol>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>数据结构与算法</category>
+      </categories>
+      <tags>
+        <tag>数据结构与算法</tag>
+        <tag>线性结构</tag>
+        <tag>非线性结构</tag>
+        <tag>顺序存储结构</tag>
+        <tag>链式存储结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>02.Java基础知识-文档及规范</title>
+    <url>/2020/07/03/02-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E6%96%87%E6%A1%A3%E5%8F%8A%E8%A7%84%E8%8C%83/</url>
+    <content><![CDATA[<h2 id="一、Java-API文档"><a href="#一、Java-API文档" class="headerlink" title="一、Java API文档"></a>一、Java API文档</h2><ul>
+<li>API (Application Programming Interface,应用程序编程接口)是Java提供的基本编程接口。</li>
+<li>Java语言提供了大量的基础类，因此Oracle也为这些基础类提供了相应的API文档，用于告诉开发者如何使用这些类，以及这些类里包含的方法。</li>
+<li>下载API: <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a><br><img src="http://qd1ql2976.bkt.clouddn.com/2119" alt=""><h2 id="二、良好的编程风格"><a href="#二、良好的编程风格" class="headerlink" title="二、良好的编程风格"></a>二、良好的编程风格</h2></li>
+<li><h4 id="正确的注释和注释风格"><a href="#正确的注释和注释风格" class="headerlink" title="正确的注释和注释风格"></a>正确的注释和注释风格</h4><ul>
+<li>使用文档注释来注释整个类或整个方法。</li>
+<li>如果注释方法中的某一一个步骤，使用单行或多行注释。</li>
+</ul>
+</li>
+<li><h4 id="正确的缩进和空白"><a href="#正确的缩进和空白" class="headerlink" title="正确的缩进和空白"></a>正确的缩进和空白</h4><ul>
+<li>使用一次tab操作，实现缩进</li>
+<li>运算符两边习惯性各加一一个空格。比如: 2+4* 5。</li>
+</ul>
+</li>
+<li><h4 id="块的风格"><a href="#块的风格" class="headerlink" title="块的风格"></a>块的风格</h4><ul>
+<li>JavaAPI源代码选择了行尾风格<br><img src="http://qd1ql2976.bkt.clouddn.com/2135" alt=""><h2 id="三、注释"><a href="#三、注释" class="headerlink" title="三、注释"></a>三、注释</h2></li>
+</ul>
+</li>
+<li>用于注解说明解释程序的文字就是注释。</li>
+<li>Java中的注释类型:<ul>
+<li>单行注释</li>
+<li>多行注释</li>
+<li>文档注释(java特有)</li>
+</ul>
+</li>
+<li>提高了代码的阅读性;调试程序的重要方法。</li>
+<li>注释是一个程序员必须要具有的良好编程习惯。</li>
+<li>将自己的思想通过注释先整理出来，再用代码去体现</li>
+<li><h4 id="单行注释"><a href="#单行注释" class="headerlink" title="单行注释"></a>单行注释</h4>  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">格式: &#x2F;&#x2F;注释文字</span><br></pre></td></tr></table></figure></li>
+<li><h4 id="多行注释"><a href="#多行注释" class="headerlink" title="多行注释"></a>多行注释</h4>  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">格式: &#x2F;*注释文字*&#x2F;</span><br></pre></td></tr></table></figure></li>
+<li><h4 id="注"><a href="#注" class="headerlink" title="注:"></a>注:</h4><ul>
+<li>对于单行和多行注释，被注释的文字，不会被JVM (java虚拟机)解释执行。</li>
+<li>多行注释里面不允许有多行注释嵌套。</li>
+</ul>
+</li>
+<li><h4 id="文档注释-Java特有"><a href="#文档注释-Java特有" class="headerlink" title="文档注释(Java特有)"></a>文档注释(Java特有)</h4>  格式:  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line">@author指定java程序的作者</span><br><span class="line">@version指定源文件的版本</span><br><span class="line">*&#x2F;</span><br></pre></td></tr></table></figure></li>
+<li><h4 id="javadoc解析"><a href="#javadoc解析" class="headerlink" title="javadoc解析"></a>javadoc解析</h4><ul>
+<li>注释内容可以被JDK提供的工具javadoc所解析，生成一套以网页文件形式体现的该程序的说明文档。<br><img src="http://qd1ql2976.bkt.clouddn.com/2176" alt=""><h2 id="四、注释示例"><a href="#四、注释示例" class="headerlink" title="四、注释示例"></a>四、注释示例</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line">1. java规范的三种注释方式：</span><br><span class="line">单行注释</span><br><span class="line">多行注释</span><br><span class="line">文档注释(java特有)</span><br><span class="line"></span><br><span class="line">2.</span><br><span class="line">单行注释和多行注释的作用：</span><br><span class="line">① 对所写的程序进行解释说明，增强可读性。方便自己，方便别人</span><br><span class="line">② 调试所写的代码</span><br><span class="line"></span><br><span class="line">3. 特点：单行注释和多行注释，注释了的内容不参与编译。</span><br><span class="line">         换句话说，编译以后生成的.class结尾的字节码文件中不包含注释掉的信息</span><br><span class="line"></span><br><span class="line">4. 文档注释的使用：</span><br><span class="line">    注释内容可以被JDK提供的工具 javadoc 所解析，生成一套以网页文件形式体现的该程序的说明文档。</span><br><span class="line"></span><br><span class="line">5. 多行注释不可以嵌套使用</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">*&#x2F;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line">文档注释</span><br><span class="line">@author shkstart</span><br><span class="line">@version v1.0</span><br><span class="line">这是我的第一个java程序！非常的开森！</span><br><span class="line"></span><br><span class="line">*&#x2F;</span><br><span class="line">public class HelloJava&#123;</span><br><span class="line">	&#x2F;*</span><br><span class="line">	多行注释：</span><br><span class="line">	如下的main方法是程序的入口！</span><br><span class="line">	main的格式是固定的！</span><br><span class="line">	*&#x2F;</span><br><span class="line">	&#x2F;**</span><br><span class="line">	如下的方式是main()，作用：程序的入口。</span><br><span class="line">	*&#x2F;</span><br><span class="line">	public static void main(String[] args)&#123;</span><br><span class="line">		&#x2F;&#x2F;单行注释：如下的语句表示输出到控制台</span><br><span class="line">		&#x2F;&#x2F;System.out.println(&quot;Hello World!&quot;)</span><br><span class="line">		System.out.println(&quot;Hello World!&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 </li>
 </ul>
 ]]></content>
@@ -285,49 +338,42 @@
       </tags>
   </entry>
   <entry>
-    <title>02.Java基础知识-文档及规范</title>
-    <url>/2020/07/03/02-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E6%96%87%E6%A1%A3%E5%8F%8A%E8%A7%84%E8%8C%83/</url>
-    <content><![CDATA[<h2 id="一、Java-API文档"><a href="#一、Java-API文档" class="headerlink" title="一、Java API文档"></a>一、Java API文档</h2><ul>
-<li>API (Application Programming Interface,应用程序编程接口)是Java提供的基本编程接口。</li>
-<li>Java语言提供了大量的基础类，因此Oracle也为这些基础类提供了相应的API文档，用于告诉开发者如何使用这些类，以及这些类里包含的方法。</li>
-<li>下载API: <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a><br><img src="http://qd1ql2976.bkt.clouddn.com/2119" alt=""><h2 id="二、良好的编程风格"><a href="#二、良好的编程风格" class="headerlink" title="二、良好的编程风格"></a>二、良好的编程风格</h2></li>
-<li><h4 id="正确的注释和注释风格"><a href="#正确的注释和注释风格" class="headerlink" title="正确的注释和注释风格"></a>正确的注释和注释风格</h4><ul>
-<li>使用文档注释来注释整个类或整个方法。</li>
-<li>如果注释方法中的某一一个步骤，使用单行或多行注释。</li>
+    <title>04.Java基础知识-关键字、保留字与标识符</title>
+    <url>/2020/07/05/04-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E5%85%B3%E9%94%AE%E5%AD%97%E3%80%81%E4%BF%9D%E7%95%99%E5%AD%97%E4%B8%8E%E6%A0%87%E8%AF%86%E7%AC%A6/</url>
+    <content><![CDATA[<h2 id="关键字与保留字"><a href="#关键字与保留字" class="headerlink" title="关键字与保留字"></a>关键字与保留字</h2><ul>
+<li><h4 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h4><ul>
+<li><strong>定义</strong>：被Java 语言赋予了特殊含义，用做专门用途的字符串（单词）</li>
+<li><strong>特点</strong>：关键字中所有字母都为小写</li>
+<li><strong>官方地址</strong>： <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html" target="_blank" rel="noopener">https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html</a><br><img src="http://qd1ql2976.bkt.clouddn.com/2416" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2419" alt=""></li>
+<li><strong>注</strong>：true、false、null虽然不是关键字，但是命名时不可用。</li>
 </ul>
 </li>
-<li><h4 id="正确的缩进和空白"><a href="#正确的缩进和空白" class="headerlink" title="正确的缩进和空白"></a>正确的缩进和空白</h4><ul>
-<li>使用一次tab操作，实现缩进</li>
-<li>运算符两边习惯性各加一一个空格。比如: 2+4* 5。</li>
+<li><h4 id="保留字"><a href="#保留字" class="headerlink" title="保留字"></a>保留字</h4><ul>
+<li><strong>Java保留字</strong>：现有Java版本尚未使用，但以后版本可能会作为关键字使用。自己命名标识符时要避免使用这些保留字goto 、const<h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2></li>
 </ul>
 </li>
-<li><h4 id="块的风格"><a href="#块的风格" class="headerlink" title="块的风格"></a>块的风格</h4><ul>
-<li>JavaAPI源代码选择了行尾风格<br><img src="http://qd1ql2976.bkt.clouddn.com/2135" alt=""><h2 id="三、注释"><a href="#三、注释" class="headerlink" title="三、注释"></a>三、注释</h2></li>
+<li><h4 id="标识符-1"><a href="#标识符-1" class="headerlink" title="标识符"></a>标识符</h4><ul>
+<li>Java对各种变量、方法和类等要素命名时使用的字符序列称为标识符</li>
+<li><strong>技巧</strong>：凡是自己可以起名字的地方都叫标识符。</li>
 </ul>
 </li>
-<li>用于注解说明解释程序的文字就是注释。</li>
-<li>Java中的注释类型:<ul>
-<li>单行注释</li>
-<li>多行注释</li>
-<li>文档注释(java特有)</li>
+<li><h4 id="定义合法标识符规则"><a href="#定义合法标识符规则" class="headerlink" title="定义合法标识符规则"></a>定义合法标识符规则</h4><ul>
+<li>由26 个英文字母大小写，0-9，_或$组成</li>
+<li>数字不可以开头。</li>
+<li>不可以使用关键字和保留字，但能包含关键字和保留字。</li>
+<li>Java中严格区分大小写，长度无限制。</li>
+<li>标识符不能包含空格</li>
 </ul>
 </li>
-<li>提高了代码的阅读性;调试程序的重要方法。</li>
-<li>注释是一个程序员必须要具有的良好编程习惯。</li>
-<li>将自己的思想通过注释先整理出来，再用代码去体现</li>
-<li><h4 id="单行注释"><a href="#单行注释" class="headerlink" title="单行注释"></a>单行注释</h4>  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">格式: &#x2F;&#x2F;注释文字</span><br></pre></td></tr></table></figure></li>
-<li><h4 id="多行注释"><a href="#多行注释" class="headerlink" title="多行注释"></a>多行注释</h4>  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">格式: &#x2F;*注释文字*&#x2F;</span><br></pre></td></tr></table></figure></li>
-<li><h4 id="注"><a href="#注" class="headerlink" title="注:"></a>注:</h4><ul>
-<li>对于单行和多行注释，被注释的文字，不会被JVM (java虚拟机)解释执行。</li>
-<li>多行注释里面不允许有多行注释嵌套。</li>
+<li><h4 id="Java中的名称命名规范"><a href="#Java中的名称命名规范" class="headerlink" title="Java中的名称命名规范"></a>Java中的名称命名规范</h4><ul>
+<li><strong>包名</strong>：多单词组成时所有字母都小写：xxxyyyzzz</li>
+<li><strong>类名、接口名</strong>：多单词组成时，所有单词的首字母大写：XxxYyyZzz</li>
+<li><strong>变量名、方法名</strong>：多单词组成时，第一个单词首字母小写，第二个单词开始每个单词首字母大写：xxxYyyZzz</li>
+<li><strong>常量名</strong>：所有字母都大写。多单词时每个单词用下划线连接：XXX_YYY_ZZZ</li>
 </ul>
 </li>
-<li><h4 id="文档注释-Java特有"><a href="#文档注释-Java特有" class="headerlink" title="文档注释(Java特有)"></a>文档注释(Java特有)</h4>  格式:  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line">@author指定java程序的作者</span><br><span class="line">@version指定源文件的版本</span><br><span class="line">*&#x2F;</span><br></pre></td></tr></table></figure></li>
-<li><h4 id="javadoc解析"><a href="#javadoc解析" class="headerlink" title="javadoc解析"></a>javadoc解析</h4><ul>
-<li>注释内容可以被JDK提供的工具javadoc所解析，生成一套以网页文件形式体现的该程序的说明文档。<br><img src="http://qd1ql2976.bkt.clouddn.com/2176" alt=""><h2 id="四、注释示例"><a href="#四、注释示例" class="headerlink" title="四、注释示例"></a>四、注释示例</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line">1. java规范的三种注释方式：</span><br><span class="line">单行注释</span><br><span class="line">多行注释</span><br><span class="line">文档注释(java特有)</span><br><span class="line"></span><br><span class="line">2.</span><br><span class="line">单行注释和多行注释的作用：</span><br><span class="line">① 对所写的程序进行解释说明，增强可读性。方便自己，方便别人</span><br><span class="line">② 调试所写的代码</span><br><span class="line"></span><br><span class="line">3. 特点：单行注释和多行注释，注释了的内容不参与编译。</span><br><span class="line">         换句话说，编译以后生成的.class结尾的字节码文件中不包含注释掉的信息</span><br><span class="line"></span><br><span class="line">4. 文档注释的使用：</span><br><span class="line">    注释内容可以被JDK提供的工具 javadoc 所解析，生成一套以网页文件形式体现的该程序的说明文档。</span><br><span class="line"></span><br><span class="line">5. 多行注释不可以嵌套使用</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">*&#x2F;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line">文档注释</span><br><span class="line">@author shkstart</span><br><span class="line">@version v1.0</span><br><span class="line">这是我的第一个java程序！非常的开森！</span><br><span class="line"></span><br><span class="line">*&#x2F;</span><br><span class="line">public class HelloJava&#123;</span><br><span class="line">	&#x2F;*</span><br><span class="line">	多行注释：</span><br><span class="line">	如下的main方法是程序的入口！</span><br><span class="line">	main的格式是固定的！</span><br><span class="line">	*&#x2F;</span><br><span class="line">	&#x2F;**</span><br><span class="line">	如下的方式是main()，作用：程序的入口。</span><br><span class="line">	*&#x2F;</span><br><span class="line">	public static void main(String[] args)&#123;</span><br><span class="line">		&#x2F;&#x2F;单行注释：如下的语句表示输出到控制台</span><br><span class="line">		&#x2F;&#x2F;System.out.println(&quot;Hello World!&quot;)</span><br><span class="line">		System.out.println(&quot;Hello World!&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
+<li><strong>注意1</strong>：在起名字时，为了提高阅读性，要尽量有意义，“见名知意”。</li>
+<li><strong>注意2</strong>：java采用unicode字符集，因此标识符也可以使用汉字声明，但是不建议使用。</li>
 </ul>
 ]]></content>
       <categories>
@@ -335,6 +381,9 @@
       </categories>
       <tags>
         <tag>Java基础</tag>
+        <tag>关键字</tag>
+        <tag>保留字</tag>
+        <tag>标识符</tag>
       </tags>
   </entry>
   <entry>
@@ -491,63 +540,6 @@
       </tags>
   </entry>
   <entry>
-    <title>05.数据结构-单链表面试题</title>
-    <url>/2020/07/08/05-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%8D%95%E9%93%BE%E8%A1%A8%E9%9D%A2%E8%AF%95%E9%A2%98/</url>
-    <content><![CDATA[<h2 id="单链表的常见面试题有如下"><a href="#单链表的常见面试题有如下" class="headerlink" title="单链表的常见面试题有如下:"></a>单链表的常见面试题有如下:</h2><ul>
-<li><p>求单链表中有效节点的个数</p>
-<ul>
-<li><p>代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">   &#x2F;&#x2F;方法：获取到单链表的节点的个数(如果是带头结点的链表，需求不统计头节点)</span><br><span class="line">public static int getLength(HeroNode head) &#123;</span><br><span class="line">	if (head.next &#x3D;&#x3D; null)&#123; &#x2F;&#x2F;空链表</span><br><span class="line">		return 0;</span><br><span class="line">	&#125;</span><br><span class="line">	int length &#x3D; 0;</span><br><span class="line">	&#x2F;&#x2F;定义一个辅助的变量, 这里我们没有统计头节点</span><br><span class="line">	HeroNode cur &#x3D; head; &#x2F;&#x2F; HeroNode cur &#x3D; head.next;</span><br><span class="line">	while (cur.next !&#x3D; null) &#123; &#x2F;&#x2F; while(cur !&#x3D; null) &#123;</span><br><span class="line">		length++;</span><br><span class="line">		cur &#x3D; cur.next;</span><br><span class="line">	&#125;</span><br><span class="line">	return length;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>查找单链表中的倒数第k个结点 【新浪面试题】</p>
-<ul>
-<li><p>代码如下</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">   &#x2F;&#x2F;查找单链表中的倒数第k个结点 【新浪面试题】</span><br><span class="line">&#x2F;&#x2F;思路</span><br><span class="line">&#x2F;&#x2F;1. 编写一个方法，接收head节点，同时接收一个index </span><br><span class="line">&#x2F;&#x2F;2. index 表示是倒数第index个节点</span><br><span class="line">&#x2F;&#x2F;3. 先把链表从头到尾遍历，得到链表的总的长度 getLength</span><br><span class="line">&#x2F;&#x2F;4. 得到size 后，我们从链表的第一个开始遍历 (size-index)个，就可以得到</span><br><span class="line">&#x2F;&#x2F;5. 如果找到了，则返回该节点，否则返回nulll</span><br><span class="line">public static HeroNode findLastIndexNode(HeroNode head, int index)&#123;</span><br><span class="line">	&#x2F;&#x2F;判断如果链表为空，返回null</span><br><span class="line">	if (head.next &#x3D;&#x3D; null)&#123;</span><br><span class="line">		return null;</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;&#x2F;第一个遍历得到链表的长度(节点个数)</span><br><span class="line">	int length &#x3D; getLength(head);</span><br><span class="line">	&#x2F;&#x2F;第二次遍历  size-index 位置，就是我们倒数的第K个节点</span><br><span class="line">	&#x2F;&#x2F;先做一个index的校验</span><br><span class="line">	if (index &lt;&#x3D; 0 || index &gt; length)&#123;</span><br><span class="line">		return null;</span><br><span class="line">	&#125;</span><br><span class="line">	HeroNode cur &#x3D; head; &#x2F;&#x2F; HeroNode cur &#x3D; head.next;</span><br><span class="line">	for(int i &#x3D; 0; i &lt;&#x3D; length - index; i++) &#123;&#x2F;&#x2F; for(int i &#x3D;0; i&lt; size - index; i++) &#123;</span><br><span class="line">		cur &#x3D; cur.next;</span><br><span class="line">	&#125;</span><br><span class="line">	return cur;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>单链表的反转【腾讯面试题，有点难度】</p>
-<ul>
-<li><p>图解思路</p>
-<ol>
-<li>先定义一个节点 reverseHead = new HeroNode();</li>
-<li>从头到尾遍历原来的链表，每遍历一个节点，就将其取出，并放在新的链表reverseHead 的最前端.</li>
-<li>原来的链表的head.next = reverseHead.next</li>
-</ol>
-<p><img src="http://qd1ql2976.bkt.clouddn.com/2970" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2973" alt=""></p>
-</li>
-<li><p>代码如下</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;将单链表反转</span><br><span class="line">public static void reversetList(HeroNode head)&#123;</span><br><span class="line">	&#x2F;&#x2F;如果当前链表为空，或者只有一个节点，无需反转，直接返回</span><br><span class="line">	if (head.next &#x3D;&#x3D; null || head.next.next &#x3D;&#x3D; null)&#123;</span><br><span class="line">		return ;</span><br><span class="line">	&#125;</span><br><span class="line">	HeroNode reverseHead &#x3D; new HeroNode(0,&quot;&quot;,&quot;&quot;);</span><br><span class="line">	&#x2F;&#x2F;定义一个辅助的指针(变量)，帮助我们遍历原来的链表</span><br><span class="line">	HeroNode cur &#x3D; head.next ;</span><br><span class="line">	HeroNode next &#x3D; null;&#x2F;&#x2F; 指向当前节点[cur]的下一个节点</span><br><span class="line">	&#x2F;&#x2F;遍历原来的链表，每遍历一个节点，就将其取出，并放在新的链表reverseHead 的最前端</span><br><span class="line">	while(cur !&#x3D; null) &#123;</span><br><span class="line">		next &#x3D; cur.next;&#x2F;&#x2F;先暂时保存当前节点的下一个节点，因为后面需要使用</span><br><span class="line">		cur.next &#x3D; reverseHead.next;&#x2F;&#x2F;将cur的下一个节点指向新的链表的最前端</span><br><span class="line">		reverseHead.next &#x3D; cur;&#x2F;&#x2F;将cur 连接到新的链表上</span><br><span class="line">		cur &#x3D; next;&#x2F;&#x2F;让cur后移</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;&#x2F;将head.next 指向 reverseHead.next , 实现单链表的反转</span><br><span class="line">	head.next &#x3D; reverseHead.next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>从尾到头打印单链表 【百度，要求方式1：反向遍历 。 方式2：Stack栈】</p>
-<ul>
-<li><p>图解思路</p>
-<p><img src="http://qd1ql2976.bkt.clouddn.com/2975" alt=""></p>
-</li>
-<li><p>代码实现</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;方式2：</span><br><span class="line">&#x2F;&#x2F;可以利用栈这个数据结构，将各个节点压入到栈中，然后利用栈的先进后出的特点，就实现了逆序打印的效果</span><br><span class="line">public static void reversePrint(HeroNode head) &#123;</span><br><span class="line">	if(head.next &#x3D;&#x3D; null) &#123;</span><br><span class="line">		return;&#x2F;&#x2F;空链表，不能打印</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;&#x2F;创建要给一个栈，将各个节点压入栈</span><br><span class="line">	Stack&lt;HeroNode&gt; stack &#x3D; new Stack&lt;HeroNode&gt;();</span><br><span class="line">	HeroNode cur &#x3D; head.next;</span><br><span class="line">	&#x2F;&#x2F;将链表的所有节点压入栈</span><br><span class="line">	while(cur !&#x3D; null) &#123;</span><br><span class="line">		stack.push(cur);</span><br><span class="line">		cur &#x3D; cur.next; &#x2F;&#x2F;cur后移，这样就可以压入下一个节点</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;&#x2F;将栈中的节点进行打印,pop 出栈</span><br><span class="line">	while (stack.size() &gt; 0) &#123;</span><br><span class="line">		System.out.println(stack.pop()); &#x2F;&#x2F;stack的特点是先进后出</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>合并两个有序的单链表，合并之后的链表依然有序</p>
-  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.wzx.linkedlist;</span><br><span class="line"></span><br><span class="line">import java.util.Stack;</span><br><span class="line"></span><br><span class="line">public class SingleLinkedListDemo &#123;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		&#x2F;&#x2F;创建一个链表</span><br><span class="line">		SingleLinkedList singlelinkedList &#x3D; new SingleLinkedList();</span><br><span class="line">		HeroNode h1 &#x3D; new HeroNode(1,&quot;宋江&quot;,&quot;及时雨&quot;);</span><br><span class="line">		HeroNode h2 &#x3D; new HeroNode(2,&quot;吴用&quot;,&quot;智多星&quot;);</span><br><span class="line">		HeroNode h3 &#x3D; new HeroNode(3,&quot;卢俊义&quot;,&quot;玉麒麟&quot;);</span><br><span class="line">		HeroNode h4 &#x3D; new HeroNode(4,&quot;林冲&quot;,&quot;豹子头&quot;);</span><br><span class="line">		singlelinkedList.list();</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;按排名添加</span><br><span class="line">		singlelinkedList.addByOrder(h3);</span><br><span class="line">		singlelinkedList.addByOrder(h2);</span><br><span class="line">		singlelinkedList.addByOrder(h4);</span><br><span class="line">		singlelinkedList.addByOrder(h1);</span><br><span class="line">		singlelinkedList.list();</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;创建第二个链表</span><br><span class="line">		SingleLinkedList singlelinkedList1 &#x3D; new SingleLinkedList();</span><br><span class="line">		HeroNode h11 &#x3D; new HeroNode(10,&quot;张三&quot;,&quot;张三&quot;);</span><br><span class="line">		HeroNode h22 &#x3D; new HeroNode(21,&quot;李四&quot;,&quot;李四&quot;);</span><br><span class="line">		HeroNode h33 &#x3D; new HeroNode(13,&quot;王五&quot;,&quot;王五&quot;);</span><br><span class="line">		HeroNode h44 &#x3D; new HeroNode(45,&quot;刘六&quot;,&quot;刘六&quot;);</span><br><span class="line">		singlelinkedList1.list();</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;按排名添加</span><br><span class="line">		singlelinkedList1.addByOrder(h11);</span><br><span class="line">		singlelinkedList1.addByOrder(h22);</span><br><span class="line">		singlelinkedList1.addByOrder(h33);</span><br><span class="line">		singlelinkedList1.addByOrder(h44);</span><br><span class="line">		singlelinkedList1.list();</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;直接添加无排序</span><br><span class="line">&#x2F;&#x2F;		singlelinkedList.add(h11);</span><br><span class="line">&#x2F;&#x2F;		singlelinkedList.add(h22);</span><br><span class="line">&#x2F;&#x2F;		singlelinkedList.add(h33);</span><br><span class="line">&#x2F;&#x2F;		singlelinkedList.add(h44);</span><br><span class="line">&#x2F;&#x2F;		singlelinkedList1.list();</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;合并两个有序的单链表，合并之后的链表依然有序</span><br><span class="line">		System.out.println(&quot;合并两个有序的单链表，合并之后的链表依然有序&quot;);</span><br><span class="line">		singlelinkedListTwo(singlelinkedList1.getHead(),singlelinkedList.getHead());</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;获取有效节点的个数</span><br><span class="line">		&#x2F;*System.out.println(&quot;有效节点个数：&quot;+getLength(singlelinkedList.getHead()));*&#x2F;</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;倒数第k个节点</span><br><span class="line">		&#x2F;*System.out.println(&quot;倒数第k个节点：&quot;+findLastIndexNode(singlelinkedList.getHead(),1));*&#x2F;</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;翻转</span><br><span class="line">		&#x2F;*System.out.println(&quot;反转&quot;);</span><br><span class="line">		reversetList(singlelinkedList.getHead());</span><br><span class="line">		singlelinkedList.list();*&#x2F;</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;逆序打印</span><br><span class="line">		&#x2F;*System.out.println(&quot;反转&quot;);</span><br><span class="line">		reversePrint(singlelinkedList.getHead());*&#x2F;</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;修改</span><br><span class="line">		&#x2F;*System.out.println(&quot;修改豹子头林冲&quot;);</span><br><span class="line">		HeroNode h5 &#x3D; new HeroNode(4,&quot;林冲~~~&quot;,&quot;豹子头~~~&quot;);</span><br><span class="line">		singlelinkedList.update(h5);</span><br><span class="line">		singlelinkedList.list();*&#x2F;</span><br><span class="line">		&#x2F;&#x2F;删除</span><br><span class="line">		&#x2F;*System.out.println(&quot;删除豹子头林冲&quot;);</span><br><span class="line">		singlelinkedList.delete(1);</span><br><span class="line">		singlelinkedList.delete(2);</span><br><span class="line">		singlelinkedList.delete(3);</span><br><span class="line">		singlelinkedList.delete(4);</span><br><span class="line">		singlelinkedList.list();*&#x2F;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	&#x2F;&#x2F;合并两个有序的单链表，合并之后的链表依然有序</span><br><span class="line">	public static void singlelinkedListTwo(HeroNode head1 , HeroNode head2)&#123;</span><br><span class="line">		SingleLinkedList singleLinkedList &#x3D; new SingleLinkedList();</span><br><span class="line">		HeroNode  head&#x3D; singleLinkedList.getHead();</span><br><span class="line">		&#x2F;&#x2F;定义一个辅助变量</span><br><span class="line">		HeroNode cur &#x3D; head;</span><br><span class="line">		HeroNode cur1 &#x3D; head1.next;</span><br><span class="line">		HeroNode cur2 &#x3D; head2.next;</span><br><span class="line">		while (cur1 !&#x3D; null &amp;&amp; cur2 !&#x3D; null) &#123;</span><br><span class="line">            if (cur1.no &lt;&#x3D; cur2.no) &#123;</span><br><span class="line">            	cur.next &#x3D; cur1;</span><br><span class="line">            	cur &#x3D; cur.next;</span><br><span class="line">                cur1 &#x3D; cur1.next;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">            	cur.next &#x3D; cur2;</span><br><span class="line">            	cur &#x3D; cur.next;</span><br><span class="line">                cur2 &#x3D; cur2.next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if (cur1 &#x3D;&#x3D; null) &#123;</span><br><span class="line">            while (cur2 !&#x3D; null) &#123;</span><br><span class="line">            	cur.next &#x3D; cur2;</span><br><span class="line">                cur &#x3D; cur.next;</span><br><span class="line">                cur2 &#x3D; cur2.next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            while (cur1 !&#x3D; null) &#123;</span><br><span class="line">            	cur.next &#x3D; cur1;</span><br><span class="line">            	cur &#x3D; cur.next;</span><br><span class="line">                cur1 &#x3D; cur1.next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">		singleLinkedList.list();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;方法：获取到单链表的节点的个数(如果是带头结点的链表，需求不统计头节点)</span><br><span class="line">	public static int getLength(HeroNode head) &#123;</span><br><span class="line">		if (head.next &#x3D;&#x3D; null)&#123; &#x2F;&#x2F;空链表</span><br><span class="line">			return 0;</span><br><span class="line">		&#125;</span><br><span class="line">		int length &#x3D; 0;</span><br><span class="line">		&#x2F;&#x2F;定义一个辅助的变量, 这里我们没有统计头节点</span><br><span class="line">		HeroNode cur &#x3D; head; &#x2F;&#x2F; HeroNode cur &#x3D; head.next;</span><br><span class="line">		while (cur.next !&#x3D; null) &#123; &#x2F;&#x2F; while(cur !&#x3D; null) &#123;</span><br><span class="line">			length++;</span><br><span class="line">			cur &#x3D; cur.next;</span><br><span class="line">		&#125;</span><br><span class="line">		return length;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;查找单链表中的倒数第k个结点 【新浪面试题】</span><br><span class="line">	&#x2F;&#x2F;思路</span><br><span class="line">	&#x2F;&#x2F;1. 编写一个方法，接收head节点，同时接收一个index </span><br><span class="line">	&#x2F;&#x2F;2. index 表示是倒数第index个节点</span><br><span class="line">	&#x2F;&#x2F;3. 先把链表从头到尾遍历，得到链表的总的长度 getLength</span><br><span class="line">	&#x2F;&#x2F;4. 得到size 后，我们从链表的第一个开始遍历 (size-index)个，就可以得到</span><br><span class="line">	&#x2F;&#x2F;5. 如果找到了，则返回该节点，否则返回null</span><br><span class="line">	public static HeroNode findLastIndexNode(HeroNode head, int index)&#123;</span><br><span class="line">		&#x2F;&#x2F;判断如果链表为空，返回null</span><br><span class="line">		if (head.next &#x3D;&#x3D; null)&#123;</span><br><span class="line">			return null;</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;第一个遍历得到链表的长度(节点个数)</span><br><span class="line">		int length &#x3D; getLength(head);</span><br><span class="line">		&#x2F;&#x2F;第二次遍历  size-index 位置，就是我们倒数的第K个节点</span><br><span class="line">		&#x2F;&#x2F;先做一个index的校验</span><br><span class="line">		if (index &lt;&#x3D; 0 || index &gt; length)&#123;</span><br><span class="line">			return null;</span><br><span class="line">		&#125;</span><br><span class="line">		HeroNode cur &#x3D; head; &#x2F;&#x2F; HeroNode cur &#x3D; head.next;</span><br><span class="line">		for(int i &#x3D; 0; i &lt;&#x3D; length - index; i++) &#123;&#x2F;&#x2F; for(int i &#x3D;0; i&lt; size - index; i++) &#123;</span><br><span class="line">			cur &#x3D; cur.next;</span><br><span class="line">		&#125;</span><br><span class="line">		return cur;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;将单链表反转</span><br><span class="line">	public static void reversetList(HeroNode head)&#123;</span><br><span class="line">		&#x2F;&#x2F;如果当前链表为空，或者只有一个节点，无需反转，直接返回</span><br><span class="line">		if (head.next &#x3D;&#x3D; null || head.next.next &#x3D;&#x3D; null)&#123;</span><br><span class="line">			return ;</span><br><span class="line">		&#125;</span><br><span class="line">		HeroNode reverseHead &#x3D; new HeroNode(0,&quot;&quot;,&quot;&quot;);</span><br><span class="line">		&#x2F;&#x2F;定义一个辅助的指针(变量)，帮助我们遍历原来的链表</span><br><span class="line">		HeroNode cur &#x3D; head.next ;</span><br><span class="line">		HeroNode next &#x3D; null;&#x2F;&#x2F; 指向当前节点[cur]的下一个节点</span><br><span class="line">		&#x2F;&#x2F;遍历原来的链表，每遍历一个节点，就将其取出，并放在新的链表reverseHead 的最前端</span><br><span class="line">		while(cur !&#x3D; null) &#123;</span><br><span class="line">			next &#x3D; cur.next;&#x2F;&#x2F;先暂时保存当前节点的下一个节点，因为后面需要使用</span><br><span class="line">			cur.next &#x3D; reverseHead.next;&#x2F;&#x2F;将cur的下一个节点指向新的链表的最前端</span><br><span class="line">			reverseHead.next &#x3D; cur;&#x2F;&#x2F;将cur 连接到新的链表上</span><br><span class="line">			cur &#x3D; next;&#x2F;&#x2F;让cur后移</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;将head.next 指向 reverseHead.next , 实现单链表的反转</span><br><span class="line">		head.next &#x3D; reverseHead.next;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;方式2：</span><br><span class="line">	&#x2F;&#x2F;可以利用栈这个数据结构，将各个节点压入到栈中，然后利用栈的先进后出的特点，就实现了逆序打印的效果</span><br><span class="line">	public static void reversePrint(HeroNode head) &#123;</span><br><span class="line">		if(head.next &#x3D;&#x3D; null) &#123;</span><br><span class="line">			return;&#x2F;&#x2F;空链表，不能打印</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;创建要给一个栈，将各个节点压入栈</span><br><span class="line">		Stack&lt;HeroNode&gt; stack &#x3D; new Stack&lt;HeroNode&gt;();</span><br><span class="line">		HeroNode cur &#x3D; head.next;</span><br><span class="line">		&#x2F;&#x2F;将链表的所有节点压入栈</span><br><span class="line">		while(cur !&#x3D; null) &#123;</span><br><span class="line">			stack.push(cur);</span><br><span class="line">			cur &#x3D; cur.next; &#x2F;&#x2F;cur后移，这样就可以压入下一个节点</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;将栈中的节点进行打印,pop 出栈</span><br><span class="line">		while (stack.size() &gt; 0) &#123;</span><br><span class="line">			System.out.println(stack.pop()); &#x2F;&#x2F;stack的特点是先进后出</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;定义SingleLinkedList 管理我们的英雄</span><br><span class="line">class SingleLinkedList&#123;</span><br><span class="line">	&#x2F;&#x2F;先初始化一个头节点, 头节点不要动, 不存放具体的数据</span><br><span class="line">	private HeroNode head &#x3D; new HeroNode(0,&quot;&quot;,&quot;&quot;);</span><br><span class="line">	</span><br><span class="line">	public HeroNode getHead() &#123;</span><br><span class="line">		return head;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public void setHead(HeroNode head) &#123;</span><br><span class="line">		this.head &#x3D; head;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	&#x2F;&#x2F;添加节点到单向链表</span><br><span class="line">	&#x2F;&#x2F;思路，当不考虑编号顺序时</span><br><span class="line">	&#x2F;&#x2F;1. 找到当前链表的最后节点</span><br><span class="line">	&#x2F;&#x2F;2. 将最后这个节点的next 指向 新的节点</span><br><span class="line">	public void add(HeroNode heroNode)&#123;</span><br><span class="line">		&#x2F;&#x2F;因为head节点不能动，因此我们需要一个辅助遍历 temp</span><br><span class="line">		HeroNode temp &#x3D; head;</span><br><span class="line">		&#x2F;&#x2F;遍历链表，找到最后</span><br><span class="line">		while (true) &#123;</span><br><span class="line">			&#x2F;&#x2F;找到链表的最后</span><br><span class="line">			if (temp.next &#x3D;&#x3D; null)&#123;&#x2F;&#x2F;遍历结束</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			&#x2F;&#x2F;如果没有找到最后, 将将temp后移</span><br><span class="line">			temp &#x3D; temp.next;</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;当退出while循环时，temp就指向了链表的最后</span><br><span class="line">		&#x2F;&#x2F;将最后这个节点的next 指向 新的节点</span><br><span class="line">		temp.next &#x3D; heroNode;</span><br><span class="line">&#x2F;&#x2F;		System.out.println(&quot;添加成功&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;第二种方式在添加英雄时，根据排名将英雄插入到指定位置</span><br><span class="line">	&#x2F;&#x2F;(如果有这个排名，则添加失败，并给出提示)</span><br><span class="line">	public void addByOrder(HeroNode heroNode)&#123;</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;因为头节点不能动，因此我们仍然通过一个辅助指针(变量)来帮助找到添加的位置</span><br><span class="line">		&#x2F;&#x2F;因为单链表，因为我们找的temp 是位于 添加位置的前一个节点，否则插入不了</span><br><span class="line">		HeroNode temp &#x3D; head;</span><br><span class="line">		boolean flag &#x3D; false;&#x2F;&#x2F; flag标志添加的编号是否存在，默认为false</span><br><span class="line">		while (true)&#123;</span><br><span class="line">			&#x2F;&#x2F;判断是否到链表最后</span><br><span class="line">			if (temp.next &#x3D;&#x3D; null)&#123;</span><br><span class="line">				break ;</span><br><span class="line">			&#125;</span><br><span class="line">			if (temp.next.no &gt; heroNode.no)&#123;</span><br><span class="line">				break;</span><br><span class="line">			&#125;else if(temp.next.no &#x3D;&#x3D; heroNode.no)&#123;</span><br><span class="line">				flag &#x3D; true;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			temp &#x3D; temp.next; &#x2F;&#x2F;后移，遍历当前链表</span><br><span class="line">		&#125;</span><br><span class="line">		if (flag)&#123;</span><br><span class="line">			System.out.printf(&quot;添加失败，排名为%d的英雄已经存在！\n&quot;,heroNode.no);</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			&#x2F;&#x2F;插入到链表中, temp的后面</span><br><span class="line">			heroNode.next &#x3D; temp.next;</span><br><span class="line">			temp.next &#x3D; heroNode;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;修改节点的信息, 根据no编号来修改，即no编号不能改.</span><br><span class="line">	&#x2F;&#x2F;说明</span><br><span class="line">	&#x2F;&#x2F;1. 根据 newHeroNode 的 no 来修改即可</span><br><span class="line">	public void update(HeroNode heroNode)&#123;</span><br><span class="line">		&#x2F;&#x2F;遍历</span><br><span class="line">		&#x2F;&#x2F;找到需要修改的节点, 根据no编号</span><br><span class="line">		&#x2F;&#x2F;定义一个辅助变量</span><br><span class="line">		HeroNode temp &#x3D; head;</span><br><span class="line">		boolean flag &#x3D; false;&#x2F;&#x2F;表示是否找到该节点</span><br><span class="line">		while (true)&#123;</span><br><span class="line">			if (temp.next &#x3D;&#x3D; null)&#123;</span><br><span class="line">				break;&#x2F;&#x2F;已经遍历完链表</span><br><span class="line">			&#125;</span><br><span class="line">			if (temp.next.no &#x3D;&#x3D; heroNode.no)&#123;</span><br><span class="line">				flag &#x3D; true;</span><br><span class="line">				break;&#x2F;&#x2F;找到</span><br><span class="line">			&#125;</span><br><span class="line">			temp &#x3D; temp.next;</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;根据flag 判断是否找到要修改的节点</span><br><span class="line">		if (flag)&#123;</span><br><span class="line">			temp.next.name &#x3D; heroNode.name;</span><br><span class="line">			temp.next.nickName &#x3D; heroNode.nickName;</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			System.out.printf(&quot;修改失败，排名为%d的不存在！\n&quot;,heroNode.no);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;删除节点</span><br><span class="line">	&#x2F;&#x2F;思路</span><br><span class="line">	&#x2F;&#x2F;1. head 不能动，因此我们需要一个temp辅助节点找到待删除节点的前一个节点</span><br><span class="line">	&#x2F;&#x2F;2. 说明我们在比较时，是temp.next.no 和  需要删除的节点的no比较</span><br><span class="line">	public void delete(int no)&#123;</span><br><span class="line">		HeroNode temp &#x3D; head;</span><br><span class="line">		boolean flag &#x3D; false; &#x2F;&#x2F; 标志是否找到待删除节点的</span><br><span class="line">		while (true)&#123;</span><br><span class="line">			if (temp.next &#x3D;&#x3D; null)&#123; &#x2F;&#x2F;已经到链表的最后</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			if (temp.next.no &#x3D;&#x3D; no)&#123;&#x2F;&#x2F;找到的待删除节点的前一个节点temp</span><br><span class="line">				flag &#x3D; true;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			temp &#x3D; temp.next; &#x2F;&#x2F;temp后移，遍历</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;判断flag</span><br><span class="line">		if (flag)&#123; &#x2F;&#x2F;找到</span><br><span class="line">			temp.next &#x3D; temp.next.next;&#x2F;&#x2F;可以删除</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			System.out.printf(&quot;修改失败，排名为%d的不存在！\n&quot;,no);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;显示链表[遍历]</span><br><span class="line">	public void list()&#123;</span><br><span class="line">		&#x2F;&#x2F;判断链表是否为空</span><br><span class="line">		if (head.next &#x3D;&#x3D; null)&#123;</span><br><span class="line">			System.out.println(&quot;链表为空，没有数据！&quot;);</span><br><span class="line">			return ;</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;因为头节点，不能动，因此我们需要一个辅助变量来遍历</span><br><span class="line">		HeroNode temp &#x3D; head;</span><br><span class="line">		while (true)&#123;</span><br><span class="line">			&#x2F;&#x2F;判断是否到链表最后</span><br><span class="line">			if (temp.next &#x3D;&#x3D; null)&#123;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			&#x2F;&#x2F;输出节点的信息</span><br><span class="line">			System.out.println(temp.next);</span><br><span class="line">			&#x2F;&#x2F;将temp后移， 一定小心</span><br><span class="line">			temp &#x3D; temp.next;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;定义HeroNode ， 每个HeroNode 对象就是一个节点</span><br><span class="line">class HeroNode &#123;</span><br><span class="line">	int no;</span><br><span class="line">	String name;</span><br><span class="line">	String nickName;</span><br><span class="line">	HeroNode next;&#x2F;&#x2F;指向下一个节点</span><br><span class="line">	&#x2F;&#x2F;构造器</span><br><span class="line">	public HeroNode(int no, String name, String nickName)&#123;</span><br><span class="line">		this.no &#x3D; no;</span><br><span class="line">		this.name &#x3D; name;</span><br><span class="line">		this.nickName &#x3D; nickName;</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;&#x2F;为了显示方法，我们重新toString</span><br><span class="line">	@Override</span><br><span class="line">	public String toString() &#123;</span><br><span class="line">		return &quot;HeroNode [no&#x3D;&quot; + no + &quot;, name&#x3D;&quot; + name + &quot;, nickName&#x3D;&quot; + nickName  + &quot;]&quot;;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>数据结构与算法</category>
-      </categories>
-      <tags>
-        <tag>数据结构与算法</tag>
-        <tag>单链表</tag>
-        <tag>面试题</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>03.数据结构-队列</title>
     <url>/2020/07/05/03-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%98%9F%E5%88%97/</url>
     <content><![CDATA[<h2 id="队列-数组实现"><a href="#队列-数组实现" class="headerlink" title="队列-数组实现"></a>队列-数组实现</h2><ol>
@@ -610,52 +602,250 @@
       </tags>
   </entry>
   <entry>
-    <title>04.Java基础知识-关键字、保留字与标识符</title>
-    <url>/2020/07/05/04-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E5%85%B3%E9%94%AE%E5%AD%97%E3%80%81%E4%BF%9D%E7%95%99%E5%AD%97%E4%B8%8E%E6%A0%87%E8%AF%86%E7%AC%A6/</url>
-    <content><![CDATA[<h2 id="关键字与保留字"><a href="#关键字与保留字" class="headerlink" title="关键字与保留字"></a>关键字与保留字</h2><ul>
-<li><h4 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h4><ul>
-<li><strong>定义</strong>：被Java 语言赋予了特殊含义，用做专门用途的字符串（单词）</li>
-<li><strong>特点</strong>：关键字中所有字母都为小写</li>
-<li><strong>官方地址</strong>： <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html" target="_blank" rel="noopener">https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html</a><br><img src="http://qd1ql2976.bkt.clouddn.com/2416" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2419" alt=""></li>
-<li><strong>注</strong>：true、false、null虽然不是关键字，但是命名时不可用。</li>
+    <title>05.数据结构-单链表面试题</title>
+    <url>/2020/07/08/05-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%8D%95%E9%93%BE%E8%A1%A8%E9%9D%A2%E8%AF%95%E9%A2%98/</url>
+    <content><![CDATA[<h2 id="单链表的常见面试题有如下"><a href="#单链表的常见面试题有如下" class="headerlink" title="单链表的常见面试题有如下:"></a>单链表的常见面试题有如下:</h2><ul>
+<li><p>求单链表中有效节点的个数</p>
+<ul>
+<li><p>代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">   &#x2F;&#x2F;方法：获取到单链表的节点的个数(如果是带头结点的链表，需求不统计头节点)</span><br><span class="line">public static int getLength(HeroNode head) &#123;</span><br><span class="line">	if (head.next &#x3D;&#x3D; null)&#123; &#x2F;&#x2F;空链表</span><br><span class="line">		return 0;</span><br><span class="line">	&#125;</span><br><span class="line">	int length &#x3D; 0;</span><br><span class="line">	&#x2F;&#x2F;定义一个辅助的变量, 这里我们没有统计头节点</span><br><span class="line">	HeroNode cur &#x3D; head; &#x2F;&#x2F; HeroNode cur &#x3D; head.next;</span><br><span class="line">	while (cur.next !&#x3D; null) &#123; &#x2F;&#x2F; while(cur !&#x3D; null) &#123;</span><br><span class="line">		length++;</span><br><span class="line">		cur &#x3D; cur.next;</span><br><span class="line">	&#125;</span><br><span class="line">	return length;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 </li>
-<li><h4 id="保留字"><a href="#保留字" class="headerlink" title="保留字"></a>保留字</h4><ul>
-<li><strong>Java保留字</strong>：现有Java版本尚未使用，但以后版本可能会作为关键字使用。自己命名标识符时要避免使用这些保留字goto 、const<h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2></li>
+<li><p>查找单链表中的倒数第k个结点 【新浪面试题】</p>
+<ul>
+<li><p>代码如下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">   &#x2F;&#x2F;查找单链表中的倒数第k个结点 【新浪面试题】</span><br><span class="line">&#x2F;&#x2F;思路</span><br><span class="line">&#x2F;&#x2F;1. 编写一个方法，接收head节点，同时接收一个index </span><br><span class="line">&#x2F;&#x2F;2. index 表示是倒数第index个节点</span><br><span class="line">&#x2F;&#x2F;3. 先把链表从头到尾遍历，得到链表的总的长度 getLength</span><br><span class="line">&#x2F;&#x2F;4. 得到size 后，我们从链表的第一个开始遍历 (size-index)个，就可以得到</span><br><span class="line">&#x2F;&#x2F;5. 如果找到了，则返回该节点，否则返回nulll</span><br><span class="line">public static HeroNode findLastIndexNode(HeroNode head, int index)&#123;</span><br><span class="line">	&#x2F;&#x2F;判断如果链表为空，返回null</span><br><span class="line">	if (head.next &#x3D;&#x3D; null)&#123;</span><br><span class="line">		return null;</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;&#x2F;第一个遍历得到链表的长度(节点个数)</span><br><span class="line">	int length &#x3D; getLength(head);</span><br><span class="line">	&#x2F;&#x2F;第二次遍历  size-index 位置，就是我们倒数的第K个节点</span><br><span class="line">	&#x2F;&#x2F;先做一个index的校验</span><br><span class="line">	if (index &lt;&#x3D; 0 || index &gt; length)&#123;</span><br><span class="line">		return null;</span><br><span class="line">	&#125;</span><br><span class="line">	HeroNode cur &#x3D; head; &#x2F;&#x2F; HeroNode cur &#x3D; head.next;</span><br><span class="line">	for(int i &#x3D; 0; i &lt;&#x3D; length - index; i++) &#123;&#x2F;&#x2F; for(int i &#x3D;0; i&lt; size - index; i++) &#123;</span><br><span class="line">		cur &#x3D; cur.next;</span><br><span class="line">	&#125;</span><br><span class="line">	return cur;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 </li>
-<li><h4 id="标识符-1"><a href="#标识符-1" class="headerlink" title="标识符"></a>标识符</h4><ul>
-<li>Java对各种变量、方法和类等要素命名时使用的字符序列称为标识符</li>
-<li><strong>技巧</strong>：凡是自己可以起名字的地方都叫标识符。</li>
+<li><p>单链表的反转【腾讯面试题，有点难度】</p>
+<ul>
+<li><p>图解思路</p>
+<ol>
+<li>先定义一个节点 reverseHead = new HeroNode();</li>
+<li>从头到尾遍历原来的链表，每遍历一个节点，就将其取出，并放在新的链表reverseHead 的最前端.</li>
+<li>原来的链表的head.next = reverseHead.next</li>
+</ol>
+<p><img src="http://qd1ql2976.bkt.clouddn.com/2970" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2973" alt=""></p>
+</li>
+<li><p>代码如下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;将单链表反转</span><br><span class="line">public static void reversetList(HeroNode head)&#123;</span><br><span class="line">	&#x2F;&#x2F;如果当前链表为空，或者只有一个节点，无需反转，直接返回</span><br><span class="line">	if (head.next &#x3D;&#x3D; null || head.next.next &#x3D;&#x3D; null)&#123;</span><br><span class="line">		return ;</span><br><span class="line">	&#125;</span><br><span class="line">	HeroNode reverseHead &#x3D; new HeroNode(0,&quot;&quot;,&quot;&quot;);</span><br><span class="line">	&#x2F;&#x2F;定义一个辅助的指针(变量)，帮助我们遍历原来的链表</span><br><span class="line">	HeroNode cur &#x3D; head.next ;</span><br><span class="line">	HeroNode next &#x3D; null;&#x2F;&#x2F; 指向当前节点[cur]的下一个节点</span><br><span class="line">	&#x2F;&#x2F;遍历原来的链表，每遍历一个节点，就将其取出，并放在新的链表reverseHead 的最前端</span><br><span class="line">	while(cur !&#x3D; null) &#123;</span><br><span class="line">		next &#x3D; cur.next;&#x2F;&#x2F;先暂时保存当前节点的下一个节点，因为后面需要使用</span><br><span class="line">		cur.next &#x3D; reverseHead.next;&#x2F;&#x2F;将cur的下一个节点指向新的链表的最前端</span><br><span class="line">		reverseHead.next &#x3D; cur;&#x2F;&#x2F;将cur 连接到新的链表上</span><br><span class="line">		cur &#x3D; next;&#x2F;&#x2F;让cur后移</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;&#x2F;将head.next 指向 reverseHead.next , 实现单链表的反转</span><br><span class="line">	head.next &#x3D; reverseHead.next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 </li>
-<li><h4 id="定义合法标识符规则"><a href="#定义合法标识符规则" class="headerlink" title="定义合法标识符规则"></a>定义合法标识符规则</h4><ul>
-<li>由26 个英文字母大小写，0-9，_或$组成</li>
-<li>数字不可以开头。</li>
-<li>不可以使用关键字和保留字，但能包含关键字和保留字。</li>
-<li>Java中严格区分大小写，长度无限制。</li>
-<li>标识符不能包含空格</li>
+<li><p>从尾到头打印单链表 【百度，要求方式1：反向遍历 。 方式2：Stack栈】</p>
+<ul>
+<li><p>图解思路</p>
+<p><img src="http://qd1ql2976.bkt.clouddn.com/2975" alt=""></p>
+</li>
+<li><p>代码实现</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;方式2：</span><br><span class="line">&#x2F;&#x2F;可以利用栈这个数据结构，将各个节点压入到栈中，然后利用栈的先进后出的特点，就实现了逆序打印的效果</span><br><span class="line">public static void reversePrint(HeroNode head) &#123;</span><br><span class="line">	if(head.next &#x3D;&#x3D; null) &#123;</span><br><span class="line">		return;&#x2F;&#x2F;空链表，不能打印</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;&#x2F;创建要给一个栈，将各个节点压入栈</span><br><span class="line">	Stack&lt;HeroNode&gt; stack &#x3D; new Stack&lt;HeroNode&gt;();</span><br><span class="line">	HeroNode cur &#x3D; head.next;</span><br><span class="line">	&#x2F;&#x2F;将链表的所有节点压入栈</span><br><span class="line">	while(cur !&#x3D; null) &#123;</span><br><span class="line">		stack.push(cur);</span><br><span class="line">		cur &#x3D; cur.next; &#x2F;&#x2F;cur后移，这样就可以压入下一个节点</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;&#x2F;将栈中的节点进行打印,pop 出栈</span><br><span class="line">	while (stack.size() &gt; 0) &#123;</span><br><span class="line">		System.out.println(stack.pop()); &#x2F;&#x2F;stack的特点是先进后出</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 </li>
-<li><h4 id="Java中的名称命名规范"><a href="#Java中的名称命名规范" class="headerlink" title="Java中的名称命名规范"></a>Java中的名称命名规范</h4><ul>
-<li><strong>包名</strong>：多单词组成时所有字母都小写：xxxyyyzzz</li>
-<li><strong>类名、接口名</strong>：多单词组成时，所有单词的首字母大写：XxxYyyZzz</li>
-<li><strong>变量名、方法名</strong>：多单词组成时，第一个单词首字母小写，第二个单词开始每个单词首字母大写：xxxYyyZzz</li>
-<li><strong>常量名</strong>：所有字母都大写。多单词时每个单词用下划线连接：XXX_YYY_ZZZ</li>
+<li><p>合并两个有序的单链表，合并之后的链表依然有序</p>
+  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.wzx.linkedlist;</span><br><span class="line"></span><br><span class="line">import java.util.Stack;</span><br><span class="line"></span><br><span class="line">public class SingleLinkedListDemo &#123;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		&#x2F;&#x2F;创建一个链表</span><br><span class="line">		SingleLinkedList singlelinkedList &#x3D; new SingleLinkedList();</span><br><span class="line">		HeroNode h1 &#x3D; new HeroNode(1,&quot;宋江&quot;,&quot;及时雨&quot;);</span><br><span class="line">		HeroNode h2 &#x3D; new HeroNode(2,&quot;吴用&quot;,&quot;智多星&quot;);</span><br><span class="line">		HeroNode h3 &#x3D; new HeroNode(3,&quot;卢俊义&quot;,&quot;玉麒麟&quot;);</span><br><span class="line">		HeroNode h4 &#x3D; new HeroNode(4,&quot;林冲&quot;,&quot;豹子头&quot;);</span><br><span class="line">		singlelinkedList.list();</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;按排名添加</span><br><span class="line">		singlelinkedList.addByOrder(h3);</span><br><span class="line">		singlelinkedList.addByOrder(h2);</span><br><span class="line">		singlelinkedList.addByOrder(h4);</span><br><span class="line">		singlelinkedList.addByOrder(h1);</span><br><span class="line">		singlelinkedList.list();</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;创建第二个链表</span><br><span class="line">		SingleLinkedList singlelinkedList1 &#x3D; new SingleLinkedList();</span><br><span class="line">		HeroNode h11 &#x3D; new HeroNode(10,&quot;张三&quot;,&quot;张三&quot;);</span><br><span class="line">		HeroNode h22 &#x3D; new HeroNode(21,&quot;李四&quot;,&quot;李四&quot;);</span><br><span class="line">		HeroNode h33 &#x3D; new HeroNode(13,&quot;王五&quot;,&quot;王五&quot;);</span><br><span class="line">		HeroNode h44 &#x3D; new HeroNode(45,&quot;刘六&quot;,&quot;刘六&quot;);</span><br><span class="line">		singlelinkedList1.list();</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;按排名添加</span><br><span class="line">		singlelinkedList1.addByOrder(h11);</span><br><span class="line">		singlelinkedList1.addByOrder(h22);</span><br><span class="line">		singlelinkedList1.addByOrder(h33);</span><br><span class="line">		singlelinkedList1.addByOrder(h44);</span><br><span class="line">		singlelinkedList1.list();</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;直接添加无排序</span><br><span class="line">&#x2F;&#x2F;		singlelinkedList.add(h11);</span><br><span class="line">&#x2F;&#x2F;		singlelinkedList.add(h22);</span><br><span class="line">&#x2F;&#x2F;		singlelinkedList.add(h33);</span><br><span class="line">&#x2F;&#x2F;		singlelinkedList.add(h44);</span><br><span class="line">&#x2F;&#x2F;		singlelinkedList1.list();</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;合并两个有序的单链表，合并之后的链表依然有序</span><br><span class="line">		System.out.println(&quot;合并两个有序的单链表，合并之后的链表依然有序&quot;);</span><br><span class="line">		singlelinkedListTwo(singlelinkedList1.getHead(),singlelinkedList.getHead());</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;获取有效节点的个数</span><br><span class="line">		&#x2F;*System.out.println(&quot;有效节点个数：&quot;+getLength(singlelinkedList.getHead()));*&#x2F;</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;倒数第k个节点</span><br><span class="line">		&#x2F;*System.out.println(&quot;倒数第k个节点：&quot;+findLastIndexNode(singlelinkedList.getHead(),1));*&#x2F;</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;翻转</span><br><span class="line">		&#x2F;*System.out.println(&quot;反转&quot;);</span><br><span class="line">		reversetList(singlelinkedList.getHead());</span><br><span class="line">		singlelinkedList.list();*&#x2F;</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;逆序打印</span><br><span class="line">		&#x2F;*System.out.println(&quot;反转&quot;);</span><br><span class="line">		reversePrint(singlelinkedList.getHead());*&#x2F;</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;修改</span><br><span class="line">		&#x2F;*System.out.println(&quot;修改豹子头林冲&quot;);</span><br><span class="line">		HeroNode h5 &#x3D; new HeroNode(4,&quot;林冲~~~&quot;,&quot;豹子头~~~&quot;);</span><br><span class="line">		singlelinkedList.update(h5);</span><br><span class="line">		singlelinkedList.list();*&#x2F;</span><br><span class="line">		&#x2F;&#x2F;删除</span><br><span class="line">		&#x2F;*System.out.println(&quot;删除豹子头林冲&quot;);</span><br><span class="line">		singlelinkedList.delete(1);</span><br><span class="line">		singlelinkedList.delete(2);</span><br><span class="line">		singlelinkedList.delete(3);</span><br><span class="line">		singlelinkedList.delete(4);</span><br><span class="line">		singlelinkedList.list();*&#x2F;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	&#x2F;&#x2F;合并两个有序的单链表，合并之后的链表依然有序</span><br><span class="line">	public static void singlelinkedListTwo(HeroNode head1 , HeroNode head2)&#123;</span><br><span class="line">		SingleLinkedList singleLinkedList &#x3D; new SingleLinkedList();</span><br><span class="line">		HeroNode  head&#x3D; singleLinkedList.getHead();</span><br><span class="line">		&#x2F;&#x2F;定义一个辅助变量</span><br><span class="line">		HeroNode cur &#x3D; head;</span><br><span class="line">		HeroNode cur1 &#x3D; head1.next;</span><br><span class="line">		HeroNode cur2 &#x3D; head2.next;</span><br><span class="line">		while (cur1 !&#x3D; null &amp;&amp; cur2 !&#x3D; null) &#123;</span><br><span class="line">            if (cur1.no &lt;&#x3D; cur2.no) &#123;</span><br><span class="line">            	cur.next &#x3D; cur1;</span><br><span class="line">            	cur &#x3D; cur.next;</span><br><span class="line">                cur1 &#x3D; cur1.next;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">            	cur.next &#x3D; cur2;</span><br><span class="line">            	cur &#x3D; cur.next;</span><br><span class="line">                cur2 &#x3D; cur2.next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if (cur1 &#x3D;&#x3D; null) &#123;</span><br><span class="line">            while (cur2 !&#x3D; null) &#123;</span><br><span class="line">            	cur.next &#x3D; cur2;</span><br><span class="line">                cur &#x3D; cur.next;</span><br><span class="line">                cur2 &#x3D; cur2.next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            while (cur1 !&#x3D; null) &#123;</span><br><span class="line">            	cur.next &#x3D; cur1;</span><br><span class="line">            	cur &#x3D; cur.next;</span><br><span class="line">                cur1 &#x3D; cur1.next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">		singleLinkedList.list();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;方法：获取到单链表的节点的个数(如果是带头结点的链表，需求不统计头节点)</span><br><span class="line">	public static int getLength(HeroNode head) &#123;</span><br><span class="line">		if (head.next &#x3D;&#x3D; null)&#123; &#x2F;&#x2F;空链表</span><br><span class="line">			return 0;</span><br><span class="line">		&#125;</span><br><span class="line">		int length &#x3D; 0;</span><br><span class="line">		&#x2F;&#x2F;定义一个辅助的变量, 这里我们没有统计头节点</span><br><span class="line">		HeroNode cur &#x3D; head; &#x2F;&#x2F; HeroNode cur &#x3D; head.next;</span><br><span class="line">		while (cur.next !&#x3D; null) &#123; &#x2F;&#x2F; while(cur !&#x3D; null) &#123;</span><br><span class="line">			length++;</span><br><span class="line">			cur &#x3D; cur.next;</span><br><span class="line">		&#125;</span><br><span class="line">		return length;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;查找单链表中的倒数第k个结点 【新浪面试题】</span><br><span class="line">	&#x2F;&#x2F;思路</span><br><span class="line">	&#x2F;&#x2F;1. 编写一个方法，接收head节点，同时接收一个index </span><br><span class="line">	&#x2F;&#x2F;2. index 表示是倒数第index个节点</span><br><span class="line">	&#x2F;&#x2F;3. 先把链表从头到尾遍历，得到链表的总的长度 getLength</span><br><span class="line">	&#x2F;&#x2F;4. 得到size 后，我们从链表的第一个开始遍历 (size-index)个，就可以得到</span><br><span class="line">	&#x2F;&#x2F;5. 如果找到了，则返回该节点，否则返回null</span><br><span class="line">	public static HeroNode findLastIndexNode(HeroNode head, int index)&#123;</span><br><span class="line">		&#x2F;&#x2F;判断如果链表为空，返回null</span><br><span class="line">		if (head.next &#x3D;&#x3D; null)&#123;</span><br><span class="line">			return null;</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;第一个遍历得到链表的长度(节点个数)</span><br><span class="line">		int length &#x3D; getLength(head);</span><br><span class="line">		&#x2F;&#x2F;第二次遍历  size-index 位置，就是我们倒数的第K个节点</span><br><span class="line">		&#x2F;&#x2F;先做一个index的校验</span><br><span class="line">		if (index &lt;&#x3D; 0 || index &gt; length)&#123;</span><br><span class="line">			return null;</span><br><span class="line">		&#125;</span><br><span class="line">		HeroNode cur &#x3D; head; &#x2F;&#x2F; HeroNode cur &#x3D; head.next;</span><br><span class="line">		for(int i &#x3D; 0; i &lt;&#x3D; length - index; i++) &#123;&#x2F;&#x2F; for(int i &#x3D;0; i&lt; size - index; i++) &#123;</span><br><span class="line">			cur &#x3D; cur.next;</span><br><span class="line">		&#125;</span><br><span class="line">		return cur;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;将单链表反转</span><br><span class="line">	public static void reversetList(HeroNode head)&#123;</span><br><span class="line">		&#x2F;&#x2F;如果当前链表为空，或者只有一个节点，无需反转，直接返回</span><br><span class="line">		if (head.next &#x3D;&#x3D; null || head.next.next &#x3D;&#x3D; null)&#123;</span><br><span class="line">			return ;</span><br><span class="line">		&#125;</span><br><span class="line">		HeroNode reverseHead &#x3D; new HeroNode(0,&quot;&quot;,&quot;&quot;);</span><br><span class="line">		&#x2F;&#x2F;定义一个辅助的指针(变量)，帮助我们遍历原来的链表</span><br><span class="line">		HeroNode cur &#x3D; head.next ;</span><br><span class="line">		HeroNode next &#x3D; null;&#x2F;&#x2F; 指向当前节点[cur]的下一个节点</span><br><span class="line">		&#x2F;&#x2F;遍历原来的链表，每遍历一个节点，就将其取出，并放在新的链表reverseHead 的最前端</span><br><span class="line">		while(cur !&#x3D; null) &#123;</span><br><span class="line">			next &#x3D; cur.next;&#x2F;&#x2F;先暂时保存当前节点的下一个节点，因为后面需要使用</span><br><span class="line">			cur.next &#x3D; reverseHead.next;&#x2F;&#x2F;将cur的下一个节点指向新的链表的最前端</span><br><span class="line">			reverseHead.next &#x3D; cur;&#x2F;&#x2F;将cur 连接到新的链表上</span><br><span class="line">			cur &#x3D; next;&#x2F;&#x2F;让cur后移</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;将head.next 指向 reverseHead.next , 实现单链表的反转</span><br><span class="line">		head.next &#x3D; reverseHead.next;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;方式2：</span><br><span class="line">	&#x2F;&#x2F;可以利用栈这个数据结构，将各个节点压入到栈中，然后利用栈的先进后出的特点，就实现了逆序打印的效果</span><br><span class="line">	public static void reversePrint(HeroNode head) &#123;</span><br><span class="line">		if(head.next &#x3D;&#x3D; null) &#123;</span><br><span class="line">			return;&#x2F;&#x2F;空链表，不能打印</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;创建要给一个栈，将各个节点压入栈</span><br><span class="line">		Stack&lt;HeroNode&gt; stack &#x3D; new Stack&lt;HeroNode&gt;();</span><br><span class="line">		HeroNode cur &#x3D; head.next;</span><br><span class="line">		&#x2F;&#x2F;将链表的所有节点压入栈</span><br><span class="line">		while(cur !&#x3D; null) &#123;</span><br><span class="line">			stack.push(cur);</span><br><span class="line">			cur &#x3D; cur.next; &#x2F;&#x2F;cur后移，这样就可以压入下一个节点</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;将栈中的节点进行打印,pop 出栈</span><br><span class="line">		while (stack.size() &gt; 0) &#123;</span><br><span class="line">			System.out.println(stack.pop()); &#x2F;&#x2F;stack的特点是先进后出</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;定义SingleLinkedList 管理我们的英雄</span><br><span class="line">class SingleLinkedList&#123;</span><br><span class="line">	&#x2F;&#x2F;先初始化一个头节点, 头节点不要动, 不存放具体的数据</span><br><span class="line">	private HeroNode head &#x3D; new HeroNode(0,&quot;&quot;,&quot;&quot;);</span><br><span class="line">	</span><br><span class="line">	public HeroNode getHead() &#123;</span><br><span class="line">		return head;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public void setHead(HeroNode head) &#123;</span><br><span class="line">		this.head &#x3D; head;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	&#x2F;&#x2F;添加节点到单向链表</span><br><span class="line">	&#x2F;&#x2F;思路，当不考虑编号顺序时</span><br><span class="line">	&#x2F;&#x2F;1. 找到当前链表的最后节点</span><br><span class="line">	&#x2F;&#x2F;2. 将最后这个节点的next 指向 新的节点</span><br><span class="line">	public void add(HeroNode heroNode)&#123;</span><br><span class="line">		&#x2F;&#x2F;因为head节点不能动，因此我们需要一个辅助遍历 temp</span><br><span class="line">		HeroNode temp &#x3D; head;</span><br><span class="line">		&#x2F;&#x2F;遍历链表，找到最后</span><br><span class="line">		while (true) &#123;</span><br><span class="line">			&#x2F;&#x2F;找到链表的最后</span><br><span class="line">			if (temp.next &#x3D;&#x3D; null)&#123;&#x2F;&#x2F;遍历结束</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			&#x2F;&#x2F;如果没有找到最后, 将将temp后移</span><br><span class="line">			temp &#x3D; temp.next;</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;当退出while循环时，temp就指向了链表的最后</span><br><span class="line">		&#x2F;&#x2F;将最后这个节点的next 指向 新的节点</span><br><span class="line">		temp.next &#x3D; heroNode;</span><br><span class="line">&#x2F;&#x2F;		System.out.println(&quot;添加成功&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;第二种方式在添加英雄时，根据排名将英雄插入到指定位置</span><br><span class="line">	&#x2F;&#x2F;(如果有这个排名，则添加失败，并给出提示)</span><br><span class="line">	public void addByOrder(HeroNode heroNode)&#123;</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;因为头节点不能动，因此我们仍然通过一个辅助指针(变量)来帮助找到添加的位置</span><br><span class="line">		&#x2F;&#x2F;因为单链表，因为我们找的temp 是位于 添加位置的前一个节点，否则插入不了</span><br><span class="line">		HeroNode temp &#x3D; head;</span><br><span class="line">		boolean flag &#x3D; false;&#x2F;&#x2F; flag标志添加的编号是否存在，默认为false</span><br><span class="line">		while (true)&#123;</span><br><span class="line">			&#x2F;&#x2F;判断是否到链表最后</span><br><span class="line">			if (temp.next &#x3D;&#x3D; null)&#123;</span><br><span class="line">				break ;</span><br><span class="line">			&#125;</span><br><span class="line">			if (temp.next.no &gt; heroNode.no)&#123;</span><br><span class="line">				break;</span><br><span class="line">			&#125;else if(temp.next.no &#x3D;&#x3D; heroNode.no)&#123;</span><br><span class="line">				flag &#x3D; true;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			temp &#x3D; temp.next; &#x2F;&#x2F;后移，遍历当前链表</span><br><span class="line">		&#125;</span><br><span class="line">		if (flag)&#123;</span><br><span class="line">			System.out.printf(&quot;添加失败，排名为%d的英雄已经存在！\n&quot;,heroNode.no);</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			&#x2F;&#x2F;插入到链表中, temp的后面</span><br><span class="line">			heroNode.next &#x3D; temp.next;</span><br><span class="line">			temp.next &#x3D; heroNode;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;修改节点的信息, 根据no编号来修改，即no编号不能改.</span><br><span class="line">	&#x2F;&#x2F;说明</span><br><span class="line">	&#x2F;&#x2F;1. 根据 newHeroNode 的 no 来修改即可</span><br><span class="line">	public void update(HeroNode heroNode)&#123;</span><br><span class="line">		&#x2F;&#x2F;遍历</span><br><span class="line">		&#x2F;&#x2F;找到需要修改的节点, 根据no编号</span><br><span class="line">		&#x2F;&#x2F;定义一个辅助变量</span><br><span class="line">		HeroNode temp &#x3D; head;</span><br><span class="line">		boolean flag &#x3D; false;&#x2F;&#x2F;表示是否找到该节点</span><br><span class="line">		while (true)&#123;</span><br><span class="line">			if (temp.next &#x3D;&#x3D; null)&#123;</span><br><span class="line">				break;&#x2F;&#x2F;已经遍历完链表</span><br><span class="line">			&#125;</span><br><span class="line">			if (temp.next.no &#x3D;&#x3D; heroNode.no)&#123;</span><br><span class="line">				flag &#x3D; true;</span><br><span class="line">				break;&#x2F;&#x2F;找到</span><br><span class="line">			&#125;</span><br><span class="line">			temp &#x3D; temp.next;</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;根据flag 判断是否找到要修改的节点</span><br><span class="line">		if (flag)&#123;</span><br><span class="line">			temp.next.name &#x3D; heroNode.name;</span><br><span class="line">			temp.next.nickName &#x3D; heroNode.nickName;</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			System.out.printf(&quot;修改失败，排名为%d的不存在！\n&quot;,heroNode.no);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;删除节点</span><br><span class="line">	&#x2F;&#x2F;思路</span><br><span class="line">	&#x2F;&#x2F;1. head 不能动，因此我们需要一个temp辅助节点找到待删除节点的前一个节点</span><br><span class="line">	&#x2F;&#x2F;2. 说明我们在比较时，是temp.next.no 和  需要删除的节点的no比较</span><br><span class="line">	public void delete(int no)&#123;</span><br><span class="line">		HeroNode temp &#x3D; head;</span><br><span class="line">		boolean flag &#x3D; false; &#x2F;&#x2F; 标志是否找到待删除节点的</span><br><span class="line">		while (true)&#123;</span><br><span class="line">			if (temp.next &#x3D;&#x3D; null)&#123; &#x2F;&#x2F;已经到链表的最后</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			if (temp.next.no &#x3D;&#x3D; no)&#123;&#x2F;&#x2F;找到的待删除节点的前一个节点temp</span><br><span class="line">				flag &#x3D; true;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			temp &#x3D; temp.next; &#x2F;&#x2F;temp后移，遍历</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;判断flag</span><br><span class="line">		if (flag)&#123; &#x2F;&#x2F;找到</span><br><span class="line">			temp.next &#x3D; temp.next.next;&#x2F;&#x2F;可以删除</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			System.out.printf(&quot;修改失败，排名为%d的不存在！\n&quot;,no);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;显示链表[遍历]</span><br><span class="line">	public void list()&#123;</span><br><span class="line">		&#x2F;&#x2F;判断链表是否为空</span><br><span class="line">		if (head.next &#x3D;&#x3D; null)&#123;</span><br><span class="line">			System.out.println(&quot;链表为空，没有数据！&quot;);</span><br><span class="line">			return ;</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;因为头节点，不能动，因此我们需要一个辅助变量来遍历</span><br><span class="line">		HeroNode temp &#x3D; head;</span><br><span class="line">		while (true)&#123;</span><br><span class="line">			&#x2F;&#x2F;判断是否到链表最后</span><br><span class="line">			if (temp.next &#x3D;&#x3D; null)&#123;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			&#x2F;&#x2F;输出节点的信息</span><br><span class="line">			System.out.println(temp.next);</span><br><span class="line">			&#x2F;&#x2F;将temp后移， 一定小心</span><br><span class="line">			temp &#x3D; temp.next;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;定义HeroNode ， 每个HeroNode 对象就是一个节点</span><br><span class="line">class HeroNode &#123;</span><br><span class="line">	int no;</span><br><span class="line">	String name;</span><br><span class="line">	String nickName;</span><br><span class="line">	HeroNode next;&#x2F;&#x2F;指向下一个节点</span><br><span class="line">	&#x2F;&#x2F;构造器</span><br><span class="line">	public HeroNode(int no, String name, String nickName)&#123;</span><br><span class="line">		this.no &#x3D; no;</span><br><span class="line">		this.name &#x3D; name;</span><br><span class="line">		this.nickName &#x3D; nickName;</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;&#x2F;为了显示方法，我们重新toString</span><br><span class="line">	@Override</span><br><span class="line">	public String toString() &#123;</span><br><span class="line">		return &quot;HeroNode [no&#x3D;&quot; + no + &quot;, name&#x3D;&quot; + name + &quot;, nickName&#x3D;&quot; + nickName  + &quot;]&quot;;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>数据结构与算法</category>
+      </categories>
+      <tags>
+        <tag>数据结构与算法</tag>
+        <tag>单链表</tag>
+        <tag>面试题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo搭建博客及使用</title>
+    <url>/2020/07/01/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%8F%8A%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h3 id="一般使用"><a href="#一般使用" class="headerlink" title="一般使用"></a>一般使用</h3><h5 id="1-新建文章"><a href="#1-新建文章" class="headerlink" title="1. 新建文章"></a>1. 新建文章</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo n &quot;blogname&quot;</span><br></pre></td></tr></table></figure>
+<h5 id="2-清除"><a href="#2-清除" class="headerlink" title="2. 清除"></a>2. 清除</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+<h5 id="3-生成"><a href="#3-生成" class="headerlink" title="3. 生成"></a>3. 生成</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+<h5 id="4-部署"><a href="#4-部署" class="headerlink" title="4. 部署"></a>4. 部署</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<h3 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h3><h5 id="1-安装node-js"><a href="#1-安装node-js" class="headerlink" title="1. 安装node.js"></a>1. 安装node.js</h5><h5 id="2-安装淘宝的cnpm-管理器"><a href="#2-安装淘宝的cnpm-管理器" class="headerlink" title="2. 安装淘宝的cnpm 管理器"></a>2. 安装淘宝的cnpm 管理器</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry&#x3D;http:&#x2F;&#x2F;registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<h5 id="3-安装hexo框架"><a href="#3-安装hexo框架" class="headerlink" title="3. 安装hexo框架"></a>3. 安装hexo框架</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<h5 id="4-生成博客-初始化博客"><a href="#4-生成博客-初始化博客" class="headerlink" title="4. 生成博客 初始化博客"></a>4. 生成博客 初始化博客</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+
+<h5 id="5-启动本地博客服务"><a href="#5-启动本地博客服务" class="headerlink" title="5. 启动本地博客服务"></a>5. 启动本地博客服务</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<h5 id="6-本地访问地址"><a href="#6-本地访问地址" class="headerlink" title="6. 本地访问地址"></a>6. 本地访问地址</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;localhost:4000&#x2F;</span><br></pre></td></tr></table></figure>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><h5 id="1-新建文章-1"><a href="#1-新建文章-1" class="headerlink" title="1. 新建文章"></a>1. 新建文章</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo n &quot;文章名&quot; &#x2F;&#x2F;new</span><br></pre></td></tr></table></figure>
+<h5 id="2-新建页面"><a href="#2-新建页面" class="headerlink" title="2. 新建页面"></a>2. 新建页面</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new page &quot;about&quot;</span><br></pre></td></tr></table></figure>
+
+<h5 id="3-本地运行-预览"><a href="#3-本地运行-预览" class="headerlink" title="3. 本地运行(预览)"></a>3. 本地运行(预览)</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo s &#x2F;&#x2F;sever</span><br></pre></td></tr></table></figure>
+<h5 id="4-清除缓存"><a href="#4-清除缓存" class="headerlink" title="4. 清除缓存"></a>4. 清除缓存</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo c &#x2F;&#x2F;clean</span><br></pre></td></tr></table></figure>
+<h5 id="5-生成"><a href="#5-生成" class="headerlink" title="5. 生成"></a>5. 生成</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo g &#x2F;&#x2F;generate</span><br></pre></td></tr></table></figure>
+
+<h5 id="6-部署到github"><a href="#6-部署到github" class="headerlink" title="6. 部署到github"></a>6. 部署到github</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo d &#x2F;&#x2F;deploy</span><br></pre></td></tr></table></figure>
+
+<h5 id="7-推送到分支"><a href="#7-推送到分支" class="headerlink" title="7. 推送到分支"></a>7. 推送到分支</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></table></figure>
+<h3 id="配置GitHub"><a href="#配置GitHub" class="headerlink" title="配置GitHub"></a>配置GitHub</h3><h5 id="1-配置-config-yml"><a href="#1-配置-config-yml" class="headerlink" title="1. 配置_config.yml"></a>1. 配置_config.yml</h5><p><img src="http://qd1ql2976.bkt.clouddn.com/1687" alt=""></p>
+<h5 id="2-更换主题"><a href="#2-更换主题" class="headerlink" title="2.更换主题"></a>2.更换主题</h5><p><img src="http://qd1ql2976.bkt.clouddn.com/1717" alt=""></p>
+<h5 id="3-问题"><a href="#3-问题" class="headerlink" title="3.问题"></a>3.问题</h5><p>解决代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
+<p><img src="http://qd1ql2976.bkt.clouddn.com/1700" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/1702" alt=""></p>
+<h4 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h4><h5 id="hexo主题网站"><a href="#hexo主题网站" class="headerlink" title="hexo主题网站"></a><a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo主题网站</a></h5><h6 id="进入主题文件"><a href="#进入主题文件" class="headerlink" title="进入主题文件"></a>进入主题文件</h6><p><img src="http://qd1ql2976.bkt.clouddn.com/1713" alt=""></p>
+<h6 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;Fechin&#x2F;hexo-theme-diaspora.git</span><br></pre></td></tr></table></figure>
+<p><img src="http://qd1ql2976.bkt.clouddn.com/1726" alt=""></p>
+]]></content>
+      <categories>
+        <category>Hexo 博客</category>
+      </categories>
+      <tags>
+        <tag>Hexo 博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>06.Java基础知识-进制</title>
+    <url>/2020/07/06/06-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E8%BF%9B%E5%88%B6/</url>
+    <content><![CDATA[<h2 id="世界上有10人种人，认识和不认识二进制的。"><a href="#世界上有10人种人，认识和不认识二进制的。" class="headerlink" title="世界上有10人种人，认识和不认识二进制的。"></a>世界上有10人种人，认识和不认识二进制的。</h2><h4 id="所有数字在计算机底层都以-二进制形式存在。"><a href="#所有数字在计算机底层都以-二进制形式存在。" class="headerlink" title="所有数字在计算机底层都以 二进制形式存在。"></a>所有数字在计算机底层都以 二进制形式存在。</h4><h4 id="对于整数，有四种表示方式："><a href="#对于整数，有四种表示方式：" class="headerlink" title="对于整数，有四种表示方式："></a>对于整数，有四种表示方式：</h4><ul>
+<li>二进制(binary) ：0,1 ，满2进1.以0b或0B开头。</li>
+<li>十进制(decimal) ：0-9 ，满10进1。</li>
+<li>八进制(octal) ：0-7 ，满8进1. 以数字0开头表示。</li>
+<li>十六进制(hex) ：0-9及A-F，满16进1. 以0x或0X开头表示。此处的A-F不区分大小写。</li>
+<li>如：0x21AF +1= 0X21B0<br><img src="http://qd1ql2976.bkt.clouddn.com/2707" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2709" alt=""><h2 id="二进制"><a href="#二进制" class="headerlink" title="二进制"></a>二进制</h2></li>
+<li>Java整数常量默认是int类型，当用二进制定义整数时，其第32位是符号位；当是long类型时，二进制默认占64位，第64位是符号位</li>
+<li>二进制的整数有如下三种形式：<ul>
+<li>原码：直接将一个数值换成二进制数。最高位是符号位</li>
+<li>负数的反码：是对原码按位取反，只是最高位（符号位）确定为1。</li>
+<li>负数的补码：其反码加1。</li>
 </ul>
 </li>
-<li><strong>注意1</strong>：在起名字时，为了提高阅读性，要尽量有意义，“见名知意”。</li>
-<li><strong>注意2</strong>：java采用unicode字符集，因此标识符也可以使用汉字声明，但是不建议使用。</li>
+<li>计算机以二进制补码的形式保存所有的整数。<ul>
+<li>正数的原码、反码、补码都相同</li>
+<li>负数的补码是其反码+1<h2 id="为什么要使用原码、反码、补码表示形式呢？"><a href="#为什么要使用原码、反码、补码表示形式呢？" class="headerlink" title="为什么要使用原码、反码、补码表示形式呢？"></a>为什么要使用原码、反码、补码表示形式呢？</h2>计算机辨别“符号位”显然会让计算机的基础电路设计变得十分复杂! 于是<br>人们想出了将符号位也参与运算的方法. 我们知道, 根据运算法则减去一个正数等于加上一个负数, 即: 1-1 = 1 + (-1) = 0 , 所以机器可以只有加法而没有减法,这样计算机运算的设计就更简单了。<br><img src="http://qd1ql2976.bkt.clouddn.com/2726" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2728" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2730" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2732" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2734" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2736" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2738" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2740" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2742" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2744" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2746" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2748" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2750" alt=""><h2 id="进制间转化"><a href="#进制间转化" class="headerlink" title="进制间转化"></a>进制间转化</h2><h4 id="进制的基本转换"><a href="#进制的基本转换" class="headerlink" title="进制的基本转换"></a>进制的基本转换</h4></li>
 </ul>
+</li>
+<li>十进制 二进制互转<ul>
+<li>二进制转成十进制  乘以2 的幂数</li>
+<li>十进制转成二进制  除以2 取余数</li>
+</ul>
+</li>
+<li>二进制 八进制互转</li>
+<li>二进制 十六进制互转</li>
+<li>十进制 八进制互转</li>
+<li>十进制 十六进制互转<br><img src="http://qd1ql2976.bkt.clouddn.com/2776" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2778" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2780" alt=""><h2 id="进制间转化-1"><a href="#进制间转化-1" class="headerlink" title="进制间转化"></a>进制间转化</h2><h4 id="进制的基本转换-1"><a href="#进制的基本转换-1" class="headerlink" title="进制的基本转换"></a>进制的基本转换</h4></li>
+<li>十进制 二进制互转<ul>
+<li>二进制转成十进制  乘以2 的幂数</li>
+<li>十进制转成二进制  除以2 取余数</li>
+</ul>
+</li>
+<li>二进制 八进制互转</li>
+<li>二进制 十六进制互转</li>
+<li>十进制 八进制互转</li>
+<li>十进制 十六进制互转<br><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/5EC871BA9D5D42D7B5A1CBC281ED4B1E/2776" alt=""><br><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/3C33F55D34E1419DA549F06B9001E058/2778" alt=""><br><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/E571E67C2E55469BBF3FB6451CB447FD/2780" alt=""><h2 id="求一个0-255范围内的整数的十六进制值"><a href="#求一个0-255范围内的整数的十六进制值" class="headerlink" title="求一个0~255范围内的整数的十六进制值"></a>求一个0~255范围内的整数的十六进制值</h2></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class Test &#123;</span><br><span class="line">	public static void main(String[] args)&#123;</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F; 如何求一个0~255范围内的整数的十六进制值，例如60的十六进制表示形式3C</span><br><span class="line">		&#x2F;&#x2F; 0~255范围代表二进制控制在8位以内</span><br><span class="line">		int temp &#x3D; 60;</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F; 方式一：自动实现</span><br><span class="line">		System.out.println(&quot;自动实现&quot;);</span><br><span class="line">		String str1 &#x3D; Integer.toBinaryString(temp);</span><br><span class="line">		System.out.println(temp+&quot;转换二进制:\t&quot; + str1);</span><br><span class="line">		</span><br><span class="line">		String str2 &#x3D; Integer.toHexString(temp);</span><br><span class="line">		System.out.println(temp+&quot;转换十六进制:\t&quot; + str2);</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F; 方式二：自动实现</span><br><span class="line">		System.out.println(&quot;手动实现&quot;);</span><br><span class="line">		&#x2F;&#x2F; &amp;位运算符（与）：按底层二进制进行计算 相同为1，不同为0</span><br><span class="line">		&#x2F;&#x2F; 15二进制为1111 与 temp 进行&amp;运算可以求出 temp 二进制后四位的和</span><br><span class="line">		int k &#x3D; temp &amp; 15;</span><br><span class="line">		&#x2F;&#x2F; 判断是否超过9转换为（A-F）</span><br><span class="line">		char k1 &#x3D; (char)(k - 10 + 97);</span><br><span class="line">		&#x2F;&#x2F; 转换为String类型保存</span><br><span class="line">		String i &#x3D; k &gt; 9 ? k1 + &quot;&quot; : k + &quot;&quot; ;</span><br><span class="line">		&#x2F;&#x2F; &gt;&gt;位运算符（右移）：按底层二进制进行右移四位，剩余的正好是前四位</span><br><span class="line">		k &#x3D; temp &gt;&gt; 4;</span><br><span class="line">		&#x2F;&#x2F; 判断是否超过9转换为（A-F）</span><br><span class="line">		k1 &#x3D; (char)(k - 10 + 97);</span><br><span class="line">		&#x2F;&#x2F; 转换为String类型保存</span><br><span class="line">		String j &#x3D; k &gt; 9 ? k1 + &quot;&quot; : k + &quot;&quot; ;</span><br><span class="line">		</span><br><span class="line">		System.out.println(temp+&quot;转换十六进制:\t&quot; + j + i);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>Java基础</category>
       </categories>
       <tags>
         <tag>Java基础</tag>
-        <tag>关键字</tag>
-        <tag>保留字</tag>
-        <tag>标识符</tag>
+        <tag>进制</tag>
+        <tag>二进制</tag>
+        <tag>十进制</tag>
+        <tag>八进制</tag>
+        <tag>十六进制</tag>
+        <tag>进制转换</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GitHub&amp;Git基础</title>
+    <url>/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<h2 id="1-概述与目的"><a href="#1-概述与目的" class="headerlink" title="1.概述与目的"></a>1.概述与目的</h2><ol>
+<li><h5 id="什么是Git"><a href="#什么是Git" class="headerlink" title="什么是Git"></a>什么是Git</h5>Git是一个免费、开源的版本控制软件</li>
+<li><h5 id="什么是版本控制系统"><a href="#什么是版本控制系统" class="headerlink" title="什么是版本控制系统"></a>什么是版本控制系统</h5>版本控制是一种记录一个或若干个文件内容变化，以便将来查阅特定版本修订情况的系统。（记录文件的所有历史变化、随时可恢复到任何一个历史状态、多人协作开发或修改错误恢复）</li>
+<li><h5 id="什么是Github"><a href="#什么是Github" class="headerlink" title="什么是Github"></a>什么是Github</h5>Github是全球最大的社交编程及代码托管网站（<a href="https://github.com/）。" target="_blank" rel="noopener">https://github.com/）。</a><br>Github可以托管各种git库，并提供一个web界面（用户名.github.io/仓库名）</li>
+<li><h5 id="Github和Git是什么关系"><a href="#Github和Git是什么关系" class="headerlink" title="Github和Git是什么关系"></a>Github和Git是什么关系</h5>Git是版本控制软件<br>Github是项目代码托管的平台，借助Git来管理项目代码</li>
+<li><h5 id="为什么学习github"><a href="#为什么学习github" class="headerlink" title="为什么学习github"></a>为什么学习github</h5>学习优秀的开源项目<br>关注行业前辈了解最新的行业动态<br>借助github托管项目代码</li>
+<li><h5 id="简单介绍Git"><a href="#简单介绍Git" class="headerlink" title="简单介绍Git"></a>简单介绍Git</h5>Git是分布式版本控制系统，那么它就没有中央服务器的，每个人的电脑就是一个完整的版本库，这样，工作的时候就不需要联网了，因为版本都是在自己的电脑上。既然每个人的电脑都有一个完整的版本库，那多个人如何协作呢?比如说自己在电脑上改了文件A,其他人也在电脑上改了文件A，这时，你们两之间只需把各自的修改推送给对方，就可以互相看到对方的修改了。<img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/1.png" class="">
+借助Github托管项目代码。<h2 id="2-GitHub基本概念"><a href="#2-GitHub基本概念" class="headerlink" title="2.GitHub基本概念"></a>2.GitHub基本概念</h2></li>
+<li><h5 id="仓库-Repository"><a href="#仓库-Repository" class="headerlink" title="仓库(Repository)"></a>仓库(Repository)</h5>仓库用来存放项目代码，每个项目对应一个仓库(Repository)，多个开源项目则有多个仓库（Repositories）。</li>
+<li><h5 id="复制克隆项目（fork）"><a href="#复制克隆项目（fork）" class="headerlink" title="复制克隆项目（fork）"></a>复制克隆项目（fork）</h5>完全复制别人的项目到自己的GitHub,丝毫不会影响原有项目的代码与结构。fork的项目是独立存在的！</li>
+<li><h5 id="发起请求-Pull-Request"><a href="#发起请求-Pull-Request" class="headerlink" title="发起请求(Pull Request)"></a>发起请求(Pull Request)</h5>发起请求，这个其实是基于Fork的。如果你fork了别人的项目并且在其基础上做了改进，后来觉得改进的很不错，应该要把这些改进让更多的人收益，于是就想把自己的改进合并到原有项目里，这个时候你就可以发起一个PullRequest(简称PR)，原有项目创建人就可以收到这个请求，这个时候你会仔细查看他的代码，并且测试觉得ok了，就会接受他的PR,这个时候他做的改进原有项目就会拥有了。</li>
+<li><h5 id="事务卡片-Issue"><a href="#事务卡片-Issue" class="headerlink" title="事务卡片(Issue)"></a>事务卡片(Issue)</h5>发现代码BUG，但是目前没有成型代码，需要讨论时用。</li>
+</ol>
+<p>举个例子，就是你开源了一个项目，别人发现你的项目中有bug,或者哪些地方做的不够好，他就可以给你提个Issue,即问题，提的问题多了，也就是Issues，然后你.看到了这些问题就可以去逐个修复，修复ok了就可以一个个的Close掉。</p>
+<h2 id="3-GitHub上创建仓库"><a href="#3-GitHub上创建仓库" class="headerlink" title="3.GitHub上创建仓库"></a>3.GitHub上创建仓库</h2><p>一个git库（仓库）对应一个开源项目</p>
+<p>通过git管理git库</p>
+<img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/3.png" class="">
+<img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/4.png" class="">
+<h2 id="4-GitHub上管理仓库"><a href="#4-GitHub上管理仓库" class="headerlink" title="4.GitHub上管理仓库"></a>4.GitHub上管理仓库</h2><ol>
+<li><h5 id="创建文件"><a href="#创建文件" class="headerlink" title="创建文件"></a>创建文件</h5><img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/5.png" class="">
+<img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/6.png" class="">
+<img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/7.png" class="">
+<img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/8.png" class=""></li>
+<li><h5 id="编辑文件"><a href="#编辑文件" class="headerlink" title="编辑文件"></a>编辑文件</h5><img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/9.png" class="">
+<img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/10.png" class="">
+<img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/11.png" class="">
+<img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/12.png" class=""></li>
+<li><h5 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h5>可在commits按钮查看删除信息<img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/9.png" class="">
+<img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/13.png" class="">
+<img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/14.png" class="">
+<h2 id="5-在本地使用Git"><a href="#5-在本地使用Git" class="headerlink" title="5.在本地使用Git"></a>5.在本地使用Git</h2><img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/15.png" class="">
+工作流程：</li>
+<li>从远程仓库中克隆 Git 资源作为本地仓库。</li>
+<li>从本地仓库中checkout代码然后进行代码修改</li>
+<li>在提交前先将代码提交到暂存区。</li>
+<li>提交修改。提交到本地仓库。本地仓库中保存修改的各个历史版本。</li>
+<li>在修改完成后，需要和团队成员共享代码时，可以将代码push到远程仓库。</li>
+</ol>
+<p>下图展示了 Git 的工作流程：</p>
+<img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/2.png" class="">
+<h5 id="设置用户名与邮箱（用户标识，必要）"><a href="#设置用户名与邮箱（用户标识，必要）" class="headerlink" title="设置用户名与邮箱（用户标识，必要）"></a>设置用户名与邮箱（用户标识，必要）</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;Programmingmakesmebald&quot; #名称</span><br><span class="line">git config --global user.email &quot;1731082812@qq.com&quot;   #邮箱</span><br></pre></td></tr></table></figure>
+<h5 id="SSH设置"><a href="#SSH设置" class="headerlink" title="SSH设置"></a>SSH设置</h5><p>现在本地生成ssh：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C 1701082812@qq.com</span><br></pre></td></tr></table></figure>
+<p> 一直回车</p>
+<p>GitHub上配置：<br>①github②settings③SSH and …④New SSH⑤ title任意⑥key中输入 刚才在本地生成的ssh（<br>将本地刚才生成的id_rsa.pub内容复制到远程的Key中）</p>
+<p>测试连通性：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<p>如果本地和远程成功通信，则可以在 /.ssh目录中 发现known_hosts文件如果失败：多尝试几次、检查回车符</p>
+<h5 id="本地仓库初始化代码"><a href="#本地仓库初始化代码" class="headerlink" title="本地仓库初始化代码"></a>本地仓库初始化代码</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+
+<h5 id="在远程建立git项目"><a href="#在远程建立git项目" class="headerlink" title="在远程建立git项目"></a>在远程建立git项目</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">①new②建立项目③ 生成  https:&#x2F;&#x2F;github.com&#x2F;Programmingmakesmebald&#x2F;First-GitHub.git</span><br></pre></td></tr></table></figure>
+
+<h5 id="本地项目-远程项目关联"><a href="#本地项目-远程项目关联" class="headerlink" title="本地项目-远程项目关联"></a>本地项目-远程项目关联</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git remote add origin git@github.com:yanqun&#x2F;mygitremote.git</span><br></pre></td></tr></table></figure>
+
+<h5 id="工作区域（上传文件到Github）"><a href="#工作区域（上传文件到Github）" class="headerlink" title="工作区域（上传文件到Github）"></a>工作区域（上传文件到Github）</h5><p>命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">查看工作区状态：git status</span><br><span class="line">添加到暂存区  ：git add 文件名.后缀名</span><br><span class="line">提交到本地仓库：git commit -m “提交描述”</span><br><span class="line">上传到远程仓库：git push</span><br></pre></td></tr></table></figure>
+<p>第一次发布项目（本地-远程）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git add .    &#x2F;&#x2F;文件-暂存区.&quot;代表当前目录所有文件</span><br><span class="line">git commit -m “提交描述” &#x2F;&#x2F;暂存区在本地分支（默认master）</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+
+<p>第一次下载项目（远程-本地）</p>
+<p>下载</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;Programmingmakesmebald&#x2F;First-GitHub.git</span><br></pre></td></tr></table></figure>
+<p>提交</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m “提交到分支描述”</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+
+<p>更新（远程-本地）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>
+
+<img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/16.png" class="">
+<img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/17.png" class="">
+<h2 id="6-问题"><a href="#6-问题" class="headerlink" title="6.问题"></a>6.问题</h2><ol>
+<li><h5 id="上传时要输入账号密码（私有项目，没有权限）"><a href="#上传时要输入账号密码（私有项目，没有权限）" class="headerlink" title="上传时要输入账号密码（私有项目，没有权限）"></a>上传时要输入账号密码（私有项目，没有权限）</h5></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">①在 .git文件 里面找到config 打开</span><br></pre></td></tr></table></figure>
+<img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/18.png" class="">
+<img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/19.png" class="">
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">②将 [remote “origin”]</span><br><span class="line">url &#x3D; https:&#x2F;&#x2F;github.com&#x2F;用户名&#x2F;仓库名.git</span><br><span class="line">改为</span><br><span class="line">[remote “origin”]</span><br><span class="line">url &#x3D; https:&#x2F;&#x2F;用户名:密码@github.com&#x2F;用户名&#x2F;仓库名.git</span><br><span class="line">列</span><br><span class="line">[remote “origin”]</span><br><span class="line">url &#x3D; https:&#x2F;&#x2F;Rodma1:chenyun123@github.com&#x2F;Rodma1&#x2F;test.git</span><br><span class="line">保存就解决了</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><h5 id="上传错误-（git-push）"><a href="#上传错误-（git-push）" class="headerlink" title="上传错误 （git push）"></a>上传错误 （git push）</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：git pull --rebase origin master</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Git GitHub</category>
+      </categories>
+      <tags>
+        <tag>Git GitHub</tag>
       </tags>
   </entry>
   <entry>
@@ -766,186 +956,6 @@
         <tag>三目运算符</tag>
         <tag>三元运算符</tag>
         <tag>运算符的优先级</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GitHub&amp;Git基础</title>
-    <url>/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<h2 id="1-概述与目的"><a href="#1-概述与目的" class="headerlink" title="1.概述与目的"></a>1.概述与目的</h2><ol>
-<li><h5 id="什么是Git"><a href="#什么是Git" class="headerlink" title="什么是Git"></a>什么是Git</h5>Git是一个免费、开源的版本控制软件</li>
-<li><h5 id="什么是版本控制系统"><a href="#什么是版本控制系统" class="headerlink" title="什么是版本控制系统"></a>什么是版本控制系统</h5>版本控制是一种记录一个或若干个文件内容变化，以便将来查阅特定版本修订情况的系统。（记录文件的所有历史变化、随时可恢复到任何一个历史状态、多人协作开发或修改错误恢复）</li>
-<li><h5 id="什么是Github"><a href="#什么是Github" class="headerlink" title="什么是Github"></a>什么是Github</h5>Github是全球最大的社交编程及代码托管网站（<a href="https://github.com/）。" target="_blank" rel="noopener">https://github.com/）。</a><br>Github可以托管各种git库，并提供一个web界面（用户名.github.io/仓库名）</li>
-<li><h5 id="Github和Git是什么关系"><a href="#Github和Git是什么关系" class="headerlink" title="Github和Git是什么关系"></a>Github和Git是什么关系</h5>Git是版本控制软件<br>Github是项目代码托管的平台，借助Git来管理项目代码</li>
-<li><h5 id="为什么学习github"><a href="#为什么学习github" class="headerlink" title="为什么学习github"></a>为什么学习github</h5>学习优秀的开源项目<br>关注行业前辈了解最新的行业动态<br>借助github托管项目代码</li>
-<li><h5 id="简单介绍Git"><a href="#简单介绍Git" class="headerlink" title="简单介绍Git"></a>简单介绍Git</h5>Git是分布式版本控制系统，那么它就没有中央服务器的，每个人的电脑就是一个完整的版本库，这样，工作的时候就不需要联网了，因为版本都是在自己的电脑上。既然每个人的电脑都有一个完整的版本库，那多个人如何协作呢?比如说自己在电脑上改了文件A,其他人也在电脑上改了文件A，这时，你们两之间只需把各自的修改推送给对方，就可以互相看到对方的修改了。<img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/1.png" class="">
-借助Github托管项目代码。<h2 id="2-GitHub基本概念"><a href="#2-GitHub基本概念" class="headerlink" title="2.GitHub基本概念"></a>2.GitHub基本概念</h2></li>
-<li><h5 id="仓库-Repository"><a href="#仓库-Repository" class="headerlink" title="仓库(Repository)"></a>仓库(Repository)</h5>仓库用来存放项目代码，每个项目对应一个仓库(Repository)，多个开源项目则有多个仓库（Repositories）。</li>
-<li><h5 id="复制克隆项目（fork）"><a href="#复制克隆项目（fork）" class="headerlink" title="复制克隆项目（fork）"></a>复制克隆项目（fork）</h5>完全复制别人的项目到自己的GitHub,丝毫不会影响原有项目的代码与结构。fork的项目是独立存在的！</li>
-<li><h5 id="发起请求-Pull-Request"><a href="#发起请求-Pull-Request" class="headerlink" title="发起请求(Pull Request)"></a>发起请求(Pull Request)</h5>发起请求，这个其实是基于Fork的。如果你fork了别人的项目并且在其基础上做了改进，后来觉得改进的很不错，应该要把这些改进让更多的人收益，于是就想把自己的改进合并到原有项目里，这个时候你就可以发起一个PullRequest(简称PR)，原有项目创建人就可以收到这个请求，这个时候你会仔细查看他的代码，并且测试觉得ok了，就会接受他的PR,这个时候他做的改进原有项目就会拥有了。</li>
-<li><h5 id="事务卡片-Issue"><a href="#事务卡片-Issue" class="headerlink" title="事务卡片(Issue)"></a>事务卡片(Issue)</h5>发现代码BUG，但是目前没有成型代码，需要讨论时用。</li>
-</ol>
-<p>举个例子，就是你开源了一个项目，别人发现你的项目中有bug,或者哪些地方做的不够好，他就可以给你提个Issue,即问题，提的问题多了，也就是Issues，然后你.看到了这些问题就可以去逐个修复，修复ok了就可以一个个的Close掉。</p>
-<h2 id="3-GitHub上创建仓库"><a href="#3-GitHub上创建仓库" class="headerlink" title="3.GitHub上创建仓库"></a>3.GitHub上创建仓库</h2><p>一个git库（仓库）对应一个开源项目</p>
-<p>通过git管理git库</p>
-<img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/3.png" class="">
-<img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/4.png" class="">
-<h2 id="4-GitHub上管理仓库"><a href="#4-GitHub上管理仓库" class="headerlink" title="4.GitHub上管理仓库"></a>4.GitHub上管理仓库</h2><ol>
-<li><h5 id="创建文件"><a href="#创建文件" class="headerlink" title="创建文件"></a>创建文件</h5><img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/5.png" class="">
-<img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/6.png" class="">
-<img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/7.png" class="">
-<img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/8.png" class=""></li>
-<li><h5 id="编辑文件"><a href="#编辑文件" class="headerlink" title="编辑文件"></a>编辑文件</h5><img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/9.png" class="">
-<img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/10.png" class="">
-<img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/11.png" class="">
-<img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/12.png" class=""></li>
-<li><h5 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h5>可在commits按钮查看删除信息<img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/9.png" class="">
-<img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/13.png" class="">
-<img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/14.png" class="">
-<h2 id="5-在本地使用Git"><a href="#5-在本地使用Git" class="headerlink" title="5.在本地使用Git"></a>5.在本地使用Git</h2><img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/15.png" class="">
-工作流程：</li>
-<li>从远程仓库中克隆 Git 资源作为本地仓库。</li>
-<li>从本地仓库中checkout代码然后进行代码修改</li>
-<li>在提交前先将代码提交到暂存区。</li>
-<li>提交修改。提交到本地仓库。本地仓库中保存修改的各个历史版本。</li>
-<li>在修改完成后，需要和团队成员共享代码时，可以将代码push到远程仓库。</li>
-</ol>
-<p>下图展示了 Git 的工作流程：</p>
-<img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/2.png" class="">
-<h5 id="设置用户名与邮箱（用户标识，必要）"><a href="#设置用户名与邮箱（用户标识，必要）" class="headerlink" title="设置用户名与邮箱（用户标识，必要）"></a>设置用户名与邮箱（用户标识，必要）</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;Programmingmakesmebald&quot; #名称</span><br><span class="line">git config --global user.email &quot;1731082812@qq.com&quot;   #邮箱</span><br></pre></td></tr></table></figure>
-<h5 id="SSH设置"><a href="#SSH设置" class="headerlink" title="SSH设置"></a>SSH设置</h5><p>现在本地生成ssh：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C 1701082812@qq.com</span><br></pre></td></tr></table></figure>
-<p> 一直回车</p>
-<p>GitHub上配置：<br>①github②settings③SSH and …④New SSH⑤ title任意⑥key中输入 刚才在本地生成的ssh（<br>将本地刚才生成的id_rsa.pub内容复制到远程的Key中）</p>
-<p>测试连通性：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-<p>如果本地和远程成功通信，则可以在 /.ssh目录中 发现known_hosts文件如果失败：多尝试几次、检查回车符</p>
-<h5 id="本地仓库初始化代码"><a href="#本地仓库初始化代码" class="headerlink" title="本地仓库初始化代码"></a>本地仓库初始化代码</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
-
-<h5 id="在远程建立git项目"><a href="#在远程建立git项目" class="headerlink" title="在远程建立git项目"></a>在远程建立git项目</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">①new②建立项目③ 生成  https:&#x2F;&#x2F;github.com&#x2F;Programmingmakesmebald&#x2F;First-GitHub.git</span><br></pre></td></tr></table></figure>
-
-<h5 id="本地项目-远程项目关联"><a href="#本地项目-远程项目关联" class="headerlink" title="本地项目-远程项目关联"></a>本地项目-远程项目关联</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git remote add origin git@github.com:yanqun&#x2F;mygitremote.git</span><br></pre></td></tr></table></figure>
-
-<h5 id="工作区域（上传文件到Github）"><a href="#工作区域（上传文件到Github）" class="headerlink" title="工作区域（上传文件到Github）"></a>工作区域（上传文件到Github）</h5><p>命令</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">查看工作区状态：git status</span><br><span class="line">添加到暂存区  ：git add 文件名.后缀名</span><br><span class="line">提交到本地仓库：git commit -m “提交描述”</span><br><span class="line">上传到远程仓库：git push</span><br></pre></td></tr></table></figure>
-<p>第一次发布项目（本地-远程）</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git add .    &#x2F;&#x2F;文件-暂存区.&quot;代表当前目录所有文件</span><br><span class="line">git commit -m “提交描述” &#x2F;&#x2F;暂存区在本地分支（默认master）</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-
-<p>第一次下载项目（远程-本地）</p>
-<p>下载</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;Programmingmakesmebald&#x2F;First-GitHub.git</span><br></pre></td></tr></table></figure>
-<p>提交</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m “提交到分支描述”</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
-
-<p>更新（远程-本地）</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>
-
-<img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/16.png" class="">
-<img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/17.png" class="">
-<h2 id="6-问题"><a href="#6-问题" class="headerlink" title="6.问题"></a>6.问题</h2><ol>
-<li><h5 id="上传时要输入账号密码（私有项目，没有权限）"><a href="#上传时要输入账号密码（私有项目，没有权限）" class="headerlink" title="上传时要输入账号密码（私有项目，没有权限）"></a>上传时要输入账号密码（私有项目，没有权限）</h5></li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">①在 .git文件 里面找到config 打开</span><br></pre></td></tr></table></figure>
-<img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/18.png" class="">
-<img src="/2020/07/01/GitHub-Git%E5%9F%BA%E7%A1%80/19.png" class="">
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">②将 [remote “origin”]</span><br><span class="line">url &#x3D; https:&#x2F;&#x2F;github.com&#x2F;用户名&#x2F;仓库名.git</span><br><span class="line">改为</span><br><span class="line">[remote “origin”]</span><br><span class="line">url &#x3D; https:&#x2F;&#x2F;用户名:密码@github.com&#x2F;用户名&#x2F;仓库名.git</span><br><span class="line">列</span><br><span class="line">[remote “origin”]</span><br><span class="line">url &#x3D; https:&#x2F;&#x2F;Rodma1:chenyun123@github.com&#x2F;Rodma1&#x2F;test.git</span><br><span class="line">保存就解决了</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li><h5 id="上传错误-（git-push）"><a href="#上传错误-（git-push）" class="headerlink" title="上传错误 （git push）"></a>上传错误 （git push）</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：git pull --rebase origin master</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>Git GitHub</category>
-      </categories>
-      <tags>
-        <tag>Git GitHub</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo搭建博客及使用</title>
-    <url>/2020/07/01/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%8F%8A%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h3 id="一般使用"><a href="#一般使用" class="headerlink" title="一般使用"></a>一般使用</h3><h5 id="1-新建文章"><a href="#1-新建文章" class="headerlink" title="1. 新建文章"></a>1. 新建文章</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo n &quot;blogname&quot;</span><br></pre></td></tr></table></figure>
-<h5 id="2-清除"><a href="#2-清除" class="headerlink" title="2. 清除"></a>2. 清除</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
-<h5 id="3-生成"><a href="#3-生成" class="headerlink" title="3. 生成"></a>3. 生成</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-<h5 id="4-部署"><a href="#4-部署" class="headerlink" title="4. 部署"></a>4. 部署</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<h3 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h3><h5 id="1-安装node-js"><a href="#1-安装node-js" class="headerlink" title="1. 安装node.js"></a>1. 安装node.js</h5><h5 id="2-安装淘宝的cnpm-管理器"><a href="#2-安装淘宝的cnpm-管理器" class="headerlink" title="2. 安装淘宝的cnpm 管理器"></a>2. 安装淘宝的cnpm 管理器</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry&#x3D;http:&#x2F;&#x2F;registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-
-<h5 id="3-安装hexo框架"><a href="#3-安装hexo框架" class="headerlink" title="3. 安装hexo框架"></a>3. 安装hexo框架</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-<h5 id="4-生成博客-初始化博客"><a href="#4-生成博客-初始化博客" class="headerlink" title="4. 生成博客 初始化博客"></a>4. 生成博客 初始化博客</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
-
-<h5 id="5-启动本地博客服务"><a href="#5-启动本地博客服务" class="headerlink" title="5. 启动本地博客服务"></a>5. 启动本地博客服务</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-<h5 id="6-本地访问地址"><a href="#6-本地访问地址" class="headerlink" title="6. 本地访问地址"></a>6. 本地访问地址</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;localhost:4000&#x2F;</span><br></pre></td></tr></table></figure>
-<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><h5 id="1-新建文章-1"><a href="#1-新建文章-1" class="headerlink" title="1. 新建文章"></a>1. 新建文章</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo n &quot;文章名&quot; &#x2F;&#x2F;new</span><br></pre></td></tr></table></figure>
-<h5 id="2-新建页面"><a href="#2-新建页面" class="headerlink" title="2. 新建页面"></a>2. 新建页面</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new page &quot;about&quot;</span><br></pre></td></tr></table></figure>
-
-<h5 id="3-本地运行-预览"><a href="#3-本地运行-预览" class="headerlink" title="3. 本地运行(预览)"></a>3. 本地运行(预览)</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo s &#x2F;&#x2F;sever</span><br></pre></td></tr></table></figure>
-<h5 id="4-清除缓存"><a href="#4-清除缓存" class="headerlink" title="4. 清除缓存"></a>4. 清除缓存</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo c &#x2F;&#x2F;clean</span><br></pre></td></tr></table></figure>
-<h5 id="5-生成"><a href="#5-生成" class="headerlink" title="5. 生成"></a>5. 生成</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo g &#x2F;&#x2F;generate</span><br></pre></td></tr></table></figure>
-
-<h5 id="6-部署到github"><a href="#6-部署到github" class="headerlink" title="6. 部署到github"></a>6. 部署到github</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo d &#x2F;&#x2F;deploy</span><br></pre></td></tr></table></figure>
-
-<h5 id="7-推送到分支"><a href="#7-推送到分支" class="headerlink" title="7. 推送到分支"></a>7. 推送到分支</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></table></figure>
-<h3 id="配置GitHub"><a href="#配置GitHub" class="headerlink" title="配置GitHub"></a>配置GitHub</h3><h5 id="1-配置-config-yml"><a href="#1-配置-config-yml" class="headerlink" title="1. 配置_config.yml"></a>1. 配置_config.yml</h5><p><img src="http://qd1ql2976.bkt.clouddn.com/1687" alt=""></p>
-<h5 id="2-更换主题"><a href="#2-更换主题" class="headerlink" title="2.更换主题"></a>2.更换主题</h5><p><img src="http://qd1ql2976.bkt.clouddn.com/1717" alt=""></p>
-<h5 id="3-问题"><a href="#3-问题" class="headerlink" title="3.问题"></a>3.问题</h5><p>解决代码</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
-<p><img src="http://qd1ql2976.bkt.clouddn.com/1700" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/1702" alt=""></p>
-<h4 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h4><h5 id="hexo主题网站"><a href="#hexo主题网站" class="headerlink" title="hexo主题网站"></a><a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo主题网站</a></h5><h6 id="进入主题文件"><a href="#进入主题文件" class="headerlink" title="进入主题文件"></a>进入主题文件</h6><p><img src="http://qd1ql2976.bkt.clouddn.com/1713" alt=""></p>
-<h6 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;Fechin&#x2F;hexo-theme-diaspora.git</span><br></pre></td></tr></table></figure>
-<p><img src="http://qd1ql2976.bkt.clouddn.com/1726" alt=""></p>
-]]></content>
-      <categories>
-        <category>Hexo 博客</category>
-      </categories>
-      <tags>
-        <tag>Hexo 博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>06.Java基础知识-进制</title>
-    <url>/2020/07/06/06-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E8%BF%9B%E5%88%B6/</url>
-    <content><![CDATA[<h2 id="世界上有10人种人，认识和不认识二进制的。"><a href="#世界上有10人种人，认识和不认识二进制的。" class="headerlink" title="世界上有10人种人，认识和不认识二进制的。"></a>世界上有10人种人，认识和不认识二进制的。</h2><h4 id="所有数字在计算机底层都以-二进制形式存在。"><a href="#所有数字在计算机底层都以-二进制形式存在。" class="headerlink" title="所有数字在计算机底层都以 二进制形式存在。"></a>所有数字在计算机底层都以 二进制形式存在。</h4><h4 id="对于整数，有四种表示方式："><a href="#对于整数，有四种表示方式：" class="headerlink" title="对于整数，有四种表示方式："></a>对于整数，有四种表示方式：</h4><ul>
-<li>二进制(binary) ：0,1 ，满2进1.以0b或0B开头。</li>
-<li>十进制(decimal) ：0-9 ，满10进1。</li>
-<li>八进制(octal) ：0-7 ，满8进1. 以数字0开头表示。</li>
-<li>十六进制(hex) ：0-9及A-F，满16进1. 以0x或0X开头表示。此处的A-F不区分大小写。</li>
-<li>如：0x21AF +1= 0X21B0<br><img src="http://qd1ql2976.bkt.clouddn.com/2707" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2709" alt=""><h2 id="二进制"><a href="#二进制" class="headerlink" title="二进制"></a>二进制</h2></li>
-<li>Java整数常量默认是int类型，当用二进制定义整数时，其第32位是符号位；当是long类型时，二进制默认占64位，第64位是符号位</li>
-<li>二进制的整数有如下三种形式：<ul>
-<li>原码：直接将一个数值换成二进制数。最高位是符号位</li>
-<li>负数的反码：是对原码按位取反，只是最高位（符号位）确定为1。</li>
-<li>负数的补码：其反码加1。</li>
-</ul>
-</li>
-<li>计算机以二进制补码的形式保存所有的整数。<ul>
-<li>正数的原码、反码、补码都相同</li>
-<li>负数的补码是其反码+1<h2 id="为什么要使用原码、反码、补码表示形式呢？"><a href="#为什么要使用原码、反码、补码表示形式呢？" class="headerlink" title="为什么要使用原码、反码、补码表示形式呢？"></a>为什么要使用原码、反码、补码表示形式呢？</h2>计算机辨别“符号位”显然会让计算机的基础电路设计变得十分复杂! 于是<br>人们想出了将符号位也参与运算的方法. 我们知道, 根据运算法则减去一个正数等于加上一个负数, 即: 1-1 = 1 + (-1) = 0 , 所以机器可以只有加法而没有减法,这样计算机运算的设计就更简单了。<br><img src="http://qd1ql2976.bkt.clouddn.com/2726" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2728" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2730" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2732" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2734" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2736" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2738" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2740" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2742" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2744" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2746" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2748" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2750" alt=""><h2 id="进制间转化"><a href="#进制间转化" class="headerlink" title="进制间转化"></a>进制间转化</h2><h4 id="进制的基本转换"><a href="#进制的基本转换" class="headerlink" title="进制的基本转换"></a>进制的基本转换</h4></li>
-</ul>
-</li>
-<li>十进制 二进制互转<ul>
-<li>二进制转成十进制  乘以2 的幂数</li>
-<li>十进制转成二进制  除以2 取余数</li>
-</ul>
-</li>
-<li>二进制 八进制互转</li>
-<li>二进制 十六进制互转</li>
-<li>十进制 八进制互转</li>
-<li>十进制 十六进制互转<br><img src="http://qd1ql2976.bkt.clouddn.com/2776" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2778" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/2780" alt=""></li>
-</ul>
-]]></content>
-      <categories>
-        <category>Java基础</category>
-      </categories>
-      <tags>
-        <tag>Java基础</tag>
-        <tag>进制</tag>
-        <tag>二进制</tag>
-        <tag>十进制</tag>
-        <tag>八进制</tag>
-        <tag>十六进制</tag>
-        <tag>进制转换</tag>
       </tags>
   </entry>
   <entry>
