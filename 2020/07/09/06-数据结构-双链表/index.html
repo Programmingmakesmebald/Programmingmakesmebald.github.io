@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hans" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>06.数据结构-双链表 - 秃头小王子</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="秃头小王子的个人博客,双链表双向链表也叫双链表，是链表的一种，它的每个数据结点中都有两个指针，分别指向直接后继和直接前驱。所以，从双向链表中的任意一个结点开始，都可以很方便地访问它的前驱结点和后继结点
+单链表与双链表区别,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="秃头小王子" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">秃头小王子</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://yoursite.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">06.数据结构-双链表</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">06.数据结构-双链表</h1>
+        <div class="stuff">
+            <span>七月 09, 2020</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E5%8F%8C%E9%93%BE%E8%A1%A8/" rel="tag">双链表</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" rel="tag">数据结构与算法</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h2 id="双链表"><a href="#双链表" class="headerlink" title="双链表"></a>双链表</h2><p>双向链表也叫双链表，是链表的一种，它的每个数据结点中都有两个指针，分别指向直接后继和直接前驱。所以，从双向链表中的任意一个结点开始，都可以很方便地访问它的前驱结点和后继结点</p>
+<h4 id="单链表与双链表区别"><a href="#单链表与双链表区别" class="headerlink" title="单链表与双链表区别"></a>单链表与双链表区别</h4><p>逻辑上没有区别。他们均是完成线性表的内容。主要的区别是结构上的构造有所区别。</p>
+<ul>
+<li>单链表<ul>
+<li>对于一个节点，有储存数据的data。和next后驱节点(指针)。也就是这个单链表想要一些遍历的操作都得通过前节点—&gt;后节点。<br><img src="http://qd1ql2976.bkt.clouddn.com/3155" alt=""></li>
+</ul>
+</li>
+<li>双链表<ul>
+<li>对于一个节点，有些和单链表一样有存储数据的data,指向后方的next（指针）。它拥有单链表的所有操作和内容。但是他还有一个前驱节点pre(指针)。<br><img src="http://qd1ql2976.bkt.clouddn.com/3157" alt=""><h4 id="双向链表应用实例"><a href="#双向链表应用实例" class="headerlink" title="双向链表应用实例"></a>双向链表应用实例</h4></li>
+</ul>
+</li>
+</ul>
+<p><strong>使用带 head 头的双向链表实现 –水浒英雄排行榜</strong></p>
+<ul>
+<li>管理单向链表的缺点分析: <ul>
+<li>单向链表，查找的方向只能是一个方向，而双向链表可以向前或者向后查找。</li>
+<li>单向链表不能自我删除，需要靠辅助节点，而双向链表，则可以自我删除，所以前面我们单链表删除时节点，总是找到temp,temp是待删除节点的前一个节点(认真体会).</li>
+</ul>
+</li>
+<li>双链表图解:<br>  <img src="http://qd1ql2976.bkt.clouddn.com/3179" alt=""></li>
+<li>图解思路:</li>
+</ul>
+<ol>
+<li>遍历方发和单链表一样，只是可以向前，也可以向后查找</li>
+<li>添加 (默认添加到双向链表的最后)<ol>
+<li>先找到双向链表的最后这个节点</li>
+<li>temp.next = heroNode</li>
+<li>heroNode.pre = temp;</li>
+</ol>
+</li>
+<li>修改思路和原来的单向链表一样.</li>
+<li>删除<ol>
+<li>因为是双向链表，因此，我们可以实现自我删除某个节点</li>
+<li>直接找到要删除的这个节点，比如 temp</li>
+<li>temp.pre.next = temp.next</li>
+<li>temp.next.pre = temp.pre;</li>
+</ol>
+</li>
+</ol>
+<ul>
+<li><p>代码实现:</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br></pre></td><td class="code"><pre><span class="line">package com.wzx.linkedlist;</span><br><span class="line"></span><br><span class="line">public class DoubleLinkedListDemo &#123;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		DoubleLinkedList doubleLinkedList &#x3D; new DoubleLinkedList();</span><br><span class="line">		HeroNode2 h1 &#x3D; new HeroNode2(1,&quot;宋江&quot;,&quot;及时雨&quot;);</span><br><span class="line">		HeroNode2 h2 &#x3D; new HeroNode2(2,&quot;吴用&quot;,&quot;智多星&quot;);</span><br><span class="line">		HeroNode2 h3 &#x3D; new HeroNode2(3,&quot;卢俊义&quot;,&quot;玉麒麟&quot;);</span><br><span class="line">		HeroNode2 h4 &#x3D; new HeroNode2(4,&quot;林冲&quot;,&quot;豹子头&quot;);</span><br><span class="line">		HeroNode2 h5 &#x3D; new HeroNode2(4,&quot;张三&quot;,&quot;李四&quot;);</span><br><span class="line">		doubleLinkedList.list();</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;顺序添加</span><br><span class="line">&#x2F;&#x2F;		doubleLinkedList.add(h1);</span><br><span class="line">&#x2F;&#x2F;		doubleLinkedList.add(h2);</span><br><span class="line">&#x2F;&#x2F;		doubleLinkedList.add(h3);</span><br><span class="line">&#x2F;&#x2F;		doubleLinkedList.add(h4);</span><br><span class="line">		&#x2F;&#x2F;按排名添加</span><br><span class="line">		doubleLinkedList.addByOrder(h3);</span><br><span class="line">		doubleLinkedList.addByOrder(h2);</span><br><span class="line">		doubleLinkedList.addByOrder(h4);</span><br><span class="line">		doubleLinkedList.addByOrder(h1);</span><br><span class="line">		doubleLinkedList.list();</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;修改</span><br><span class="line">		System.out.println(&quot;修改后的双链表&quot;);</span><br><span class="line">		doubleLinkedList.update(h5);</span><br><span class="line">		doubleLinkedList.list();</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;删除</span><br><span class="line">		System.out.println(&quot;删除后的双链表&quot;);</span><br><span class="line">		doubleLinkedList.delete(3);</span><br><span class="line">		doubleLinkedList.list();</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">class DoubleLinkedList&#123;</span><br><span class="line">	&#x2F;&#x2F;先初始化一个头节点, 头节点不要动, 不存放具体的数据</span><br><span class="line">	private HeroNode2 head &#x3D; new HeroNode2(0,&quot;&quot;,&quot;&quot;);</span><br><span class="line">	</span><br><span class="line">	public HeroNode2 getHead() &#123;</span><br><span class="line">		return head;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;删除节点</span><br><span class="line">	public void delete(int no)&#123;</span><br><span class="line">		if (head.next &#x3D;&#x3D; null)&#123;</span><br><span class="line">			System.out.println(&quot;双链表为空，无法删除！！！&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;辅助节点</span><br><span class="line">		HeroNode2 temp &#x3D; head.next;</span><br><span class="line">		boolean flag &#x3D; false;</span><br><span class="line">		while(temp !&#x3D; null)&#123;</span><br><span class="line">			if (temp.no &#x3D;&#x3D; no)&#123;</span><br><span class="line">				flag &#x3D; true;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			temp &#x3D;temp.next;</span><br><span class="line">		&#125;</span><br><span class="line">		if(flag)&#123;</span><br><span class="line">			temp.pre.next &#x3D; temp.next;</span><br><span class="line">			&#x2F;&#x2F;如果删除的节点是最后一个，不执行temp.next.pre &#x3D; temp.pre;</span><br><span class="line">			&#x2F;&#x2F; 因为temp.next &#x3D; null , temp.next.pre报空指针异常</span><br><span class="line">			if(temp.next !&#x3D; null)&#123;</span><br><span class="line">				temp.next.pre &#x3D; temp.pre;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			System.out.printf(&quot;双链表中没有排名为%d的英雄！！！&quot;,no);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;修改节点</span><br><span class="line">	public void update(HeroNode2 heroNode)&#123;</span><br><span class="line">		if (head.next &#x3D;&#x3D; null)&#123;</span><br><span class="line">			System.out.println(&quot;双链表为空，无法修改！！！&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;辅助变量</span><br><span class="line">		HeroNode2 temp &#x3D; head;</span><br><span class="line">		boolean flag &#x3D; false;</span><br><span class="line">		while (temp.next !&#x3D; null)&#123;</span><br><span class="line">			if (temp.next.no &#x3D;&#x3D; heroNode.no)&#123;</span><br><span class="line">				flag &#x3D; true;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			temp &#x3D; temp.next;</span><br><span class="line">		&#125;</span><br><span class="line">		if (flag)&#123;</span><br><span class="line">			temp.next.name &#x3D; heroNode.name;</span><br><span class="line">			temp.next.nickName &#x3D; heroNode.nickName;</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			System.out.printf(&quot;双链表中没有排名为%d的英雄！！！&quot;,heroNode.no);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;1.结尾添加节点</span><br><span class="line">	public void add(HeroNode2 heroNode)&#123;</span><br><span class="line">		&#x2F;&#x2F;辅助变量</span><br><span class="line">		HeroNode2 temp &#x3D; head; </span><br><span class="line">		while(temp.next !&#x3D; null)&#123;</span><br><span class="line">			temp &#x3D; temp.next;&#x2F;&#x2F;后移</span><br><span class="line">		&#125;&#x2F;&#x2F;遍历结束后指向最后一个节点</span><br><span class="line">		temp.next &#x3D; heroNode;</span><br><span class="line">		heroNode.pre &#x3D; temp;</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;&#x2F;1.按英雄的排名添加节点</span><br><span class="line">	public void addByOrder(HeroNode2 heroNode)&#123;</span><br><span class="line">		&#x2F;&#x2F;辅助变量</span><br><span class="line">		HeroNode2 temp &#x3D; head;</span><br><span class="line">		boolean flag &#x3D; false;</span><br><span class="line">		while (temp.next !&#x3D; null)&#123;</span><br><span class="line">			if (temp.next.no &gt; heroNode.no)&#123;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			temp &#x3D; temp.next;</span><br><span class="line">		&#125;&#x2F;&#x2F;遍历结束后指向最后一个节点 或者 指向比排名大的前一个节点</span><br><span class="line">		&#x2F;&#x2F;如果查入的位置是最后一个节点，不执行 temp.next.pre &#x3D; heroNode;</span><br><span class="line">		&#x2F;&#x2F; 因为temp.next &#x3D; null , temp.next.pre报空指针异常</span><br><span class="line">		if (temp.next !&#x3D; null)&#123;</span><br><span class="line">			temp.next.pre &#x3D; heroNode;</span><br><span class="line">		&#125;</span><br><span class="line">		heroNode.next &#x3D; temp.next;</span><br><span class="line">		heroNode.pre &#x3D; temp; </span><br><span class="line">		temp.next &#x3D; heroNode;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;遍历显示</span><br><span class="line">	public void list()&#123;</span><br><span class="line">		if (head.next &#x3D;&#x3D; null)&#123;</span><br><span class="line">			System.out.println(&quot;双链表为空！！！&quot;);</span><br><span class="line">			return ;</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;辅助变量</span><br><span class="line">		HeroNode2 temp &#x3D; head; </span><br><span class="line">		while(temp.next !&#x3D; null)&#123;</span><br><span class="line">			System.out.println(temp.next);</span><br><span class="line">			temp &#x3D; temp.next;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;定义HeroNode2 ， 每个HeroNode 对象就是一个节点</span><br><span class="line">class HeroNode2 &#123;</span><br><span class="line">	int no;</span><br><span class="line">	String name;</span><br><span class="line">	String nickName;</span><br><span class="line">	HeroNode2 next;&#x2F;&#x2F;指向下一个节点</span><br><span class="line">	HeroNode2 pre;&#x2F;&#x2F;指向上一个节点</span><br><span class="line">	&#x2F;&#x2F;构造器</span><br><span class="line">	public HeroNode2(int no, String name, String nickName)&#123;</span><br><span class="line">		this.no &#x3D; no;</span><br><span class="line">		this.name &#x3D; name;</span><br><span class="line">		this.nickName &#x3D; nickName;</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;&#x2F;为了显示方法，我们重新toString</span><br><span class="line">	@Override</span><br><span class="line">	public String toString() &#123;</span><br><span class="line">		return &quot;HeroNode [no&#x3D;&quot; + no + &quot;, name&#x3D;&quot; + name + &quot;, nickName&#x3D;&quot; + nickName  + &quot;]&quot;;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='true'
+        data-ae='true'
+        data-ci='98d8392c61bba8a9f87d'
+        data-cs='a5b47de553739830db015b176764355577df22bf'
+        data-r='Comment'
+        data-o='Programmingmakesmebald'
+        data-a='Programmingmakesmebald'
+        data-d='true'
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class='side'>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#双链表"><span class="toc-number">1.</span> <span class="toc-text">双链表</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#单链表与双链表区别"><span class="toc-number">1.0.1.</span> <span class="toc-text">单链表与双链表区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#双向链表应用实例"><span class="toc-number">1.0.2.</span> <span class="toc-text">双向链表应用实例</span></a></li></ol></li></ol></li></ol>	
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
