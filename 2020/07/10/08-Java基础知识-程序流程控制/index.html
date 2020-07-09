@@ -1,0 +1,416 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hans" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>08.Java基础知识-程序流程控制 - 秃头小王子</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="秃头小王子的个人博客,程序流程控制
+流程控制语句是用来控制程序中各语句执行顺序的语句，可以把语句组合成能完成一定功能的小逻辑模块。
+
+其流程控制方式采用结构化程序设计中规定的三种基本流程结构，即：
+
+顺序结构
+分支结构
+,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="秃头小王子" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">秃头小王子</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://yoursite.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">08.Java基础知识-程序流程控制</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">08.Java基础知识-程序流程控制</h1>
+        <div class="stuff">
+            <span>七月 10, 2020</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Java%E5%9F%BA%E7%A1%80/" rel="tag">Java基础</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/break/" rel="tag">break</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/continue/" rel="tag">continue</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/do%E2%80%A6while/" rel="tag">do…while</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/for/" rel="tag">for</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/if%E2%80%A6else/" rel="tag">if…else</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/return/" rel="tag">return</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/switch-%E5%92%8Cif%E8%AF%AD%E5%8F%A5%E7%9A%84%E5%AF%B9%E6%AF%94/" rel="tag">switch 和if语句的对比</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/switch-case/" rel="tag">switch-case</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/while/" rel="tag">while</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E2%80%9C%E6%97%A0%E9%99%90%E2%80%9D%E5%BE%AA%E7%8E%AF/" rel="tag">“无限”循环</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84/" rel="tag">分支结构</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E5%B5%8C%E5%A5%97%E5%BE%AA%E7%8E%AF/" rel="tag">嵌套循环</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E5%BD%A9%E7%A5%A8%E6%B8%B8%E6%88%8F/" rel="tag">彩票游戏</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/" rel="tag">循环结构</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E7%A8%8B%E5%BA%8F%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/" rel="tag">程序流程控制</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E9%A1%BA%E5%BA%8F%E7%BB%93%E6%9E%84/" rel="tag">顺序结构</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h2 id="程序流程控制"><a href="#程序流程控制" class="headerlink" title="程序流程控制"></a>程序流程控制</h2><ul>
+<li><p>流程控制语句是用来控制程序中各语句执行顺序的语句，可以把语句组合成能完成一定功能的小逻辑模块。</p>
+</li>
+<li><p>其流程控制方式采用结构化程序设计中规定的三种基本流程结构，即：</p>
+<ul>
+<li>顺序结构</li>
+<li>分支结构</li>
+<li>循环结构<h4 id="顺序结构"><a href="#顺序结构" class="headerlink" title="顺序结构"></a>顺序结构</h4></li>
+</ul>
+</li>
+<li><p>程序从上到下逐行地执行，中间没有任何判断和跳转。<br><img src="http://qd1ql2976.bkt.clouddn.com/3002" alt=""></p>
+</li>
+<li><p>Java中定义成员变量时采用合法的前向引用。如：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">正确形式：</span><br><span class="line">public class Test&#123;</span><br><span class="line">    int num1 &#x3D; 12;</span><br><span class="line">    int num2 &#x3D; num1 + 2;</span><br><span class="line">&#125;</span><br><span class="line">错误形式：</span><br><span class="line">public class Test&#123;</span><br><span class="line">    int num2 &#x3D; num1 + 2；</span><br><span class="line">    int num1 &#x3D; 12;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="分支结构"><a href="#分支结构" class="headerlink" title="分支结构"></a>分支结构</h4><p>根据条件，选择性地执行某段代码。</p>
+<ul>
+<li><h5 id="if…else语句。"><a href="#if…else语句。" class="headerlink" title="if…else语句。"></a>if…else语句。</h5><ul>
+<li>条件表达式必须是布尔表达式（关系表达式或逻辑表达式）、布尔变量</li>
+<li>语句块只有一条执行语句时，一对{}可以省略，但建议保留</li>
+<li>if-else语句结构，根据需要可以嵌套使用</li>
+<li>当if-else结构是“多选一”时，最后的else是可选的，根据需要可以省略</li>
+<li>当多个条件是“互斥”关系时，条件判断语句及执行语句间顺序无所谓</li>
+<li>当多个条件是“包含”关系时，“小上大下 / 子上父下”</li>
+<li>三种格式：</li>
+</ul>
+<p>  1.<br>  <img src="http://qd1ql2976.bkt.clouddn.com/3004" alt=""></p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if( 条件表达式)&#123;</span><br><span class="line">    执行代码块；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>  2.<br>  <img src="http://qd1ql2976.bkt.clouddn.com/3006" alt=""></p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">if( 条件表达式)&#123;</span><br><span class="line">    执行代码块1;</span><br><span class="line">&#125;</span><br><span class="line">else&#123;</span><br><span class="line">    执行代码块2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>  3.<br>  <img src="http://qd1ql2976.bkt.clouddn.com/3008" alt=""></p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">if( 条件表达式1)&#123;</span><br><span class="line">    执行 代码块1;</span><br><span class="line">&#125;</span><br><span class="line">else if ( 条件表达式2)&#123;</span><br><span class="line">    执行 代码块2;</span><br><span class="line">&#125;</span><br><span class="line">……</span><br><span class="line">else&#123;</span><br><span class="line">    执行 代码块n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>彩票游戏</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*</span><br><span class="line">假设你想开发一个玩彩票的游戏，程序随机地产生一个两位数的彩票，提示用户输入一个两位数，然后按照下面的规则判定用户是否能赢。</span><br><span class="line">1)如果用户输入的数匹配彩票的实际顺序，奖金10 000美元。</span><br><span class="line">2)如果用户输入的所有数字匹配彩票的所有数字，但顺序不一致，奖金 3 000美元。</span><br><span class="line">3)如果用户输入的一个数字仅满足顺序情况下匹配彩票的一个数字，奖金1 000美元。</span><br><span class="line">4)如果用户输入的一个数字仅满足非顺序情况下匹配彩票的一个数字，奖金500美元。</span><br><span class="line">5)如果用户输入的数字没有匹配任何一个数字，则彩票作废。</span><br><span class="line">提示：使用Math.random()产生随机数Math.random() 产生[0,1)范围的随机值Math.random() * 90：[0,90) </span><br><span class="line">Math.random() * 90 + 10：[10,100) 即得到  [10,99]</span><br><span class="line"></span><br><span class="line">使用(int)(Math.random() * 90  + 10)产生一个两位数的随机数。</span><br><span class="line">*&#x2F;</span><br><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">class TestCaiPiao&#123;</span><br><span class="line">	public static void main(String[] args)&#123;</span><br><span class="line">		&#x2F;&#x2F;1、随机产生一个两位数</span><br><span class="line">		&#x2F;&#x2F;System.out.println(Math.random());&#x2F;&#x2F;产生[0,1)</span><br><span class="line">		int number &#x3D; (int)(Math.random()*90 + 10);&#x2F;&#x2F;得到[10,99]，即[10,100)</span><br><span class="line">		&#x2F;&#x2F;System.out.println(number);</span><br><span class="line">		</span><br><span class="line">		int numberShi &#x3D; number&#x2F;10;</span><br><span class="line">		int numberGe &#x3D; number%10;</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;2、用户输入一个两位数</span><br><span class="line">		Scanner input &#x3D; new Scanner(System.in);</span><br><span class="line">		System.out.print(&quot;请输入一个两位数：&quot;);</span><br><span class="line">		int guess &#x3D; input.nextInt();</span><br><span class="line">		</span><br><span class="line">		int guessShi &#x3D; guess&#x2F;10;</span><br><span class="line">		int guessGe &#x3D; guess%10;</span><br><span class="line">		</span><br><span class="line">		if(number &#x3D;&#x3D; guess)&#123;</span><br><span class="line">			System.out.println(&quot;奖金10 000美元&quot;);</span><br><span class="line">		&#125;else if(numberShi &#x3D;&#x3D; guessGe &amp;&amp; numberGe &#x3D;&#x3D; guessShi)&#123;</span><br><span class="line">			System.out.println(&quot;奖金3 000美元&quot;);</span><br><span class="line">		&#125;else if(numberShi&#x3D;&#x3D;guessShi || numberGe &#x3D;&#x3D; guessGe)&#123;</span><br><span class="line">			System.out.println(&quot;奖金1 000美元&quot;);</span><br><span class="line">		&#125;else if(numberShi&#x3D;&#x3D;guessGe || numberGe &#x3D;&#x3D; guessShi)&#123;</span><br><span class="line">			System.out.println(&quot;奖金500美元&quot;);</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			System.out.println(&quot;没中奖&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		System.out.println(&quot;中奖号码是：&quot; + number);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><h5 id="switch-case语句。"><a href="#switch-case语句。" class="headerlink" title="switch-case语句。"></a>switch-case语句。</h5><ul>
+<li><p>switch(表达式)中表达式的值必须是下述几种类型之一：byte ，short，char ，int，枚举 (jdk 5.0) ，String (jdk 7.0)；</p>
+</li>
+<li><p>case子句中的值必须是常量，不能是变量名或不确定的表达式值；</p>
+</li>
+<li><p>同一个switch语句，所有case子句中的常量值互不相同；</p>
+</li>
+<li><p>break语句用来在执行完一个case分支后使程序跳出switch语句块；如果没有break，程序会顺序执行到switch结尾</p>
+</li>
+<li><p>default子句是可任选的。同时，位置也是灵活的。当没有匹配的case时，执行default</p>
+</li>
+<li><p>格式:<br>  <img src="http://qd1ql2976.bkt.clouddn.com/3010" alt=""></p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">switch( 表达式)&#123;</span><br><span class="line">    case 常量1:</span><br><span class="line">    语句1;</span><br><span class="line">    &#x2F;&#x2F; break;</span><br><span class="line">    case 常量2:</span><br><span class="line">    语句2;</span><br><span class="line">    &#x2F;&#x2F; break;</span><br><span class="line">    … …</span><br><span class="line">    case 常量N:</span><br><span class="line">    语句N;</span><br><span class="line">    &#x2F;&#x2F; break;</span><br><span class="line">    default:</span><br><span class="line">    语句;</span><br><span class="line">    &#x2F;&#x2F; break;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>求输入的日期是当年的第几天</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">class TestDaysOfYear&#123;</span><br><span class="line">	public static void main(String[] args)&#123;</span><br><span class="line">		Scanner input &#x3D; new Scanner(System.in);</span><br><span class="line">		</span><br><span class="line">		System.out.print(&quot;年：&quot;);</span><br><span class="line">		int year &#x3D; input.nextInt();</span><br><span class="line">		</span><br><span class="line">		System.out.print(&quot;月：&quot;);</span><br><span class="line">		int month &#x3D; input.nextInt();</span><br><span class="line">		</span><br><span class="line">		System.out.print(&quot;日：&quot;);</span><br><span class="line">		int day &#x3D; input.nextInt();</span><br><span class="line">		</span><br><span class="line">		int days &#x3D; day;</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;加前面几个月的满月天数</span><br><span class="line">		switch(month)&#123;</span><br><span class="line">			case 12:</span><br><span class="line">				&#x2F;&#x2F;前面11个月的总天数</span><br><span class="line">				&#x2F;&#x2F;days +&#x3D; 第11月的天数;</span><br><span class="line">				days +&#x3D; 30;</span><br><span class="line">			case 11:</span><br><span class="line">				&#x2F;&#x2F;前面10个月的总天数</span><br><span class="line">				&#x2F;&#x2F;days +&#x3D; 第10月的天数;</span><br><span class="line">				days +&#x3D; 31;</span><br><span class="line">			case 10:</span><br><span class="line">				days +&#x3D; 30;&#x2F;&#x2F;九月</span><br><span class="line">			case 9:</span><br><span class="line">				days +&#x3D; 31;&#x2F;&#x2F;八月</span><br><span class="line">			case 8:</span><br><span class="line">				days +&#x3D; 31;&#x2F;&#x2F;七月</span><br><span class="line">			case 7:</span><br><span class="line">				days +&#x3D; 30;&#x2F;&#x2F;六月</span><br><span class="line">			case 6:</span><br><span class="line">				days +&#x3D; 31;&#x2F;&#x2F;五月</span><br><span class="line">			case 5:</span><br><span class="line">				days +&#x3D; 30;&#x2F;&#x2F;四月</span><br><span class="line">			case 4:</span><br><span class="line">				days +&#x3D; 31;&#x2F;&#x2F;三月</span><br><span class="line">			case 3:</span><br><span class="line">				days +&#x3D; 28;&#x2F;&#x2F;二月</span><br><span class="line">				&#x2F;*if(闰年)&#123;</span><br><span class="line">					days++;</span><br><span class="line">				&#125;</span><br><span class="line">				*&#x2F;</span><br><span class="line">				if(year % 4 &#x3D;&#x3D;0 &amp;&amp; year % 100 !&#x3D; 0 || year%400&#x3D;&#x3D;0)&#123;</span><br><span class="line">					days++;</span><br><span class="line">				&#125;</span><br><span class="line">			case 2:</span><br><span class="line">				days +&#x3D; 31;&#x2F;&#x2F;一月</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		System.out.println(year + &quot;年&quot; + month + &quot;月&quot; + day + &quot;日是这一年的第&quot; + days + &quot;天&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><h5 id="switch-和if语句的对比"><a href="#switch-和if语句的对比" class="headerlink" title="switch 和if语句的对比"></a>switch 和if语句的对比</h5><p>if和switch语句很像，具体什么场景下，应用哪个语句呢？</p>
+</li>
+<li><p>如果判断的具体数值不多，而且符合byte、short 、char、int、String、枚举等几种类型。虽然两个语句都可以使用，建议使用swtich语句。因为效率稍高。</p>
+</li>
+<li><p>其他情况：对区间判断，对结果为boolean类型判断，使用if，if的使用范围更广。也就是说，使用switch-case的，都可以改写为if-else。反之不成立。</p>
+<h4 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h4></li>
+<li><p>注：JDK1.5提供了foreach循环，方便的遍历集合、数组元素。</p>
+</li>
+<li><h5 id="循环结构-1"><a href="#循环结构-1" class="headerlink" title="循环结构"></a>循环结构</h5><ul>
+<li>根据循环条件，重复性的执行某段代码。</li>
+</ul>
+</li>
+<li><h5 id="循环语句分类"><a href="#循环语句分类" class="headerlink" title="循环语句分类"></a>循环语句分类</h5><ul>
+<li>while</li>
+<li>do…while</li>
+<li>for</li>
+</ul>
+</li>
+<li><h5 id="循环语句的四个组成部分"><a href="#循环语句的四个组成部分" class="headerlink" title="循环语句的四个组成部分"></a>循环语句的四个组成部分</h5><ul>
+<li>初始化部分(init_statement)</li>
+<li>循环条件部分(test_exp)</li>
+<li>循环体部分(body_statement)</li>
+<li>迭代部分(alter_statement)<br><img src="http://qd1ql2976.bkt.clouddn.com/3108" alt=""></li>
+</ul>
+</li>
+<li><h5 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h5><ul>
+<li><p>语法格式</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for (①初始化部分;②循环条件部分;④迭代部分)｛</span><br><span class="line">    ③ 循环体部分;</span><br><span class="line">｝</span><br></pre></td></tr></table></figure></li>
+<li><p>执行过程：</p>
+<p>  <img src="http://qd1ql2976.bkt.clouddn.com/3110" alt=""></p>
+</li>
+<li><p>说明：</p>
+<ul>
+<li>②循环条件部分为boolean类型表达式，当值为false时，退出循环</li>
+<li>①初始化部分可以声明多个变量，但必须是同一个类型，用逗号分隔</li>
+<li>④可以有多个变量更新，用逗号分隔</li>
+</ul>
+</li>
+<li><p>for循环执行演示：<br>  <img src="http://qd1ql2976.bkt.clouddn.com/3112" alt=""></p>
+</li>
+<li><p>输入两个正整数m和n，求其最大公约数和最小公倍数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">int m &#x3D; 12, n &#x3D; 28;</span><br><span class="line">&#x2F;&#x2F;获取m和n的较大值</span><br><span class="line">int max &#x3D; (m &gt; n)? m : n;</span><br><span class="line">&#x2F;&#x2F;获取m和n的较小值</span><br><span class="line">int min &#x3D; (m &lt; n)? m : n;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;求m和n的最大公约数</span><br><span class="line">for(int i &#x3D; min;i &gt;&#x3D; 1;i--)&#123;</span><br><span class="line">    if( m % i &#x3D;&#x3D; 0 &amp;&amp; n % i &#x3D;&#x3D; 0)&#123;</span><br><span class="line">        System.out.println(&quot;m和n的最大公约数是：&quot; + i);</span><br><span class="line">        break;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;求m和n的最小公倍数</span><br><span class="line">for(int i &#x3D; max;i &lt;&#x3D; m * n;i++)&#123;</span><br><span class="line">    if( i % m &#x3D;&#x3D; 0 &amp;&amp; i % n &#x3D;&#x3D; 0)&#123;</span><br><span class="line">        System.out.println(&quot;m和n的最小公倍数是：&quot; + i);</span><br><span class="line">        break;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><h5 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h5><ul>
+<li><p>语法格式</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">① 初始化部分</span><br><span class="line">while(②循环条件部分)｛</span><br><span class="line">    ③循环体部分;</span><br><span class="line">    ④迭代部分;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>执行过程：</p>
+<p>  <img src="http://qd1ql2976.bkt.clouddn.com/3114" alt=""></p>
+</li>
+<li><p>说明：</p>
+<ul>
+<li>注意不要忘记声明④迭代部分。否则，循环将不能结束，变成死循环。</li>
+<li>for循环和while循环可以相互转换<br>区别：for循环和while循环的初始化条件部分的作用范围不同。</li>
+</ul>
+</li>
+<li><p>遍历100以内的所有偶数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;遍历100以内的所有偶数</span><br><span class="line">	int i &#x3D; 1;</span><br><span class="line">	while(i &lt;&#x3D; 100)&#123;</span><br><span class="line">		</span><br><span class="line">		if(i % 2 &#x3D;&#x3D; 0)&#123;</span><br><span class="line">			System.out.println(i);</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		i++;</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;&#x2F;出了while循环以后，i仍可以调用。</span><br><span class="line">	System.out.println(i);&#x2F;&#x2F;101</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><h5 id="do-while循环"><a href="#do-while循环" class="headerlink" title="do-while循环"></a>do-while循环</h5><ul>
+<li><p>语法格式</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">①初始化部分;</span><br><span class="line">do&#123;</span><br><span class="line">    ③ 循环体部分</span><br><span class="line">    ④ 迭代部分</span><br><span class="line">&#125;while(②循环条件部分);</span><br></pre></td></tr></table></figure></li>
+<li><p>执行过程：</p>
+<p>  <img src="http://qd1ql2976.bkt.clouddn.com/3116" alt=""></p>
+</li>
+<li><p>说明：</p>
+<ul>
+<li>do-while 循环至少执行一次循环体 。</li>
+<li>开发中，使用for和while更多一些。较少使用do-while</li>
+</ul>
+</li>
+<li><p>遍历100以内的偶数,并计算所有偶数的和及偶数的个数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;遍历100以内的偶数,并计算所有偶数的和及偶数的个数</span><br><span class="line">	int num &#x3D; 1;</span><br><span class="line">	int sum &#x3D; 0;&#x2F;&#x2F;记录总和</span><br><span class="line">	int count &#x3D; 0;&#x2F;&#x2F;记录个数</span><br><span class="line">	do&#123;</span><br><span class="line">		</span><br><span class="line">		if(num % 2 &#x3D;&#x3D; 0)&#123;</span><br><span class="line">			System.out.println(num);</span><br><span class="line">			sum +&#x3D; num;</span><br><span class="line">			count++;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		num++;</span><br><span class="line"></span><br><span class="line">	&#125;while(num &lt;&#x3D; 100);</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">	System.out.println(&quot;总和为：&quot; + sum);</span><br><span class="line">	System.out.println(&quot;个数为：&quot; + count);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><h5 id="“无限”循环："><a href="#“无限”循环：" class="headerlink" title="“无限”循环："></a>“无限”循环：</h5><ul>
+<li><p>最简单“无限”循环：格式： while(true)、for(;;)  无限循环存在的原因是并不知道循环多少次，需要根据循环体内部某些条件，来控制循环的结束。</p>
+</li>
+<li><p>结束循环有几种方式？</p>
+<ol>
+<li>方式一：循环条件部分返回false</li>
+<li>方式二：在循环体中，执行break</li>
+</ol>
+</li>
+<li><p>题目：<br>从键盘读入个数不确定的整数，并判断读入的正数和负数的个数，输入为0时结束程序。</p>
+</li>
+<li><p>说明：</p>
+<ol>
+<li>不在循环条件部分限制次数的结构：for(;;) 或 while(true)</li>
+</ol>
+</li>
+<li><p>代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">	</span><br><span class="line">	Scanner scan &#x3D; new Scanner(System.in);</span><br><span class="line">	</span><br><span class="line">	int positiveNumber &#x3D; 0;&#x2F;&#x2F;记录正数的个数</span><br><span class="line">	int negativeNumber &#x3D; 0;&#x2F;&#x2F;记录负数的个数</span><br><span class="line"></span><br><span class="line">	for(;;)&#123;&#x2F;&#x2F;while(true)&#123;</span><br><span class="line">		</span><br><span class="line">		int number &#x3D; scan.nextInt();</span><br><span class="line"></span><br><span class="line">		&#x2F;&#x2F;判断number的正负情况</span><br><span class="line">		if(number &gt; 0)&#123;</span><br><span class="line">			positiveNumber++;</span><br><span class="line">		&#125;else if(number &lt; 0)&#123;</span><br><span class="line">			negativeNumber++;</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			&#x2F;&#x2F;一旦执行break，跳出循环</span><br><span class="line">			break;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	System.out.println(&quot;输入的正数个数为：&quot; + positiveNumber);</span><br><span class="line">	System.out.println(&quot;输入的负数个数为：&quot; + negativeNumber);</span><br><span class="line">	</span><br><span class="line">	while(true)&#123;</span><br><span class="line">		</span><br><span class="line">		int number &#x3D; scan.nextInt();</span><br><span class="line"></span><br><span class="line">		&#x2F;&#x2F;判断number的正负情况</span><br><span class="line">		if(number &gt; 0)&#123;</span><br><span class="line">			positiveNumber++;</span><br><span class="line">		&#125;else if(number &lt; 0)&#123;</span><br><span class="line">			negativeNumber++;</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			&#x2F;&#x2F;一旦执行break，跳出循环</span><br><span class="line">			break;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	System.out.println(&quot;输入的正数个数为：&quot; + positiveNumber);</span><br><span class="line">	System.out.println(&quot;输入的负数个数为：&quot; + negativeNumber);</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="嵌套循环"><a href="#嵌套循环" class="headerlink" title="嵌套循环"></a>嵌套循环</h4></li>
+</ul>
+</li>
+<li><p>将一个循环放在另一个循环体内，就形成了嵌套循环。其中，for,while,do…while均可以作为外层循环或内层循环。</p>
+</li>
+<li><p>实质上，嵌套循环就是把内层循环当成外层循环的循环体。当只有内层循环的循环条件为false时，才会完全跳出内层循环，才可结束外层的当次循环，开始下一次的循环。</p>
+</li>
+<li><p>设外层循环次数为m次，内层为n次，则内层循环体实际上需要执行m*n次。</p>
+</li>
+<li><p>九九乘法表</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">	</span><br><span class="line">	for(int i &#x3D; 1;i &lt;&#x3D; 9;i++)&#123;</span><br><span class="line">		</span><br><span class="line">		for(int j &#x3D; 1;j &lt;&#x3D; i;j++)&#123;</span><br><span class="line">			System.out.print(i + &quot; * &quot; + j + &quot; &#x3D; &quot; + (i * j) + &quot;  &quot;);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		System.out.println();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="特殊关键字的使用：break、continue"><a href="#特殊关键字的使用：break、continue" class="headerlink" title="特殊关键字的使用：break、continue"></a>特殊关键字的使用：break、continue</h4><table>
+<thead>
+<tr>
+<th>关键字</th>
+<th>使用范围</th>
+<th>循环中使用的作用(不同点)</th>
+<th>相同点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>break</td>
+<td>switch-case与循环结构中</td>
+<td>结束当前循环</td>
+<td>关键字后面不能声明执行语句</td>
+</tr>
+<tr>
+<td>continue</td>
+<td>循环结构中</td>
+<td>结束当次循环</td>
+<td>关键字后面不能声明执行语句</td>
+</tr>
+</tbody></table>
+<ul>
+<li><h5 id="break"><a href="#break" class="headerlink" title="break"></a>break</h5></li>
+<li><p>break语句用于终止某个语句块的执行</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    ……</span><br><span class="line">    break;</span><br><span class="line">    ……</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>break语句出现在多层嵌套的语句块中时，可以通过标签指明要终止的是<br>哪一层语句块</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">label1: &#123; </span><br><span class="line">    ……</span><br><span class="line">    label2: &#123; </span><br><span class="line">        ……</span><br><span class="line">        label3: &#123; </span><br><span class="line">            ……</span><br><span class="line">            break label2;</span><br><span class="line">            ……</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><h5 id="continue"><a href="#continue" class="headerlink" title="continue"></a>continue</h5></li>
+<li><p>continue 语句</p>
+<ul>
+<li>continue只能使用在循环结构中</li>
+<li>continue语句用于跳过其所在循环语句块的一次执行，继续下一次循环</li>
+<li>continue语句出现在多层嵌套的循环语句体中时，可以通过标签指明要跳过的是哪一层循环</li>
+</ul>
+</li>
+<li><p>continue 语句用法举例</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String args[])&#123;</span><br><span class="line">    for (int i &#x3D; 0; i &lt; 100; i++) &#123;</span><br><span class="line">        if (i%10&#x3D;&#x3D;0)</span><br><span class="line">        continue;</span><br><span class="line">        System.out.println(i);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><h5 id="return-特殊的流程控制语句"><a href="#return-特殊的流程控制语句" class="headerlink" title="return 特殊的流程控制语句"></a>return 特殊的流程控制语句</h5></li>
+<li><p>return：并非专门用于结束循环的，它的功能是结束一个方法。当一个方法执行到一个return语句时，这个方法将被结束。</p>
+</li>
+<li><p>与break和continue不同的是，return直接结束整个方法，不管这个return处于多少层循环之内</p>
+</li>
+<li><h5 id="特殊流程控制语句说明"><a href="#特殊流程控制语句说明" class="headerlink" title="特殊流程控制语句说明"></a>特殊流程控制语句说明</h5><ul>
+<li>break只能用于switch语句和循环语句中。</li>
+<li>continue只能用于循环语句中。</li>
+<li>二者功能类似，但continue是终止本次循环，break是终止本层循环。</li>
+<li>break、continue之后不能有其他的语句，因为程序永远不会执行其后的语句。</li>
+<li>标号语句必须紧接在循环的头部。标号语句不能用在非循环语句的前面。</li>
+<li>很多语言都有goto语句，goto语句可以随意将控制转移到程序中的任意一条语句上，然后执行它。但使程序容易出错。Java中的break和continue是不同于goto的。</li>
+</ul>
+</li>
+<li><p>代码示例</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">	for(int i &#x3D; 1;i &lt;&#x3D; 10;i++)&#123;</span><br><span class="line">	</span><br><span class="line">		if(i % 4 &#x3D;&#x3D; 0)&#123;</span><br><span class="line">			break;&#x2F;&#x2F;123</span><br><span class="line">			&#x2F;&#x2F;continue;&#x2F;&#x2F;123567910</span><br><span class="line">			&#x2F;&#x2F;System.out.println(&quot;今晚迪丽热巴要约我！！！&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.print(i);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	System.out.println(&quot;\n&quot;);</span><br><span class="line">	&#x2F;&#x2F;******************************</span><br><span class="line">	</span><br><span class="line">	label:for(int i &#x3D; 1;i &lt;&#x3D; 4;i++)&#123;</span><br><span class="line">	</span><br><span class="line">		for(int j &#x3D; 1;j &lt;&#x3D; 10;j++)&#123;</span><br><span class="line">			</span><br><span class="line">			if(j % 4 &#x3D;&#x3D; 0)&#123;</span><br><span class="line">				&#x2F;&#x2F;break;&#x2F;&#x2F;默认跳出包裹此关键字最近的一层循环。</span><br><span class="line">				&#x2F;&#x2F;continue;</span><br><span class="line"></span><br><span class="line">				&#x2F;&#x2F;break label;&#x2F;&#x2F;结束指定标识的一层循环结构</span><br><span class="line">				continue label;&#x2F;&#x2F;结束指定标识的一层循环结构当次循环</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">			System.out.print(j);</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		System.out.println();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='true'
+        data-ae='true'
+        data-ci='98d8392c61bba8a9f87d'
+        data-cs='a5b47de553739830db015b176764355577df22bf'
+        data-r='Comment'
+        data-o='Programmingmakesmebald'
+        data-a='Programmingmakesmebald'
+        data-d='true'
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class='side'>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#程序流程控制"><span class="toc-number">1.</span> <span class="toc-text">程序流程控制</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#顺序结构"><span class="toc-number">1.0.1.</span> <span class="toc-text">顺序结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#分支结构"><span class="toc-number">1.0.2.</span> <span class="toc-text">分支结构</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#if…else语句。"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">if…else语句。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#switch-case语句。"><span class="toc-number">1.0.2.2.</span> <span class="toc-text">switch-case语句。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#switch-和if语句的对比"><span class="toc-number">1.0.2.3.</span> <span class="toc-text">switch 和if语句的对比</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#循环结构"><span class="toc-number">1.0.3.</span> <span class="toc-text">循环结构</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#循环结构-1"><span class="toc-number">1.0.3.1.</span> <span class="toc-text">循环结构</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#循环语句分类"><span class="toc-number">1.0.3.2.</span> <span class="toc-text">循环语句分类</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#循环语句的四个组成部分"><span class="toc-number">1.0.3.3.</span> <span class="toc-text">循环语句的四个组成部分</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#for循环"><span class="toc-number">1.0.3.4.</span> <span class="toc-text">for循环</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#while循环"><span class="toc-number">1.0.3.5.</span> <span class="toc-text">while循环</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#do-while循环"><span class="toc-number">1.0.3.6.</span> <span class="toc-text">do-while循环</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#“无限”循环："><span class="toc-number">1.0.3.7.</span> <span class="toc-text">“无限”循环：</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#嵌套循环"><span class="toc-number">1.0.4.</span> <span class="toc-text">嵌套循环</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#特殊关键字的使用：break、continue"><span class="toc-number">1.0.5.</span> <span class="toc-text">特殊关键字的使用：break、continue</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#break"><span class="toc-number">1.0.5.1.</span> <span class="toc-text">break</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#continue"><span class="toc-number">1.0.5.2.</span> <span class="toc-text">continue</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#return-特殊的流程控制语句"><span class="toc-number">1.0.5.3.</span> <span class="toc-text">return 特殊的流程控制语句</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#特殊流程控制语句说明"><span class="toc-number">1.0.5.4.</span> <span class="toc-text">特殊流程控制语句说明</span></a></li></ol></li></ol></li></ol></li></ol>	
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>

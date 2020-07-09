@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hans" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>09.Java基础知识-质数与优化 - 秃头小王子</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="秃头小王子的个人博客,输出100以内的所有的质数质数（素数）：只能被1和它本身整除的自然数。从2开始，到这个数减1结束为止，都不能被这个数本身整除。
+一、简单实现
+注意boolean isFlag = true;
+
+不要,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="秃头小王子" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">秃头小王子</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://yoursite.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">09.Java基础知识-质数与优化</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">09.Java基础知识-质数与优化</h1>
+        <div class="stuff">
+            <span>七月 10, 2020</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/100%E4%BB%A5%E5%86%85%E8%B4%A8%E6%95%B0/" rel="tag">100以内质数</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Java%E5%9F%BA%E7%A1%80/" rel="tag">Java基础</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E6%B1%82%E8%B4%A8%E6%95%B0%E8%BF%90%E7%AE%97%E4%BC%98%E5%8C%96/" rel="tag">求质数运算优化</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E8%B4%A8%E6%95%B0/" rel="tag">质数</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h2 id="输出100以内的所有的质数"><a href="#输出100以内的所有的质数" class="headerlink" title="输出100以内的所有的质数"></a>输出100以内的所有的质数</h2><p>质数（素数）：只能被1和它本身整除的自然数。从2开始，到这个数减1结束为止，都不能被这个数本身整除。</p>
+<h4 id="一、简单实现"><a href="#一、简单实现" class="headerlink" title="一、简单实现"></a>一、简单实现</h4><ol>
+<li><p>注意boolean isFlag = true;</p>
+</li>
+<li><p>不要放在外层循环里边 每次声明 浪费内存</p>
+</li>
+<li><p>声明一次，每次外层循环重置isFlag</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">	</span><br><span class="line">	boolean isFlag &#x3D; true;&#x2F;&#x2F;标识i是否被j除尽，一旦除尽，修改其值</span><br><span class="line"></span><br><span class="line">	for(int i &#x3D; 2;i &lt;&#x3D; 100;i++)&#123;&#x2F;&#x2F;遍历100以内的自然数</span><br><span class="line">	</span><br><span class="line">		&#x2F;&#x2F;boolean isFlag &#x3D; true;放在这每次声明 浪费内存</span><br><span class="line">	</span><br><span class="line">		for(int j &#x3D; 2;j &lt; i;j++)&#123;&#x2F;&#x2F;j:被i去除</span><br><span class="line">			</span><br><span class="line">			if(i % j &#x3D;&#x3D; 0)&#123; &#x2F;&#x2F;i被j除尽</span><br><span class="line">				isFlag &#x3D; false;</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;</span><br><span class="line">		if(isFlag &#x3D;&#x3D; true)&#123;</span><br><span class="line">			System.out.println(i);</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;重置isFlag</span><br><span class="line">		isFlag &#x3D; true;</span><br><span class="line">	</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="100000以内的所有的质数个数"><a href="#100000以内的所有的质数个数" class="headerlink" title="100000以内的所有的质数个数"></a>100000以内的所有的质数个数</h2><h4 id="二、第一次优化"><a href="#二、第一次优化" class="headerlink" title="二、第一次优化"></a>二、第一次优化</h4></li>
+<li><p>i替换为根号i（Math.sqrt(i)）</p>
+<p> 对本身是质数的自然数是有效的。</p>
+<p> 因为 i = 根号i * 根号i（Math.sqrt(i) * Math.sqrt(i)）；</p>
+</li>
+<li><p>第一次确定不是质数break跳出，只对本身非质数的自然数是有效的。</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">	</span><br><span class="line">	boolean isFlag &#x3D; true;&#x2F;&#x2F;标识i是否被j除尽，一旦除尽，修改其值</span><br><span class="line">	int count &#x3D; 0;&#x2F;&#x2F;记录质数的个数</span><br><span class="line"></span><br><span class="line">	&#x2F;&#x2F;获取当前时间距离1970-01-01 00:00:00 的毫秒数</span><br><span class="line">	long start &#x3D; System.currentTimeMillis();</span><br><span class="line"></span><br><span class="line">	for(int i &#x3D; 2;i &lt;&#x3D; 100000;i++)&#123;&#x2F;&#x2F;遍历100000以内的自然数</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;优化1：i替换为根号i（Math.sqrt(i)），对本身是质数的自然数是有效的。因为 i &#x3D; 根号i * 根号i（Math.sqrt(i) * Math.sqrt(i)）；</span><br><span class="line">		&#x2F;&#x2F;for(int j &#x3D; 2;j &lt; i;j++)&#123;</span><br><span class="line">		for(int j &#x3D; 2;j &lt;&#x3D; Math.sqrt(i);j++)&#123;&#x2F;&#x2F;j:被i去除</span><br><span class="line">			</span><br><span class="line">			if(i % j &#x3D;&#x3D; 0)&#123; &#x2F;&#x2F;i被j除尽</span><br><span class="line">				isFlag &#x3D; false;</span><br><span class="line">				break;&#x2F;&#x2F;优化2：第一次确定不是质数break跳出，只对本身非质数的自然数是有效的。</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;</span><br><span class="line">		if(isFlag &#x3D;&#x3D; true)&#123;</span><br><span class="line">			&#x2F;&#x2F;System.out.println(i);</span><br><span class="line">			count++;</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;重置isFlag</span><br><span class="line">		isFlag &#x3D; true;</span><br><span class="line">	</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	&#x2F;&#x2F;获取当前时间距离1970-01-01 00:00:00 的毫秒数</span><br><span class="line">	long end &#x3D; System.currentTimeMillis();</span><br><span class="line">	System.out.println(&quot;质数的个数为：&quot; + count);</span><br><span class="line">	System.out.println(&quot;所花费的时间为：&quot; + (end - start));&#x2F;&#x2F;17110 - 优化一：break:1546 - 优化二：13</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h4 id="三、第二次优化"><a href="#三、第二次优化" class="headerlink" title="三、第二次优化"></a>三、第二次优化</h4><ol>
+<li><p>省去标识i是否被j除尽boolean isFlag = true;</p>
+</li>
+<li><p>利用continue label;实现执行到count++;的都是质数</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	int count &#x3D; 0;&#x2F;&#x2F;记录质数的个数</span><br><span class="line"></span><br><span class="line">	&#x2F;&#x2F;获取当前时间距离1970-01-01 00:00:00 的毫秒数</span><br><span class="line">	long start &#x3D; System.currentTimeMillis();</span><br><span class="line"></span><br><span class="line">	label:for(int i &#x3D; 2;i &lt;&#x3D; 100000;i++)&#123;&#x2F;&#x2F;遍历100000以内的自然数</span><br><span class="line">		</span><br><span class="line">		for(int j &#x3D; 2;j &lt;&#x3D; Math.sqrt(i);j++)&#123;&#x2F;&#x2F;j:被i去除</span><br><span class="line">			</span><br><span class="line">			if(i % j &#x3D;&#x3D; 0)&#123; &#x2F;&#x2F;i被j除尽</span><br><span class="line">				continue label;</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;能执行到此步骤的，都是质数</span><br><span class="line">		count++;</span><br><span class="line">	</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	&#x2F;&#x2F;获取当前时间距离1970-01-01 00:00:00 的毫秒数</span><br><span class="line">	long end &#x3D; System.currentTimeMillis();</span><br><span class="line">	System.out.println(&quot;质数的个数为：&quot; + count);</span><br><span class="line">	System.out.println(&quot;所花费的时间为：&quot; + (end - start));</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='true'
+        data-ae='true'
+        data-ci='98d8392c61bba8a9f87d'
+        data-cs='a5b47de553739830db015b176764355577df22bf'
+        data-r='Comment'
+        data-o='Programmingmakesmebald'
+        data-a='Programmingmakesmebald'
+        data-d='true'
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class='side'>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#输出100以内的所有的质数"><span class="toc-number">1.</span> <span class="toc-text">输出100以内的所有的质数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#一、简单实现"><span class="toc-number">1.0.1.</span> <span class="toc-text">一、简单实现</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#100000以内的所有的质数个数"><span class="toc-number">2.</span> <span class="toc-text">100000以内的所有的质数个数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#二、第一次优化"><span class="toc-number">2.0.1.</span> <span class="toc-text">二、第一次优化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#三、第二次优化"><span class="toc-number">2.0.2.</span> <span class="toc-text">三、第二次优化</span></a></li></ol></li></ol></li></ol>	
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
