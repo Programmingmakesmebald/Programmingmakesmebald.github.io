@@ -1,0 +1,491 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hans" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>10.Java基础知识-数组 - 秃头小王子</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="秃头小王子的个人博客,数组一、数组的概述
+数组的理解：数组(Array)，是多个相同类型数据按一定顺序排列的集合，并使用一个名字命名，并通过编号的方式对这些数据进行统一管理。
+
+数组的常见概念
+
+数组名
+下标(或索引)
+,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="秃头小王子" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">秃头小王子</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://yoursite.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">10.Java基础知识-数组</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">10.Java基础知识-数组</h1>
+        <div class="stuff">
+            <span>七月 11, 2020</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Arrays%E5%B7%A5%E5%85%B7%E7%B1%BB/" rel="tag">Arrays工具类</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84/" rel="tag">一维数组</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84/" rel="tag">二维数组</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/" rel="tag">冒泡排序</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/" rel="tag">快速排序</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" rel="tag">排序算法</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%A7%E8%83%BD%E5%AF%B9%E6%AF%94/" rel="tag">排序算法性能对比</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E6%95%B0%E7%BB%84/" rel="tag">数组</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E6%95%B0%E7%BB%84%E5%BC%82%E5%B8%B8/" rel="tag">数组异常</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E6%95%B0%E7%BB%84%E8%B6%8A%E7%95%8C%E5%BC%82%E5%B8%B8/" rel="tag">数组越界异常</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E7%A9%BA%E6%8C%87%E9%92%88%E5%BC%82%E5%B8%B8/" rel="tag">空指针异常</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h4 id="一、数组的概述"><a href="#一、数组的概述" class="headerlink" title="一、数组的概述"></a>一、数组的概述</h4><ol>
+<li><p>数组的理解：数组(Array)，是多个相同类型数据按一定顺序排列<br>的集合，并使用一个名字命名，并通过编号的方式对这些数据进行统一管理。</p>
+</li>
+<li><p>数组的常见概念</p>
+<ul>
+<li>数组名</li>
+<li>下标(或索引)</li>
+<li>元素</li>
+<li>数组的长度</li>
+</ul>
+</li>
+<li><p>数组的特点：</p>
+<ul>
+<li>数组是有序排列的</li>
+<li>数组属于引用数据类型的变量。数组的元素，既可以是基本数据类型，也可以是引用数据类型</li>
+<li>创建数组对象会在内存中开辟一整块连续的空间，而数组名中引用的是这块连续空间的首地址。</li>
+<li>数组的长度一旦确定，就不能修改。</li>
+<li>我们可以直接通过下标(或索引)的方式调用指定位置的元素，速度很快。</li>
+</ul>
+</li>
+<li><p>数组的分类：</p>
+<ul>
+<li>按照维度：一维数组、二维数组、三维数组、…</li>
+<li>按照元素的数据类型：基本数据类型元素的数组、引用数据类型元素的数组(即对象数组)<h4 id="二、一维数组的使用"><a href="#二、一维数组的使用" class="headerlink" title="二、一维数组的使用"></a>二、一维数组的使用</h4></li>
+</ul>
+</li>
+<li><p>一维数组的声明</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">type var[]</span><br><span class="line">type[] var；</span><br></pre></td></tr></table></figure>
+<p> 例如：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int a1[];</span><br><span class="line">int[] a;</span><br><span class="line">double[] b;</span><br><span class="line">String[] c; &#x2F;&#x2F;引用类型变量数组</span><br></pre></td></tr></table></figure>
+<p> Java语言中声明数组时不能指定其长度(数组中元素的数)， 例如： int a[5]; //非法</p>
+</li>
+<li><p>一维数组的声明和初始化</p>
+<ul>
+<li><p>动态初始化：数组声明且为数组元素分配空间与赋值的操作分开进行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;基本数据类型</span><br><span class="line">int[] arr &#x3D; new int[3];&#x2F;&#x2F;声明和初始化</span><br><span class="line">arr[0] &#x3D; 3;&#x2F;&#x2F;赋值</span><br><span class="line">arr[1] &#x3D; 9;&#x2F;&#x2F;赋值</span><br><span class="line">arr[2] &#x3D; 8;&#x2F;&#x2F;赋值</span><br><span class="line">&#x2F;&#x2F;引用数据类型</span><br><span class="line">String names[];&#x2F;&#x2F;声明</span><br><span class="line">names &#x3D; new String[3];&#x2F;&#x2F;初始化</span><br><span class="line">names[0] &#x3D; “钱学森”;&#x2F;&#x2F;赋值</span><br><span class="line">names[1] &#x3D; “邓稼先”;&#x2F;&#x2F;赋值</span><br><span class="line">names[2] &#x3D; “袁隆平”;&#x2F;&#x2F;赋值</span><br></pre></td></tr></table></figure></li>
+<li><p>静态初始化：在定义数组的同时就为数组元素分配空间并赋值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;基本数据类型</span><br><span class="line">int arr[] &#x3D; new int[]&#123; 3, 9, 8&#125;;&#x2F;&#x2F;1.声明和初始化并赋值</span><br><span class="line">int[] arr &#x3D; &#123;3,9,8&#125;;&#x2F;&#x2F;2.声明和初始化并赋值</span><br><span class="line">&#x2F;&#x2F;引用数据类型</span><br><span class="line">String names[] &#x3D; &#123;“李四光”,“茅以升”,“华罗庚”&#125;&#x2F;&#x2F;声明和初始化并赋值</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>一维数组的使用：数组元素的引用</p>
+<ul>
+<li>定义并用运算符new为之分配空间后，才可以引用数组中的每个元素；</li>
+<li>数组元素的引用方式：数组名[数组元素下标]<ul>
+<li>数组元素下标可以是整型常量或整型表达式。如a[3] , b[i] , c[6*i];</li>
+<li>数组元素下标从0开始；长度为n的数组合法下标取值范围: 0 —&gt;n-1；如int a[]=new<br>int[3]; 可引用的数组元素为a[0]、a[1]、a[2]</li>
+</ul>
+</li>
+<li>每个数组都有一个属性length指明它的长度，例如：a.length 指明数组a的长度(元素个数)<ul>
+<li>数组一旦初始化，其长度是不可变的</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>一维数组的使用：数组元素的默认初始化值<br> <img src="http://qd1ql2976.bkt.clouddn.com/3486" alt=""></p>
+<ul>
+<li>数组是引用类型，它的元素相当于类的成员变量，因此数组一经分配空间，其中的每个元素也被按照成员变量同样的方式被隐式初始化。</li>
+<li>对于基本数据类型而言，默认初始化值各有不同</li>
+<li>对于引用数据类型而言，默认初始化值为null(注意 与0不同！)</li>
+</ul>
+</li>
+<li><p>数组的内存解析</p>
+<ul>
+<li><p>Java中使用关键字new来创建数组</p>
+<ul>
+<li><p>如下是创建基本数据类型元素的一维数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String args[])&#123;</span><br><span class="line">    int[] s;&#x2F;&#x2F;①</span><br><span class="line">    s &#x3D; new int[10];&#x2F;&#x2F;②</span><br><span class="line">    &#x2F;&#x2F;int[] s&#x3D;new int[10];</span><br><span class="line">    &#x2F;&#x2F; 基本 数据类型 数组在显式赋值之前，</span><br><span class="line">    &#x2F;&#x2F;Java 会自动 给他们赋默认值。</span><br><span class="line">    for ( int i&#x3D;0; i&lt;10; i++ ) &#123;</span><br><span class="line">        s[i] &#x3D;2*i+1;&#x2F;&#x2F;③</span><br><span class="line">        System.out.println(s[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>①<br><img src="http://qd1ql2976.bkt.clouddn.com/3489" alt=""></p>
+<p>②<br><img src="http://qd1ql2976.bkt.clouddn.com/3491" alt=""></p>
+<p>③<br><img src="http://qd1ql2976.bkt.clouddn.com/3493" alt=""></p>
+</li>
+</ul>
+</li>
+<li><p>内存的简化结构<br>  <img src="http://qd1ql2976.bkt.clouddn.com/3495" alt=""><br>  <img src="http://qd1ql2976.bkt.clouddn.com/3497" alt=""><br>  <img src="http://qd1ql2976.bkt.clouddn.com/3501" alt=""></p>
+</li>
+</ul>
+</li>
+<li><p>代码示例</p>
+<ol>
+<li><p>题目：从键盘读入学生成绩，找出最高分，并输出学生成绩等级。</p>
+<ul>
+<li>成绩&gt;=最高分-10 等级为’A’</li>
+<li>成绩&gt;=最高分-20 等级为’B’</li>
+<li>成绩&gt;=最高分-30 等级为’C’</li>
+<li>其余 等级为’D’</li>
+</ul>
+</li>
+<li><p>代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">	&#x2F;&#x2F;1.使用Scanner，读取学生个数</span><br><span class="line">	Scanner scanner &#x3D; new Scanner(System.in);</span><br><span class="line">	System.out.println(&quot;请输入学生人数：&quot;);</span><br><span class="line">	int number &#x3D; scanner.nextInt();</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;2.创建数组，存储学生成绩：动态初始化</span><br><span class="line">	int[] scores &#x3D; new int[number];</span><br><span class="line">	&#x2F;&#x2F;3.给数组中的元素赋值</span><br><span class="line">	System.out.println(&quot;请输入&quot; + number + &quot;个学生成绩：&quot;);</span><br><span class="line">	int maxScore &#x3D; 0;</span><br><span class="line">	for(int i &#x3D; 0;i &lt; scores.length;i++)&#123;</span><br><span class="line">		scores[i] &#x3D; scanner.nextInt();</span><br><span class="line">		&#x2F;&#x2F;4.获取数组中的元素的最大值:最高分</span><br><span class="line">		if(maxScore &lt; scores[i])&#123;</span><br><span class="line">			maxScore &#x3D; scores[i];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;&#x2F;5.根据每个学生成绩与最高分的差值，得到每个学生的等级，并输出等级和成绩</span><br><span class="line">	char level;</span><br><span class="line">	for(int i &#x3D; 0;i &lt; scores.length;i++)&#123;</span><br><span class="line">		if(maxScore - scores[i] &lt;&#x3D; 10)&#123;</span><br><span class="line">			level &#x3D; &#39;A&#39;;</span><br><span class="line">		&#125;else if(maxScore - scores[i] &lt;&#x3D; 20)&#123;</span><br><span class="line">			level &#x3D; &#39;B&#39;;</span><br><span class="line">		&#125;else if(maxScore - scores[i] &lt;&#x3D; 30)&#123;</span><br><span class="line">			level &#x3D; &#39;C&#39;;</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			level &#x3D; &#39;D&#39;;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		System.out.println(&quot;student &quot; + i + </span><br><span class="line">				&quot; score is &quot; + scores[i] + &quot;,grade is &quot; + level);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+</li>
+</ol>
+<h4 id="三、多维数组的使用"><a href="#三、多维数组的使用" class="headerlink" title="三、多维数组的使用"></a>三、多维数组的使用</h4><ol>
+<li><p>Java 语言里提供了支持多维数组的语法。</p>
+<ul>
+<li>如果说可以把一维数组当成几何中的线性图形，那么二维数组就相当于是一个表格，像Excel中的表格一样。</li>
+<li>对于二维数组的理解，我们可以看成是一维数组array1又作为另一个一维数组array2的元素而存在。其实，从数组底层的运行机制来看，其实没有多维数组。<br><img src="http://qd1ql2976.bkt.clouddn.com/3601" alt=""></li>
+</ul>
+</li>
+<li><p>二维数组[][]的声明与初始化</p>
+<ul>
+<li><p>格式1 （动态初始化）</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int[][] arr &#x3D; new int[3][2];</span><br></pre></td></tr></table></figure>
+<ul>
+<li>定义了名称为arr的二维数组</li>
+<li>二维数组中有3个一维数组</li>
+<li>每一个一维数组中有2个元素</li>
+<li>一维数组的名称分别为arr[0], arr[1], arr[2]</li>
+<li>给第一个一维数组1脚标位赋值为78写法是：arr[0][1] = 78;</li>
+</ul>
+</li>
+<li><p>格式2 （动态初始化）</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int[][] arr &#x3D; new int[3][];</span><br></pre></td></tr></table></figure>
+<ul>
+<li>二维数组中有3个一维数组。</li>
+<li>每个一维数组都是默认初始化值null (注意：区别于格式1）</li>
+<li>可以对这个三个一维数组分别进行初始化</li>
+<li>arr[0] = new int[3]; arr[1] = new int[1]; arr[2] = new int[2];</li>
+<li>注：int[][]arr = new int[][3]; //非法</li>
+</ul>
+</li>
+<li><p>格式3 （静态初始化</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int[][] arr &#x3D; new int[][]&#123;&#123;3,8,2&#125;,&#123;2,7&#125;,&#123;9,0,1,6&#125;&#125;;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>定义一个名称为arr的二维数组，二维数组中有三个一维数组</li>
+<li>每一个一维数组中具体元素也都已初始化</li>
+<li>第一个一维数组 arr[0] = {3,8,2};</li>
+<li>第二个一维数组 arr[1] = {2,7};</li>
+<li>第三个一维数组 arr[2] = {9,0,1,6};</li>
+<li>第三个一维数组的长度表示方式：arr[2].length;</li>
+<li><strong>注意特殊写法情况</strong>： int[][] y ; int[] y[] ; int y[][] x是一维数组，y是二维数组。</li>
+<li>Java中多维数组不必都是规则矩阵形式</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>二维数组元素的默认初始化值</p>
+<ul>
+<li>针对于初始化方式一：比如：int[][] arr = new int[4][3];<ul>
+<li>外层元素的初始化值为：地址值</li>
+<li>内层元素的初始化值为：与一维数组初始化情况相同</li>
+</ul>
+</li>
+<li>针对于初始化方式二：比如：int[][] arr = new int[4][];<ul>
+<li>外层元素的初始化值为：null</li>
+<li>内层元素的初始化值为：不能调用，否则报错。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>二维数组的内存解析<br> <img src="http://qd1ql2976.bkt.clouddn.com/3603" alt=""><br> <img src="http://qd1ql2976.bkt.clouddn.com/3605" alt=""><br> <img src="http://qd1ql2976.bkt.clouddn.com/3607" alt=""><br> <img src="http://qd1ql2976.bkt.clouddn.com/3609" alt=""></p>
+</li>
+<li><p>代码示例</p>
+<ol>
+<li><p>题目：<br><img src="http://qd1ql2976.bkt.clouddn.com/3631" alt=""></p>
+</li>
+<li><p>代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args)&#123;</span><br><span class="line">	</span><br><span class="line">	int[][] arr &#x3D; new int[3][];</span><br><span class="line">	arr[0] &#x3D; new int[]&#123;3,5,8&#125;;</span><br><span class="line">	arr[1] &#x3D; new int[2];</span><br><span class="line">	arr[1][0] &#x3D; 12;</span><br><span class="line">	arr[1][1] &#x3D; 9;</span><br><span class="line">	arr[2] &#x3D; new int[]&#123;7,0,6,4&#125;;</span><br><span class="line">	</span><br><span class="line">	int sum &#x3D; 0;&#x2F;&#x2F;记录总和</span><br><span class="line">	</span><br><span class="line">	for(int i &#x3D; 0; i &lt; arr.length; i++)&#123;</span><br><span class="line">		for(int j &#x3D; 0; j &lt; arr[i].length; j++)&#123;</span><br><span class="line">			sum +&#x3D; arr[i][j];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	System.out.println(&quot;总和为：&quot; + sum);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+</li>
+</ol>
+<h4 id="四、数组中涉及到的常见算法-排序算法"><a href="#四、数组中涉及到的常见算法-排序算法" class="headerlink" title="四、数组中涉及到的常见算法-排序算法"></a>四、数组中涉及到的常见算法-排序算法</h4><ol>
+<li><p>排序：</p>
+<ul>
+<li>假设含有n个记录的序列为{R1，R2，…,Rn},其相应的关键字序列为{K1，K2，…,Kn}。将这些记录重新排序为{Ri1,Ri2,…,Rin},使得相应的关键字值满足条Ki1&lt;=Ki2&lt;=…&lt;=Kin,这样的一种操作称为排序。</li>
+<li>通常来说，排序的目的是快速查找。</li>
+</ul>
+</li>
+<li><p>衡量排序算法的优劣：</p>
+<ol>
+<li>时间复杂度：分析关键字的比较次数和记录的移动次数</li>
+<li>空间复杂度：分析排序算法中需要多少辅助内存</li>
+<li>稳定性：若两个记录A和B的关键字值相等，但排序后A、B的先后次序保持不变，则称这种排序算法是稳定的。</li>
+</ol>
+</li>
+<li><p>排序算法分类</p>
+<ul>
+<li>内部排序：整个排序过程不需要借助于外部存储器（如磁盘等），所有排序操作都在内存中完成。</li>
+<li>外部排序：参与排序的数据非常多，数据量非常大，计算机无法把整个排序过程放在内存中完成，必须借助于外部存储器（如磁盘）。外部排序最常见的是多路归并排序。可以认为外部排序是由多次内部排序组成。</li>
+</ul>
+</li>
+<li><p>十大内部排序（颜色为重要程度 红→黄→黑）</p>
+<ol>
+<li>交换排序（红）<ul>
+<li>冒泡排序（红）</li>
+<li>快速排序（红）</li>
+</ul>
+</li>
+<li>选择排序（黑）<ul>
+<li>直接选择排序（黑）</li>
+<li>堆排序（黄）</li>
+</ul>
+</li>
+<li>归并排序（黄）</li>
+<li>插入排序（黑）<ul>
+<li>直接插入排序（黑）</li>
+<li>折半插入排序（黑）</li>
+<li>Shell排序（黑）</li>
+</ul>
+</li>
+<li>桶式排序（黑）</li>
+<li>基数排序（黑）</li>
+</ol>
+</li>
+<li><p>算法的5大特征</p>
+<ul>
+<li><strong>输入（Input）</strong>：有0个或多个输入数据，这些输入必须有清楚的描述和定义</li>
+<li><strong>输出（Output）</strong>：至少有1个或多个输出结果，不可以没有输出结果</li>
+<li><strong>有穷性（有限性，Finiteness）</strong>：算法在有限的步骤之后会自动结束而不会无限循环，并且每一个步骤可以在可接受的时间内完成</li>
+<li><strong>确定性（明确性，Definiteness）</strong>：算法中的每一步都有确定的含义，不会出现二义性</li>
+<li><strong>可行性（有效性，Effectiveness）</strong>：算法的每一步都是清楚且可行的，能让用户用纸笔计算而求出答案</li>
+<li>说明：满足确定性的算法也称为：确定性算法。现在人们也关注更广泛的概念，例如考虑各种非确定性的算法，如并行算法、概率算法等。另外，人们也关注并不要求终止的计算描述，这种描述有时被称为过程（procedure）</li>
+</ul>
+</li>
+<li><p>冒泡排序</p>
+<ul>
+<li><p><strong>介绍</strong>：<br>冒泡排序的原理非常简单，它重复地走访过要排序的数列，一次比较两个元素，如果他们的顺序错误就把他们交换过来。</p>
+</li>
+<li><p><strong>排序思想</strong>：</p>
+<ol>
+<li>比较相邻的元素。如果第一个比第二个大（升序），就交换他们两个。</li>
+<li>对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对。这步做完后，最后的元素会是最大的数。</li>
+<li>针对所有的元素重复以上的步骤，除了最后一个。</li>
+<li>持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较为止。</li>
+</ol>
+</li>
+<li><p><strong>代码</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args)&#123;</span><br><span class="line">	int[] arr &#x3D; new int[]&#123;43,32,76,-98,0,64,33,-21,32,99&#125;;</span><br><span class="line">	</span><br><span class="line">	for(int i &#x3D; 0; i &lt; arr.length - 1;i++)&#123;</span><br><span class="line">		for(int j &#x3D; 0; j &lt; arr.length - i -1;j++)&#123;</span><br><span class="line">			if(arr[j] &gt; arr[j + 1])&#123;</span><br><span class="line">				int temp &#x3D; arr[j + 1];</span><br><span class="line">				arr[j + 1] &#x3D; arr[j];</span><br><span class="line">				arr[j] &#x3D; temp;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	System.out.println(Arrays.toString(arr));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>快速排序</p>
+<ul>
+<li><p><strong>介绍</strong>：<br>快速排序通常明显比同为O(nlogn)的其他算法更快，因此常被采用，而且快排采用了分治法的思想，所以在很多笔试面试中能经常看到快排的影子。可见掌握快排的重要性。</p>
+<p>  快速排序（Quick Sort）由图灵奖获得者Tony Hoare发明，被列为20世纪十大算法之一，是迄今为止所有内排序算法中速度最快的一种。冒泡排序的升级版，交换排序的一种。快速排序的时间复杂度为O(nlog(n))。</p>
+</li>
+<li><p><strong>排序思想</strong>：</p>
+<ol>
+<li>从数列中挑出一个元素，称为”基准”（pivot）。</li>
+<li>重新排序数列，所有元素比基准值小的摆放在基准前面，所有元素比基准值大的摆在基准的后面（相同的数可以到任一边）。在这个分区结束之后，该基准就处于数列的中间位置。这个称为分区（partition）操作。</li>
+<li>递归地（recursive）把小于基准值元素的子数列和大于基准值元素的子数列排序。</li>
+<li>递归的最底部情形，是数列的大小是零或一，也就是永远都已经被排序好了。虽然一直递归下去，但是这个算法总会结束，因为在每次的迭代（iteration）中，它至少会把一个元素摆到它最后的位置去。</li>
+</ol>
+</li>
+<li><p><strong>图示</strong><br><img src="http://qd1ql2976.bkt.clouddn.com/3718" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/3720" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/3723" alt=""></p>
+</li>
+<li><p><strong>代码</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Arrays.sort(arr2);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>排序算法性能对比<br> <img src="http://qd1ql2976.bkt.clouddn.com/3725" alt=""></p>
+</li>
+</ol>
+<ul>
+<li>各种内部排序方法性能比较<ol>
+<li>从平均时间而言：快速排序最佳。但在最坏情况下时间性能不如堆排序和归并排序。</li>
+<li>从算法简单性看：由于直接选择排序、直接插入排序和冒泡排序的算法比较简单，将其认为是简单算法。对于Shell排序、堆排序、快速排序和归并排序算法，其算法比较复杂，认为是复杂排序。</li>
+<li>从稳定性看：直接插入排序、冒泡排序和归并排序是稳定的；而直接选择排序、快速排序、Shell排序和堆排序是不稳定排序</li>
+<li>从待排序的记录数n的大小看，n较小时，宜采用简单排序；而n较大时宜采用改进排序。</li>
+</ol>
+</li>
+</ul>
+<ol start="9">
+<li>排序算法的选择<ol>
+<li>若n较小(如n≤50)，可采用 直接插入或 直接选择排序。<ul>
+<li>当记录规模较小时，直接插入排序较好；否则因为直接选择移动的记录数少于直<br>接插入，应选直接选择排序为宜。</li>
+</ul>
+</li>
+<li>若文件初始状态基本有序(指正序)，则应选用 直接插入、冒泡或随机的 快速排序为宜；</li>
+<li>若n较大，则应采用时间复杂度为O(nlgn)的排序方法：快速排序、堆排序或归并排序。<h4 id="五、Arrays工具类的使用"><a href="#五、Arrays工具类的使用" class="headerlink" title="五、Arrays工具类的使用"></a>五、Arrays工具类的使用</h4></li>
+</ol>
+</li>
+</ol>
+<ul>
+<li><p>java.util.Arrays类即为操作数组的工具类，包含了用来操作数组（比如排序和搜索）的各种方法。<br><img src="http://qd1ql2976.bkt.clouddn.com/3636" alt=""></p>
+</li>
+<li><p>代码示例</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;1.boolean equals(int[] a,int[] b):判断两个数组是否相等。</span><br><span class="line">	int[] arr1 &#x3D; new int[]&#123;1,2,3,4&#125;;</span><br><span class="line">	int[] arr2 &#x3D; new int[]&#123;1,3,2,4&#125;;</span><br><span class="line">	boolean isEquals &#x3D; Arrays.equals(arr1, arr2);</span><br><span class="line">	System.out.println(isEquals);</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;2.String toString(int[] a):输出数组信息。</span><br><span class="line">	System.out.println(Arrays.toString(arr1));</span><br><span class="line">	</span><br><span class="line">		</span><br><span class="line">	&#x2F;&#x2F;3.void fill(int[] a,int val):将指定值填充到数组之中。</span><br><span class="line">	Arrays.fill(arr1,10);</span><br><span class="line">	System.out.println(Arrays.toString(arr1));</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">	&#x2F;&#x2F;4.void sort(int[] a):对数组进行排序。</span><br><span class="line">	Arrays.sort(arr2);</span><br><span class="line">	System.out.println(Arrays.toString(arr2));</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;5.int binarySearch(int[] a,int key)</span><br><span class="line">	int[] arr3 &#x3D; new int[]&#123;-98,-34,2,34,54,66,79,105,210,333&#125;;</span><br><span class="line">	int index &#x3D; Arrays.binarySearch(arr3, 210);</span><br><span class="line">	if(index &gt;&#x3D; 0)&#123;</span><br><span class="line">		System.out.println(index);</span><br><span class="line">	&#125;else&#123;</span><br><span class="line">		System.out.println(&quot;未找到&quot;);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="六、数组中使用的常见异常"><a href="#六、数组中使用的常见异常" class="headerlink" title="六、数组中使用的常见异常"></a>六、数组中使用的常见异常</h4><ol>
+<li><p>数组脚标越界异常(ArrayIndexOutOfBoundsException)</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int[] arr &#x3D; new int[2];</span><br><span class="line">System.out.println(arr[2]);</span><br><span class="line">System.out.println(arr[-1]);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>访问到了数组中的不存在的脚标时发生。</li>
+</ul>
+</li>
+<li><p>空指针异常(NullPointerException)</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int[] arr &#x3D; null;</span><br><span class="line">System.out.println(arr[0]);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>arr引用没有指向实体，却在操作实体中的元素时。</li>
+</ul>
+</li>
+<li><p>代码示例</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;1. 数组角标越界的异常：ArrayIndexOutOfBoundsExcetion</span><br><span class="line">	int[] arr &#x3D; new int[]&#123;1,2,3,4,5&#125;;</span><br><span class="line">	</span><br><span class="line">&#x2F;&#x2F;		for(int i &#x3D; 0;i &lt;&#x3D; arr.length;i++)&#123;</span><br><span class="line">&#x2F;&#x2F;			System.out.println(arr[i]);</span><br><span class="line">&#x2F;&#x2F;		&#125;</span><br><span class="line">	</span><br><span class="line">&#x2F;&#x2F;		System.out.println(arr[-2]);</span><br><span class="line">	</span><br><span class="line">&#x2F;&#x2F;		System.out.println(&quot;hello&quot;);</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;2.2. 空指针异常：NullPointerException</span><br><span class="line">	&#x2F;&#x2F;情况一：</span><br><span class="line">&#x2F;&#x2F;		int[] arr1 &#x3D; new int[]&#123;1,2,3&#125;;</span><br><span class="line">&#x2F;&#x2F;		arr1 &#x3D; null;</span><br><span class="line">&#x2F;&#x2F;		System.out.println(arr1[0]);</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;情况二：</span><br><span class="line">&#x2F;&#x2F;		int[][] arr2 &#x3D; new int[4][];</span><br><span class="line">&#x2F;&#x2F;		System.out.println(arr2[0][0]);</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;情况三：</span><br><span class="line">	String[] arr3 &#x3D; new String[]&#123;&quot;AA&quot;,&quot;BB&quot;,&quot;CC&quot;&#125;;</span><br><span class="line">	arr3[0] &#x3D; null;</span><br><span class="line">	System.out.println(arr3[0].toString());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='true'
+        data-ae='true'
+        data-ci='98d8392c61bba8a9f87d'
+        data-cs='a5b47de553739830db015b176764355577df22bf'
+        data-r='Comment'
+        data-o='Programmingmakesmebald'
+        data-a='Programmingmakesmebald'
+        data-d='true'
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class='side'>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#数组"><span class="toc-number">1.</span> <span class="toc-text">数组</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#一、数组的概述"><span class="toc-number">1.0.1.</span> <span class="toc-text">一、数组的概述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二、一维数组的使用"><span class="toc-number">1.0.2.</span> <span class="toc-text">二、一维数组的使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#三、多维数组的使用"><span class="toc-number">1.0.3.</span> <span class="toc-text">三、多维数组的使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#四、数组中涉及到的常见算法-排序算法"><span class="toc-number">1.0.4.</span> <span class="toc-text">四、数组中涉及到的常见算法-排序算法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#五、Arrays工具类的使用"><span class="toc-number">1.0.5.</span> <span class="toc-text">五、Arrays工具类的使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#六、数组中使用的常见异常"><span class="toc-number">1.0.6.</span> <span class="toc-text">六、数组中使用的常见异常</span></a></li></ol></li></ol></li></ol>	
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
