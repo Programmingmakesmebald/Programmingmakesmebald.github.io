@@ -1,0 +1,723 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hans" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>11.Java基础知识-面向对象编程（上） - 秃头小王子</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="秃头小王子的个人博客,面向对象编程（上）
+一、面向过程与面向对象
+何谓“面向对象”的编程思想？ 首先解释一下“思想”。
+ 先问你个问题：你想做个怎样的人？
+ 可能你会回答：我想做个好人，孝敬父母，尊重长辈，关爱亲朋……
+,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="秃头小王子" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">秃头小王子</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://yoursite.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">11.Java基础知识-面向对象编程（上）</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">11.Java基础知识-面向对象编程（上）</h1>
+        <div class="stuff">
+            <span>七月 23, 2020</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E5%85%B3%E9%94%AE%E5%AD%97import/" rel="tag">关键字import</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E5%85%B3%E9%94%AE%E5%AD%97package/" rel="tag">关键字package</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E5%85%B3%E9%94%AE%E5%AD%97this/" rel="tag">关键字this</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD/" rel="tag">方法重载</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E6%9E%84%E9%80%A0%E5%99%A8/" rel="tag">构造器</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/" rel="tag">类和对象</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E7%B1%BB%E7%9A%84%E5%B0%81%E8%A3%85/" rel="tag">类的封装</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E7%B1%BB%E7%9A%84%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F/" rel="tag">类的成员变量</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E7%B1%BB%E7%9A%84%E6%96%B9%E6%B3%95/" rel="tag">类的方法</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" rel="tag">面向对象</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B/" rel="tag">面向过程</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h2 id="面向对象编程（上）"><a href="#面向对象编程（上）" class="headerlink" title="面向对象编程（上）"></a>面向对象编程（上）</h2><p><img src="http://qd1ql2976.bkt.clouddn.com/3788" alt=""></p>
+<h4 id="一、面向过程与面向对象"><a href="#一、面向过程与面向对象" class="headerlink" title="一、面向过程与面向对象"></a>一、面向过程与面向对象</h4><ol>
+<li><p>何谓“面向对象”的编程思想？<br> 首先解释一下“思想”。</p>
+<p> 先问你个问题：你想做个怎样的人？</p>
+<p> 可能你会回答：我想做个好人，孝敬父母，尊重长辈，关爱亲朋……</p>
+<p> 你看，这就是思想。这是你做人的思想，或者说，是你做人的原则。</p>
+<p> 做人有做人的原则，编程也有编程的原则。这些编程的原则呢，就是编程思想。</p>
+</li>
+<li><p>面向过程(POP) 与 与 象 面向对象(OOP)</p>
+<ul>
+<li><p>面向对象：Object Oriented Programming</p>
+</li>
+<li><p>面向过程：Procedure Oriented Programming</p>
+</li>
+<li><p>二者都是一种思想，面向对象是相对于面向过程而言的。面向过程，强调的是功能行为，以函数为最小单位，考虑怎么做。面向对象，将功能封装进对象，强调具备了功能的对象，以类/对象为最小单位，考虑谁来做。</p>
+</li>
+<li><p>面向对象更加强调运用人类在日常的思维逻辑中采用的思想方法与原则，如抽象、分类、继承、聚合、多态等。</p>
+</li>
+<li><p>人把大象装冰箱</p>
+<p><img src="http://qd1ql2976.bkt.clouddn.com/3848" alt=""></p>
+</li>
+</ul>
+</li>
+<li><p>面向对象的三大特征</p>
+<ul>
+<li>封装 (Encapsulation)</li>
+<li>继承 (Inheritance)</li>
+<li>多态 (Polymorphism)</li>
+</ul>
+</li>
+<li><p>面向对象的思想概述</p>
+<ul>
+<li>程序员从面向过程的执行者转化成了面向对象的指挥者</li>
+<li>面向对象分析方法分析问题的思路和步骤：<ul>
+<li>根据问题需要，选择问题所针对的现实世界中的实体。</li>
+<li>从实体中寻找解决问题相关的属性和功能，这些属性和功能就形成了概念世界中的类。</li>
+<li>把抽象的实体用计算机语言进行描述，形成计算机世界中类的定义。即借助某种程序语言，把类构造成计算机能够识别和处理的数据结构。</li>
+<li>将类实例化成计算机世界中的对象。对象是计算机世界中解决问题的最终工具。<h4 id="二、Java基本元素：类和对象"><a href="#二、Java基本元素：类和对象" class="headerlink" title="二、Java基本元素：类和对象"></a>二、Java基本元素：类和对象</h4></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>面向对象的思想概述</p>
+<ul>
+<li>类(Class)和对象(Object)是面向对象的核心概念。<ul>
+<li>类是对一类事物的描述，是抽象的、概念上的定义</li>
+<li>对象是实际存在的该类事物的每个个体，因而也称为实例(instance)。</li>
+</ul>
+</li>
+<li>“万事万物皆对象”<br><img src="http://qd1ql2976.bkt.clouddn.com/3872" alt=""></li>
+<li>可以理解为： 类  =  抽象概念的人；对象  =  实实在在的某个人</li>
+<li>面向对象程序设计的重点是类的设计</li>
+<li>类的设计，其实就是类的成员的设计</li>
+</ul>
+</li>
+<li><p>Java 类及类的成员</p>
+<ul>
+<li>属性：对应类中的成员变量</li>
+<li>行为：对应类中的成员方法</li>
+<li>Field =  属性 =  成员变量</li>
+<li>Method = (成员) 方法 =  函数</li>
+</ul>
+</li>
+<li><p>类的语法格式</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*</span><br><span class="line">修饰符 class  类名 &#123;</span><br><span class="line">    属性声明;</span><br><span class="line">    方法声明;</span><br><span class="line">&#125;</span><br><span class="line">*&#x2F;</span><br><span class="line">public class Person&#123;</span><br><span class="line"></span><br><span class="line">    private int age ; &#x2F;&#x2F;声明私有变量age</span><br><span class="line">    </span><br><span class="line">    public void showAge(int i)&#123;&#x2F;&#x2F;声明方法showAge( )</span><br><span class="line">        age &#x3D; i;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>创建Java自定义类</p>
+<ul>
+<li>定义类（考虑修饰符、类名）</li>
+<li>编写类的属性（考虑修饰符、属性类型、属性名、初始化值）</li>
+<li>编写类的方法（考虑修饰符、返回值类型、方法名、形参等）<h4 id="三、对象的创建和使用"><a href="#三、对象的创建和使用" class="headerlink" title="三、对象的创建和使用"></a>三、对象的创建和使用</h4><img src="http://qd1ql2976.bkt.clouddn.com/3907" alt=""></li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>创建对象语法：  类名 对象名 = new  类名();</li>
+<li>使用“对象名.对象成员”的方式访问对象成员（包括属性和方法）</li>
+<li>我们也可以不定义对象的句柄，而直接调用这个对象的方法。这样的对象叫做匿名对象。<ul>
+<li>如：new Person().shout();</li>
+</ul>
+</li>
+<li>使用情况<ul>
+<li>如果对一个对象只需要进行一次方法调用，那么就可以使用匿名对象。</li>
+<li>我们经常将匿名对象作为实参传递给一个方法调用。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">public class Animal &#123;</span><br><span class="line">    public int legs;</span><br><span class="line">    public void eat()&#123;</span><br><span class="line">        System.out.println(“Eating.”);</span><br><span class="line">    &#125;</span><br><span class="line">    public viod move()&#123;</span><br><span class="line">        System.out.println(“Move.”);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class Zoo&#123;</span><br><span class="line">    public static void main(String args[])&#123;</span><br><span class="line">        &#x2F;&#x2F; 创建对象</span><br><span class="line">        Animal xb&#x3D;new Animal();</span><br><span class="line">        xb.legs&#x3D;4;&#x2F;&#x2F; 访问属性</span><br><span class="line">        System.out.println(xb.legs);</span><br><span class="line">        xb.eat();&#x2F;&#x2F; 访问方法</span><br><span class="line">        xb.move();&#x2F;&#x2F; 访问方法</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://qd1ql2976.bkt.clouddn.com/3910" alt=""></p>
+<ul>
+<li>说明：如果创建了一个类的多个对象，对于类中定义的属性，每个对象都拥有各自的一套副本，且互不干扰。  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public class Zoo &#123;</span><br><span class="line">    public static void main(String args[]) &#123;</span><br><span class="line">        Animal xb &#x3D; new Animal();</span><br><span class="line">        Animal xh &#x3D; new Animal();</span><br><span class="line">        xb.legs &#x3D; 4;</span><br><span class="line">        xh.legs &#x3D; 0;</span><br><span class="line">        System.out.println(xb.legs); &#x2F;&#x2F; 4</span><br><span class="line">        System.out.println(xh.legs); &#x2F;&#x2F; 0</span><br><span class="line">        xb.legs &#x3D; 2;</span><br><span class="line">        System.out.println(xb.legs); &#x2F;&#x2F; 2</span><br><span class="line">        System.out.println(xh.legs); &#x2F;&#x2F; 0</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>提示<ul>
+<li>类的访问机制：<ul>
+<li>在一个类中的访问机制：类中的方法可以直接访问类中的成员变量（例外：static方法访问非static，编译不通过。）</li>
+<li>在不同类中的访问机制：先创建要访问类的对象，再用对象访问类中定义的成员。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>对象的产生<br>  <img src="http://qd1ql2976.bkt.clouddn.com/3962" alt=""></li>
+<li>对象的使用<br>  <img src="http://qd1ql2976.bkt.clouddn.com/3964" alt=""></li>
+<li>对象的生命周期<br>  <img src="http://qd1ql2976.bkt.clouddn.com/3966" alt=""></li>
+<li>对象的创建和使用：内存解析<br>  <img src="http://qd1ql2976.bkt.clouddn.com/3972" alt=""><br>  <img src="http://qd1ql2976.bkt.clouddn.com/3978" alt=""><br>  <img src="http://qd1ql2976.bkt.clouddn.com/3974" alt=""><br>  <img src="http://qd1ql2976.bkt.clouddn.com/3976" alt=""><h4 id="四、类的成员之一：属性"><a href="#四、类的成员之一：属性" class="headerlink" title="四、类的成员之一：属性"></a>四、类的成员之一：属性</h4></li>
+</ul>
+<ol>
+<li><p>语法格式：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">修饰符  数据类型  属性名 &#x3D;  初始化值;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>说明1:  修饰符</p>
+<ul>
+<li>常用的权限修饰符有：private、缺省、protected、public</li>
+<li>其他修饰符：static、final (暂不考虑)</li>
+</ul>
+</li>
+<li><p>说明2 ：数据类型</p>
+<ul>
+<li>任何基本数据类型(如int、Boolean)或任何引用数据类型。</li>
+</ul>
+</li>
+<li><p>说明3 ：属性名</p>
+<ul>
+<li>属于标识符，符合命名规则和规范即可。</li>
+</ul>
+</li>
+<li><p>举例：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public class Person&#123;</span><br><span class="line">private int age; &#x2F;&#x2F; 声明private变量 age</span><br><span class="line">public String name &#x3D; “Lila”; &#x2F;&#x2F;声明public变量 name</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>变量的分类：成员变量与局部变量</p>
+</li>
+</ol>
+<ul>
+<li>在方法体外，类体内声明的变量称为成员变量。</li>
+<li>在方法体内部声明的变量称为局部变量。<br><img src="http://qd1ql2976.bkt.clouddn.com/4015" alt=""></li>
+<li>注意：二者在初始化值方面的异同:<ul>
+<li>同：都有生命周期</li>
+<li>异：局部变量除形参外，均需显式初始化。</li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li><p>成员变量（属性）和局部变量的区别？<br> <img src="http://qd1ql2976.bkt.clouddn.com/4017" alt=""></p>
+</li>
+<li><p>成员变量vs局部变量的内存位置<br> <img src="http://qd1ql2976.bkt.clouddn.com/4019" alt=""></p>
+</li>
+<li><p>对象属性的默认初始化赋值</p>
+<ul>
+<li>当一个对象被创建时，会对其中各种类型的成员变量自动进行初始化赋值。除了基本数据类型之外的变量类型都是引用类型，如上面的Person及前面讲过的数组。<br><img src="http://qd1ql2976.bkt.clouddn.com/4021" alt=""><h4 id="五、类的成员之二：方法"><a href="#五、类的成员之二：方法" class="headerlink" title="五、类的成员之二：方法"></a>五、类的成员之二：方法</h4></li>
+</ul>
+</li>
+<li><p>什么是方法(method 、函数):</p>
+<ul>
+<li>方法是类或对象行为特征的抽象，用来完成某个功能操作。在某些语言中也称为函数或过程。</li>
+<li>将功能封装为方法的目的是，可以实现代码重用，简化代码</li>
+<li>Java里的方法不能独立存在，所有的方法必须定义在类里。</li>
+</ul>
+</li>
+<li><p>方法的声明格式</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">修饰符 返回值类型 方法名（参数类型 形参1, 参数类型 形参2, ….）｛</span><br><span class="line">    方法体程序代码;</span><br><span class="line">    return  返回值;</span><br><span class="line">｝</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>修饰符：public, 缺省,private, protected等</li>
+<li>返回值类型：<ul>
+<li>没有返回值：void。</li>
+<li>有返回值，声明出返回值的类型。与方法体中“return 返回值”</li>
+</ul>
+</li>
+<li>方法名 ：</li>
+<li>属于标识符，命名时遵循标识符命名规则和规范，“见名知意”</li>
+<li>形参列表：可以包含零个，一个或多个参数。多个参数时，中间用“,”隔开</li>
+<li>返回值：方法在执行完毕后返还给调用它的程序的数据。</li>
+</ul>
+</li>
+<li><p>举例 ：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class Person&#123;</span><br><span class="line">    private int age;</span><br><span class="line">    public int getAge() &#123; &#x2F;&#x2F;声明方法getAge()</span><br><span class="line">        return age;</span><br><span class="line">    &#125;</span><br><span class="line">    public void setAge(int i) &#123; &#x2F;&#x2F;声明方法setAge</span><br><span class="line">        age &#x3D; i; &#x2F;&#x2F;将参数i的值赋给类的成员变量age</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>方法的分类：<br> <img src="http://qd1ql2976.bkt.clouddn.com/4074" alt=""></p>
+</li>
+<li><p>方法的调用</p>
+<ul>
+<li>方法通过方法名被调用，且只有被调用才会执行。</li>
+<li>方法调用的过程分析<br><img src="http://qd1ql2976.bkt.clouddn.com/4076" alt=""></li>
+</ul>
+</li>
+<li><p>注 意：</p>
+</li>
+</ol>
+<ul>
+<li>方法被调用一次，就会执行一次</li>
+<li>没有具体返回值的情况，返回值类型用关键字void表示，那么方法体中可以不必使用return语句。如果使用，仅用来结束方法。</li>
+<li>定义方法时，方法的结果应该返回给调用者，交由调用者处理。</li>
+<li>方法中只能调用方法或属性，不可以在方法内部定义方法。<h4 id="六、再谈方法"><a href="#六、再谈方法" class="headerlink" title="六、再谈方法"></a>六、再谈方法</h4></li>
+</ul>
+<ol>
+<li><p>方法的重载(overload)</p>
+<ul>
+<li><p>重载的概念:在同一个类中，允许存在一个以上的同名方法，只要它们的参数个数或者参数类型不同即可。</p>
+</li>
+<li><p>重载的特点：与返回值类型无关，只看参数列表，且参数列表必须不同。(参数个数或参数类型)。调用时，根据方法参数列表的不同来区别。</p>
+</li>
+<li><p>重载示例：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;返回两个整数的和</span><br><span class="line">int add(int x,int y)&#123;return x+y;&#125;</span><br><span class="line">&#x2F;&#x2F;返回三个整数的和</span><br><span class="line">int add(int x,int y,int z)&#123;return x+y+z;&#125;</span><br><span class="line">&#x2F;&#x2F;返回两个小数的和</span><br><span class="line">double add(double x,double y)&#123;return x+y;&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>使用重载方法，可以为编程带来方便。例如，System.out.println()方法就是典型的重载方法，其内部的声明形式如下 ：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public void println(byte x)</span><br><span class="line">public void println(short x)</span><br><span class="line">public void println(int x)</span><br><span class="line">public void println(long x)</span><br><span class="line">public void println(float x)</span><br><span class="line">public void println(double x)</span><br><span class="line">public void println(char x)</span><br><span class="line">public void println(double x)</span><br><span class="line">public void println()</span><br><span class="line">……</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>可变形参的方法</p>
+<h6 id="JavaSE-5-0-中提供了Varargs-variable-number-of-arguments-机制，允许直接定义能和多个实参相匹配的形参。从而，可以用一种更简单的方式，来传递个数可变的实参。"><a href="#JavaSE-5-0-中提供了Varargs-variable-number-of-arguments-机制，允许直接定义能和多个实参相匹配的形参。从而，可以用一种更简单的方式，来传递个数可变的实参。" class="headerlink" title="JavaSE 5.0 中提供了Varargs(variable number of arguments)机制，允许直接定义能和多个实参相匹配的形参。从而，可以用一种更简单的方式，来传递个数可变的实参。"></a>JavaSE 5.0 中提供了Varargs(variable number of arguments)机制，允许直接定义能和多个实参相匹配的形参。从而，可以用一种更简单的方式，来传递个数可变的实参。</h6><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;JDK 5.0以前：采用数组形参来定义方法，传入多个同一类型变量</span><br><span class="line">public static void test(int a ,String[] books);</span><br><span class="line">&#x2F;&#x2F;JDK5.0：采用可变个数形参来定义方法，传入多个同一类型变量</span><br><span class="line">public static void test(int a ,String…books);</span><br></pre></td></tr></table></figure></code></pre><ul>
+<li><p>说明：</p>
+<ol>
+<li>声明格式：方法名(参数的类型名 …参数名)</li>
+<li>可变参数：方法参数部分指定类型的参数个数是可变多个：0个，1个或多个</li>
+<li>可变个数形参的方法与同名的方法之间，彼此构成重载</li>
+<li>可变参数方法的使用与方法参数部分使用数组是一致的</li>
+<li>方法的参数部分有可变形参，需要放在形参声明的最后</li>
+<li>在一个方法的形参位置，最多只能声明一个可变个数形参</li>
+</ol>
+</li>
+<li><p>实例：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">public void test(String[] msg)&#123;</span><br><span class="line">System.out.println(“含字符串数组参数的test方法 &quot;);</span><br><span class="line">&#125;</span><br><span class="line">public void test1(String book)&#123;</span><br><span class="line">System.out.println(“****与可变形参方法构成重载的test1方法****&quot;);</span><br><span class="line">&#125;</span><br><span class="line">public void test1(String ... books)&#123;</span><br><span class="line">System.out.println(&quot;****形参长度可变的test1方法****&quot;);</span><br><span class="line">&#125;</span><br><span class="line">public static void main(String[] args)&#123;</span><br><span class="line">TestOverload to &#x3D; new TestOverload();</span><br><span class="line">&#x2F;&#x2F;下面两次调用将执行第二个test方法</span><br><span class="line">to.test1();</span><br><span class="line">to.test1(&quot;aa&quot; , &quot;bb&quot;);</span><br><span class="line">&#x2F;&#x2F;下面将执行第一个test方法</span><br><span class="line">to.test(new String[]&#123;&quot;aa&quot;&#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>方法参数的值传递机制</p>
+<ul>
+<li><p>方法，必须由其所在类或对象调用才有意义。若方法含有参数：</p>
+<ul>
+<li>形参：方法声明时的参数</li>
+<li>实参：方法调用时实际传给形参的参数值</li>
+</ul>
+</li>
+<li><p>Java的实参值如何传入方法呢？</p>
+<ul>
+<li>Java里方法的参数传递方式只有一种：值传递。即将实际参数值的副本（复制品）传入方法内，而参数本身不受影响。<ul>
+<li>形参是基本数据类型：将实参基本数据类型变量的“数据值”传递给形参</li>
+<li>形参是引用数据类型：将实参引用数据类型变量的“地址值”传递给形参</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>基本数据类型的参数传递<br><img src="http://qd1ql2976.bkt.clouddn.com/4142" alt=""></p>
+</li>
+<li><p>引用数据类型的参数传递<br><img src="http://qd1ql2976.bkt.clouddn.com/4144" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/4146" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/4148" alt=""><br><img src="http://qd1ql2976.bkt.clouddn.com/4150" alt=""></p>
+</li>
+<li><p>例题1：交换两个数的数值</p>
+<ul>
+<li><p>错误实例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">public class TransferTest1 &#123;</span><br><span class="line">    public void swap(int a, int b) &#123;</span><br><span class="line">        int tmp &#x3D; a;</span><br><span class="line">        a &#x3D; b;</span><br><span class="line">        b &#x3D; tmp;</span><br><span class="line">        System.out.println(&quot;swap方法里，a的值是&quot; + a + &quot;；b的值是&quot; + b);</span><br><span class="line">    &#125;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        TransferTest1 test &#x3D; new TransferTest1();</span><br><span class="line">        int a &#x3D; 5;</span><br><span class="line">        int b &#x3D; 10;</span><br><span class="line">        test.swap(a, b);</span><br><span class="line">        System.out.println(&quot;交换结束后，变量a的值是&quot; + a + &quot;；变量b的值是&quot; + b);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>参数类型为：基本数据类型<br><img src="http://qd1ql2976.bkt.clouddn.com/4183" alt=""></p>
+</li>
+<li><p>正确实例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">class DataSwap &#123;</span><br><span class="line">    public int a;</span><br><span class="line">    public int b;</span><br><span class="line">&#125;</span><br><span class="line">public class TransferTest2 &#123;</span><br><span class="line">    public static void swap(DataSwap ds) &#123;</span><br><span class="line">        int temp &#x3D; ds.a;</span><br><span class="line">        ds.a &#x3D; ds.b;</span><br><span class="line">        ds.b &#x3D; temp;</span><br><span class="line">        System.out.println(&quot;swap方法里，a Field的值是&quot; + ds.a + &quot;;b Field的值是&quot; + ds.b);</span><br><span class="line">    &#125;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        DataSwap ds &#x3D; new DataSwap();</span><br><span class="line">        ds.a &#x3D; 5;</span><br><span class="line">        ds.b &#x3D; 10;</span><br><span class="line">        swap(ds);</span><br><span class="line">        System.out.println(&quot;交换结束后，a Field的值是&quot; + ds.a + &quot;;b Field的值是&quot; + ds.b);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>参数类型为：引用数据类型<br><img src="http://qd1ql2976.bkt.clouddn.com/4185" alt=""></p>
+</li>
+</ul>
+</li>
+<li><p>例题二：</p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">public class TransferTest3 &#123;</span><br><span class="line">    public static void main(String args[]) &#123;</span><br><span class="line">        TransferTest3 test &#x3D; new TransferTest3();</span><br><span class="line">        test.first();</span><br><span class="line">    &#125;</span><br><span class="line">    public void first() &#123;</span><br><span class="line">        int i &#x3D; 5;</span><br><span class="line">        Value v &#x3D; new Value();</span><br><span class="line">        v.i &#x3D; 25;</span><br><span class="line">        second(v, i);</span><br><span class="line">        System.out.println(v.i);</span><br><span class="line">    &#125;</span><br><span class="line">    public void second(Value v, int i) &#123;</span><br><span class="line">        i &#x3D; 0;</span><br><span class="line">        v.i &#x3D; 20;</span><br><span class="line">        Value val &#x3D; new Value();</span><br><span class="line">        v &#x3D; val;</span><br><span class="line">        System.out.println(v.i + &quot; &quot; + i);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class Value &#123;</span><br><span class="line">    int i &#x3D; 15;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></code></pre><ul>
+<li>方法的参数传递图示<br><img src="http://qd1ql2976.bkt.clouddn.com/4187" alt=""></li>
+</ul>
+</li>
+<li><p>面试题<br><img src="http://qd1ql2976.bkt.clouddn.com/4189" alt=""></p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">       int a &#x3D; 10;</span><br><span class="line">       int b &#x3D; 20;</span><br><span class="line">        </span><br><span class="line">       method(a, b);</span><br><span class="line">        </span><br><span class="line">       System.out.println(&quot;a&#x3D;&quot;+a);</span><br><span class="line">       System.out.println(&quot;b&#x3D;&quot;+b);</span><br><span class="line">       tes();</span><br><span class="line">   &#125;</span><br><span class="line">   &#x2F;&#x2F;方法1-终止JVM</span><br><span class="line">   public static void method(int a,int b) &#123;</span><br><span class="line">       System.out.print(&quot;a&#x3D;100 b&#x3D;200&quot;);</span><br><span class="line">       System.exit(0);</span><br><span class="line">   &#125;</span><br><span class="line">   &#x2F;&#x2F;方法2-另一种是改变打印输出流</span><br><span class="line">   public static void method(final int a,final int b) &#123;</span><br><span class="line">       PrintStream stream &#x3D; new PrintStream(System.out)&#123;</span><br><span class="line">           @Override</span><br><span class="line">           public void print(String s) &#123;</span><br><span class="line">               super.print(s.replace(a+&quot;&quot;, a*10+&quot;&quot;).replace(b+&quot;&quot;, b*10+&quot;&quot;));</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;;</span><br><span class="line">       System.setOut(stream);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<p>  <img src="http://qd1ql2976.bkt.clouddn.com/4191" alt=""></p>
+</li>
+</ul>
+</li>
+<li><p>递归(recursion) 方法</p>
+<ul>
+<li><p>递归方法：一个方法体内调用它自身。</p>
+</li>
+<li><p>方法递归包含了一种隐式的循环，它会重复执行某段代码，但这种重复执行无须循环控制。</p>
+</li>
+<li><p>递归一定要向已知方向递归，否则这种递归就变成了无穷递归，类似于死循环。</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;计算1-100之间所有自然数的和</span><br><span class="line">public int sum(int num)&#123;</span><br><span class="line">    if(num &#x3D;&#x3D; 1)&#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        return num + sum(num - 1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>拓展<br><img src="http://qd1ql2976.bkt.clouddn.com/4211" alt=""><br>双重递归是以指数级增长的<br><img src="http://qd1ql2976.bkt.clouddn.com/4213" alt=""></p>
+<h4 id="七、OOP特征一：封装与隐藏"><a href="#七、OOP特征一：封装与隐藏" class="headerlink" title="七、OOP特征一：封装与隐藏"></a>七、OOP特征一：封装与隐藏</h4></li>
+</ul>
+</li>
+<li><p>为什么需要封装？封装的作用和含义？</p>
+<ul>
+<li>我要用洗衣机，只需要按一下开关和洗涤模式就可以了。有必要了解洗衣机内部的结构吗？有必要碰电动机吗？</li>
+<li>我要开车，…</li>
+</ul>
+</li>
+<li><p>我们程序设计追求“高内聚，低耦合”。</p>
+<ul>
+<li>高内聚 ：类的内部数据操作细节自己完成，不允许外部干涉；</li>
+<li>低耦合 ：仅对外暴露少量的方法用于使用。</li>
+</ul>
+</li>
+<li><p>隐藏对象内部的复杂性，只对外公开简单的接口。便于外界调用，从而提高系统的可扩展性、可维护性。通俗的说，把该隐藏的隐藏起来，该暴露的暴露出来。这就是封装性的设计思想。</p>
+</li>
+<li><p>问题引入</p>
+<ul>
+<li><p>使用者对类内部定义的属性(对象的成员变量)的直接操作会导致数据的错误、混乱或 安全性</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class Animal &#123;</span><br><span class="line">    public int legs;</span><br><span class="line">    public void eat()&#123;</span><br><span class="line">       System.out.println(&quot;Eating&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    public void move()&#123;</span><br><span class="line">        System.out.println(&quot;Moving.&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">public class Zoo &#123;</span><br><span class="line">    public static void main(String args[]) &#123;</span><br><span class="line">        Animal xb &#x3D; new Animal();</span><br><span class="line">        xb.legs &#x3D; 4;</span><br><span class="line">        System.out.println(xb.legs);</span><br><span class="line">        xb.eat();</span><br><span class="line">        xb.move();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>问题：xb.legs = -1000;</p>
+</li>
+<li><p>应该将legs 属性保护起来，防止乱用。</p>
+</li>
+<li><p>保护的方式：信息隐藏</p>
+</li>
+</ul>
+</li>
+<li><p>信息的封装和隐藏</p>
+<ul>
+<li><p>Java中通过将数据声明为私有的(private)，再提供公共的（public）方法:getXxx()和setXxx()实现对该属性的操作，以实现下述目的：</p>
+</li>
+<li><p>隐藏一个类中不需要对外提供的实现细节；</p>
+</li>
+<li><p>使用者只能通过事先定制好的方法来访问数据，可以方便地加入控制逻辑，限制对属性的不合理操作；</p>
+</li>
+<li><p>便于修改，增强代码的可维护性；</p>
+</li>
+<li><p>举例</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">class Animal &#123;</span><br><span class="line">    private int legs;&#x2F;&#x2F; 将属性legs定义为private，只能被Animal类内部访问</span><br><span class="line">    public void setLegs(int i) &#123; &#x2F;&#x2F; 在这里定义方法 eat() 和 move()</span><br><span class="line">        if (i !&#x3D; 0 &amp;&amp; i !&#x3D; 2 &amp;&amp; i !&#x3D; 4) &#123;</span><br><span class="line">        System.out.println(&quot;Wrong number of legs!&quot;);</span><br><span class="line">        return;</span><br><span class="line">        &#125;</span><br><span class="line">        legs &#x3D; i;</span><br><span class="line">    &#125;</span><br><span class="line">    public int getLegs() &#123;</span><br><span class="line">        return legs;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">public class Zoo &#123;</span><br><span class="line">    public static void main(String args[]) &#123;</span><br><span class="line">        Animal xb &#x3D; new Animal();</span><br><span class="line">        xb.setLegs(4); &#x2F;&#x2F; xb.setLegs(-1000);</span><br><span class="line">        &#x2F;&#x2F;xb.legs &#x3D; -1000; &#x2F;&#x2F; 非法</span><br><span class="line">        System.out.println(xb.getLegs());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>四种访问权限修饰符</p>
+<ul>
+<li>Java权限修饰符public、protected、(缺省)、private置于 类的成员定义前，用来限定对象对该类成员的访问权限。<br><img src="http://qd1ql2976.bkt.clouddn.com/4261" alt=""></li>
+<li>对于class的权限修饰只可以用public和default(缺省)。<ul>
+<li>public类可以在任意地方被访问。</li>
+<li>default类只可以被同一个包内部的类访问。<br><img src="http://qd1ql2976.bkt.clouddn.com/4263" alt=""><h4 id="八、类的成员之三：构造器"><a href="#八、类的成员之三：构造器" class="headerlink" title="八、类的成员之三：构造器"></a>八、类的成员之三：构造器</h4></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>构造器的特征</p>
+<ul>
+<li>它具有与类相同的名称</li>
+<li>它不声明返回值类型。（与声明为void不同）</li>
+<li>不能被static、final、synchronized、abstract、native修饰，不能有return语句返回值</li>
+</ul>
+</li>
+<li><p>构造器的作用：</p>
+<ul>
+<li>如：Order o = new Order(); Person p = new Person(“Peter”,15);</li>
+<li>如同我们规定每个“人”一出生就必须先洗澡，我们就可以在“人”的构造器中加入完成“洗澡”的程序代码，于是每个“人”一出生就会自动完成“洗澡”，程序就不必再在每个人刚出生时一个一个地告诉他们要“洗澡”了。</li>
+</ul>
+</li>
+<li><p>格式</p>
+<ul>
+<li><p>语法格式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">修饰符 类名 (参数列表) &#123;</span><br><span class="line">    初始化语句；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>举例：创建Animal 类的实例：Animal a = new Animal();调用构造器，将legs初始化为4。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public class Animal &#123;</span><br><span class="line">    private int legs;</span><br><span class="line">    &#x2F;&#x2F; 构造器</span><br><span class="line">    public Animal() &#123;</span><br><span class="line">        legs &#x3D; 4;</span><br><span class="line">    &#125;</span><br><span class="line">    public void setLegs(int i) &#123;</span><br><span class="line">        legs &#x3D; i;</span><br><span class="line">    &#125;</span><br><span class="line">    public int getLegs() &#123;</span><br><span class="line">        return legs;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>构造方法</p>
+<ul>
+<li>根据参数不同，构造器可以分为如下两类：<ul>
+<li>隐式无参构造器（系统默认提供）</li>
+<li>显式定义一个或多个</li>
+</ul>
+</li>
+<li>注 意：<ul>
+<li>Java 语言中，每个类都至少有一个构造器</li>
+<li>默认构造器的修饰符与所属类的修饰符一致</li>
+<li>一旦显式定义了构造器，则系统不再提供默认构造</li>
+<li>一个类可以创建多个重载的构造器</li>
+<li>父类的构造器不可被子类继承</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>构造器重载</p>
+<ul>
+<li><p>构造器一般用来创建对象的同时初始化对象。如</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class Person&#123;</span><br><span class="line">    String name;</span><br><span class="line">    int age;</span><br><span class="line">    public Person(String n , int a)&#123; </span><br><span class="line">        name&#x3D;n;</span><br><span class="line">        age&#x3D;a;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>构造器重载使得对象的创建更加灵活，方便创建各种不同的对象。</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public class Person&#123;</span><br><span class="line">    public Person(String name, int age, Date d) &#123;this(name,age);…&#125;</span><br><span class="line">    public Person(String name, int age) &#123;…&#125;</span><br><span class="line">    public Person(String name, Date d) &#123;…&#125;</span><br><span class="line">    public Person()&#123;…&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>构造器重载，参数列表必须不同</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">public class Person &#123;</span><br><span class="line">    private String name;</span><br><span class="line">    private int age;</span><br><span class="line">    private Date birthDate;</span><br><span class="line">    public Person(String n, int a, Date d) &#123;</span><br><span class="line">        name &#x3D; n;</span><br><span class="line">        age &#x3D; a;</span><br><span class="line">        birthDate &#x3D; d;</span><br><span class="line">    &#125;</span><br><span class="line">    public Person(String n, int a) &#123;</span><br><span class="line">        name &#x3D; n;</span><br><span class="line">        age &#x3D; a;</span><br><span class="line">    &#125;</span><br><span class="line">    public Person(String n, Date d) &#123;</span><br><span class="line">        name &#x3D; n;</span><br><span class="line">        birthDate &#x3D; d;</span><br><span class="line">    &#125;</span><br><span class="line">    public Person(String n) &#123;</span><br><span class="line">        name &#x3D; n;</span><br><span class="line">        age &#x3D; 30;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>总结：属性赋值过程</p>
+<ul>
+<li>截止到目前，我们讲到了很多位置都可以对类的属性赋值。现总结这几个位置，并指明赋值的先后顺序。</li>
+<li>赋值的位置：<ul>
+<li>①默认初始化</li>
+<li>②显式初始化</li>
+<li>③构造器中初始化</li>
+<li>④通过“对象.属性“或“对象.方法”的方式赋值</li>
+</ul>
+</li>
+<li>赋值的先后顺序：<ul>
+<li>① - ② - ③ - ④</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>拓展知识：JavaBean</p>
+<ul>
+<li><p>JavaBean是一种Java语言写成的可重用组件。</p>
+</li>
+<li><p>所谓javaBean，是指符合如下标准的Java类：</p>
+<ul>
+<li>类是公共的</li>
+<li>有一个无参的公共的构造器</li>
+<li>有属性，且有对应的get、set方法</li>
+</ul>
+</li>
+<li><p>用户可以使用JavaBean将功能、处理、值、数据库访问和其他任何可以用Java代码创造的对象进行打包，并且其他的开发者可以通过内部的JSP页面、Servlet、其他JavaBean、applet程序或者应用来使用这些对象。用户可以认为JavaBean提供了一种随时随地的复制和粘贴的功能，而不用关心任何改变。</p>
+</li>
+<li><p>JavaBean示例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">public class JavaBean &#123;</span><br><span class="line">    private String name; &#x2F;&#x2F; 属性一般定义为private</span><br><span class="line">    private int age;</span><br><span class="line">    public JavaBean() &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    public int getAge() &#123;</span><br><span class="line">        return age;</span><br><span class="line">    &#125;</span><br><span class="line">    public void setAge(int a) &#123;</span><br><span class="line">        age &#x3D; a;</span><br><span class="line">    &#125;</span><br><span class="line">    public String getName() &#123;</span><br><span class="line">        return name;</span><br><span class="line">    &#125;</span><br><span class="line">    public void setName(String n) &#123;</span><br><span class="line">        name &#x3D; n;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>拓展知识：UML类图<br> <img src="http://qd1ql2976.bkt.clouddn.com/4373" alt=""></p>
+<h4 id="九、关键字：this"><a href="#九、关键字：this" class="headerlink" title="九、关键字：this"></a>九、关键字：this</h4></li>
+<li><p>this 是什么？</p>
+<ul>
+<li>在Java中，this关键字比较难理解，它的作用和其词义很接近。<ul>
+<li>它在方法内部使用，即这个方法所属对象的引用；</li>
+<li>它在构造器内部使用，表示该构造器正在初始化的对象。</li>
+</ul>
+</li>
+<li>this 可以调用类的属性、方法和构造器</li>
+<li>什么时候使用this关键字呢？<ul>
+<li>当在方法内需要用到调用该方法的对象时，就用this。</li>
+<li>具体的：我们可以用this来区分属性和局部变量。</li>
+<li>比如：this.name = name;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>使用规则</p>
+<ul>
+<li>在任意方法或构造器内，如果使用当前类的成员变量或成员方法可以在其前面添加this，增强程序的阅读性。不过，通常我们都习惯省略this。</li>
+<li>当形参与成员变量同名时，如果在方法内或构造器内需要使用成员变量，必须添加this来表明该变量是类的成员变量</li>
+<li>使用this访问属性和方法时，如果在本类中未找到，会从父类中查找</li>
+<li>this可以作为一个类中构造器相互调用的特殊格式</li>
+</ul>
+</li>
+<li><p>注意：</p>
+<ul>
+<li>可以在类的构造器中使用”this(形参列表)”的方式，调用本类中重载的其他的构造器！</li>
+<li>明确：构造器中不能通过”this(形参列表)”的方式调用自身构造器</li>
+<li>如果一个类中声明了n个构造器，则最多有n-1个构造器中使用了”this(形参列表)”</li>
+<li>“this(形参列表)”必须声明在类的构造器的首行！</li>
+<li>在类的一个构造器中，最多只能声明一个”this(形参列表)”</li>
+</ul>
+</li>
+<li><p>使用this，调用属性、方法</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Person&#123; &#x2F;&#x2F; 定义Person类</span><br><span class="line">    private String name ;</span><br><span class="line">    private int age ;</span><br><span class="line">    public Person(String name,int age)&#123;</span><br><span class="line">        this.name &#x3D; name ;</span><br><span class="line">        this.age &#x3D; age ; </span><br><span class="line">    &#125;</span><br><span class="line">    public void getInfo()&#123;</span><br><span class="line">        System.out.println(&quot;姓名：&quot; + name) ;</span><br><span class="line">        this.speak();</span><br><span class="line">    &#125;</span><br><span class="line">    public void speak()&#123;</span><br><span class="line">        System.out.println(“年龄：” + this.age);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<ul>
+<li><p>当前正在操作本方法的对象称为当前对象。</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">class Person&#123; &#x2F;&#x2F; 定义Person类</span><br><span class="line">    String name;</span><br><span class="line">    Person(String name)&#123;</span><br><span class="line">        this.name &#x3D; name;&#125;</span><br><span class="line">        public void getInfo()&#123;</span><br><span class="line">        System.out.println(&quot;Person类 --&gt; &quot; + this.name) ;</span><br><span class="line">    &#125;</span><br><span class="line">    public boolean compare(Person p)&#123;</span><br><span class="line">        return this.name&#x3D;&#x3D;p.name;</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br><span class="line">public class PersonTest&#123;</span><br><span class="line">    public static void main(String args[])&#123;</span><br><span class="line">        Person per1 &#x3D; new Person(&quot;张三&quot;) ;</span><br><span class="line">        Person per2 &#x3D; new Person(&quot;李四&quot;) ;</span><br><span class="line">        per1.getInfo() ; &#x2F;&#x2F; 当前调用getInfo()方法的对象是per1</span><br><span class="line">        per2.getInfo() ; &#x2F;&#x2F; 当前调用getInfo()方法的对象是per2</span><br><span class="line">        boolean b &#x3D; per1.compare(per2);</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>使用this调用本类的构造器</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class Person&#123; &#x2F;&#x2F; 定义Person类</span><br><span class="line">    private String name ;</span><br><span class="line">    private int age ;</span><br><span class="line">    public Person()&#123; &#x2F;&#x2F; 无参构造器</span><br><span class="line">    System.out.println(&quot;新对象实例化&quot;) ;</span><br><span class="line">&#125;</span><br><span class="line">public Person(String name)&#123;</span><br><span class="line">        this(); &#x2F;&#x2F; 调用本类中的无参构造器</span><br><span class="line">        this.name &#x3D; name ;</span><br><span class="line">    &#125;</span><br><span class="line">    public Person(String name,int age)&#123;</span><br><span class="line">        this(name) ; &#x2F;&#x2F; 调用有一个参数的构造器</span><br><span class="line">        this.age &#x3D; age;</span><br><span class="line">    &#125;</span><br><span class="line">    public String getInfo()&#123;</span><br><span class="line">        return &quot;姓名：&quot; + name + &quot;，年龄：&quot; + age ;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="十、关键字：package、import"><a href="#十、关键字：package、import" class="headerlink" title="十、关键字：package、import"></a>十、关键字：package、import</h4><ol>
+<li><p>关键字—package</p>
+<ul>
+<li>包的作用：<ul>
+<li>包帮助管理大型软件系统：将功能相近的类划分到同一个包中。比如：MVC的设计模式</li>
+<li>包可以包含类和子包，划分项目层次，便于管理</li>
+<li>解决类命名冲突的问题</li>
+<li>控制访问权限</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>MVC设计模式</p>
+<ul>
+<li>MVC是常用的设计模式之一，将整个程序分为三个层次：视图模型层，控制器层，与数据模型层。这种将程序输入输出、数据处理，以及数据的展示分离开来的设计模式使程序结构变的灵活而且清晰，同时也描述了程序各个对象间的通信方式，降低了程序的耦合性。<br><img src="http://qd1ql2976.bkt.clouddn.com/4499" alt=""></li>
+<li>模型层 model 主要处理数据<ul>
+<li>数据对象封装 model.bean/domain</li>
+<li>数据库操作类 model.dao</li>
+<li>数据库 model.db</li>
+</ul>
+</li>
+<li>视图层 view  显示数据<ul>
+<li>相关工具类 view.utils</li>
+<li>自定义view view.ui</li>
+</ul>
+</li>
+<li>控制层 controller  处理业务逻辑<ul>
+<li>应用界面相关 controller.activity</li>
+<li>存放fragment controller.fragment</li>
+<li>显示列表的适配器 controller.adapter</li>
+<li>服务相关的 controller.service</li>
+<li>抽取的基类 controller.base</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>JDK 中主要的包介绍</p>
+<ul>
+<li>java.lang—-包含一些Java语言的核心类，如String、Math、Integer、System和Thread，提供常用功能</li>
+<li>java.net—-包含执行与网络相关的操作的类和接口。</li>
+<li>java.io —-包含能提供多种输入/输出功能的类</li>
+<li>java.util—-包含一些实用工具类，如定义系统特性、接口的集合框架类、使用与日期日历相关的函数。</li>
+<li>java.text—-包含了一些java格式化相关的类</li>
+<li>java.sql—-包含了java进行JDBC数据库编程的相关类/接口</li>
+<li>java.awt—-包含了构成抽象窗口工具集（abstract windowtoolkits）的多个类，这些类被用来构建和管理应用程序的图形用户界面(GUI)。(C/S)</li>
+</ul>
+</li>
+<li><p>关键字—import</p>
+<ul>
+<li><p>为使用定义在不同包中的Java类，需用import语句来引入指定包层次下所需要的类或全部类(.*)。import语句告诉编译器到哪里去寻找类。</p>
+</li>
+<li><p>语法格式:     <code>import 包名. 类名</code>;</p>
+</li>
+<li><p>应用举例：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import pack1.pack2.Test; &#x2F;&#x2F;import pack1.pack2.*; 表示引入pack1.pack2包中的所有结构</span><br><span class="line">public class PackTest&#123;</span><br><span class="line">    public static void main(String args[])&#123;</span><br><span class="line">        Test t &#x3D; new Test(); &#x2F;&#x2F;Test类在在pack1.pack2包 包 中定义</span><br><span class="line">        t.display();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>注意</p>
+<ul>
+<li>在源文件中使用import显式的导入指定包下的类或接口</li>
+<li>声明在包的声明和类的声明之间</li>
+<li>如果需要导入多个类或接口，那么就并列显式多个import语句即可</li>
+<li>举例：可以使用java.util.*的方式，一次性导入util包下所有的类或接口。</li>
+<li>如果导入的类或接口是java.lang包下的，或者是当前包下的，则可以省略此import语句。</li>
+<li>如果在代码中使用不同包下的同名的类。那么就需要使用类的全类名的方式指明调用的是哪个类。</li>
+<li>如果已经导入java.a包下的类。那么如果需要使用a包的子包下的类的话，仍然需要导入。</li>
+<li>import static组合的使用：调用指定类或接口下的静态的属性或方法</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='true'
+        data-ae='true'
+        data-ci='98d8392c61bba8a9f87d'
+        data-cs='a5b47de553739830db015b176764355577df22bf'
+        data-r='Comment'
+        data-o='Programmingmakesmebald'
+        data-a='Programmingmakesmebald'
+        data-d='true'
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class='side'>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#面向对象编程（上）"><span class="toc-number">1.</span> <span class="toc-text">面向对象编程（上）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#一、面向过程与面向对象"><span class="toc-number">1.0.1.</span> <span class="toc-text">一、面向过程与面向对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二、Java基本元素：类和对象"><span class="toc-number">1.0.2.</span> <span class="toc-text">二、Java基本元素：类和对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#三、对象的创建和使用"><span class="toc-number">1.0.3.</span> <span class="toc-text">三、对象的创建和使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#四、类的成员之一：属性"><span class="toc-number">1.0.4.</span> <span class="toc-text">四、类的成员之一：属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#五、类的成员之二：方法"><span class="toc-number">1.0.5.</span> <span class="toc-text">五、类的成员之二：方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#六、再谈方法"><span class="toc-number">1.0.6.</span> <span class="toc-text">六、再谈方法</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#JavaSE-5-0-中提供了Varargs-variable-number-of-arguments-机制，允许直接定义能和多个实参相匹配的形参。从而，可以用一种更简单的方式，来传递个数可变的实参。"><span class="toc-number">1.0.6.0.1.</span> <span class="toc-text">JavaSE 5.0 中提供了Varargs(variable number of arguments)机制，允许直接定义能和多个实参相匹配的形参。从而，可以用一种更简单的方式，来传递个数可变的实参。</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#七、OOP特征一：封装与隐藏"><span class="toc-number">1.0.7.</span> <span class="toc-text">七、OOP特征一：封装与隐藏</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#八、类的成员之三：构造器"><span class="toc-number">1.0.8.</span> <span class="toc-text">八、类的成员之三：构造器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#九、关键字：this"><span class="toc-number">1.0.9.</span> <span class="toc-text">九、关键字：this</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#十、关键字：package、import"><span class="toc-number">1.0.10.</span> <span class="toc-text">十、关键字：package、import</span></a></li></ol></li></ol></li></ol>	
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
