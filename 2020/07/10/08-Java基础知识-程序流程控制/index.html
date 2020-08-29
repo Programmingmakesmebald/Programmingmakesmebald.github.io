@@ -81,7 +81,7 @@
 <li>循环结构<h4 id="顺序结构"><a href="#顺序结构" class="headerlink" title="顺序结构"></a>顺序结构</h4></li>
 </ul>
 </li>
-<li><p>程序从上到下逐行地执行，中间没有任何判断和跳转。<br><img src="http://qd1ql2976.bkt.clouddn.com/3002" alt=""></p>
+<li><p>程序从上到下逐行地执行，中间没有任何判断和跳转。<br><img src="http://wangzixuan.work/3002" alt=""></p>
 </li>
 <li><p>Java中定义成员变量时采用合法的前向引用。如：</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">正确形式：</span><br><span class="line">public class Test&#123;</span><br><span class="line">    int num1 &#x3D; 12;</span><br><span class="line">    int num2 &#x3D; num1 + 2;</span><br><span class="line">&#125;</span><br><span class="line">错误形式：</span><br><span class="line">public class Test&#123;</span><br><span class="line">    int num2 &#x3D; num1 + 2；</span><br><span class="line">    int num1 &#x3D; 12;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -99,11 +99,11 @@
 <li>当多个条件是“包含”关系时，“小上大下 / 子上父下”</li>
 <li>三种格式：</li>
 </ul>
-<p>  1.<br>  <img src="http://qd1ql2976.bkt.clouddn.com/3004" alt=""></p>
+<p>  1.<br>  <img src="http://wangzixuan.work/3004" alt=""></p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if( 条件表达式)&#123;</span><br><span class="line">    执行代码块；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>  2.<br>  <img src="http://qd1ql2976.bkt.clouddn.com/3006" alt=""></p>
+<p>  2.<br>  <img src="http://wangzixuan.work/3006" alt=""></p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">if( 条件表达式)&#123;</span><br><span class="line">    执行代码块1;</span><br><span class="line">&#125;</span><br><span class="line">else&#123;</span><br><span class="line">    执行代码块2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>  3.<br>  <img src="http://qd1ql2976.bkt.clouddn.com/3008" alt=""></p>
+<p>  3.<br>  <img src="http://wangzixuan.work/3008" alt=""></p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">if( 条件表达式1)&#123;</span><br><span class="line">    执行 代码块1;</span><br><span class="line">&#125;</span><br><span class="line">else if ( 条件表达式2)&#123;</span><br><span class="line">    执行 代码块2;</span><br><span class="line">&#125;</span><br><span class="line">……</span><br><span class="line">else&#123;</span><br><span class="line">    执行 代码块n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li><p>彩票游戏</p>
@@ -126,7 +126,7 @@
 </li>
 <li><p>default子句是可任选的。同时，位置也是灵活的。当没有匹配的case时，执行default</p>
 </li>
-<li><p>格式:<br>  <img src="http://qd1ql2976.bkt.clouddn.com/3010" alt=""></p>
+<li><p>格式:<br>  <img src="http://wangzixuan.work/3010" alt=""></p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">switch( 表达式)&#123;</span><br><span class="line">    case 常量1:</span><br><span class="line">    语句1;</span><br><span class="line">    &#x2F;&#x2F; break;</span><br><span class="line">    case 常量2:</span><br><span class="line">    语句2;</span><br><span class="line">    &#x2F;&#x2F; break;</span><br><span class="line">    … …</span><br><span class="line">    case 常量N:</span><br><span class="line">    语句N;</span><br><span class="line">    &#x2F;&#x2F; break;</span><br><span class="line">    default:</span><br><span class="line">    语句;</span><br><span class="line">    &#x2F;&#x2F; break;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 <li><p>求输入的日期是当年的第几天</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">class TestDaysOfYear&#123;</span><br><span class="line">	public static void main(String[] args)&#123;</span><br><span class="line">		Scanner input &#x3D; new Scanner(System.in);</span><br><span class="line">		</span><br><span class="line">		System.out.print(&quot;年：&quot;);</span><br><span class="line">		int year &#x3D; input.nextInt();</span><br><span class="line">		</span><br><span class="line">		System.out.print(&quot;月：&quot;);</span><br><span class="line">		int month &#x3D; input.nextInt();</span><br><span class="line">		</span><br><span class="line">		System.out.print(&quot;日：&quot;);</span><br><span class="line">		int day &#x3D; input.nextInt();</span><br><span class="line">		</span><br><span class="line">		int days &#x3D; day;</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;加前面几个月的满月天数</span><br><span class="line">		switch(month)&#123;</span><br><span class="line">			case 12:</span><br><span class="line">				&#x2F;&#x2F;前面11个月的总天数</span><br><span class="line">				&#x2F;&#x2F;days +&#x3D; 第11月的天数;</span><br><span class="line">				days +&#x3D; 30;</span><br><span class="line">			case 11:</span><br><span class="line">				&#x2F;&#x2F;前面10个月的总天数</span><br><span class="line">				&#x2F;&#x2F;days +&#x3D; 第10月的天数;</span><br><span class="line">				days +&#x3D; 31;</span><br><span class="line">			case 10:</span><br><span class="line">				days +&#x3D; 30;&#x2F;&#x2F;九月</span><br><span class="line">			case 9:</span><br><span class="line">				days +&#x3D; 31;&#x2F;&#x2F;八月</span><br><span class="line">			case 8:</span><br><span class="line">				days +&#x3D; 31;&#x2F;&#x2F;七月</span><br><span class="line">			case 7:</span><br><span class="line">				days +&#x3D; 30;&#x2F;&#x2F;六月</span><br><span class="line">			case 6:</span><br><span class="line">				days +&#x3D; 31;&#x2F;&#x2F;五月</span><br><span class="line">			case 5:</span><br><span class="line">				days +&#x3D; 30;&#x2F;&#x2F;四月</span><br><span class="line">			case 4:</span><br><span class="line">				days +&#x3D; 31;&#x2F;&#x2F;三月</span><br><span class="line">			case 3:</span><br><span class="line">				days +&#x3D; 28;&#x2F;&#x2F;二月</span><br><span class="line">				&#x2F;*if(闰年)&#123;</span><br><span class="line">					days++;</span><br><span class="line">				&#125;</span><br><span class="line">				*&#x2F;</span><br><span class="line">				if(year % 4 &#x3D;&#x3D;0 &amp;&amp; year % 100 !&#x3D; 0 || year%400&#x3D;&#x3D;0)&#123;</span><br><span class="line">					days++;</span><br><span class="line">				&#125;</span><br><span class="line">			case 2:</span><br><span class="line">				days +&#x3D; 31;&#x2F;&#x2F;一月</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		System.out.println(year + &quot;年&quot; + month + &quot;月&quot; + day + &quot;日是这一年的第&quot; + days + &quot;天&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
@@ -154,14 +154,14 @@
 <li>初始化部分(init_statement)</li>
 <li>循环条件部分(test_exp)</li>
 <li>循环体部分(body_statement)</li>
-<li>迭代部分(alter_statement)<br><img src="http://qd1ql2976.bkt.clouddn.com/3108" alt=""></li>
+<li>迭代部分(alter_statement)<br><img src="http://wangzixuan.work/3108" alt=""></li>
 </ul>
 </li>
 <li><h5 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h5><ul>
 <li><p>语法格式</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for (①初始化部分;②循环条件部分;④迭代部分)｛</span><br><span class="line">    ③ 循环体部分;</span><br><span class="line">｝</span><br></pre></td></tr></table></figure></li>
 <li><p>执行过程：</p>
-<p>  <img src="http://qd1ql2976.bkt.clouddn.com/3110" alt=""></p>
+<p>  <img src="http://wangzixuan.work/3110" alt=""></p>
 </li>
 <li><p>说明：</p>
 <ul>
@@ -170,7 +170,7 @@
 <li>④可以有多个变量更新，用逗号分隔</li>
 </ul>
 </li>
-<li><p>for循环执行演示：<br>  <img src="http://qd1ql2976.bkt.clouddn.com/3112" alt=""></p>
+<li><p>for循环执行演示：<br>  <img src="http://wangzixuan.work/3112" alt=""></p>
 </li>
 <li><p>输入两个正整数m和n，求其最大公约数和最小公倍数。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">int m &#x3D; 12, n &#x3D; 28;</span><br><span class="line">&#x2F;&#x2F;获取m和n的较大值</span><br><span class="line">int max &#x3D; (m &gt; n)? m : n;</span><br><span class="line">&#x2F;&#x2F;获取m和n的较小值</span><br><span class="line">int min &#x3D; (m &lt; n)? m : n;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;求m和n的最大公约数</span><br><span class="line">for(int i &#x3D; min;i &gt;&#x3D; 1;i--)&#123;</span><br><span class="line">    if( m % i &#x3D;&#x3D; 0 &amp;&amp; n % i &#x3D;&#x3D; 0)&#123;</span><br><span class="line">        System.out.println(&quot;m和n的最大公约数是：&quot; + i);</span><br><span class="line">        break;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;求m和n的最小公倍数</span><br><span class="line">for(int i &#x3D; max;i &lt;&#x3D; m * n;i++)&#123;</span><br><span class="line">    if( i % m &#x3D;&#x3D; 0 &amp;&amp; i % n &#x3D;&#x3D; 0)&#123;</span><br><span class="line">        System.out.println(&quot;m和n的最小公倍数是：&quot; + i);</span><br><span class="line">        break;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
@@ -180,7 +180,7 @@
 <li><p>语法格式</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">① 初始化部分</span><br><span class="line">while(②循环条件部分)｛</span><br><span class="line">    ③循环体部分;</span><br><span class="line">    ④迭代部分;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 <li><p>执行过程：</p>
-<p>  <img src="http://qd1ql2976.bkt.clouddn.com/3114" alt=""></p>
+<p>  <img src="http://wangzixuan.work/3114" alt=""></p>
 </li>
 <li><p>说明：</p>
 <ul>
@@ -197,7 +197,7 @@
 <li><p>语法格式</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">①初始化部分;</span><br><span class="line">do&#123;</span><br><span class="line">    ③ 循环体部分</span><br><span class="line">    ④ 迭代部分</span><br><span class="line">&#125;while(②循环条件部分);</span><br></pre></td></tr></table></figure></li>
 <li><p>执行过程：</p>
-<p>  <img src="http://qd1ql2976.bkt.clouddn.com/3116" alt=""></p>
+<p>  <img src="http://wangzixuan.work/3116" alt=""></p>
 </li>
 <li><p>说明：</p>
 <ul>
