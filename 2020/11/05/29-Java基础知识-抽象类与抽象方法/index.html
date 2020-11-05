@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hans" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>29.Java基础知识-抽象类与抽象方法 - 秃头小王子</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="秃头小王子的个人博客,抽象类与抽象方法随着继承层次中一个个新子类的定义，类变得越来越具体，而父类则更一般，更通用。类的设计应该保证父类和子类能够共享特征。有时将一个父类设计得非常抽象，以至于它没有具体的实例，这样的类叫做,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="秃头小王子" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">秃头小王子</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://yoursite.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">29.Java基础知识-抽象类与抽象方法</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">29.Java基础知识-抽象类与抽象方法</h1>
+        <div class="stuff">
+            <span>十一月 05, 2020</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Java%E5%9F%BA%E7%A1%80/" rel="tag">Java基础</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E4%B8%8E%E6%8A%BD%E8%B1%A1%E6%96%B9%E6%B3%95/" rel="tag">抽象类与抽象方法</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h2 id="抽象类与抽象方法"><a href="#抽象类与抽象方法" class="headerlink" title="抽象类与抽象方法"></a>抽象类与抽象方法</h2><p>随着继承层次中一个个新子类的定义，类变得越来越具体，而父类则更一般，更通用。类的设计应该保证父类和子类能够共享特征。有时将一个父类设计得非常抽象，以至于它没有具体的实例，这样的类叫做抽象类。</p>
+<h6 id="abstract：抽象的"><a href="#abstract：抽象的" class="headerlink" title="abstract：抽象的"></a>abstract：抽象的</h6><h6 id="abstract可以修饰的结构：类、方法"><a href="#abstract可以修饰的结构：类、方法" class="headerlink" title="abstract可以修饰的结构：类、方法"></a>abstract可以修饰的结构：类、方法</h6><h6 id="abstract不可以修饰变量、代码块、构造器、私有方法、静态方法、final的方法、final的类"><a href="#abstract不可以修饰变量、代码块、构造器、私有方法、静态方法、final的方法、final的类" class="headerlink" title="abstract不可以修饰变量、代码块、构造器、私有方法、静态方法、final的方法、final的类"></a>abstract不可以修饰变量、代码块、构造器、私有方法、静态方法、final的方法、final的类</h6><h4 id="abstract修饰类：抽象类"><a href="#abstract修饰类：抽象类" class="headerlink" title="abstract修饰类：抽象类"></a>abstract修饰类：抽象类</h4><ul>
+<li>此类不能实例化</li>
+<li>抽象类中一定有构造器，便于子类实例化时调用（设计：子类对象实例化的全过程）</li>
+<li>开发中，都会提供抽象类的子类，让子类对象实例化，完成相关的操作</li>
+</ul>
+<h4 id="abstract修饰方法：抽象方法"><a href="#abstract修饰方法：抽象方法" class="headerlink" title="abstract修饰方法：抽象方法"></a>abstract修饰方法：抽象方法</h4><ul>
+<li>抽象方法只有方法的声明，没有方法体</li>
+<li>包含抽象方法的类，一定是一个抽象类。反之，抽象类中可以没有抽象方法。</li>
+<li>若子类重写了父类所有的抽象方法后，子类方可实例化</li>
+<li>若子类没有重写父类中的所有抽象方法，则子类也是一个抽象类，需要使用abstract修饰</li>
+</ul>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='true'
+        data-ae='true'
+        data-ci='98d8392c61bba8a9f87d'
+        data-cs='a5b47de553739830db015b176764355577df22bf'
+        data-r='Comment'
+        data-o='Programmingmakesmebald'
+        data-a='Programmingmakesmebald'
+        data-d='true'
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class='side'>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#抽象类与抽象方法"><span class="toc-number">1.</span> <span class="toc-text">抽象类与抽象方法</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#abstract：抽象的"><span class="toc-number">1.0.0.0.1.</span> <span class="toc-text">abstract：抽象的</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#abstract可以修饰的结构：类、方法"><span class="toc-number">1.0.0.0.2.</span> <span class="toc-text">abstract可以修饰的结构：类、方法</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#abstract不可以修饰变量、代码块、构造器、私有方法、静态方法、final的方法、final的类"><span class="toc-number">1.0.0.0.3.</span> <span class="toc-text">abstract不可以修饰变量、代码块、构造器、私有方法、静态方法、final的方法、final的类</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#abstract修饰类：抽象类"><span class="toc-number">1.0.1.</span> <span class="toc-text">abstract修饰类：抽象类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#abstract修饰方法：抽象方法"><span class="toc-number">1.0.2.</span> <span class="toc-text">abstract修饰方法：抽象方法</span></a></li></ol></li></ol></li></ol>	
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>

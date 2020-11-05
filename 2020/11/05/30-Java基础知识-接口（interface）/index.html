@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hans" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>30.Java基础知识-接口（interface） - 秃头小王子</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="秃头小王子的个人博客,接口（interface）接口(interface)是抽象方法和常量值定义的集合。
+接口的使用
+使用interface来定义
+Java中接口和类是并列的两个结构
+接口通过让类去实现(implemen,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="秃头小王子" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">秃头小王子</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://yoursite.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">30.Java基础知识-接口（interface）</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">30.Java基础知识-接口（interface）</h1>
+        <div class="stuff">
+            <span>十一月 05, 2020</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Java%E5%9F%BA%E7%A1%80/" rel="tag">Java基础</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E6%8E%A5%E5%8F%A3%EF%BC%88interface%EF%BC%89/" rel="tag">接口（interface）</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h2 id="接口（interface）"><a href="#接口（interface）" class="headerlink" title="接口（interface）"></a>接口（interface）</h2><p>接口(interface)是抽象方法和常量值定义的集合。</p>
+<h4 id="接口的使用"><a href="#接口的使用" class="headerlink" title="接口的使用"></a>接口的使用</h4><ul>
+<li>使用interface来定义</li>
+<li>Java中接口和类是并列的两个结构</li>
+<li>接口通过让类去实现(implements)的方式来使用<ul>
+<li>如果实现类覆盖了接口中的所有抽象方法，则此实现类就可以实例化</li>
+<li>如果实现类没有覆盖接口中所有的抽象方法，则此实现类仍为一个抽象类</li>
+</ul>
+</li>
+<li>一个类可以实现多个接口，接口也可以继承其它接口。</li>
+<li>与继承关系类似，接口与实现类之间存在多态性</li>
+</ul>
+<h4 id="定义接口中的成员"><a href="#定义接口中的成员" class="headerlink" title="定义接口中的成员"></a>定义接口中的成员</h4><ul>
+<li>JDK7及以前，只能定义全局常量和抽象方法<ul>
+<li>全局常量：public static final的，但是可以省略</li>
+<li>抽象方法：public abstract的</li>
+</ul>
+</li>
+<li>JDK8：还可以定义静态方法、默认方法<ul>
+<li>静态方法：使用static关键字修饰。可以通过接口直接调用静态方法，并执行其方法体。我们经常在相互一起使用的类中使用静态方法。你可以在标准库中<br>找到像Collection/Collections或者Path/Paths这样成对的接口和类。</li>
+<li>默认方法：默认方法使用default关键字修饰。可以通过实现类对象来调用。我们在已有的接口中提供新方法的同时，还保持了与旧版本代码的兼容性。比如：java 8 API中对Collection、List、Comparator等接口提供了丰富的默认方法。</li>
+</ul>
+</li>
+</ul>
+<h4 id="接口的特点"><a href="#接口的特点" class="headerlink" title="接口的特点"></a>接口的特点</h4><ul>
+<li>接口中没有构造器<ul>
+<li>意味着接口不可以实例化</li>
+</ul>
+</li>
+<li>接口采用多继承机制<ul>
+<li>弥补了Java单继承性的局限性</li>
+<li>格式：class AA extends BB implements CC,DD,EE</li>
+</ul>
+</li>
+</ul>
+<h4 id="接口与抽象类的对比"><a href="#接口与抽象类的对比" class="headerlink" title="接口与抽象类的对比"></a>接口与抽象类的对比</h4><p><img src="http://wangzixuan.work/6730" alt="image"></p>
+<h4 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">interface A &#123;</span><br><span class="line">    &#x2F;&#x2F;接口中只能定义全局常量</span><br><span class="line">    &#x2F;&#x2F;public static final被省略</span><br><span class="line">	int x &#x3D; 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class B &#123;</span><br><span class="line">	int x &#x3D; 1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class C extends B implements A &#123;</span><br><span class="line">	public void pX() &#123;</span><br><span class="line">		&#x2F;&#x2F;编译不通过。因为x是不明确的</span><br><span class="line">		&#x2F;&#x2F; System.out.println(x);</span><br><span class="line">		System.out.println(super.x);&#x2F;&#x2F;1</span><br><span class="line">		System.out.println(A.x);&#x2F;&#x2F;0</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		new C().pX();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>pX()方法中不能出现System.out.println(x);</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">interface Playable &#123;</span><br><span class="line">	void play();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">interface Bounceable &#123;</span><br><span class="line">	void play();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">interface Rollable extends Playable,Bounceable </span><br><span class="line">&#123;</span><br><span class="line">    &#x2F;&#x2F;接口中只能定义全局常量</span><br><span class="line">    &#x2F;&#x2F;public static final被省略</span><br><span class="line">	Ball ball &#x3D; new Ball(&quot;PingPang&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Ball implements Rollable &#123;</span><br><span class="line">	</span><br><span class="line">	private String name;</span><br><span class="line">		public String getName() &#123;</span><br><span class="line">		return name;</span><br><span class="line">	&#125;</span><br><span class="line">		</span><br><span class="line">	public Ball(String name) &#123;</span><br><span class="line">		this.name &#x3D; name;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public void play() &#123;</span><br><span class="line">	    &#x2F;&#x2F;ball为public static final 的不能再赋值</span><br><span class="line">	    &#x2F;&#x2F;此处报错</span><br><span class="line">		ball &#x3D; new Ball(&quot;Football&quot;);</span><br><span class="line">		System.out.println(ball.getName());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>ball为public static final 的不能再赋值</p>
+<h4 id="接口中的默认方法"><a href="#接口中的默认方法" class="headerlink" title="接口中的默认方法"></a>接口中的默认方法</h4><ul>
+<li>若一个接口中定义了一个默认方法，而另外一个接口中也定义了一个同名同参数的方法（不管此方法是否是默认方法），在实现类同时实现了这两个接口时，会出现： <strong>接口冲突</strong>。<ul>
+<li>解决办法：实现类必须覆盖接口中同名同参数的方法，来解决冲突。</li>
+</ul>
+</li>
+<li>若一个接口中定义了一个默认方法，而父类中也定义了一个同名同参数的非抽象方法，则不会出现冲突问题。因为此时遵守：<strong>类优先原则</strong>。接口中具有相同名称和参数的默认方法会被忽略。</li>
+</ul>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='true'
+        data-ae='true'
+        data-ci='98d8392c61bba8a9f87d'
+        data-cs='a5b47de553739830db015b176764355577df22bf'
+        data-r='Comment'
+        data-o='Programmingmakesmebald'
+        data-a='Programmingmakesmebald'
+        data-d='true'
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class='side'>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#接口（interface）"><span class="toc-number">1.</span> <span class="toc-text">接口（interface）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#接口的使用"><span class="toc-number">1.0.1.</span> <span class="toc-text">接口的使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#定义接口中的成员"><span class="toc-number">1.0.2.</span> <span class="toc-text">定义接口中的成员</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#接口的特点"><span class="toc-number">1.0.3.</span> <span class="toc-text">接口的特点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#接口与抽象类的对比"><span class="toc-number">1.0.4.</span> <span class="toc-text">接口与抽象类的对比</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#面试题"><span class="toc-number">1.0.5.</span> <span class="toc-text">面试题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#接口中的默认方法"><span class="toc-number">1.0.6.</span> <span class="toc-text">接口中的默认方法</span></a></li></ol></li></ol></li></ol>	
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>

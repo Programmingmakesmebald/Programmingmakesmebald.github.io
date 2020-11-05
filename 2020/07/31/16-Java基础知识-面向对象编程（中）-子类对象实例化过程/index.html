@@ -10,7 +10,9 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="Fechin,"> 
-    <meta name="description" content="秃头小王子的个人博客,"> 
+    <meta name="description" content="秃头小王子的个人博客,子类对象实例化过程子类对象实例化时，会在堆内开辟的新空间里加载自己的属性以及所有父类（直接父类、间接父类）的所有属性。
+1. 子类对象实例化的流程
+2. 加载所有父类属性通过this(…)或supe,"> 
     <meta name="author" content="John Doe"> 
     <link rel="alternative" href="atom.xml" title="秃头小王子" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -59,10 +61,16 @@
         <div class="stuff">
             <span>七月 31, 2020</span>
             
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Java%E5%9F%BA%E7%A1%80/" rel="tag">Java基础</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E5%AD%90%E7%B1%BB%E5%AF%B9%E8%B1%A1%E5%AE%9E%E4%BE%8B%E5%8C%96/" rel="tag">子类对象实例化</a></li></ul>
+
 
         </div>
         <div class="content markdown">
-            
+            <h2 id="子类对象实例化过程"><a href="#子类对象实例化过程" class="headerlink" title="子类对象实例化过程"></a>子类对象实例化过程</h2><p>子类对象实例化时，会在堆内开辟的新空间里加载自己的属性以及所有父类（直接父类、间接父类）的所有属性。</p>
+<h4 id="1-子类对象实例化的流程"><a href="#1-子类对象实例化的流程" class="headerlink" title="1. 子类对象实例化的流程"></a>1. 子类对象实例化的流程</h4><p><img src="http://wangzixuan.work/4747" alt=""></p>
+<h4 id="2-加载所有父类属性"><a href="#2-加载所有父类属性" class="headerlink" title="2. 加载所有父类属性"></a>2. 加载所有父类属性</h4><p>通过this(…)或super()或super(…)直接或者间接的调用父类构造器在堆内开辟的新空间里加载及所有父类（直接父类、间接父类）的所有属性<br><img src="http://wangzixuan.work/4751" alt=""></p>
+<h4 id="3-所有属性都在子类对象实例化时在对堆内开辟的新空间中"><a href="#3-所有属性都在子类对象实例化时在对堆内开辟的新空间中" class="headerlink" title="3. 所有属性都在子类对象实例化时在对堆内开辟的新空间中"></a>3. 所有属性都在子类对象实例化时在对堆内开辟的新空间中</h4><p><img src="http://wangzixuan.work/4749" alt=""></p>
+
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
                 <source type="audio/mpeg" src="">
@@ -97,7 +105,7 @@
     </div>
     
         <div class='side'>
-				
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#子类对象实例化过程"><span class="toc-number">1.</span> <span class="toc-text">子类对象实例化过程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-子类对象实例化的流程"><span class="toc-number">1.0.1.</span> <span class="toc-text">1. 子类对象实例化的流程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-加载所有父类属性"><span class="toc-number">1.0.2.</span> <span class="toc-text">2. 加载所有父类属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-所有属性都在子类对象实例化时在对堆内开辟的新空间中"><span class="toc-number">1.0.3.</span> <span class="toc-text">3. 所有属性都在子类对象实例化时在对堆内开辟的新空间中</span></a></li></ol></li></ol></li></ol>	
         </div>
     
 </div>

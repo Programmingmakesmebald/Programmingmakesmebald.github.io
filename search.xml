@@ -1503,14 +1503,21 @@
 <li>减少代码冗余，提高代码复用</li>
 <li>更有利于类的拓展</li>
 <li>让类与类产生联系，提供多态的前提<h4 id="4-继承的规则"><a href="#4-继承的规则" class="headerlink" title="4. 继承的规则"></a>4. 继承的规则</h4></li>
-<li>子类不能直接访问父类中私有（private）的成员变量和方法<br><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/AE08FD7513114528966F38C0BF53CEB4/4602" alt=""></li>
+<li>子类不能直接访问父类中私有（private）的成员变量和方法<br><img src="http://wangzixuan.work/4602" alt=""></li>
 <li>Java只支持单继承和多层继承，不允许多重继承<ul>
 <li>一个类只能有一个父类</li>
-<li>一个父类可以派生多个子类<br><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/47A671982D9340DBACB47445F722073E/4604" alt=""><br><img src="https://note.youdao.com/yws/public/resource/96442cc0fb1bbf3377094a8fbad8ce78/xmlnote/801703C0FDC74ECE80E8A210F83DBEC1/4606" alt=""></li>
+<li>一个父类可以派生多个子类<br><img src="http://wangzixuan.work/4604" alt=""><br><img src="http://wangzixuan.work/4606" alt=""></li>
 </ul>
 </li>
 </ul>
 ]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+        <tag>继承性</tag>
+      </tags>
   </entry>
   <entry>
     <title>11.Java基础知识-面向对象编程（上）</title>
@@ -2073,57 +2080,471 @@
   <entry>
     <title>13.Java基础知识-面向对象编程（中）-方法重写</title>
     <url>/2020/07/31/13-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%EF%BC%88%E4%B8%AD%EF%BC%89-%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h2 id="方法重写-override-overwrite"><a href="#方法重写-override-overwrite" class="headerlink" title="方法重写(override/overwrite)"></a>方法重写(override/overwrite)</h2><h4 id="1-定义"><a href="#1-定义" class="headerlink" title="1. 定义"></a>1. 定义</h4><p>在子类中可以根据需要对从父类继承的方法进行重写（重置、覆盖）。在执行程序时，子类的方法将覆盖父类的方法。</p>
+<h4 id="2-要求"><a href="#2-要求" class="headerlink" title="2. 要求"></a>2. 要求</h4><ul>
+<li>子类重写的方法必须和父类被重写的方法具有相同的方法名称、参数列表</li>
+<li>子类重写的方法的返回值类型不能大于父类被重写的方法的返回值类型</li>
+<li>子类重写的方法使用的访问权限不能小于父类被重写的方法的访问权限<ul>
+<li>子类不能重写父类中声明为private权限的方法</li>
+</ul>
+</li>
+<li>子类方法抛出的异常不能大于父类被重写方法的异常<h4 id="3-注意"><a href="#3-注意" class="headerlink" title="3. 注意"></a>3. 注意</h4>子类与父类中同名同参数的方法必须同时声明为非static的(即为重写)，或者同时声明为static的（不是重写）。因为static方法是属于类的，子类无法覆盖父类的方法。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+        <tag>方法重写</tag>
+      </tags>
   </entry>
   <entry>
     <title>14.Java基础知识-四种访问权限修饰符</title>
     <url>/2020/07/31/14-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E5%9B%9B%E7%A7%8D%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90%E4%BF%AE%E9%A5%B0%E7%AC%A6/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h2 id="权限修饰符"><a href="#权限修饰符" class="headerlink" title="权限修饰符"></a>权限修饰符</h2><h4 id="1-修饰成员变量"><a href="#1-修饰成员变量" class="headerlink" title="1. 修饰成员变量"></a>1. 修饰成员变量</h4><p>Java权限修饰符public、protected、 (缺省)、 private置于 类的成员定义前，用来限定对象对该类成员的访问权限。<br><img src="http://wangzixuan.work/4656" alt="">   </p>
+<h4 id="2-修饰类"><a href="#2-修饰类" class="headerlink" title="2. 修饰类"></a>2. 修饰类</h4><p>对于class的权限修饰只可以用public和default(缺省)。</p>
+<ul>
+<li>public类可以在任意地方被访问。</li>
+<li>default类只可以被同一个包内部的类访问。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+        <tag>权限修饰符</tag>
+      </tags>
   </entry>
   <entry>
     <title>15.Java基础知识-面向对象编程（中）-super</title>
     <url>/2020/07/31/15-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%EF%BC%88%E4%B8%AD%EF%BC%89-super/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h2 id="super"><a href="#super" class="headerlink" title="super"></a>super</h2><p>在Java类中使用super来调用父类中的指定操作</p>
+<h4 id="1-super调用父类结构"><a href="#1-super调用父类结构" class="headerlink" title="1. super调用父类结构"></a>1. super调用父类结构</h4><ul>
+<li>super可以访问父类的属性</li>
+<li>super可以访问父类的方法</li>
+<li>super可以在子类构造器中调用父类构造器<h4 id="2-注意"><a href="#2-注意" class="headerlink" title="2. 注意"></a>2. 注意</h4></li>
+<li>子父类中出现同名的成员时，super代表调用的时父类的成员</li>
+<li>super的追溯不仅限于直接父类</li>
+<li>super代表父类的内存空间的标识，this代表当前类对象的引用<br><img src="http://wangzixuan.work/4727" alt=""><h4 id="3-调用父类构造器"><a href="#3-调用父类构造器" class="headerlink" title="3. 调用父类构造器"></a>3. 调用父类构造器</h4></li>
+<li>子类中所有的构造器默认都会访问父类中的空参构造器</li>
+<li>当父类中没有空参构造器时，子类的构造器必须通过this（参数列表）或者super（参数列表）调用父类或者父类中相应的构造器。this与super只能二选一，且只能放在构造器的首行</li>
+<li>如果子类构造器中既未显式的调用父类或本类的构造器，且父类中没有空参构造器，则编译出错</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+        <tag>super</tag>
+      </tags>
   </entry>
   <entry>
     <title>16.Java基础知识-面向对象编程（中）-子类对象实例化过程</title>
     <url>/2020/07/31/16-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%EF%BC%88%E4%B8%AD%EF%BC%89-%E5%AD%90%E7%B1%BB%E5%AF%B9%E8%B1%A1%E5%AE%9E%E4%BE%8B%E5%8C%96%E8%BF%87%E7%A8%8B/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h2 id="子类对象实例化过程"><a href="#子类对象实例化过程" class="headerlink" title="子类对象实例化过程"></a>子类对象实例化过程</h2><p>子类对象实例化时，会在堆内开辟的新空间里加载自己的属性以及所有父类（直接父类、间接父类）的所有属性。</p>
+<h4 id="1-子类对象实例化的流程"><a href="#1-子类对象实例化的流程" class="headerlink" title="1. 子类对象实例化的流程"></a>1. 子类对象实例化的流程</h4><p><img src="http://wangzixuan.work/4747" alt=""></p>
+<h4 id="2-加载所有父类属性"><a href="#2-加载所有父类属性" class="headerlink" title="2. 加载所有父类属性"></a>2. 加载所有父类属性</h4><p>通过this(…)或super()或super(…)直接或者间接的调用父类构造器在堆内开辟的新空间里加载及所有父类（直接父类、间接父类）的所有属性<br><img src="http://wangzixuan.work/4751" alt=""></p>
+<h4 id="3-所有属性都在子类对象实例化时在对堆内开辟的新空间中"><a href="#3-所有属性都在子类对象实例化时在对堆内开辟的新空间中" class="headerlink" title="3. 所有属性都在子类对象实例化时在对堆内开辟的新空间中"></a>3. 所有属性都在子类对象实例化时在对堆内开辟的新空间中</h4><p><img src="http://wangzixuan.work/4749" alt=""></p>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+        <tag>子类对象实例化</tag>
+      </tags>
   </entry>
   <entry>
     <title>17.Java基础知识-面向对象编程（中）-多态性</title>
     <url>/2020/07/31/17-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%EF%BC%88%E4%B8%AD%EF%BC%89-%E5%A4%9A%E6%80%81%E6%80%A7/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h2 id="多态性"><a href="#多态性" class="headerlink" title="多态性"></a>多态性</h2><h4 id="1-什么是多态性"><a href="#1-什么是多态性" class="headerlink" title="1. 什么是多态性"></a>1. 什么是多态性</h4><p>对象的多态性：父类对象指向子类引用（或子类的对象赋给父类的引用）（可以直接应用在抽象类和接口上）</p>
+<h4 id="2-多态的使用："><a href="#2-多态的使用：" class="headerlink" title="2. 多态的使用："></a>2. 多态的使用：</h4><ul>
+<li>父类对象指向子类引用</li>
+<li>多态作用<ul>
+<li>提高了代码的通用性，常称作接口重用</li>
+</ul>
+</li>
+<li>使用前提：① 类的继承关系② 方法的重写</li>
+<li>对象的多态性<ul>
+<li>只适用于方法（编译，看左边；运行，看右边。）</li>
+<li>不适用于属性（编译和运行都看左边）</li>
+</ul>
+</li>
+<li>成员方法：<ul>
+<li>编译时：要查看引用变量所声明的类中是否有所调用的方法。</li>
+<li>运行时：调用实际new的对象所属的类中的重写方法。</li>
+</ul>
+</li>
+<li>成员变量：<ul>
+<li>不具备多态性，只看引用变量所声明的类。</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-虚拟方法调用-Virtual-Method-Invocation"><a href="#3-虚拟方法调用-Virtual-Method-Invocation" class="headerlink" title="3. 虚拟方法调用(Virtual Method Invocation)"></a>3. 虚拟方法调用(Virtual Method Invocation)</h4><p>有了对象的多态性以后，我们在编译期，只能调用父类中声明的方法，但在运行期，我们实际执行的是子类重写父类的方法。</p>
+<p>总结：编译，看左边；运行，看右边。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;正常的方法调用</span><br><span class="line">Person e &#x3D; new Person();</span><br><span class="line">e.getInfo();</span><br><span class="line">Student e &#x3D; new Student();</span><br><span class="line">e.getInfo();</span><br><span class="line">&#x2F;&#x2F;虚拟方法调用( 多态情况下)</span><br><span class="line">Person e &#x3D; new Student();</span><br><span class="line">e.getInfo(); &#x2F;&#x2F; 调用Student 类的getInfo() 方法</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>虚拟方法调用( 多态情况下)<br>子类中定义了与父类同名同参数的方法，在多态情况下，将此时父类的方法称为虚拟方法，父类根据赋给它的不同子类对象，动态调用属于子类的该方法。这样的方法调用在编译期是无法确定的。</li>
+<li>编译时类型和运行时类型<br>编译时e 为Person类型，而方法的调用是在运行时确定的，所以调用的是Student类的getInfo() 方法。——动态绑定<h4 id="4-Java引用变量的两个类型"><a href="#4-Java引用变量的两个类型" class="headerlink" title="4. Java引用变量的两个类型"></a>4. Java引用变量的两个类型</h4>编译时类型和运行时类型。编译时类型由声明该变量时使用的类型决定，运行时类型由实际赋给该变量的对象决定。简称：编译时，看左边；运行时，看右边。</li>
+<li>若编译时类型和运行时类型不一致，就出现了对象的多态性 (Polymorphism)</li>
+<li>多态情况下<ul>
+<li>“看左边”：看的是父类的引用（父类中不具备子类特有的方法）</li>
+<li>“看右边”：看的是子类的对象（实际运行的是子类重写父类的方法）<h4 id="5-对象的多态"><a href="#5-对象的多态" class="headerlink" title="5. 对象的多态"></a>5. 对象的多态</h4>在Java中,子类的对象可以替代父类的对象使用</li>
+</ul>
+</li>
+<li>一个变量只能有一种确定的数据类型</li>
+<li>一个引用类型变量可能指向(引用)多种不同类型的对象</li>
+<li>示例</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Person p &#x3D; new Student();</span><br><span class="line">Object o &#x3D; new Person();&#x2F;&#x2F;Object类型的变量o，指向Person类型的对象</span><br><span class="line">o &#x3D; new Student(); &#x2F;&#x2F;Object类型的变量o，指向Student类型的对象</span><br></pre></td></tr></table></figure>
+<ul>
+<li>这里子类可看做是特殊的父类，所以父类类型的引用可以指向子类的对象：向型上转型(upcasting)。<h4 id="6-多态不适用于属性"><a href="#6-多态不适用于属性" class="headerlink" title="6. 多态不适用于属性"></a>6. 多态不适用于属性</h4>一个引用类型变量如果声明为父类的类型，但实际引用的是子类对象，那么该变量就不能再访问子类中添加的属性和方法</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Student m &#x3D; new Student();</span><br><span class="line">m.school &#x3D; “pku”;  &#x2F;&#x2F; 合法,Student 类有school 成员变量</span><br><span class="line">Person e &#x3D; new Student();</span><br><span class="line">e.school &#x3D; “pku”; &#x2F;&#x2F; 非法,Person 类没有school</span><br></pre></td></tr></table></figure>
+<p>属性是在编译时确定的，编译时e为Person类型，没有school 成员变量，因而编译错误。</p>
+<h4 id="7-面试题"><a href="#7-面试题" class="headerlink" title="7. 面试题"></a>7. 面试题</h4><ul>
+<li>谈谈你对多态的理解？<ol>
+<li>实现代码的通用性</li>
+<li>object类中定义的public boolean equals(Object obj){}</li>
+<li>JDBC:使用java程序操作(获取数据库连接、CRUD)数据 库(MySQL、Oracle、DB2、SQL Server)</li>
+<li>抽象类、接口的使用肯定体现了多态性。(抽象类、接口不能实例化)</li>
+</ol>
+</li>
+<li>多态时编译时行为还是运行时行为？<ul>
+<li>运行时行为</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+        <tag>多态性</tag>
+      </tags>
   </entry>
   <entry>
     <title>18.Java基础知识-面向对象编程（中）-instanceof</title>
     <url>/2020/07/31/18-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%EF%BC%88%E4%B8%AD%EF%BC%89-instanceof/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h2 id="instanceof-操作符"><a href="#instanceof-操作符" class="headerlink" title="instanceof  操作符"></a>instanceof  操作符</h2><h4 id="1-使用"><a href="#1-使用" class="headerlink" title="1. 使用"></a>1. 使用</h4><p>x instanceof A </p>
+<ul>
+<li>检验x是否为类A的对象</li>
+<li>返回值为boolean</li>
+<li>判断对象x是否属于类A的子类，如果是，返回true；如果不是，返回false。<h4 id="2-要求"><a href="#2-要求" class="headerlink" title="2. 要求"></a>2. 要求</h4></li>
+<li>x所属的类与类A必须是子类和父类的关系，否则编译错误。</li>
+<li>使用情境：为了避免在向下转型时出现ClassCastException的异常，我们在向下转型之前，先进行instanceof的判断，一旦返回true，就进行向下转型。如果返回false，不进行向下转型。<h4 id="3-示例"><a href="#3-示例" class="headerlink" title="3. 示例"></a>3. 示例</h4></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class Person extends Object &#123;…&#125;</span><br><span class="line">public class Student extends Person &#123;…&#125;</span><br><span class="line">public class Graduate extends Person &#123;…&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;-------------------------------------------------</span><br><span class="line"></span><br><span class="line">public void method1(Person e) &#123;</span><br><span class="line">&#x2F;&#x2F;在多态性的作用下，调用此方法时传入的参数可以时Person和子类Student和子类Graduate</span><br><span class="line">if (e instanceof Person)</span><br><span class="line">&#x2F;&#x2F;  处理Person 类及其子类对象</span><br><span class="line">if (e instanceof Student)</span><br><span class="line">&#x2F;&#x2F; 处理Student 类及其子类对象</span><br><span class="line">if (e instanceof Graduate)</span><br><span class="line">&#x2F;&#x2F; 处理Graduate 类及其子类对象</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+        <tag>instanceof</tag>
+      </tags>
   </entry>
   <entry>
     <title>19.Java基础知识-面向对象编程（中）-对象类型转换</title>
     <url>/2020/07/31/19-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%EF%BC%88%E4%B8%AD%EF%BC%89-%E5%AF%B9%E8%B1%A1%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h2 id="对象类型转换-Casting"><a href="#对象类型转换-Casting" class="headerlink" title="对象类型转换 (Casting )"></a>对象类型转换 (Casting )</h2><p><img src="http://wangzixuan.work/4916" alt=""></p>
+<h4 id="1-基本数据类型的Casting"><a href="#1-基本数据类型的Casting" class="headerlink" title="1. 基本数据类型的Casting"></a>1. 基本数据类型的Casting</h4><ul>
+<li>自动类型转换：小的数据类型可以自动转换成大的数据类型</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">long g &#x3D; 20;</span><br><span class="line">double d &#x3D; 12.0f;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>强制类型转换：可以把大的数据类型强制转换(casting)成小的数据类型</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">float f &#x3D; (float)12.0; </span><br><span class="line">int a &#x3D; (int)1200L；</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-对Java对象的强制类型转换称为造型"><a href="#2-对Java对象的强制类型转换称为造型" class="headerlink" title="2. 对Java对象的强制类型转换称为造型"></a>2. 对Java对象的强制类型转换称为造型</h4><ul>
+<li>向上转型<ul>
+<li>多态：从子类到父类的类型转换</li>
+<li>可以自动进行</li>
+</ul>
+</li>
+<li>向下转型<ul>
+<li>为什么向下转型？<ul>
+<li>有了对象的多态性以后，内存中实际上是加载了子类特有的属性和方法的，但是由于变量声明为父类类型，导致  编译时，只能调用父类中声明的属性和方法。子类特有的属性和方法不能调用。</li>
+</ul>
+</li>
+<li>从父类到子类的类型转换必须通过造型(强制类型转换) 实现<ul>
+<li>强制类型转换符（）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>无继承关系的引用类型间的转换是非法的</li>
+<li>在造型前可以使用instanceof操作符测试一个对象的类型<ul>
+<li>为了避免在向下转型时出现ClassCastException的异常，我们在向下转型之前，先进行instanceof的判断，一旦返回true，就进行向下转型。如果返回false，不进行向下转型。如果 a instanceof A返回true,则 a instanceof B也返回true.</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-转换举例"><a href="#3-转换举例" class="headerlink" title="3. 转换举例"></a>3. 转换举例</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class ConversionTest &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        double d &#x3D; 13.4;</span><br><span class="line">        long l &#x3D; (long) d;</span><br><span class="line">        System.out.println(l);</span><br><span class="line">        int in &#x3D; 5;</span><br><span class="line">        &#x2F;&#x2F; boolean b &#x3D; (boolean)in;</span><br><span class="line">        Object obj &#x3D; &quot;Hello&quot;;</span><br><span class="line">        String objStr &#x3D; (String) obj;</span><br><span class="line">        System.out.println(objStr);</span><br><span class="line">        Object objPri &#x3D; new Integer(5);</span><br><span class="line">        &#x2F;&#x2F; 所以下面代码运行时引发ClassCastException异常</span><br><span class="line">        String str &#x3D; (String) objPri;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class Test &#123;</span><br><span class="line">    &#x2F;&#x2F;向上转型，多态性，传进来的e可以时Person类型及其子类</span><br><span class="line">    public void method(Person e) &#123;</span><br><span class="line">        &#x2F;&#x2F; 设Person类中没有getschool() 方法</span><br><span class="line">        &#x2F;&#x2F; System.out.pritnln(e.getschool()); &#x2F;&#x2F;非法,编译时错误</span><br><span class="line">        if (e instanceof Student) &#123;</span><br><span class="line">            &#x2F;&#x2F;向下转型，强制转换</span><br><span class="line">            Student me &#x3D; (Student) e; &#x2F;&#x2F; 将e强制转换为Student类型</span><br><span class="line">            System.out.pritnln(me.getschool());</span><br><span class="line">        &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        public static void main(String[] args)&#123;</span><br><span class="line">        Test t &#x3D; new Test();</span><br><span class="line">        Student m &#x3D; new Student();</span><br><span class="line">        t.method(m);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+        <tag>对象类型转换</tag>
+      </tags>
   </entry>
   <entry>
     <title>21.Java基础知识-Object类-equals与==</title>
     <url>/2020/07/31/21-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-Object%E7%B1%BB-equals%E4%B8%8E/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h2 id="操作符与equals-方法"><a href="#操作符与equals-方法" class="headerlink" title="== 操作符与equals 方法"></a>== 操作符与equals 方法</h2><h4 id="1-操作符"><a href="#1-操作符" class="headerlink" title="1. == 操作符"></a>1. == 操作符</h4><ul>
+<li>如果比较的是基本数据类型变量：比较两个变量保存的数据是否相等。（不一定类型要相同）</li>
+<li>如果比较的是引用数据类型变量：比较两个对象的地址值是否相同.即两个引用是否指向同一个对象实体</li>
+<li>== 符号使用时，符号两边的数据类型必须兼容(可自动转换的基本数据类型除外)，否则编译出错</li>
+</ul>
+<h4 id="2-equals-方法"><a href="#2-equals-方法" class="headerlink" title="2. equals() 方法"></a>2. equals() 方法</h4><ul>
+<li><p>equals() ：所有类都继承了Object，了也就获得了equals() 方法 。 还可以重写 。</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;Object类中equals()的定义</span><br><span class="line">public boolean equals(Object obj) &#123;</span><br><span class="line">    return (this &#x3D;&#x3D; obj);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>特例 ：当用equals() 方法进行比较时 ，对类File 、String 、Date 及包装类（Wrapper Class）来说，比较的不是两个引用的地址是否相同，而是比较两个对象的”实体内容”是否相同</p>
+<ul>
+<li>原因：在这些类中重写了Object 类的equals() 方法</li>
+</ul>
+</li>
+<li><p>当自定义equals()时，可以重写。通常用于比较两个对象的“ 内容 ”是否都相等</p>
+</li>
+<li><p>重写equals() 方法的原则</p>
+<ul>
+<li>对称性：如果x.equals(y)返回是“true”，那么y.equals(x)也应该返回是“true”</li>
+<li>自反性：x.equals(x)必须返回是“true”</li>
+<li>传递性：如果x.equals(y)返回是“true”，而且y.equals(z)返回是“true”，那么z.equals(x)也应该返回是“true”</li>
+<li>一致性：如果x.equals(y)返回是“true”，只要x和y内容一直不变，不管你重复x.equals(y)多少次，返回都是“true”</li>
+<li>任何情况下，x.equals(null)，永远返回是“false”</li>
+<li>x.equals(和x不同类型的对象)永远返回是“false”</li>
+</ul>
+</li>
+<li><p>手动重写举例（全部代码见页面底部）</p>
+  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;重写的原则：比较两个对象的实体内容(即：name和age)是否相同</span><br><span class="line">&#x2F;&#x2F;手动实现equals()的重写</span><br><span class="line">@Override</span><br><span class="line">public boolean equals(Object obj) &#123;</span><br><span class="line">	</span><br><span class="line">	System.out.println(&quot;Customer equals()....&quot;);</span><br><span class="line">	if (this &#x3D;&#x3D; obj) &#123;</span><br><span class="line">        return true;</span><br><span class="line">    &#125;</span><br><span class="line">	</span><br><span class="line">	if(obj instanceof Customer)&#123;</span><br><span class="line">		Customer cust &#x3D; (Customer)obj;</span><br><span class="line">		&#x2F;&#x2F;比较两个对象的每个属性是否都相同</span><br><span class="line">		if(this.age &#x3D;&#x3D; cust.age &amp;&amp; this.name.equals(cust.name))&#123;</span><br><span class="line">			return true;</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			return false;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;或</span><br><span class="line">		return this.age &#x3D;&#x3D; cust.age &amp;&amp; this.name.equals(cust.name);</span><br><span class="line">	&#125;else&#123;</span><br><span class="line">		return false;</span><br><span class="line">		</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<h4 id="3-面试题：-和equals的区别"><a href="#3-面试题：-和equals的区别" class="headerlink" title="3. 面试题：== 和equals的区别"></a>3. 面试题：== 和equals的区别</h4><ul>
+<li>==  既可以比较基本类型也可以比较引用类型<ul>
+<li>对于基本类型就是比较值</li>
+<li>对于引用类型就是比较内存地址</li>
+</ul>
+</li>
+<li>equals 的话，它是属于java.lang.Object类里面的方法<ul>
+<li>如果该方法没有被重写过默认也是==</li>
+<li>我们可以到看到String等类的equals方法是被重写过的</li>
+<li>而且String 类在日常开发中了用的比较多，久而久之，形成了equals</li>
+</ul>
+</li>
+<li>具体要看自定义类里有没有重写Object的equals方法来判断</li>
+<li>通常情况下，重写equals方法，会比较类中的相应属性是否都相等</li>
+</ul>
+<h4 id="4-代码举例"><a href="#4-代码举例" class="headerlink" title="4 代码举例"></a>4 代码举例</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class Customer &#123;</span><br><span class="line">	</span><br><span class="line">	private String name;</span><br><span class="line">	private int age;</span><br><span class="line">	public String getName() &#123;</span><br><span class="line">		return name;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setName(String name) &#123;</span><br><span class="line">		this.name &#x3D; name;</span><br><span class="line">	&#125;</span><br><span class="line">	public int getAge() &#123;</span><br><span class="line">		return age;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setAge(int age) &#123;</span><br><span class="line">		this.age &#x3D; age;</span><br><span class="line">	&#125;</span><br><span class="line">	public Customer() &#123;</span><br><span class="line">		super();</span><br><span class="line">	&#125;</span><br><span class="line">	public Customer(String name, int age) &#123;</span><br><span class="line">		super();</span><br><span class="line">		this.name &#x3D; name;</span><br><span class="line">		this.age &#x3D; age;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	&#x2F;&#x2F;自动生成的equals()</span><br><span class="line">	@Override</span><br><span class="line">	public boolean equals(Object obj) &#123;</span><br><span class="line">		if (this &#x3D;&#x3D; obj)</span><br><span class="line">			return true;</span><br><span class="line">		if (obj &#x3D;&#x3D; null)</span><br><span class="line">			return false;</span><br><span class="line">		if (getClass() !&#x3D; obj.getClass())</span><br><span class="line">			return false;</span><br><span class="line">		Customer other &#x3D; (Customer) obj;</span><br><span class="line">		if (age !&#x3D; other.age)</span><br><span class="line">			return false;</span><br><span class="line">		if (name &#x3D;&#x3D; null) &#123;</span><br><span class="line">			if (other.name !&#x3D; null)</span><br><span class="line">				return false;</span><br><span class="line">		&#125; else if (!name.equals(other.name))</span><br><span class="line">			return false;</span><br><span class="line">		return true;</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;&#x2F;重写的原则：比较两个对象的实体内容(即：name和age)是否相同</span><br><span class="line">	&#x2F;&#x2F;手动实现equals()的重写</span><br><span class="line">	@Override</span><br><span class="line">	public boolean equals(Object obj) &#123;</span><br><span class="line">		</span><br><span class="line">		System.out.println(&quot;Customer equals()....&quot;);</span><br><span class="line">		if (this &#x3D;&#x3D; obj) &#123;</span><br><span class="line">            return true;</span><br><span class="line">        &#125;</span><br><span class="line">		</span><br><span class="line">		if(obj instanceof Customer)&#123;</span><br><span class="line">			Customer cust &#x3D; (Customer)obj;</span><br><span class="line">			&#x2F;&#x2F;比较两个对象的每个属性是否都相同</span><br><span class="line">			if(this.age &#x3D;&#x3D; cust.age &amp;&amp; this.name.equals(cust.name))&#123;</span><br><span class="line">				return true;</span><br><span class="line">			&#125;else&#123;</span><br><span class="line">				return false;</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">			&#x2F;&#x2F;或</span><br><span class="line">			return this.age &#x3D;&#x3D; cust.age &amp;&amp; this.name.equals(cust.name);</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			return false;</span><br><span class="line">			</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+        <tag>继承性</tag>
+      </tags>
   </entry>
   <entry>
     <title>20.Java基础知识-Object类</title>
     <url>/2020/07/31/20-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-Object%E7%B1%BB/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h2 id="Object-类的使用"><a href="#Object-类的使用" class="headerlink" title="Object  类的使用"></a>Object  类的使用</h2><h4 id="1-Object类是什么？"><a href="#1-Object类是什么？" class="headerlink" title="1. Object类是什么？"></a>1. Object类是什么？</h4><p>Object类是所有Java类的根父类</p>
+<h4 id="2-默认父类"><a href="#2-默认父类" class="headerlink" title="2. 默认父类"></a>2. 默认父类</h4><p>如果在类的声明中未使用extends关键字指明其父类，则默认父类为java.lang.Object类</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class Person &#123;</span><br><span class="line">...</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;等价于</span><br><span class="line">public class Person extends Object &#123;</span><br><span class="line">...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="3-作为参数"><a href="#3-作为参数" class="headerlink" title="3. 作为参数"></a>3. 作为参数</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">method(Object obj)&#123;…&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Object类型作为方法的参数，方法可以接收任何类作为其参数使用</p>
+<h4 id="4-Object-类中的主要结构"><a href="#4-Object-类中的主要结构" class="headerlink" title="4. Object 类中的主要结构"></a>4. Object 类中的主要结构</h4><ul>
+<li>属性：无</li>
+<li>构造器：Object类只声明了一个空参的构造器</li>
+<li>方法：equals() / toString() / getClass() /hashCode() / clone() / finalize()<br>wait() 、 notify()、notifyAll()<br><img src="http://wangzixuan.work/4949" alt=""></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+        <tag>Object类</tag>
+      </tags>
   </entry>
   <entry>
     <title>22.Java基础知识-Object类-toString()</title>
     <url>/2020/07/31/22-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-Object%E7%B1%BB-toString/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h2 id="Object类中toString"><a href="#Object类中toString" class="headerlink" title="Object类中toString()"></a>Object类中toString()</h2><h4 id="1-toString"><a href="#1-toString" class="headerlink" title="1. toString()"></a>1. toString()</h4><p>当我们输出一个对象的引用时，实际上就是调用当前对象的toString()</p>
+<h4 id="2-Object类中toString-的定义"><a href="#2-Object类中toString-的定义" class="headerlink" title="2. Object类中toString()的定义"></a>2. Object类中toString()的定义</h4><ul>
+<li>toString() 方法在Object 类中定义 </li>
+<li>返回值是String 类型</li>
+<li>返回类名和它的引用地址。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public String toString() &#123;</span><br><span class="line">    return getClass().getName() + &quot;@&quot; + Integer.toHexString(hashCode());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="3-toString-的调用"><a href="#3-toString-的调用" class="headerlink" title="3. toString()的调用"></a>3. toString()的调用</h4><ul>
+<li><p>在行 进行String 与其它类型数据的连接操作时 ，用 自动调用toString()</p>
+</li>
+<li><p>如果对象为空，直接打印对象（由于print方法里边判断了对象是否为空）输出null，toString()则报空指针异常</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Date now&#x3D;new Date();</span><br><span class="line">System.out.println(“now&#x3D;”+now);  相当于</span><br><span class="line">System.out.println(“now&#x3D;”+now.toString());</span><br><span class="line"></span><br><span class="line">String s &#x3D; &quot;abc&quot;;</span><br><span class="line">s &#x3D; null;</span><br><span class="line">System.out.println(s);&#x2F;&#x2F;null</span><br><span class="line">System.out.println(&quot;*********&quot;);</span><br><span class="line">System.out.println(s.toString());&#x2F;&#x2F;出现NullPointerException</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>基本类型数据转换为String类型时，调用了对应包装类的toString()方法</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int a&#x3D;10;</span><br><span class="line">System.out.println(“a&#x3D;”+a);</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="4-包装类toString-的重写"><a href="#4-包装类toString-的重写" class="headerlink" title="4. 包装类toString()的重写"></a>4. 包装类toString()的重写</h4><p>像String、Date、File、包装类等都重写了Object类中的toString()方法。使得在调用对象的toString()时，返回”实体内容”信息</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">s1&#x3D;“hello”;</span><br><span class="line">System.out.println(s1);</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-自定义类toString-的重写"><a href="#5-自定义类toString-的重写" class="headerlink" title="5. 自定义类toString()的重写"></a>5. 自定义类toString()的重写</h4><p>自定义类也可以重写toString()方法，当调用此方法时，返回对象的”实体内容”</p>
+<h4 id="6-面试题"><a href="#6-面试题" class="headerlink" title="6. 面试题"></a>6. 面试题</h4><ul>
+<li>问题：为什么打印char型数组的结果不是类型+地址，而是字符串</li>
+<li>原因：char对应的包装类Character重写了toString()方法</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">char[] arr &#x3D; new char[] &#123; &#39;a&#39;, &#39;b&#39;, &#39;c&#39; &#125;;</span><br><span class="line">System.out.println(arr);&#x2F;&#x2F;abc</span><br><span class="line"></span><br><span class="line">int[] arr1 &#x3D; new int[] &#123; 1, 2, 3 &#125;;</span><br><span class="line">System.out.println(arr1);&#x2F;&#x2F;[I@3d4eac69</span><br><span class="line"></span><br><span class="line">double[] arr2 &#x3D; new double[] &#123; 1.1, 2.2, 3.3 &#125;;</span><br><span class="line">System.out.println(arr2);&#x2F;&#x2F;[D@42a57993</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+        <tag>toString（）</tag>
+      </tags>
   </entry>
   <entry>
     <title>23.Java基础知识-包装类</title>
     <url>/2020/07/31/23-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E5%8C%85%E8%A3%85%E7%B1%BB/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h2 id="包装类"><a href="#包装类" class="headerlink" title="包装类"></a>包装类</h2><h4 id="1-包装类是什么？"><a href="#1-包装类是什么？" class="headerlink" title="1. 包装类是什么？"></a>1. 包装类是什么？</h4><ul>
+<li><p>针对八种基本数据类型定义相应的引用类型—包装类（封装类）</p>
+<h4 id="2-包装类的作用"><a href="#2-包装类的作用" class="headerlink" title="2. 包装类的作用"></a>2. 包装类的作用</h4></li>
+<li><p>java提供了8种基本数据类型对应的包装类</p>
+</li>
+<li><p>使得基本数据类型的变量具有类的特征</p>
+</li>
+<li><p>有了类的特点，就可以调用类中的方法</p>
+</li>
+<li><p>Java才是真正的面向对象</p>
+<h4 id="3-基本数据类型与包装类的对应"><a href="#3-基本数据类型与包装类的对应" class="headerlink" title="3. 基本数据类型与包装类的对应"></a>3. 基本数据类型与包装类的对应</h4><p><img src="http://wangzixuan.work/5105" alt=""></p>
+<h4 id="4-包装类的使用"><a href="#4-包装类的使用" class="headerlink" title="4. 包装类的使用"></a>4. 包装类的使用</h4></li>
+<li><p>装箱：基本数据类型包装成包装类的实例</p>
+<ul>
+<li><p>通过包装类的构造器实现：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int i &#x3D; 500; </span><br><span class="line">Integer t &#x3D; new Integer(i);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>还可以通过字符串参数构造包装类对象：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;字符串只保函数值</span><br><span class="line">Float f &#x3D; new Float(“4.56”);</span><br><span class="line">Long l &#x3D; new Long(“asdf”); &#x2F;&#x2F;报异常NumberFormatException</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>拆箱：获得包装类对象中包装的基本类型变量</p>
+<ul>
+<li><p>调用包装类的.xxxValue()方法：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">boolean b &#x3D; bObj.booleanValue();</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>JDK1.5之后，支持自动装箱，自动拆箱。但类型必须匹配。</p>
+  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;自动装箱：基本数据类型 ---&gt;包装类</span><br><span class="line">int num2 &#x3D; 10;</span><br><span class="line">Integer in1 &#x3D; num2;&#x2F;&#x2F;自动装箱</span><br><span class="line"></span><br><span class="line">boolean b1 &#x3D; true;</span><br><span class="line">Boolean b2 &#x3D; b1;&#x2F;&#x2F;自动装箱</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;自动拆箱：包装类---&gt;基本数据类型</span><br><span class="line">System.out.println(in1.toString());</span><br><span class="line"></span><br><span class="line">int num3 &#x3D; in1;&#x2F;&#x2F;自动拆箱</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="5-基本类型、包装类与String-类间的转换"><a href="#5-基本类型、包装类与String-类间的转换" class="headerlink" title="5. 基本类型、包装类与String 类间的转换"></a>5. 基本类型、包装类与String 类间的转换</h4><ul>
+<li><p>字符串转换成基本数据类型</p>
+<ul>
+<li><p>通过包装类的构造器实现：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int i &#x3D; new Integer(“12”);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过包装类的parseXxx(String s)静态方法：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Float f &#x3D; Float.parseFloat(“12.1”);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>基本数据类型转换成字符串</p>
+<ul>
+<li><p>调用字符串重载的valueOf()方法：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">String fstr &#x3D; String.valueOf(2.34f);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>更直接的方式：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">String intStr &#x3D; 5 + “”</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="http://wangzixuan.work/5148" alt=""></p>
+<ul>
+<li>简易版<ul>
+<li>基本数据类型&lt;—&gt;包装类:JDK5.0新特性:自动装箱与自动拆箱</li>
+<li>基本数据类型、包装类—&gt;String:调用String重载的value0f(Xxx xxx)</li>
+<li>String—&gt;基本数据类型、包装类:调用包装类的parseXxx(String s)</li>
+<li>注意:转换时，可能会报NumberFormatException</li>
+</ul>
+</li>
+</ul>
+<h4 id="6-包装类用法举例"><a href="#6-包装类用法举例" class="headerlink" title="6. 包装类用法举例"></a>6. 包装类用法举例</h4><ul>
+<li><p>装箱：包装类使得一个基本数据类型的数据变成了类。</p>
+<ul>
+<li><p>有了类的特点，可以调用类中的方法。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int i &#x3D; 500;</span><br><span class="line">Integer t &#x3D; new Integer(i);</span><br><span class="line"></span><br><span class="line">String s &#x3D; t.toString(); &#x2F;&#x2F; s &#x3D; “500“,t是类，有toString方法</span><br><span class="line">String s1 &#x3D; Integer.toString(314); &#x2F;&#x2F; s1&#x3D; “314“ 将数字转换成字符串。</span><br><span class="line"></span><br><span class="line">String s2&#x3D;“4.56”;</span><br><span class="line">double ds&#x3D;Double.parseDouble(s2); &#x2F;&#x2F;将字符串转换成数字</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>拆箱：将数字包装类中内容变为基本数据类型。</p>
+  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int j &#x3D; t.intValue(); &#x2F;&#x2F; j &#x3D; 500，intValue取出包装类中的数据</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>包装类在实际开发中用的最多的在于字符串变为基本数据类型。</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">String str1 &#x3D; &quot;30&quot; ;</span><br><span class="line">String str2 &#x3D; &quot;30.3&quot; ;</span><br><span class="line">int x &#x3D; Integer.parseInt(str1) ; &#x2F;&#x2F; 将字符串变为int型</span><br><span class="line">float f &#x3D; Float.parseFloat(str2) ; &#x2F;&#x2F; 将字符串变为int型</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-面试题"><a href="#6-面试题" class="headerlink" title="6. 面试题"></a>6. 面试题</h4><ul>
+<li><p>如下两个题目输出结果相同吗？各是什么</p>
+</li>
+<li><p>原因：三目运算符：两边的类型相同，所以int类型的1被自动提升为double类型的1.0</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Object o1 &#x3D; true ? new Integer(1) : new Double(2.0);</span><br><span class="line">System.out.println(o1);&#x2F;&#x2F;1.0</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Object o2;</span><br><span class="line">if (true)</span><br><span class="line">o2 &#x3D; new Integer(1);</span><br><span class="line">else</span><br><span class="line">o2 &#x3D; new Double(2.0);</span><br><span class="line">System.out.println(o2);&#x2F;&#x2F;1</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>写出下面三个输出的值</p>
+</li>
+<li><p>①原因：</p>
+<ul>
+<li>i和j都是new出来的，所以比较的是地址值</li>
+</ul>
+</li>
+<li><p>②原因：</p>
+<ul>
+<li>Integer内部定义了IntegerCache结构</li>
+<li>IntegerCache中定义了Integer[],保存了从-128-127范围的整数</li>
+<li>如果我们使用自动装箱的方式，给Integer赋值的范围在-128-127范围内时，可以直接使用数组中的元素，不用再去new了</li>
+<li>目的：提高效率</li>
+<li>没有超出范围、没有new，所以比较的时数值</li>
+</ul>
+</li>
+<li><p>③原因：</p>
+<ul>
+<li>128超出了IntegerCache中定义的Integer[]保存的从-128-127的范围</li>
+<li>超出范围x与y都是new出来的，所以比较的地址值</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public void method1() &#123;</span><br><span class="line">    Integer i &#x3D; new Integer(1);</span><br><span class="line">    Integer j &#x3D; new Integer(1);</span><br><span class="line">    System.out.println(i &#x3D;&#x3D; j);&#x2F;&#x2F;false</span><br><span class="line">    </span><br><span class="line">    Integer m &#x3D; 1;</span><br><span class="line">    Integer n &#x3D; 1;</span><br><span class="line">    System.out.println(m &#x3D;&#x3D; n);&#x2F;&#x2F;true</span><br><span class="line">    </span><br><span class="line">    Integer x &#x3D; 128;&#x2F;&#x2F;相当于new了一个Integer对象</span><br><span class="line">    Integer y &#x3D; 128;&#x2F;&#x2F;相当于new了一个Integer对象</span><br><span class="line">    System.out.println(x &#x3D;&#x3D; y);&#x2F;&#x2F;false</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+        <tag>包装类</tag>
+      </tags>
   </entry>
   <entry>
     <title>GitHub&amp;Git基础</title>
@@ -2275,6 +2696,568 @@
       </categories>
       <tags>
         <tag>SSM文件上传</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>25.Java基础知识-static关键字</title>
+    <url>/2020/11/05/25-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-static%E5%85%B3%E9%94%AE%E5%AD%97/</url>
+    <content><![CDATA[<h2 id="关键字-static"><a href="#关键字-static" class="headerlink" title="关键字:static"></a>关键字:static</h2><h4 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public Chinese&#123;</span><br><span class="line">    private String name;</span><br><span class="line">    private int age;</span><br><span class="line">    private static String country &#x3D; &quot;中国&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>我们编写一个中国人的类，所有的中国人都有国家名称这个属性，每一个中国人都共享这个国家名称，不必在每一个中国人的实例对象中都单独分配一个用于代表国家名称的变量空间。所以我们称这个变量为静态变量（类变量），用static修饰。</p>
+<h4 id="类属性、类方法的设计思想"><a href="#类属性、类方法的设计思想" class="headerlink" title="类属性、类方法的设计思想"></a>类属性、类方法的设计思想</h4><ul>
+<li>类属性作为该类各个对象之间共享的变量。在设计类时，分析哪些属性<strong>不因对象的不同而改变</strong>，将这些属性设置为类属性。</li>
+<li>如果方法与调用者无关，则这样的方法通常被声明为类方法，<strong>不需要创建对象就可以通过“类.方法”调用类方法</strong></li>
+</ul>
+<h4 id="使用范围"><a href="#使用范围" class="headerlink" title="使用范围"></a>使用范围</h4><ul>
+<li>在Java中，可以用static修饰属性、方法、代码块、内部类<h4 id="4-被static修饰的成员具备的特点"><a href="#4-被static修饰的成员具备的特点" class="headerlink" title="4.被static修饰的成员具备的特点"></a>4.被static修饰的成员具备的特点</h4></li>
+<li>随着类的加载而加载</li>
+<li>优先于对象存在</li>
+<li>修饰类的成员，被所有的对象所共享</li>
+<li>访问权限允许时，可不创建对象，直接被类调用</li>
+</ul>
+<h4 id="类变量"><a href="#类变量" class="headerlink" title="类变量"></a>类变量</h4><ul>
+<li>类变量（类属性）由该类的所有实例共享<br><img src="http://wangzixuan.work/5407" alt=""></li>
+<li>应用举例</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Person &#123;</span><br><span class="line">    private int id;</span><br><span class="line">    public static int total &#x3D; 0;</span><br><span class="line">    public Person() &#123;</span><br><span class="line">        total++;</span><br><span class="line">        id &#x3D; total;</span><br><span class="line">    &#125;</span><br><span class="line">    public static void main(String args[])&#123;</span><br><span class="line">        Person Tom&#x3D;new Person();</span><br><span class="line">        Tom.id&#x3D;0;</span><br><span class="line">        total&#x3D;100; &#x2F;&#x2F;  不用创建对象就可以访问静态成员</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">public class StaticDemo &#123;</span><br><span class="line">    public static void main(String args[]) &#123;</span><br><span class="line">        Person.total &#x3D; 100; &#x2F;&#x2F;  不用创建对象就可以访问静态成员</span><br><span class="line">        &#x2F;&#x2F; 访问方式：类名. 类属性 ， 类名. 类方法</span><br><span class="line">        System.out.println(Person.total);</span><br><span class="line">        Person c &#x3D; new Person();</span><br><span class="line">        System.out.println(c.total); &#x2F;&#x2F; 输出101</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="类方法"><a href="#类方法" class="headerlink" title="类方法"></a>类方法</h4><ul>
+<li>没有对象的实例时，可以用 类名. 方法名()的形式访问由static修饰的类方法。</li>
+<li>在static 方法内部只能访问类的static 修饰的属性或方法， 不能访问类的非static的结构</li>
+<li>因为不需要实例就可以访问static 方法，因此static 方法内部不能有this ，也不能有 super。</li>
+<li>static修饰的方法不能被重写 </li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+        <tag>static关键字</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>26.Java基础知识-单例模式</title>
+    <url>/2020/11/05/26-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</url>
+    <content><![CDATA[<h2 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h2><p>所谓类的单例设计模式，就是采取一定的方法保证在整个的软件系统中，对<br>某个类 只能存在一个对象实例，并且该类只提供一个取得其对象实例的方法。<br>如果我们要让类在一个虚拟机中只能产生一个对象，我们首先必须将类的构<br>造器的访问权限设置为private，这样，就不能用new操作符在类的外部产生<br>类的对象了，但在类内部仍可以产生该类的对象。因为在类的外部开始还无<br>法得到类的对象，只能调用该类的某个静态方法以返回类内部创建的对象，<br>静态方法只能访问类中的静态成员变量，所以，指向类内部产生的该类对象<br>的变量也必须定义成静态的。</p>
+<h4 id="单例模式的优点"><a href="#单例模式的优点" class="headerlink" title="单例模式的优点"></a>单例模式的优点</h4><p>由于单例模式只生成一个实例，减少了系统性能开销，当一个对象的<br>产生需要比较多的资源时，如读取配置、产生其他依赖对象时，则可<br>以通过在应用启动时直接产生一个单例对象，然后永久驻留内存的方<br>式来解决。</p>
+<h4 id="饿汉式"><a href="#饿汉式" class="headerlink" title="饿汉式"></a>饿汉式</h4><h6 id="好处：线程安全。"><a href="#好处：线程安全。" class="headerlink" title="好处：线程安全。"></a>好处：线程安全。</h6><h6 id="坏处：对象加载时间过长。"><a href="#坏处：对象加载时间过长。" class="headerlink" title="坏处：对象加载时间过长。"></a>坏处：对象加载时间过长。</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Singleton &#123;</span><br><span class="line">    &#x2F;&#x2F; 1.私有化构造器</span><br><span class="line">    private Singleton() &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F; 2.内部提供一个当前类的实例</span><br><span class="line">    &#x2F;&#x2F; 4.此实例也必须静态化</span><br><span class="line">    private static Singleton single &#x3D; new Singleton();</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F; 3.提供公共的静态的方法，返回当前类的对象</span><br><span class="line">    public static Singleton getInstance() &#123;</span><br><span class="line">        return single;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="懒汉式"><a href="#懒汉式" class="headerlink" title="懒汉式"></a>懒汉式</h4><h6 id="好处：延迟对象的创建。"><a href="#好处：延迟对象的创建。" class="headerlink" title="好处：延迟对象的创建。"></a>好处：延迟对象的创建。</h6><h6 id="坏处：线程不安全。"><a href="#坏处：线程不安全。" class="headerlink" title="坏处：线程不安全。"></a>坏处：线程不安全。</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Singleton &#123;</span><br><span class="line">    &#x2F;&#x2F; 1.私有化构造器</span><br><span class="line">    private Singleton() &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F; 2.内部提供一个当前类的实例</span><br><span class="line">    &#x2F;&#x2F; 4.此实例也必须静态化</span><br><span class="line">    private static Singleton single;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F; 3.提供公共的静态的方法，返回当前类的对象</span><br><span class="line">    public static Singleton getInstance() &#123;</span><br><span class="line">        if(single &#x3D;&#x3D; null) &#123;</span><br><span class="line">            single &#x3D; new Singleton();</span><br><span class="line">        &#125;</span><br><span class="line">        return single;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="线程安全懒汉式"><a href="#线程安全懒汉式" class="headerlink" title="线程安全懒汉式"></a>线程安全懒汉式</h4><h6 id="好处：延迟对象的创建。-1"><a href="#好处：延迟对象的创建。-1" class="headerlink" title="好处：延迟对象的创建。"></a>好处：延迟对象的创建。</h6><h6 id="坏处：线程安全。"><a href="#坏处：线程安全。" class="headerlink" title="坏处：线程安全。"></a>坏处：线程安全。</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Singleton &#123;</span><br><span class="line">    &#x2F;&#x2F; 1.私有化构造器</span><br><span class="line">    private Singleton() &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F; 2.内部提供一个当前类的实例</span><br><span class="line">    &#x2F;&#x2F; 4.此实例也必须静态化</span><br><span class="line">    private static Singleton single;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F; 3.提供公共的静态的方法，返回当前类的对象</span><br><span class="line">    public static Singleton getInstance() &#123;</span><br><span class="line">        if(single &#x3D;&#x3D; null) &#123;</span><br><span class="line">            synchronized(Singleton.class)&#123;</span><br><span class="line">                if(single &#x3D;&#x3D; null)&#123;</span><br><span class="line">                    single &#x3D; new Singleton();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return single;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p><a href="https://www.runoob.com/design-pattern/singleton-pattern.html" target="_blank" rel="noopener">更详细的单例模式</a></p>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+        <tag>单例模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>27.Java基础知识-代码块</title>
+    <url>/2020/11/05/27-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E4%BB%A3%E7%A0%81%E5%9D%97/</url>
+    <content><![CDATA[<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><h4 id="代码块的作用"><a href="#代码块的作用" class="headerlink" title="代码块的作用"></a>代码块的作用</h4><p>用来初始化类、对象</p>
+<h4 id="代码块的分类"><a href="#代码块的分类" class="headerlink" title="代码块的分类"></a>代码块的分类</h4><h5 id="静态代码块static"><a href="#静态代码块static" class="headerlink" title="静态代码块static"></a>静态代码块static</h5><p>一个类中代码块若有修饰符，则只能被static修饰</p>
+<ul>
+<li>作用：初始化类的信息</li>
+<li>内部可以有输出语句</li>
+<li>不可以对非静态的属性初始化，即不可以调用非静态的属性和方法</li>
+<li>若有多个静态代码块，按照从上到下的顺序执行</li>
+<li>静态代码块的执行要先于非静态代码块</li>
+<li>随着类的加载而执行，而且只执行一次</li>
+</ul>
+<h5 id="非静态代码块"><a href="#非静态代码块" class="headerlink" title="非静态代码块"></a>非静态代码块</h5><p>没有使用static修饰</p>
+<ul>
+<li>作用：在创建对象时，初始化对象的属性</li>
+<li>内部可以有输出语句</li>
+<li>非静态代码块内可以调用静态的属性、静态的方法，或非静态的属性、非静态的方法</li>
+<li>若有多个非静态代码块，按照声明的顺序执行</li>
+<li>随着对象的创建而执行，没创建一个对象，就执行一次非静态代码块</li>
+</ul>
+<h4 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h4><h4 id="程序中成员变量赋值的执行顺序"><a href="#程序中成员变量赋值的执行顺序" class="headerlink" title="程序中成员变量赋值的执行顺序"></a>程序中成员变量赋值的执行顺序</h4><ol>
+<li>声明成员变量的默认初始化</li>
+<li>显式初始化、多个初始化块依次被执行（同级别下按先后顺序执行）</li>
+<li>构造器再对成员进行初始化操作</li>
+<li>通过”对象.属性”或”对象.方法”的方式，可多次给属性赋值</li>
+</ol>
+<h6 id="由父及子，静态先行"><a href="#由父及子，静态先行" class="headerlink" title="由父及子，静态先行"></a>由父及子，静态先行</h6>]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+        <tag>代码块</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>28.Java基础知识-final</title>
+    <url>/2020/11/05/28-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-final/</url>
+    <content><![CDATA[<h2 id="final"><a href="#final" class="headerlink" title="final"></a>final</h2><p>Java中final可以用来修饰的结构：类、方法、变量,表示“最终的”。</p>
+<h4 id="final修饰类"><a href="#final修饰类" class="headerlink" title="final修饰类"></a>final修饰类</h4><h6 id="此类不能被继承"><a href="#此类不能被继承" class="headerlink" title="此类不能被继承"></a>此类不能被继承</h6><p>比如：String类、System类、StringBuffer类</p>
+<h4 id="final修饰方法"><a href="#final修饰方法" class="headerlink" title="final修饰方法"></a>final修饰方法</h4><h6 id="此方法不可以被重写"><a href="#此方法不可以被重写" class="headerlink" title="此方法不可以被重写"></a>此方法不可以被重写</h6><p>比如：Object类中getClass();</p>
+<h4 id="final修饰变量"><a href="#final修饰变量" class="headerlink" title="final修饰变量"></a>final修饰变量</h4><h6 id="此时的”变量”就称为是一个常量"><a href="#此时的”变量”就称为是一个常量" class="headerlink" title="此时的”变量”就称为是一个常量"></a>此时的”变量”就称为是一个常量</h6><h5 id="final修饰属性"><a href="#final修饰属性" class="headerlink" title="final修饰属性"></a>final修饰属性</h5><p>可以赋值的位置：</p>
+<ul>
+<li>显式初始化</li>
+<li>代码块中初始化</li>
+<li>构造器中初始化</li>
+</ul>
+<h5 id="final修饰局部变量"><a href="#final修饰局部变量" class="headerlink" title="final修饰局部变量"></a>final修饰局部变量</h5><ul>
+<li>final修饰形参时，表明此形参是一个常量。当我们调用此方法时，给常量形参赋一个实参。一旦赋值以后，就只能在方法体内使用此形参，但不能进行重新赋值。</li>
+<li>final修饰方法内部变量，可以在声明时赋值，若声明时没有赋值，以后只能赋值一次。</li>
+</ul>
+<h4 id="static-final-用来修饰属性：全局常量"><a href="#static-final-用来修饰属性：全局常量" class="headerlink" title="static final 用来修饰属性：全局常量"></a>static final 用来修饰属性：全局常量</h4><h4 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class Something &#123;</span><br><span class="line">    public int addOne(final int x) &#123;</span><br><span class="line">        return ++x;</span><br><span class="line">        &#x2F;&#x2F; return x + 1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>return ++x; 报错，<br>++x即为x = x + 1; ，形参x声明为final的只能赋值一次。</p>
+<p>return x + 1;不会报错</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class Something &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Other o &#x3D; new Other();</span><br><span class="line">        new Something().addOne(o);</span><br><span class="line">    &#125;</span><br><span class="line">    public void addOne(final Other o) &#123;</span><br><span class="line">        &#x2F;&#x2F; o &#x3D; new Other();</span><br><span class="line">        o.i++;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class Other &#123;</span><br><span class="line">    public int i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>方法addOne的other类型的形参被声明为final，other类型为引用类型，故传来的为地址值，所以如果new Other() 赋给o就会报错，但是修改o的属性不会改变o的值，不报错。</p>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+        <tag>final</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>29.Java基础知识-抽象类与抽象方法</title>
+    <url>/2020/11/05/29-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E4%B8%8E%E6%8A%BD%E8%B1%A1%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="抽象类与抽象方法"><a href="#抽象类与抽象方法" class="headerlink" title="抽象类与抽象方法"></a>抽象类与抽象方法</h2><p>随着继承层次中一个个新子类的定义，类变得越来越具体，而父类则更一般，更通用。类的设计应该保证父类和子类能够共享特征。有时将一个父类设计得非常抽象，以至于它没有具体的实例，这样的类叫做抽象类。</p>
+<h6 id="abstract：抽象的"><a href="#abstract：抽象的" class="headerlink" title="abstract：抽象的"></a>abstract：抽象的</h6><h6 id="abstract可以修饰的结构：类、方法"><a href="#abstract可以修饰的结构：类、方法" class="headerlink" title="abstract可以修饰的结构：类、方法"></a>abstract可以修饰的结构：类、方法</h6><h6 id="abstract不可以修饰变量、代码块、构造器、私有方法、静态方法、final的方法、final的类"><a href="#abstract不可以修饰变量、代码块、构造器、私有方法、静态方法、final的方法、final的类" class="headerlink" title="abstract不可以修饰变量、代码块、构造器、私有方法、静态方法、final的方法、final的类"></a>abstract不可以修饰变量、代码块、构造器、私有方法、静态方法、final的方法、final的类</h6><h4 id="abstract修饰类：抽象类"><a href="#abstract修饰类：抽象类" class="headerlink" title="abstract修饰类：抽象类"></a>abstract修饰类：抽象类</h4><ul>
+<li>此类不能实例化</li>
+<li>抽象类中一定有构造器，便于子类实例化时调用（设计：子类对象实例化的全过程）</li>
+<li>开发中，都会提供抽象类的子类，让子类对象实例化，完成相关的操作</li>
+</ul>
+<h4 id="abstract修饰方法：抽象方法"><a href="#abstract修饰方法：抽象方法" class="headerlink" title="abstract修饰方法：抽象方法"></a>abstract修饰方法：抽象方法</h4><ul>
+<li>抽象方法只有方法的声明，没有方法体</li>
+<li>包含抽象方法的类，一定是一个抽象类。反之，抽象类中可以没有抽象方法。</li>
+<li>若子类重写了父类所有的抽象方法后，子类方可实例化</li>
+<li>若子类没有重写父类中的所有抽象方法，则子类也是一个抽象类，需要使用abstract修饰</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+        <tag>抽象类与抽象方法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>30.Java基础知识-接口（interface）</title>
+    <url>/2020/11/05/30-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E6%8E%A5%E5%8F%A3%EF%BC%88interface%EF%BC%89/</url>
+    <content><![CDATA[<h2 id="接口（interface）"><a href="#接口（interface）" class="headerlink" title="接口（interface）"></a>接口（interface）</h2><p>接口(interface)是抽象方法和常量值定义的集合。</p>
+<h4 id="接口的使用"><a href="#接口的使用" class="headerlink" title="接口的使用"></a>接口的使用</h4><ul>
+<li>使用interface来定义</li>
+<li>Java中接口和类是并列的两个结构</li>
+<li>接口通过让类去实现(implements)的方式来使用<ul>
+<li>如果实现类覆盖了接口中的所有抽象方法，则此实现类就可以实例化</li>
+<li>如果实现类没有覆盖接口中所有的抽象方法，则此实现类仍为一个抽象类</li>
+</ul>
+</li>
+<li>一个类可以实现多个接口，接口也可以继承其它接口。</li>
+<li>与继承关系类似，接口与实现类之间存在多态性</li>
+</ul>
+<h4 id="定义接口中的成员"><a href="#定义接口中的成员" class="headerlink" title="定义接口中的成员"></a>定义接口中的成员</h4><ul>
+<li>JDK7及以前，只能定义全局常量和抽象方法<ul>
+<li>全局常量：public static final的，但是可以省略</li>
+<li>抽象方法：public abstract的</li>
+</ul>
+</li>
+<li>JDK8：还可以定义静态方法、默认方法<ul>
+<li>静态方法：使用static关键字修饰。可以通过接口直接调用静态方法，并执行其方法体。我们经常在相互一起使用的类中使用静态方法。你可以在标准库中<br>找到像Collection/Collections或者Path/Paths这样成对的接口和类。</li>
+<li>默认方法：默认方法使用default关键字修饰。可以通过实现类对象来调用。我们在已有的接口中提供新方法的同时，还保持了与旧版本代码的兼容性。比如：java 8 API中对Collection、List、Comparator等接口提供了丰富的默认方法。</li>
+</ul>
+</li>
+</ul>
+<h4 id="接口的特点"><a href="#接口的特点" class="headerlink" title="接口的特点"></a>接口的特点</h4><ul>
+<li>接口中没有构造器<ul>
+<li>意味着接口不可以实例化</li>
+</ul>
+</li>
+<li>接口采用多继承机制<ul>
+<li>弥补了Java单继承性的局限性</li>
+<li>格式：class AA extends BB implements CC,DD,EE</li>
+</ul>
+</li>
+</ul>
+<h4 id="接口与抽象类的对比"><a href="#接口与抽象类的对比" class="headerlink" title="接口与抽象类的对比"></a>接口与抽象类的对比</h4><p><img src="http://wangzixuan.work/6730" alt="image"></p>
+<h4 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">interface A &#123;</span><br><span class="line">    &#x2F;&#x2F;接口中只能定义全局常量</span><br><span class="line">    &#x2F;&#x2F;public static final被省略</span><br><span class="line">	int x &#x3D; 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class B &#123;</span><br><span class="line">	int x &#x3D; 1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class C extends B implements A &#123;</span><br><span class="line">	public void pX() &#123;</span><br><span class="line">		&#x2F;&#x2F;编译不通过。因为x是不明确的</span><br><span class="line">		&#x2F;&#x2F; System.out.println(x);</span><br><span class="line">		System.out.println(super.x);&#x2F;&#x2F;1</span><br><span class="line">		System.out.println(A.x);&#x2F;&#x2F;0</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		new C().pX();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>pX()方法中不能出现System.out.println(x);</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">interface Playable &#123;</span><br><span class="line">	void play();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">interface Bounceable &#123;</span><br><span class="line">	void play();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">interface Rollable extends Playable,Bounceable </span><br><span class="line">&#123;</span><br><span class="line">    &#x2F;&#x2F;接口中只能定义全局常量</span><br><span class="line">    &#x2F;&#x2F;public static final被省略</span><br><span class="line">	Ball ball &#x3D; new Ball(&quot;PingPang&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Ball implements Rollable &#123;</span><br><span class="line">	</span><br><span class="line">	private String name;</span><br><span class="line">		public String getName() &#123;</span><br><span class="line">		return name;</span><br><span class="line">	&#125;</span><br><span class="line">		</span><br><span class="line">	public Ball(String name) &#123;</span><br><span class="line">		this.name &#x3D; name;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public void play() &#123;</span><br><span class="line">	    &#x2F;&#x2F;ball为public static final 的不能再赋值</span><br><span class="line">	    &#x2F;&#x2F;此处报错</span><br><span class="line">		ball &#x3D; new Ball(&quot;Football&quot;);</span><br><span class="line">		System.out.println(ball.getName());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>ball为public static final 的不能再赋值</p>
+<h4 id="接口中的默认方法"><a href="#接口中的默认方法" class="headerlink" title="接口中的默认方法"></a>接口中的默认方法</h4><ul>
+<li>若一个接口中定义了一个默认方法，而另外一个接口中也定义了一个同名同参数的方法（不管此方法是否是默认方法），在实现类同时实现了这两个接口时，会出现： <strong>接口冲突</strong>。<ul>
+<li>解决办法：实现类必须覆盖接口中同名同参数的方法，来解决冲突。</li>
+</ul>
+</li>
+<li>若一个接口中定义了一个默认方法，而父类中也定义了一个同名同参数的非抽象方法，则不会出现冲突问题。因为此时遵守：<strong>类优先原则</strong>。接口中具有相同名称和参数的默认方法会被忽略。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+        <tag>接口（interface）</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>31.Java基础知识-内部类</title>
+    <url>/2020/11/05/31-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E5%86%85%E9%83%A8%E7%B1%BB/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+        <tag>内部类</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>33.Java基础知识-多线程</title>
+    <url>/2020/11/05/33-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E5%A4%9A%E7%BA%BF%E7%A8%8B/</url>
+    <content><![CDATA[<h2 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h2><p>当我以为我的代码很安全时，等等。。。<br><img src="http://wangzixuan.work/6888" alt="image"></p>
+<h6 id="程序"><a href="#程序" class="headerlink" title="程序"></a>程序</h6><p>是为完成特定任务、用某种语言编写的一组指令的集合。即指一段静态的代码，静态对象。</p>
+<h6 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h6><p>是程序的一次执行过程，或是正在运行的一个程序。是一个动态的过程：有它自身的产生、存在和消亡的过程。———生命周期</p>
+<ul>
+<li>程序是静态的，进程是动态的</li>
+<li>进程作为资源分配的单位，系统在运行时会为每个进程分配不同的内存区域</li>
+</ul>
+<h6 id="线程-1"><a href="#线程-1" class="headerlink" title="线程"></a>线程</h6><p>进程可进一步细化为线程，是一个程序内部的一条执行路径。</p>
+<ul>
+<li>若一个进程同一时间并行执行多个线程，就是支持多线程的</li>
+<li>线程作为调度和执行的单位，每个线程拥有独立的运行栈和程序计数器(pc)，线程切换的开销小</li>
+<li>一个进程中的多个线程共享相同的内存单元/内存地址空间→它们从同一堆中分配对象，可以访问相同的变量和对象。这就使得线程间通信更简便、高效。但多个线程操作共享的系统资源可能就会带来安全的隐患。</li>
+</ul>
+<h6 id="并行：多个CPU同时执行多个任务。比如：多个人同时做不同的事。"><a href="#并行：多个CPU同时执行多个任务。比如：多个人同时做不同的事。" class="headerlink" title="并行：多个CPU同时执行多个任务。比如：多个人同时做不同的事。"></a>并行：多个CPU同时执行多个任务。比如：多个人同时做不同的事。</h6><h6 id="并发：一个CPU-采用时间片-同时执行多个任务。比如：秒杀、多个人做同一件事。"><a href="#并发：一个CPU-采用时间片-同时执行多个任务。比如：秒杀、多个人做同一件事。" class="headerlink" title="并发：一个CPU(采用时间片)同时执行多个任务。比如：秒杀、多个人做同一件事。"></a>并发：一个CPU(采用时间片)同时执行多个任务。比如：秒杀、多个人做同一件事。</h6><h4 id="Thread类"><a href="#Thread类" class="headerlink" title="Thread类"></a>Thread类</h4><h5 id="构造器"><a href="#构造器" class="headerlink" title="构造器"></a>构造器</h5><h6 id="Thread"><a href="#Thread" class="headerlink" title="Thread()"></a>Thread()</h6><p>创建新的Thread对象</p>
+<h6 id="Thread-String-threadname"><a href="#Thread-String-threadname" class="headerlink" title="Thread(String threadname)"></a>Thread(String threadname)</h6><p>创建线程并指定线程实例名</p>
+<h6 id="Thread-Runnable-target"><a href="#Thread-Runnable-target" class="headerlink" title="Thread(Runnable target)"></a>Thread(Runnable target)</h6><p>指定创建线程的目标对象，它实现了Runnable接中的run方法</p>
+<h6 id="Thread-Runnable-target-String-name"><a href="#Thread-Runnable-target-String-name" class="headerlink" title="Thread(Runnable target, String name)"></a>Thread(Runnable target, String name)</h6><p>创建新的Thread对象</p>
+<h5 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h5><h6 id="1-start-启动当前线程；调用当前线程的run"><a href="#1-start-启动当前线程；调用当前线程的run" class="headerlink" title="1. start():启动当前线程；调用当前线程的run()"></a>1. start():启动当前线程；调用当前线程的run()</h6><h6 id="2-run-通常需要重写Thread类中的此方法，将创建的线程要执行的操作声明在此方法中"><a href="#2-run-通常需要重写Thread类中的此方法，将创建的线程要执行的操作声明在此方法中" class="headerlink" title="2. run(): 通常需要重写Thread类中的此方法，将创建的线程要执行的操作声明在此方法中"></a>2. run(): 通常需要重写Thread类中的此方法，将创建的线程要执行的操作声明在此方法中</h6><h6 id="3-currentThread-静态方法，返回执行当前代码的线程"><a href="#3-currentThread-静态方法，返回执行当前代码的线程" class="headerlink" title="3. currentThread():静态方法，返回执行当前代码的线程"></a>3. currentThread():静态方法，返回执行当前代码的线程</h6><h6 id="4-getName-获取当前线程的名字"><a href="#4-getName-获取当前线程的名字" class="headerlink" title="4. getName():获取当前线程的名字"></a>4. getName():获取当前线程的名字</h6><h6 id="5-setName-设置当前线程的名字"><a href="#5-setName-设置当前线程的名字" class="headerlink" title="5. setName():设置当前线程的名字"></a>5. setName():设置当前线程的名字</h6><h6 id="6-yield-释放当前cpu的执行权"><a href="#6-yield-释放当前cpu的执行权" class="headerlink" title="6. yield():释放当前cpu的执行权"></a>6. yield():释放当前cpu的执行权</h6><h6 id="7-join-在线程a中调用线程b的join-此时线程a就进入阻塞状态，直到线程b完全执行完以后，线程a才结束阻塞状态。"><a href="#7-join-在线程a中调用线程b的join-此时线程a就进入阻塞状态，直到线程b完全执行完以后，线程a才结束阻塞状态。" class="headerlink" title="7. join():在线程a中调用线程b的join(),此时线程a就进入阻塞状态，直到线程b完全执行完以后，线程a才结束阻塞状态。"></a>7. join():在线程a中调用线程b的join(),此时线程a就进入阻塞状态，直到线程b完全执行完以后，线程a才结束阻塞状态。</h6><h6 id="8-stop-已过时。当执行此方法时，强制结束当前线程。"><a href="#8-stop-已过时。当执行此方法时，强制结束当前线程。" class="headerlink" title="8. stop():已过时。当执行此方法时，强制结束当前线程。"></a>8. stop():已过时。当执行此方法时，强制结束当前线程。</h6><h6 id="9-sleep-long-millitime-让当前线程“睡眠”指定的millitime毫秒。在指定的millitime毫秒时间内，当前线程是阻塞状态。"><a href="#9-sleep-long-millitime-让当前线程“睡眠”指定的millitime毫秒。在指定的millitime毫秒时间内，当前线程是阻塞状态。" class="headerlink" title="9. sleep(long millitime):让当前线程“睡眠”指定的millitime毫秒。在指定的millitime毫秒时间内，当前线程是阻塞状态。"></a>9. sleep(long millitime):让当前线程“睡眠”指定的millitime毫秒。在指定的millitime毫秒时间内，当前线程是阻塞状态。</h6><h6 id="10-isAlive-判断当前线程是否存活"><a href="#10-isAlive-判断当前线程是否存活" class="headerlink" title="10. isAlive():判断当前线程是否存活"></a>10. isAlive():判断当前线程是否存活</h6><h5 id="Java-的线程的调度"><a href="#Java-的线程的调度" class="headerlink" title="Java 的线程的调度"></a>Java 的线程的调度</h5><ul>
+<li>同优先级线程组成先进先出队列（先到先服务），使用时间片策略</li>
+<li>对高优先级，使用优先调度的抢占式策略</li>
+</ul>
+<h5 id="线程的优先级"><a href="#线程的优先级" class="headerlink" title="线程的优先级"></a>线程的优先级</h5><h6 id="线程的优先等级"><a href="#线程的优先等级" class="headerlink" title="线程的优先等级"></a>线程的优先等级</h6><ul>
+<li><p>MAX_PRIORITY：10</p>
+</li>
+<li><p>MIN _PRIORITY：1</p>
+</li>
+<li><p>NORM_PRIORITY：5  –&gt; 默认优先级</p>
+</li>
+</ul>
+<h6 id="如何获取和设置当前线程的优先级："><a href="#如何获取和设置当前线程的优先级：" class="headerlink" title="如何获取和设置当前线程的优先级："></a>如何获取和设置当前线程的优先级：</h6><ul>
+<li><p>getPriority():获取线程的优先级</p>
+</li>
+<li><p>setPriority(int p):设置线程的优先级</p>
+</li>
+</ul>
+<h6 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h6><ul>
+<li>线程创建时继承父线程的优先级</li>
+<li>低优先级只是获得调度的概率低，并非一定是在高优先级线程之后才被调用</li>
+</ul>
+<h4 id="线程的创建方式"><a href="#线程的创建方式" class="headerlink" title="线程的创建方式"></a>线程的创建方式</h4><ul>
+<li>JDK1.5之前创建新执行线程的种方法：<ul>
+<li>继承Thread类的方式</li>
+<li>实现Runnable接口的方式</li>
+</ul>
+</li>
+<li>JDK1.5之后创建新执行线程的两种方法：<ul>
+<li>实现Callable</li>
+<li>使用线程池</li>
+</ul>
+</li>
+</ul>
+<h4 id="线程的创建和使用"><a href="#线程的创建和使用" class="headerlink" title="线程的创建和使用"></a>线程的创建和使用</h4><ol>
+<li>直接调用run()方法，那么就只是普通方法，没有启动多线程模式。</li>
+<li>run()方法由JVM调用，什么时候调用，执行的过程控制都有操作系统的CPU调度决定。</li>
+<li>想要启动多线程，必须调用start()方法。</li>
+<li>一个线程对象只能调用一次start()方法启动，如果重复调用了，则将抛出以下的异常“IllegalThreadStateException”。</li>
+</ol>
+<h5 id="方式一：-继承Thread类"><a href="#方式一：-继承Thread类" class="headerlink" title="方式一： 继承Thread类"></a>方式一： 继承Thread类</h5><ul>
+<li>定义子类继承Thread类。</li>
+<li>子类中重写Thread类中的run方法。</li>
+<li>创建Thread子类对象，即创建了线程对象。</li>
+<li>调用线程对象start方法：启动线程，调用run方法。</li>
+</ul>
+<h5 id="方式二：实现Runnable"><a href="#方式二：实现Runnable" class="headerlink" title="方式二：实现Runnable"></a>方式二：实现Runnable</h5><ul>
+<li>定义子类，实现Runnable接口。</li>
+<li>子类中重写Runnable接口中的run方法。</li>
+<li>通过Thread类含参构造器创建线程对象。</li>
+<li>将Runnable接口的子类对象作为实际参数传递给Thread类的构造器中。</li>
+<li>调用Thread类的start方法：开启线程，调用Runnable子类接口的run方法。</li>
+</ul>
+<h5 id="继承与实现的联系"><a href="#继承与实现的联系" class="headerlink" title="继承与实现的联系"></a>继承与实现的联系</h5><p>Thread类实现了Runnable接口</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class Thread implements Runnable</span><br></pre></td></tr></table></figure>
+
+
+<h5 id="继承与实现的对比"><a href="#继承与实现的对比" class="headerlink" title="继承与实现的对比"></a>继承与实现的对比</h5><h6 id="相同："><a href="#相同：" class="headerlink" title="相同："></a>相同：</h6><p>两种方式都需要重写run(),将线程要执行的逻辑声明在run()中。</p>
+<h6 id="开发中："><a href="#开发中：" class="headerlink" title="开发中："></a>开发中：</h6><p>优先选择–&gt;实现Runnable接口的方式</p>
+<h6 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h6><ol>
+<li>实现的方式没有类的单继承性的局限性</li>
+<li>实现的方式更适合来处理多个线程有共享数据的情况。</li>
+</ol>
+<h4 id="线程的生命周期"><a href="#线程的生命周期" class="headerlink" title="线程的生命周期"></a>线程的生命周期</h4><p><img src="http://wangzixuan.work/6986" alt="image"></p>
+<ul>
+<li>新建： 当一个Thread类或其子类的对象被声明并创建时，新生的线程对象处于新建<br>状态</li>
+<li>就绪：处于新建状态的线程被start()后，将进入线程队列等待CPU时间片，此时它已<br>具备了运行的条件，只是没分配到CPU资源</li>
+<li>运行：当就绪的线程被调度并获得CPU资源时,便进入运行状态， run()方法定义了线<br>程的操作和功能</li>
+<li>阻塞：在某种特殊情况下，被人为挂起或执行输入输出操作时，让出 CPU 并临时中<br>止自己的执行，进入阻塞状态</li>
+<li>死亡：线程完成了它的全部工作或线程被提前强制性地中止或出现异常导致结束</li>
+</ul>
+<h4 id="线程的同步"><a href="#线程的同步" class="headerlink" title="线程的同步"></a>线程的同步</h4><h5 id="同步锁机制"><a href="#同步锁机制" class="headerlink" title="同步锁机制"></a>同步锁机制</h5><p>对于多用户访问的共同资源，在第一个用户访问时，锁定资源，使其他用户在资源解锁之前无法访问，在第一个用户使用完，解锁资源后，其下一个用户可以锁定应使用该资源。</p>
+<h5 id="锁的使用顺序"><a href="#锁的使用顺序" class="headerlink" title="锁的使用顺序"></a>锁的使用顺序</h5><p>Lock &gt; 同步代码块（已经进入了方法体，分配了相应资源） &gt; 同步方法<br>（在方法体之外）</p>
+<h5 id="如何确定需要加同步锁的代码？"><a href="#如何确定需要加同步锁的代码？" class="headerlink" title="如何确定需要加同步锁的代码？"></a>如何确定需要加同步锁的代码？</h5><ol>
+<li>如何找问题 ， 即代码是否存在线程安全 ？ （ 非常重要 ）</li>
+</ol>
+<ul>
+<li>明确哪些代码是多线程运行的代码</li>
+<li>明确多个线程是否有共享数据</li>
+<li>明确多线程运行代码中是否有多条语句操作共享数据</li>
+</ul>
+<ol start="2">
+<li>如何解决呢 ？ （ 非常重要 ）</li>
+</ol>
+<ul>
+<li>对多条操作共享数据的语句，只能让一个线程都执行完，在执行过程中，其<br>他线程不可以参与执行。</li>
+<li>即所有操作共享数据的这些语句都要放在同步范围中</li>
+</ul>
+<ol start="3">
+<li>切记 </li>
+</ol>
+<ul>
+<li>范围太小：没锁住所有有安全问题的代码</li>
+<li>范围太大：没发挥多线程的功能。</li>
+</ul>
+<h5 id="Synchronized"><a href="#Synchronized" class="headerlink" title="Synchronized"></a>Synchronized</h5><h6 id="synchronize的锁"><a href="#synchronize的锁" class="headerlink" title="synchronize的锁"></a>synchronize的锁</h6><ul>
+<li>任意对象都可以作为同步锁。所有对象都自动含有单一的锁（监视器）。</li>
+<li>必须确保使用同一个资源的<strong>多个线程共用一把锁</strong>，这个非常重要，否则就无法保证共享资源的安全</li>
+<li>一个线程类中的所有静态方法共用同一把锁（类名.class），所有非静态方法共用同一把锁（this），同步代码块（指定需谨慎）</li>
+</ul>
+<h6 id="同步代码块"><a href="#同步代码块" class="headerlink" title="同步代码块"></a>同步代码块</h6><p>同步代码块：自己指定，很多时候也是指定为this或类名.class</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">synchronized ( 对象)&#123;</span><br><span class="line">    &#x2F;&#x2F;  需要被同步的代码；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h6 id="同步方法"><a href="#同步方法" class="headerlink" title="同步方法"></a>同步方法</h6><p>同步方法的锁：静态方法（类名.class）、非静态方法（this）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public synchronized void show (String name)&#123;</span><br><span class="line">    ….</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="释放锁的操作"><a href="#释放锁的操作" class="headerlink" title="释放锁的操作"></a>释放锁的操作</h5><ul>
+<li>当前线程的同步方法、同步代码块执行结束。</li>
+<li>当前线程在同步代码块、同步方法中遇到break、return终止了该代码块、该方法的继续执行。</li>
+<li>当前线程在同步代码块、同步方法中出现了未处理的Error或Exception，导致异常结束。</li>
+<li>当前线程在同步代码块、同步方法中执行了线程对象的wait()方法，当前线程暂停，并释放锁。</li>
+</ul>
+<h5 id="不会释放锁的操作"><a href="#不会释放锁的操作" class="headerlink" title="不会释放锁的操作"></a>不会释放锁的操作</h5><ul>
+<li>线程执行同步代码块或同步方法时，程序调用Thread.sleep()、Thread.yield()方法暂停当前线程的执行</li>
+<li>线程执行同步代码块时，其他线程调用了该线程的suspend()方法将该线程挂起，该线程不会释放锁（同步监视器）。</li>
+<li>应尽量避免使用suspend()和resume()来控制线程</li>
+</ul>
+<h5 id="Lock-锁"><a href="#Lock-锁" class="headerlink" title="Lock(锁)"></a>Lock(锁)</h5><ul>
+<li>从JDK 5.0开始，Java提供了更强大的线程同步机制——通过显式定义同步锁对象来实现同步。同步锁使用Lock对象充当。</li>
+<li>java.util.concurrent.locks.Lock接口是控制多个线程对共享资源进行访问的工具。锁提供了对共享资源的独占访问，每次只能有一个线程对Lock对象加锁，线程开始访问共享资源之前应先获得Lock对象。</li>
+<li>ReentrantLock类实现了Lock，它拥有与synchronized 相同的并发性和内存语义，在实现线程安全的控制中，比较常用的是ReentrantLock，可以显式加锁、释放锁。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class A&#123;</span><br><span class="line">    private final ReentrantLock lock &#x3D; new ReenTrantLock();</span><br><span class="line">    public void m()&#123;</span><br><span class="line">        lock.lock();</span><br><span class="line">        try&#123;</span><br><span class="line">            &#x2F;&#x2F; 保证线程安全的代码;</span><br><span class="line">        &#125;</span><br><span class="line">        finally&#123;</span><br><span class="line">            lock.unlock();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="synchronized-与-Lock-的对比"><a href="#synchronized-与-Lock-的对比" class="headerlink" title="synchronized 与 Lock 的对比"></a>synchronized 与 Lock 的对比</h5><table>
+<thead>
+<tr>
+<th>synchronized</th>
+<th>lock</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>隐式锁</td>
+<td>显示锁</td>
+</tr>
+<tr>
+<td>出了作用域自动释放</td>
+<td>手动开锁和关锁</td>
+</tr>
+<tr>
+<td>代码块锁和方法锁</td>
+<td>代码块锁</td>
+</tr>
+<tr>
+<td>无</td>
+<td>JVM将花费较少的时间来调度线程，性能更好</td>
+</tr>
+</tbody></table>
+<h4 id="线程的通信"><a href="#线程的通信" class="headerlink" title="线程的通信"></a>线程的通信</h4><ul>
+<li>wait() 与 与 notify() 和 和 notifyAll()<ul>
+<li>wait()：令当前线程挂起并放弃CPU、同步资源并等待，使别的线程可访问并修改共享资源，而当前线程排队等候其他线程调用notify()或notifyAll()方法唤醒，唤醒后等待重新获得对监视器的所有权后才能继续执行。</li>
+<li>notify()：唤醒正在排队等待同步资源的线程中优先级最高者结束等待</li>
+<li>notifyAll()：唤醒正在排队等待资源的所有线程结束等待.</li>
+</ul>
+</li>
+<li>这三个方法只有在synchronized方法或synchronized代码块中才能使用，否则会报java.lang.IllegalMonitorStateException异常。</li>
+<li>因为这三个方法必须有锁对象调用，而任意对象都可以作为synchronized的同步锁，因此这三个方法只能在Object类中声明。</li>
+</ul>
+<h5 id="wait-方法"><a href="#wait-方法" class="headerlink" title="wait()  方法"></a>wait()  方法</h5><ul>
+<li>在当前线程中调用方法： 对象名.wait()</li>
+<li>使当前线程进入等待（某对象）状态，直到另一线程对该对象发出 notify(或notifyAll) 为止。</li>
+<li>调用方法的必要条件：当前线程必须具有对该对象的监控权（加锁）</li>
+<li>调用此方法后，当前线程将释放对象监控权，然后进入等待</li>
+<li>在当前线程被notify后，要重新获得监控权，然后从断点处继续代码的执行。</li>
+</ul>
+<h5 id="notify-notifyAll"><a href="#notify-notifyAll" class="headerlink" title="notify()/notifyAll()"></a>notify()/notifyAll()</h5><ul>
+<li>在当前线程中调用方法： 对象名.notify()</li>
+<li>功能：唤醒等待该对象监控权的一个/所有线程。</li>
+<li>调用方法的必要条件：当前线程必须具有对该对象的监控权（加锁）</li>
+</ul>
+<h4 id="经典例题：生产者-消费者问题"><a href="#经典例题：生产者-消费者问题" class="headerlink" title="经典例题：生产者/ 消费者问题"></a>经典例题：生产者/ 消费者问题</h4><ul>
+<li>生产者(Productor)将产品交给店员(Clerk)，而消费者(Customer)从店员处<br>取走产品，店员一次只能持有固定数量的产品(比如:20），如果生产者试图<br>生产更多的产品，店员会叫生产者停一下，如果店中有空位放产品了再通<br>知生产者继续生产；如果店中没有产品了，店员会告诉消费者等一下，如<br>果店中有产品了再通知消费者来取走产品。</li>
+<li>这里可能出现两个问题：</li>
+<li>生产者比消费者快时，消费者会漏掉一些数据没有取到。</li>
+<li>消费者比生产者快时，消费者会取相同的数据。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class PC &#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        Clerk clerk &#x3D; new Clerk();</span><br><span class="line"></span><br><span class="line">        Productor productor &#x3D; new Productor(clerk);</span><br><span class="line">        Customer c &#x3D; new Customer(clerk);</span><br><span class="line">        Thread customer &#x3D; new Thread(c);</span><br><span class="line"></span><br><span class="line">        productor.start();</span><br><span class="line">        customer.start();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Clerk&#123;</span><br><span class="line"></span><br><span class="line">    public int number;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;生产</span><br><span class="line">    public synchronized void Productr()&#123;</span><br><span class="line">        if(number &gt;&#x3D; 20)&#123;</span><br><span class="line">            try&#123;</span><br><span class="line">                wait();</span><br><span class="line">            &#125;catch (Exception e)&#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;else &#123;</span><br><span class="line">            number++;</span><br><span class="line">            System.out.println(&quot;生产的第&quot; + number + &quot;个产品&quot;);</span><br><span class="line">            notify();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;消费</span><br><span class="line">    public synchronized void Customer()&#123;</span><br><span class="line">        if (number &lt;&#x3D; 0)&#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                wait();</span><br><span class="line">            &#125;catch (Exception e)&#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;else &#123;</span><br><span class="line">            System.out.println(&quot;消费的第&quot; + number + &quot;个产品&quot;);</span><br><span class="line">            number--;</span><br><span class="line">            notify();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Productor extends Thread&#123;</span><br><span class="line">    private Clerk clerk;</span><br><span class="line">    @Override</span><br><span class="line">    public void run() &#123;</span><br><span class="line">        while(true)&#123;</span><br><span class="line">            clerk.Productr();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    public Productor(Clerk clerk)&#123;</span><br><span class="line">        this.clerk &#x3D; clerk;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Customer implements Runnable&#123;</span><br><span class="line">    private  Clerk clerk;</span><br><span class="line">    @Override</span><br><span class="line">    public void run() &#123;</span><br><span class="line">        while(true)&#123;</span><br><span class="line">            clerk.Customer();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    public Customer(Clerk clerk)&#123;</span><br><span class="line">        this.clerk &#x3D; clerk;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+        <tag>多线程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>24.Java基础知识-JUnit单元测试</title>
+    <url>/2020/11/05/24-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-JUnit%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<h2 id="Java中的JUnit单元测试"><a href="#Java中的JUnit单元测试" class="headerlink" title="Java中的JUnit单元测试"></a>Java中的JUnit单元测试</h2><h4 id="1-步骤："><a href="#1-步骤：" class="headerlink" title="1. 步骤："></a>1. 步骤：</h4><ol>
+<li><p>选中当前工程 </p>
+<ul>
+<li>右键选择：build path </li>
+<li>add libraries </li>
+<li>JUnit 4 </li>
+<li>下一步</li>
+</ul>
+</li>
+<li><p>创建Java类，进行单元测试。此时的Java类要求：</p>
+<ul>
+<li>此类是public的</li>
+<li>此类提供公共的无参的构造器</li>
+</ul>
+</li>
+<li><p>此类中声明单元测试方法。</p>
+<ul>
+<li>方法的权限是public</li>
+<li>没有返回值</li>
+<li>没有形参</li>
+</ul>
+</li>
+<li><p>此单元测试需要</p>
+<ul>
+<li>声明注解：@Test,</li>
+<li>导包：import org.junit.Test;</li>
+</ul>
+</li>
+<li><p>声明好单元测试方法以后，就可以在方法体内测试相关的代码。</p>
+</li>
+<li><p>写完代码以后</p>
+<ul>
+<li>左键双击单元测试方法名</li>
+<li>右键：run as - JUnit Test</li>
+</ul>
+</li>
+</ol>
+<h4 id="2-说明："><a href="#2-说明：" class="headerlink" title="2. 说明："></a>2. 说明：</h4><ol>
+<li>如果执行结果没有任何异常：绿条</li>
+<li>如果执行结果出现异常：红条</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+        <tag>JUnit单元测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>32.Java基础知识-异常处理</title>
+    <url>/2020/11/05/32-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</url>
+    <content><![CDATA[<h2 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h2><h4 id="异常概述与异常体系结构"><a href="#异常概述与异常体系结构" class="headerlink" title="异常概述与异常体系结构"></a>异常概述与异常体系结构</h4><h5 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h5><p>在Java语言中，将程序执行中发生的不正常情况称为“异常”。<br>(开发过程中的语法错误和逻辑错误不是异常)</p>
+<h5 id="Java程序执行中异常的分类"><a href="#Java程序执行中异常的分类" class="headerlink" title="Java程序执行中异常的分类"></a>Java程序执行中异常的分类</h5><p>Error ：Java虚拟机无法解决的严重问题。如：JVM系统内部错误、资源耗尽等严重情况。比如：StackOverflowError和OOM。一般不编写针对性的代码进行处理。</p>
+<p>Exception: 其它因编程错误或偶然的外在因素导致的一般性问题，可以使用针对性的代码进行处理。</p>
+<h5 id="异常体系结构"><a href="#异常体系结构" class="headerlink" title="异常体系结构"></a>异常体系结构</h5><p><img src="http://wangzixuan.work/6812" alt="image"></p>
+<h6 id="运行时异常"><a href="#运行时异常" class="headerlink" title="运行时异常"></a>运行时异常</h6><ul>
+<li>是指编译器不要求强制处置的异常。一般是指编程时的逻辑错误，是程序<br>员应该积极避免其出现的异常。java.lang.RuntimeException类及它的子<br>类都是运行时异常。</li>
+<li>对于这类异常，可以不作处理，因为这类异常很普遍，若全处理可能会对<br>程序的可读性和运行效率产生影响。<h6 id="编译时异常"><a href="#编译时异常" class="headerlink" title="编译时异常"></a>编译时异常</h6></li>
+<li>是指编译器要求必须处置的异常。即程序在运行时由于外界因素造成的一<br>般性异常。编译器要求Java程序必须捕获或声明所有编译时异常。</li>
+<li>对于这类异常，如果程序不处理，可能会带来意想不到的结果。</li>
+</ul>
+<h4 id="常见异常"><a href="#常见异常" class="headerlink" title="常见异常"></a>常见异常</h4><p><img src="http://wangzixuan.work/6808" alt="image"></p>
+<h4 id="异常处理一：try-catch-finally捕获"><a href="#异常处理一：try-catch-finally捕获" class="headerlink" title="异常处理一：try-catch-finally捕获"></a>异常处理一：try-catch-finally捕获</h4><p>在编写程序时，经常要在可能出现错误的地方加上检测的代码，如进行x/y运算时，要检测分母为0，数据为空，输入的不是数据而是字符等。过多的if-else分支会导致程序的代码加长、臃肿，可读性差。因此采用异常处理机制。</p>
+<h5 id="异常的抛出机制"><a href="#异常的抛出机制" class="headerlink" title="异常的抛出机制"></a>异常的抛出机制</h5><ul>
+<li>如果一个方法内抛出异常，该异常对象会被抛给调用者方法中处理。如果异常没有在调用者方法中处理，它继续被抛给这个调用方法的上层方法。这个过程将一直继续下去，直到异常被处理。这一过程称为捕获(catch)异常。</li>
+<li>如果一个异常回到main()方法，并且main()也不处理，则程序运行终止。</li>
+<li>程序员通常只能处理Exception，而对Error无能为力。</li>
+</ul>
+<h5 id="try-catch-finally"><a href="#try-catch-finally" class="headerlink" title="try-catch-finally"></a>try-catch-finally</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">try&#123;</span><br><span class="line">...... &#x2F;&#x2F;可能产生异常的代码</span><br><span class="line">&#125;</span><br><span class="line">catch( ExceptionName1 e )&#123;</span><br><span class="line">...... &#x2F;&#x2F;当产生ExceptionName1型异常时的处置措施</span><br><span class="line">&#125;</span><br><span class="line">catch( ExceptionName2 e )&#123;</span><br><span class="line">...... &#x2F;&#x2F;当产生ExceptionName2型异常时的处置措施</span><br><span class="line">&#125;</span><br><span class="line">[ finally&#123;</span><br><span class="line">...... &#x2F;&#x2F;无论是否发生异常， 都无条件执行的语句</span><br><span class="line">&#125; ]</span><br></pre></td></tr></table></figure>
+
+<h6 id="try"><a href="#try" class="headerlink" title="try"></a>try</h6><p>捕获异常的第一步是用try{…}语句块选定捕获异常的范围，将可能出现异常的代码放在try语句块中。</p>
+<h6 id="catch-Exceptiontype-e"><a href="#catch-Exceptiontype-e" class="headerlink" title="catch (Exceptiontype e)"></a>catch (Exceptiontype e)</h6><p>在catch语句块中是对异常对象进行处理的代码。每个try语句块可以伴随一个或多个catch语句，用于处理可能产生的不同类型的异常对象。</p>
+<ul>
+<li>如果明确知道产生的是何种异常，可以用该异常类作为catch的参数；也可以用其父类作为catch的参数。</li>
+<li>getMessage() 获取异常信息，返回字符串</li>
+<li>printStackTrace()获取异常类名和异常信息，以及异常出现在程序中的位置。返回值void。</li>
+</ul>
+<h6 id="finally"><a href="#finally" class="headerlink" title="finally"></a>finally</h6><ul>
+<li>捕获异常的最后一步是通过finally语句为异常处理提供一个统一的出口，使得在控制流转到程序的其它部分以前，能够对程序的状态作统一的管理。</li>
+<li>不论在try代码块中是否发生了异常事件，catch语句是否执行，catch语句是否有异常，catch语句中是否有return，finally块中的语句都会被执行。</li>
+</ul>
+<h6 id="finally语句和catch语句是任选的"><a href="#finally语句和catch语句是任选的" class="headerlink" title="finally语句和catch语句是任选的"></a>finally语句和catch语句是任选的</h6><h4 id="异常处理二：throws抛异常"><a href="#异常处理二：throws抛异常" class="headerlink" title="异常处理二：throws抛异常"></a>异常处理二：throws抛异常</h4><ul>
+<li>如果一个方法(中的语句执行时)可能生成某种异常，但是并不能确定如何处理这种异常，则此方法应显示地声明抛出异常，表明该方法将不对这些异常进行处理，<br>而由该方法的调用者负责处理。</li>
+<li>在方法声明中用throws语句可以声明抛出异常的列表，throws后面的异常类型可以是方法中产生的异常类型，也可以是它的父类 。</li>
+</ul>
+<h5 id="throws-异常"><a href="#throws-异常" class="headerlink" title="throws + 异常"></a>throws + 异常</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public void readFile(String file) throws FileNotFoundException &#123;</span><br><span class="line">    ……</span><br><span class="line">    &#x2F;&#x2F;  读文件的操作可能产生FileNotFoundException 类型的异常</span><br><span class="line">    FileInputStream fis &#x3D; new FileInputStream(file);</span><br><span class="line">    ..……</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="重写方法声明抛出异常的原则"><a href="#重写方法声明抛出异常的原则" class="headerlink" title="重写方法声明抛出异常的原则"></a>重写方法声明抛出异常的原则</h5><p>重写方法不能抛出比被重写方法范围更大的异常类型。在多态的情况下，对methodA()方法的调用-异常的捕获按父类声明的异常处理。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class A &#123;</span><br><span class="line">    public void methodA() throws IOException &#123;</span><br><span class="line">    ……</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br><span class="line">public class B1 extends A &#123;</span><br><span class="line">    public void methodA() throws FileNotFoundException &#123;</span><br><span class="line">    ……</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br><span class="line">public class B2 extends A &#123;</span><br><span class="line">    public void methodA() throws Exception &#123; &#x2F;&#x2F; 报错</span><br><span class="line">    ……</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="手动抛出异常"><a href="#手动抛出异常" class="headerlink" title="手动抛出异常"></a>手动抛出异常</h4><ul>
+<li>首先要生成异常类对象，然后通过throw语句实现抛出操作(提交给Java运<br>行环境)。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">IOException e &#x3D; new IOException();</span><br><span class="line">throw e;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>可以抛出的异常必须是Throwable或其子类的实例。下面的语句在编译时将<br>会产生语法错误：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">throw new String(&quot;want to throw&quot;);</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h4><ul>
+<li>一般地，用户自定义异常类都是RuntimeException的子类。</li>
+<li>自定义异常类通常需要编写几个重载的构造器。</li>
+<li>自定义异常需要提供serialVersionUID</li>
+<li>自定义的异常通过throw抛出。</li>
+<li>自定义异常最重要的是异常类的名字，当异常出现时，可以根据名字判断异常类型。</li>
+</ul>
+<h6 id="自定义异常类必须继承现有的异常类"><a href="#自定义异常类必须继承现有的异常类" class="headerlink" title="自定义异常类必须继承现有的异常类"></a>自定义异常类必须继承现有的异常类</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class MyExpTest &#123;</span><br><span class="line">    public void regist(int num) throws MyException &#123;</span><br><span class="line">        if (num &lt; 0)</span><br><span class="line">            throw new MyException(&quot;人数为负值，不合理&quot;, 3);</span><br><span class="line">        else</span><br><span class="line">            System.out.println(&quot;登记人数&quot; + num);</span><br><span class="line">    &#125;</span><br><span class="line">    public void manager() &#123;</span><br><span class="line">        try &#123;</span><br><span class="line">            regist(100);</span><br><span class="line">        &#125; catch (MyException e) &#123;</span><br><span class="line">            System.out.print(&quot;登记失败，出错种类&quot; + e.getId());</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.print(&quot;本次登记操作结束&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    public static void main(String args[]) &#123;</span><br><span class="line">        MyExpTest t &#x3D; new MyExpTest();</span><br><span class="line">        t.manager();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><h5 id="上有排污，下游治理"><a href="#上有排污，下游治理" class="headerlink" title="上有排污，下游治理"></a>上有排污，下游治理</h5><p><img src="http://wangzixuan.work/6873" alt="image"></p>
+<h5 id="宋老师一首小悟"><a href="#宋老师一首小悟" class="headerlink" title="宋老师一首小悟"></a>宋老师一首小悟</h5><ul>
+<li>世界上最遥远的 距离在 ，是我在if 里你在else 里，似乎一直相伴又永远分离；</li>
+<li>世界上最痴心的 等待当 ，是我当case 你是switch ，或许永远都选不上自己；</li>
+<li>世界上最真情的相依在 ，是你在try 我在catch。无论你发神马脾气，我都默默的承受，静静处理。到那时，再来期待我们的finally。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+        <tag>异常处理</tag>
       </tags>
   </entry>
 </search>

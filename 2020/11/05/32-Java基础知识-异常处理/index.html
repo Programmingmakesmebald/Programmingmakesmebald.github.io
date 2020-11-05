@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hans" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>32.Java基础知识-异常处理 - 秃头小王子</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="秃头小王子的个人博客,异常处理异常概述与异常体系结构异常在Java语言中，将程序执行中发生的不正常情况称为“异常”。(开发过程中的语法错误和逻辑错误不是异常)
+Java程序执行中异常的分类Error ：Java虚拟机无法,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="秃头小王子" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">秃头小王子</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://yoursite.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">32.Java基础知识-异常处理</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">32.Java基础知识-异常处理</h1>
+        <div class="stuff">
+            <span>十一月 05, 2020</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Java%E5%9F%BA%E7%A1%80/" rel="tag">Java基础</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" rel="tag">异常处理</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h2 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h2><h4 id="异常概述与异常体系结构"><a href="#异常概述与异常体系结构" class="headerlink" title="异常概述与异常体系结构"></a>异常概述与异常体系结构</h4><h5 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h5><p>在Java语言中，将程序执行中发生的不正常情况称为“异常”。<br>(开发过程中的语法错误和逻辑错误不是异常)</p>
+<h5 id="Java程序执行中异常的分类"><a href="#Java程序执行中异常的分类" class="headerlink" title="Java程序执行中异常的分类"></a>Java程序执行中异常的分类</h5><p>Error ：Java虚拟机无法解决的严重问题。如：JVM系统内部错误、资源耗尽等严重情况。比如：StackOverflowError和OOM。一般不编写针对性的代码进行处理。</p>
+<p>Exception: 其它因编程错误或偶然的外在因素导致的一般性问题，可以使用针对性的代码进行处理。</p>
+<h5 id="异常体系结构"><a href="#异常体系结构" class="headerlink" title="异常体系结构"></a>异常体系结构</h5><p><img src="http://wangzixuan.work/6812" alt="image"></p>
+<h6 id="运行时异常"><a href="#运行时异常" class="headerlink" title="运行时异常"></a>运行时异常</h6><ul>
+<li>是指编译器不要求强制处置的异常。一般是指编程时的逻辑错误，是程序<br>员应该积极避免其出现的异常。java.lang.RuntimeException类及它的子<br>类都是运行时异常。</li>
+<li>对于这类异常，可以不作处理，因为这类异常很普遍，若全处理可能会对<br>程序的可读性和运行效率产生影响。<h6 id="编译时异常"><a href="#编译时异常" class="headerlink" title="编译时异常"></a>编译时异常</h6></li>
+<li>是指编译器要求必须处置的异常。即程序在运行时由于外界因素造成的一<br>般性异常。编译器要求Java程序必须捕获或声明所有编译时异常。</li>
+<li>对于这类异常，如果程序不处理，可能会带来意想不到的结果。</li>
+</ul>
+<h4 id="常见异常"><a href="#常见异常" class="headerlink" title="常见异常"></a>常见异常</h4><p><img src="http://wangzixuan.work/6808" alt="image"></p>
+<h4 id="异常处理一：try-catch-finally捕获"><a href="#异常处理一：try-catch-finally捕获" class="headerlink" title="异常处理一：try-catch-finally捕获"></a>异常处理一：try-catch-finally捕获</h4><p>在编写程序时，经常要在可能出现错误的地方加上检测的代码，如进行x/y运算时，要检测分母为0，数据为空，输入的不是数据而是字符等。过多的if-else分支会导致程序的代码加长、臃肿，可读性差。因此采用异常处理机制。</p>
+<h5 id="异常的抛出机制"><a href="#异常的抛出机制" class="headerlink" title="异常的抛出机制"></a>异常的抛出机制</h5><ul>
+<li>如果一个方法内抛出异常，该异常对象会被抛给调用者方法中处理。如果异常没有在调用者方法中处理，它继续被抛给这个调用方法的上层方法。这个过程将一直继续下去，直到异常被处理。这一过程称为捕获(catch)异常。</li>
+<li>如果一个异常回到main()方法，并且main()也不处理，则程序运行终止。</li>
+<li>程序员通常只能处理Exception，而对Error无能为力。</li>
+</ul>
+<h5 id="try-catch-finally"><a href="#try-catch-finally" class="headerlink" title="try-catch-finally"></a>try-catch-finally</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">try&#123;</span><br><span class="line">...... &#x2F;&#x2F;可能产生异常的代码</span><br><span class="line">&#125;</span><br><span class="line">catch( ExceptionName1 e )&#123;</span><br><span class="line">...... &#x2F;&#x2F;当产生ExceptionName1型异常时的处置措施</span><br><span class="line">&#125;</span><br><span class="line">catch( ExceptionName2 e )&#123;</span><br><span class="line">...... &#x2F;&#x2F;当产生ExceptionName2型异常时的处置措施</span><br><span class="line">&#125;</span><br><span class="line">[ finally&#123;</span><br><span class="line">...... &#x2F;&#x2F;无论是否发生异常， 都无条件执行的语句</span><br><span class="line">&#125; ]</span><br></pre></td></tr></table></figure>
+
+<h6 id="try"><a href="#try" class="headerlink" title="try"></a>try</h6><p>捕获异常的第一步是用try{…}语句块选定捕获异常的范围，将可能出现异常的代码放在try语句块中。</p>
+<h6 id="catch-Exceptiontype-e"><a href="#catch-Exceptiontype-e" class="headerlink" title="catch (Exceptiontype e)"></a>catch (Exceptiontype e)</h6><p>在catch语句块中是对异常对象进行处理的代码。每个try语句块可以伴随一个或多个catch语句，用于处理可能产生的不同类型的异常对象。</p>
+<ul>
+<li>如果明确知道产生的是何种异常，可以用该异常类作为catch的参数；也可以用其父类作为catch的参数。</li>
+<li>getMessage() 获取异常信息，返回字符串</li>
+<li>printStackTrace()获取异常类名和异常信息，以及异常出现在程序中的位置。返回值void。</li>
+</ul>
+<h6 id="finally"><a href="#finally" class="headerlink" title="finally"></a>finally</h6><ul>
+<li>捕获异常的最后一步是通过finally语句为异常处理提供一个统一的出口，使得在控制流转到程序的其它部分以前，能够对程序的状态作统一的管理。</li>
+<li>不论在try代码块中是否发生了异常事件，catch语句是否执行，catch语句是否有异常，catch语句中是否有return，finally块中的语句都会被执行。</li>
+</ul>
+<h6 id="finally语句和catch语句是任选的"><a href="#finally语句和catch语句是任选的" class="headerlink" title="finally语句和catch语句是任选的"></a>finally语句和catch语句是任选的</h6><h4 id="异常处理二：throws抛异常"><a href="#异常处理二：throws抛异常" class="headerlink" title="异常处理二：throws抛异常"></a>异常处理二：throws抛异常</h4><ul>
+<li>如果一个方法(中的语句执行时)可能生成某种异常，但是并不能确定如何处理这种异常，则此方法应显示地声明抛出异常，表明该方法将不对这些异常进行处理，<br>而由该方法的调用者负责处理。</li>
+<li>在方法声明中用throws语句可以声明抛出异常的列表，throws后面的异常类型可以是方法中产生的异常类型，也可以是它的父类 。</li>
+</ul>
+<h5 id="throws-异常"><a href="#throws-异常" class="headerlink" title="throws + 异常"></a>throws + 异常</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public void readFile(String file) throws FileNotFoundException &#123;</span><br><span class="line">    ……</span><br><span class="line">    &#x2F;&#x2F;  读文件的操作可能产生FileNotFoundException 类型的异常</span><br><span class="line">    FileInputStream fis &#x3D; new FileInputStream(file);</span><br><span class="line">    ..……</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="重写方法声明抛出异常的原则"><a href="#重写方法声明抛出异常的原则" class="headerlink" title="重写方法声明抛出异常的原则"></a>重写方法声明抛出异常的原则</h5><p>重写方法不能抛出比被重写方法范围更大的异常类型。在多态的情况下，对methodA()方法的调用-异常的捕获按父类声明的异常处理。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">public class A &#123;</span><br><span class="line">    public void methodA() throws IOException &#123;</span><br><span class="line">    ……</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br><span class="line">public class B1 extends A &#123;</span><br><span class="line">    public void methodA() throws FileNotFoundException &#123;</span><br><span class="line">    ……</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br><span class="line">public class B2 extends A &#123;</span><br><span class="line">    public void methodA() throws Exception &#123; &#x2F;&#x2F; 报错</span><br><span class="line">    ……</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="手动抛出异常"><a href="#手动抛出异常" class="headerlink" title="手动抛出异常"></a>手动抛出异常</h4><ul>
+<li>首先要生成异常类对象，然后通过throw语句实现抛出操作(提交给Java运<br>行环境)。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">IOException e &#x3D; new IOException();</span><br><span class="line">throw e;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>可以抛出的异常必须是Throwable或其子类的实例。下面的语句在编译时将<br>会产生语法错误：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">throw new String(&quot;want to throw&quot;);</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h4><ul>
+<li>一般地，用户自定义异常类都是RuntimeException的子类。</li>
+<li>自定义异常类通常需要编写几个重载的构造器。</li>
+<li>自定义异常需要提供serialVersionUID</li>
+<li>自定义的异常通过throw抛出。</li>
+<li>自定义异常最重要的是异常类的名字，当异常出现时，可以根据名字判断异常类型。</li>
+</ul>
+<h6 id="自定义异常类必须继承现有的异常类"><a href="#自定义异常类必须继承现有的异常类" class="headerlink" title="自定义异常类必须继承现有的异常类"></a>自定义异常类必须继承现有的异常类</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">public class MyExpTest &#123;</span><br><span class="line">    public void regist(int num) throws MyException &#123;</span><br><span class="line">        if (num &lt; 0)</span><br><span class="line">            throw new MyException(&quot;人数为负值，不合理&quot;, 3);</span><br><span class="line">        else</span><br><span class="line">            System.out.println(&quot;登记人数&quot; + num);</span><br><span class="line">    &#125;</span><br><span class="line">    public void manager() &#123;</span><br><span class="line">        try &#123;</span><br><span class="line">            regist(100);</span><br><span class="line">        &#125; catch (MyException e) &#123;</span><br><span class="line">            System.out.print(&quot;登记失败，出错种类&quot; + e.getId());</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.print(&quot;本次登记操作结束&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    public static void main(String args[]) &#123;</span><br><span class="line">        MyExpTest t &#x3D; new MyExpTest();</span><br><span class="line">        t.manager();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><h5 id="上有排污，下游治理"><a href="#上有排污，下游治理" class="headerlink" title="上有排污，下游治理"></a>上有排污，下游治理</h5><p><img src="http://wangzixuan.work/6873" alt="image"></p>
+<h5 id="宋老师一首小悟"><a href="#宋老师一首小悟" class="headerlink" title="宋老师一首小悟"></a>宋老师一首小悟</h5><ul>
+<li>世界上最遥远的 距离在 ，是我在if 里你在else 里，似乎一直相伴又永远分离；</li>
+<li>世界上最痴心的 等待当 ，是我当case 你是switch ，或许永远都选不上自己；</li>
+<li>世界上最真情的相依在 ，是你在try 我在catch。无论你发神马脾气，我都默默的承受，静静处理。到那时，再来期待我们的finally。</li>
+</ul>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='true'
+        data-ae='true'
+        data-ci='98d8392c61bba8a9f87d'
+        data-cs='a5b47de553739830db015b176764355577df22bf'
+        data-r='Comment'
+        data-o='Programmingmakesmebald'
+        data-a='Programmingmakesmebald'
+        data-d='true'
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class='side'>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#异常处理"><span class="toc-number">1.</span> <span class="toc-text">异常处理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#异常概述与异常体系结构"><span class="toc-number">1.0.1.</span> <span class="toc-text">异常概述与异常体系结构</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#异常"><span class="toc-number">1.0.1.1.</span> <span class="toc-text">异常</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Java程序执行中异常的分类"><span class="toc-number">1.0.1.2.</span> <span class="toc-text">Java程序执行中异常的分类</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#异常体系结构"><span class="toc-number">1.0.1.3.</span> <span class="toc-text">异常体系结构</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#运行时异常"><span class="toc-number">1.0.1.3.1.</span> <span class="toc-text">运行时异常</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#编译时异常"><span class="toc-number">1.0.1.3.2.</span> <span class="toc-text">编译时异常</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#常见异常"><span class="toc-number">1.0.2.</span> <span class="toc-text">常见异常</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#异常处理一：try-catch-finally捕获"><span class="toc-number">1.0.3.</span> <span class="toc-text">异常处理一：try-catch-finally捕获</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#异常的抛出机制"><span class="toc-number">1.0.3.1.</span> <span class="toc-text">异常的抛出机制</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#try-catch-finally"><span class="toc-number">1.0.3.2.</span> <span class="toc-text">try-catch-finally</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#try"><span class="toc-number">1.0.3.2.1.</span> <span class="toc-text">try</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#catch-Exceptiontype-e"><span class="toc-number">1.0.3.2.2.</span> <span class="toc-text">catch (Exceptiontype e)</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#finally"><span class="toc-number">1.0.3.2.3.</span> <span class="toc-text">finally</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#finally语句和catch语句是任选的"><span class="toc-number">1.0.3.2.4.</span> <span class="toc-text">finally语句和catch语句是任选的</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#异常处理二：throws抛异常"><span class="toc-number">1.0.4.</span> <span class="toc-text">异常处理二：throws抛异常</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#throws-异常"><span class="toc-number">1.0.4.1.</span> <span class="toc-text">throws + 异常</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#重写方法声明抛出异常的原则"><span class="toc-number">1.0.4.2.</span> <span class="toc-text">重写方法声明抛出异常的原则</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#手动抛出异常"><span class="toc-number">1.0.5.</span> <span class="toc-text">手动抛出异常</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#自定义异常"><span class="toc-number">1.0.6.</span> <span class="toc-text">自定义异常</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#自定义异常类必须继承现有的异常类"><span class="toc-number">1.0.6.0.1.</span> <span class="toc-text">自定义异常类必须继承现有的异常类</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#总结"><span class="toc-number">1.0.7.</span> <span class="toc-text">总结</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#上有排污，下游治理"><span class="toc-number">1.0.7.1.</span> <span class="toc-text">上有排污，下游治理</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#宋老师一首小悟"><span class="toc-number">1.0.7.2.</span> <span class="toc-text">宋老师一首小悟</span></a></li></ol></li></ol></li></ol></li></ol>	
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>

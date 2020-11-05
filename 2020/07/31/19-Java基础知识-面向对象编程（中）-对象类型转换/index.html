@@ -10,7 +10,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="Fechin,"> 
-    <meta name="description" content="秃头小王子的个人博客,"> 
+    <meta name="description" content="秃头小王子的个人博客,对象类型转换 (Casting )
+1. 基本数据类型的Casting
+自动类型转换：小的数据类型可以自动转换成大的数据类型
+
+12long g &amp;#x3D; 20;double d &amp;#x3D; ,"> 
     <meta name="author" content="John Doe"> 
     <link rel="alternative" href="atom.xml" title="秃头小王子" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -59,10 +63,49 @@
         <div class="stuff">
             <span>七月 31, 2020</span>
             
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Java%E5%9F%BA%E7%A1%80/" rel="tag">Java基础</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E5%AF%B9%E8%B1%A1%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" rel="tag">对象类型转换</a></li></ul>
+
 
         </div>
         <div class="content markdown">
-            
+            <h2 id="对象类型转换-Casting"><a href="#对象类型转换-Casting" class="headerlink" title="对象类型转换 (Casting )"></a>对象类型转换 (Casting )</h2><p><img src="http://wangzixuan.work/4916" alt=""></p>
+<h4 id="1-基本数据类型的Casting"><a href="#1-基本数据类型的Casting" class="headerlink" title="1. 基本数据类型的Casting"></a>1. 基本数据类型的Casting</h4><ul>
+<li>自动类型转换：小的数据类型可以自动转换成大的数据类型</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">long g &#x3D; 20;</span><br><span class="line">double d &#x3D; 12.0f;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>强制类型转换：可以把大的数据类型强制转换(casting)成小的数据类型</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">float f &#x3D; (float)12.0; </span><br><span class="line">int a &#x3D; (int)1200L；</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-对Java对象的强制类型转换称为造型"><a href="#2-对Java对象的强制类型转换称为造型" class="headerlink" title="2. 对Java对象的强制类型转换称为造型"></a>2. 对Java对象的强制类型转换称为造型</h4><ul>
+<li>向上转型<ul>
+<li>多态：从子类到父类的类型转换</li>
+<li>可以自动进行</li>
+</ul>
+</li>
+<li>向下转型<ul>
+<li>为什么向下转型？<ul>
+<li>有了对象的多态性以后，内存中实际上是加载了子类特有的属性和方法的，但是由于变量声明为父类类型，导致  编译时，只能调用父类中声明的属性和方法。子类特有的属性和方法不能调用。</li>
+</ul>
+</li>
+<li>从父类到子类的类型转换必须通过造型(强制类型转换) 实现<ul>
+<li>强制类型转换符（）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>无继承关系的引用类型间的转换是非法的</li>
+<li>在造型前可以使用instanceof操作符测试一个对象的类型<ul>
+<li>为了避免在向下转型时出现ClassCastException的异常，我们在向下转型之前，先进行instanceof的判断，一旦返回true，就进行向下转型。如果返回false，不进行向下转型。如果 a instanceof A返回true,则 a instanceof B也返回true.</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-转换举例"><a href="#3-转换举例" class="headerlink" title="3. 转换举例"></a>3. 转换举例</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">public class ConversionTest &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        double d &#x3D; 13.4;</span><br><span class="line">        long l &#x3D; (long) d;</span><br><span class="line">        System.out.println(l);</span><br><span class="line">        int in &#x3D; 5;</span><br><span class="line">        &#x2F;&#x2F; boolean b &#x3D; (boolean)in;</span><br><span class="line">        Object obj &#x3D; &quot;Hello&quot;;</span><br><span class="line">        String objStr &#x3D; (String) obj;</span><br><span class="line">        System.out.println(objStr);</span><br><span class="line">        Object objPri &#x3D; new Integer(5);</span><br><span class="line">        &#x2F;&#x2F; 所以下面代码运行时引发ClassCastException异常</span><br><span class="line">        String str &#x3D; (String) objPri;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">public class Test &#123;</span><br><span class="line">    &#x2F;&#x2F;向上转型，多态性，传进来的e可以时Person类型及其子类</span><br><span class="line">    public void method(Person e) &#123;</span><br><span class="line">        &#x2F;&#x2F; 设Person类中没有getschool() 方法</span><br><span class="line">        &#x2F;&#x2F; System.out.pritnln(e.getschool()); &#x2F;&#x2F;非法,编译时错误</span><br><span class="line">        if (e instanceof Student) &#123;</span><br><span class="line">            &#x2F;&#x2F;向下转型，强制转换</span><br><span class="line">            Student me &#x3D; (Student) e; &#x2F;&#x2F; 将e强制转换为Student类型</span><br><span class="line">            System.out.pritnln(me.getschool());</span><br><span class="line">        &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        public static void main(String[] args)&#123;</span><br><span class="line">        Test t &#x3D; new Test();</span><br><span class="line">        Student m &#x3D; new Student();</span><br><span class="line">        t.method(m);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
                 <source type="audio/mpeg" src="">
@@ -97,7 +140,7 @@
     </div>
     
         <div class='side'>
-				
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#对象类型转换-Casting"><span class="toc-number">1.</span> <span class="toc-text">对象类型转换 (Casting )</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-基本数据类型的Casting"><span class="toc-number">1.0.1.</span> <span class="toc-text">1. 基本数据类型的Casting</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-对Java对象的强制类型转换称为造型"><span class="toc-number">1.0.2.</span> <span class="toc-text">2. 对Java对象的强制类型转换称为造型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-转换举例"><span class="toc-number">1.0.3.</span> <span class="toc-text">3. 转换举例</span></a></li></ol></li></ol></li></ol>	
         </div>
     
 </div>

@@ -10,7 +10,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="Fechin,"> 
-    <meta name="description" content="秃头小王子的个人博客,"> 
+    <meta name="description" content="秃头小王子的个人博客,Object  类的使用1. Object类是什么？Object类是所有Java类的根父类
+2. 默认父类如果在类的声明中未使用extends关键字指明其父类，则默认父类为java.lang.Obj,"> 
     <meta name="author" content="John Doe"> 
     <link rel="alternative" href="atom.xml" title="秃头小王子" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -59,10 +60,23 @@
         <div class="stuff">
             <span>七月 31, 2020</span>
             
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Java%E5%9F%BA%E7%A1%80/" rel="tag">Java基础</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Object%E7%B1%BB/" rel="tag">Object类</a></li></ul>
+
 
         </div>
         <div class="content markdown">
-            
+            <h2 id="Object-类的使用"><a href="#Object-类的使用" class="headerlink" title="Object  类的使用"></a>Object  类的使用</h2><h4 id="1-Object类是什么？"><a href="#1-Object类是什么？" class="headerlink" title="1. Object类是什么？"></a>1. Object类是什么？</h4><p>Object类是所有Java类的根父类</p>
+<h4 id="2-默认父类"><a href="#2-默认父类" class="headerlink" title="2. 默认父类"></a>2. 默认父类</h4><p>如果在类的声明中未使用extends关键字指明其父类，则默认父类为java.lang.Object类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class Person &#123;</span><br><span class="line">...</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;等价于</span><br><span class="line">public class Person extends Object &#123;</span><br><span class="line">...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="3-作为参数"><a href="#3-作为参数" class="headerlink" title="3. 作为参数"></a>3. 作为参数</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">method(Object obj)&#123;…&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Object类型作为方法的参数，方法可以接收任何类作为其参数使用</p>
+<h4 id="4-Object-类中的主要结构"><a href="#4-Object-类中的主要结构" class="headerlink" title="4. Object 类中的主要结构"></a>4. Object 类中的主要结构</h4><ul>
+<li>属性：无</li>
+<li>构造器：Object类只声明了一个空参的构造器</li>
+<li>方法：equals() / toString() / getClass() /hashCode() / clone() / finalize()<br>wait() 、 notify()、notifyAll()<br><img src="http://wangzixuan.work/4949" alt=""></li>
+</ul>
+
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
                 <source type="audio/mpeg" src="">
@@ -97,7 +111,7 @@
     </div>
     
         <div class='side'>
-				
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Object-类的使用"><span class="toc-number">1.</span> <span class="toc-text">Object  类的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-Object类是什么？"><span class="toc-number">1.0.1.</span> <span class="toc-text">1. Object类是什么？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-默认父类"><span class="toc-number">1.0.2.</span> <span class="toc-text">2. 默认父类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-作为参数"><span class="toc-number">1.0.3.</span> <span class="toc-text">3. 作为参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-Object-类中的主要结构"><span class="toc-number">1.0.4.</span> <span class="toc-text">4. Object 类中的主要结构</span></a></li></ol></li></ol></li></ol>	
         </div>
     
 </div>

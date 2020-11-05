@@ -10,7 +10,9 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="Fechin,"> 
-    <meta name="description" content="秃头小王子的个人博客,"> 
+    <meta name="description" content="秃头小王子的个人博客,Object类中toString()1. toString()当我们输出一个对象的引用时，实际上就是调用当前对象的toString()
+2. Object类中toString()的定义
+toStri,"> 
     <meta name="author" content="John Doe"> 
     <link rel="alternative" href="atom.xml" title="秃头小王子" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -59,10 +61,42 @@
         <div class="stuff">
             <span>七月 31, 2020</span>
             
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Java%E5%9F%BA%E7%A1%80/" rel="tag">Java基础</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/toString%EF%BC%88%EF%BC%89/" rel="tag">toString（）</a></li></ul>
+
 
         </div>
         <div class="content markdown">
-            
+            <h2 id="Object类中toString"><a href="#Object类中toString" class="headerlink" title="Object类中toString()"></a>Object类中toString()</h2><h4 id="1-toString"><a href="#1-toString" class="headerlink" title="1. toString()"></a>1. toString()</h4><p>当我们输出一个对象的引用时，实际上就是调用当前对象的toString()</p>
+<h4 id="2-Object类中toString-的定义"><a href="#2-Object类中toString-的定义" class="headerlink" title="2. Object类中toString()的定义"></a>2. Object类中toString()的定义</h4><ul>
+<li>toString() 方法在Object 类中定义 </li>
+<li>返回值是String 类型</li>
+<li>返回类名和它的引用地址。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public String toString() &#123;</span><br><span class="line">    return getClass().getName() + &quot;@&quot; + Integer.toHexString(hashCode());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="3-toString-的调用"><a href="#3-toString-的调用" class="headerlink" title="3. toString()的调用"></a>3. toString()的调用</h4><ul>
+<li><p>在行 进行String 与其它类型数据的连接操作时 ，用 自动调用toString()</p>
+</li>
+<li><p>如果对象为空，直接打印对象（由于print方法里边判断了对象是否为空）输出null，toString()则报空指针异常</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Date now&#x3D;new Date();</span><br><span class="line">System.out.println(“now&#x3D;”+now);  相当于</span><br><span class="line">System.out.println(“now&#x3D;”+now.toString());</span><br><span class="line"></span><br><span class="line">String s &#x3D; &quot;abc&quot;;</span><br><span class="line">s &#x3D; null;</span><br><span class="line">System.out.println(s);&#x2F;&#x2F;null</span><br><span class="line">System.out.println(&quot;*********&quot;);</span><br><span class="line">System.out.println(s.toString());&#x2F;&#x2F;出现NullPointerException</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>基本类型数据转换为String类型时，调用了对应包装类的toString()方法</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int a&#x3D;10;</span><br><span class="line">System.out.println(“a&#x3D;”+a);</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="4-包装类toString-的重写"><a href="#4-包装类toString-的重写" class="headerlink" title="4. 包装类toString()的重写"></a>4. 包装类toString()的重写</h4><p>像String、Date、File、包装类等都重写了Object类中的toString()方法。使得在调用对象的toString()时，返回”实体内容”信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s1&#x3D;“hello”;</span><br><span class="line">System.out.println(s1);</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-自定义类toString-的重写"><a href="#5-自定义类toString-的重写" class="headerlink" title="5. 自定义类toString()的重写"></a>5. 自定义类toString()的重写</h4><p>自定义类也可以重写toString()方法，当调用此方法时，返回对象的”实体内容”</p>
+<h4 id="6-面试题"><a href="#6-面试题" class="headerlink" title="6. 面试题"></a>6. 面试题</h4><ul>
+<li>问题：为什么打印char型数组的结果不是类型+地址，而是字符串</li>
+<li>原因：char对应的包装类Character重写了toString()方法</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">char[] arr &#x3D; new char[] &#123; &#39;a&#39;, &#39;b&#39;, &#39;c&#39; &#125;;</span><br><span class="line">System.out.println(arr);&#x2F;&#x2F;abc</span><br><span class="line"></span><br><span class="line">int[] arr1 &#x3D; new int[] &#123; 1, 2, 3 &#125;;</span><br><span class="line">System.out.println(arr1);&#x2F;&#x2F;[I@3d4eac69</span><br><span class="line"></span><br><span class="line">double[] arr2 &#x3D; new double[] &#123; 1.1, 2.2, 3.3 &#125;;</span><br><span class="line">System.out.println(arr2);&#x2F;&#x2F;[D@42a57993</span><br></pre></td></tr></table></figure>
+
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
                 <source type="audio/mpeg" src="">
@@ -97,7 +131,7 @@
     </div>
     
         <div class='side'>
-				
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Object类中toString"><span class="toc-number">1.</span> <span class="toc-text">Object类中toString()</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-toString"><span class="toc-number">1.0.1.</span> <span class="toc-text">1. toString()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-Object类中toString-的定义"><span class="toc-number">1.0.2.</span> <span class="toc-text">2. Object类中toString()的定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-toString-的调用"><span class="toc-number">1.0.3.</span> <span class="toc-text">3. toString()的调用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-包装类toString-的重写"><span class="toc-number">1.0.4.</span> <span class="toc-text">4. 包装类toString()的重写</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-自定义类toString-的重写"><span class="toc-number">1.0.5.</span> <span class="toc-text">5. 自定义类toString()的重写</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-面试题"><span class="toc-number">1.0.6.</span> <span class="toc-text">6. 面试题</span></a></li></ol></li></ol></li></ol>	
         </div>
     
 </div>

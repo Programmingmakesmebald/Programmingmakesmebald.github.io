@@ -10,7 +10,9 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="Fechin,"> 
-    <meta name="description" content="秃头小王子的个人博客,"> 
+    <meta name="description" content="秃头小王子的个人博客,== 操作符与equals 方法1. == 操作符
+如果比较的是基本数据类型变量：比较两个变量保存的数据是否相等。（不一定类型要相同）
+如果比较的是引用数据类型变量：比较两个对象的地址值是否相同.即,"> 
     <meta name="author" content="John Doe"> 
     <link rel="alternative" href="atom.xml" title="秃头小王子" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -59,10 +61,59 @@
         <div class="stuff">
             <span>七月 31, 2020</span>
             
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Java%E5%9F%BA%E7%A1%80/" rel="tag">Java基础</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E7%BB%A7%E6%89%BF%E6%80%A7/" rel="tag">继承性</a></li></ul>
+
 
         </div>
         <div class="content markdown">
-            
+            <h2 id="操作符与equals-方法"><a href="#操作符与equals-方法" class="headerlink" title="== 操作符与equals 方法"></a>== 操作符与equals 方法</h2><h4 id="1-操作符"><a href="#1-操作符" class="headerlink" title="1. == 操作符"></a>1. == 操作符</h4><ul>
+<li>如果比较的是基本数据类型变量：比较两个变量保存的数据是否相等。（不一定类型要相同）</li>
+<li>如果比较的是引用数据类型变量：比较两个对象的地址值是否相同.即两个引用是否指向同一个对象实体</li>
+<li>== 符号使用时，符号两边的数据类型必须兼容(可自动转换的基本数据类型除外)，否则编译出错</li>
+</ul>
+<h4 id="2-equals-方法"><a href="#2-equals-方法" class="headerlink" title="2. equals() 方法"></a>2. equals() 方法</h4><ul>
+<li><p>equals() ：所有类都继承了Object，了也就获得了equals() 方法 。 还可以重写 。</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;Object类中equals()的定义</span><br><span class="line">public boolean equals(Object obj) &#123;</span><br><span class="line">    return (this &#x3D;&#x3D; obj);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>特例 ：当用equals() 方法进行比较时 ，对类File 、String 、Date 及包装类（Wrapper Class）来说，比较的不是两个引用的地址是否相同，而是比较两个对象的”实体内容”是否相同</p>
+<ul>
+<li>原因：在这些类中重写了Object 类的equals() 方法</li>
+</ul>
+</li>
+<li><p>当自定义equals()时，可以重写。通常用于比较两个对象的“ 内容 ”是否都相等</p>
+</li>
+<li><p>重写equals() 方法的原则</p>
+<ul>
+<li>对称性：如果x.equals(y)返回是“true”，那么y.equals(x)也应该返回是“true”</li>
+<li>自反性：x.equals(x)必须返回是“true”</li>
+<li>传递性：如果x.equals(y)返回是“true”，而且y.equals(z)返回是“true”，那么z.equals(x)也应该返回是“true”</li>
+<li>一致性：如果x.equals(y)返回是“true”，只要x和y内容一直不变，不管你重复x.equals(y)多少次，返回都是“true”</li>
+<li>任何情况下，x.equals(null)，永远返回是“false”</li>
+<li>x.equals(和x不同类型的对象)永远返回是“false”</li>
+</ul>
+</li>
+<li><p>手动重写举例（全部代码见页面底部）</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;重写的原则：比较两个对象的实体内容(即：name和age)是否相同</span><br><span class="line">&#x2F;&#x2F;手动实现equals()的重写</span><br><span class="line">@Override</span><br><span class="line">public boolean equals(Object obj) &#123;</span><br><span class="line">	</span><br><span class="line">	System.out.println(&quot;Customer equals()....&quot;);</span><br><span class="line">	if (this &#x3D;&#x3D; obj) &#123;</span><br><span class="line">        return true;</span><br><span class="line">    &#125;</span><br><span class="line">	</span><br><span class="line">	if(obj instanceof Customer)&#123;</span><br><span class="line">		Customer cust &#x3D; (Customer)obj;</span><br><span class="line">		&#x2F;&#x2F;比较两个对象的每个属性是否都相同</span><br><span class="line">		if(this.age &#x3D;&#x3D; cust.age &amp;&amp; this.name.equals(cust.name))&#123;</span><br><span class="line">			return true;</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			return false;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;或</span><br><span class="line">		return this.age &#x3D;&#x3D; cust.age &amp;&amp; this.name.equals(cust.name);</span><br><span class="line">	&#125;else&#123;</span><br><span class="line">		return false;</span><br><span class="line">		</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<h4 id="3-面试题：-和equals的区别"><a href="#3-面试题：-和equals的区别" class="headerlink" title="3. 面试题：== 和equals的区别"></a>3. 面试题：== 和equals的区别</h4><ul>
+<li>==  既可以比较基本类型也可以比较引用类型<ul>
+<li>对于基本类型就是比较值</li>
+<li>对于引用类型就是比较内存地址</li>
+</ul>
+</li>
+<li>equals 的话，它是属于java.lang.Object类里面的方法<ul>
+<li>如果该方法没有被重写过默认也是==</li>
+<li>我们可以到看到String等类的equals方法是被重写过的</li>
+<li>而且String 类在日常开发中了用的比较多，久而久之，形成了equals</li>
+</ul>
+</li>
+<li>具体要看自定义类里有没有重写Object的equals方法来判断</li>
+<li>通常情况下，重写equals方法，会比较类中的相应属性是否都相等</li>
+</ul>
+<h4 id="4-代码举例"><a href="#4-代码举例" class="headerlink" title="4 代码举例"></a>4 代码举例</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line">public class Customer &#123;</span><br><span class="line">	</span><br><span class="line">	private String name;</span><br><span class="line">	private int age;</span><br><span class="line">	public String getName() &#123;</span><br><span class="line">		return name;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setName(String name) &#123;</span><br><span class="line">		this.name &#x3D; name;</span><br><span class="line">	&#125;</span><br><span class="line">	public int getAge() &#123;</span><br><span class="line">		return age;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setAge(int age) &#123;</span><br><span class="line">		this.age &#x3D; age;</span><br><span class="line">	&#125;</span><br><span class="line">	public Customer() &#123;</span><br><span class="line">		super();</span><br><span class="line">	&#125;</span><br><span class="line">	public Customer(String name, int age) &#123;</span><br><span class="line">		super();</span><br><span class="line">		this.name &#x3D; name;</span><br><span class="line">		this.age &#x3D; age;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	&#x2F;&#x2F;自动生成的equals()</span><br><span class="line">	@Override</span><br><span class="line">	public boolean equals(Object obj) &#123;</span><br><span class="line">		if (this &#x3D;&#x3D; obj)</span><br><span class="line">			return true;</span><br><span class="line">		if (obj &#x3D;&#x3D; null)</span><br><span class="line">			return false;</span><br><span class="line">		if (getClass() !&#x3D; obj.getClass())</span><br><span class="line">			return false;</span><br><span class="line">		Customer other &#x3D; (Customer) obj;</span><br><span class="line">		if (age !&#x3D; other.age)</span><br><span class="line">			return false;</span><br><span class="line">		if (name &#x3D;&#x3D; null) &#123;</span><br><span class="line">			if (other.name !&#x3D; null)</span><br><span class="line">				return false;</span><br><span class="line">		&#125; else if (!name.equals(other.name))</span><br><span class="line">			return false;</span><br><span class="line">		return true;</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;&#x2F;重写的原则：比较两个对象的实体内容(即：name和age)是否相同</span><br><span class="line">	&#x2F;&#x2F;手动实现equals()的重写</span><br><span class="line">	@Override</span><br><span class="line">	public boolean equals(Object obj) &#123;</span><br><span class="line">		</span><br><span class="line">		System.out.println(&quot;Customer equals()....&quot;);</span><br><span class="line">		if (this &#x3D;&#x3D; obj) &#123;</span><br><span class="line">            return true;</span><br><span class="line">        &#125;</span><br><span class="line">		</span><br><span class="line">		if(obj instanceof Customer)&#123;</span><br><span class="line">			Customer cust &#x3D; (Customer)obj;</span><br><span class="line">			&#x2F;&#x2F;比较两个对象的每个属性是否都相同</span><br><span class="line">			if(this.age &#x3D;&#x3D; cust.age &amp;&amp; this.name.equals(cust.name))&#123;</span><br><span class="line">				return true;</span><br><span class="line">			&#125;else&#123;</span><br><span class="line">				return false;</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">			&#x2F;&#x2F;或</span><br><span class="line">			return this.age &#x3D;&#x3D; cust.age &amp;&amp; this.name.equals(cust.name);</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			return false;</span><br><span class="line">			</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
                 <source type="audio/mpeg" src="">
@@ -97,7 +148,7 @@
     </div>
     
         <div class='side'>
-				
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#操作符与equals-方法"><span class="toc-number">1.</span> <span class="toc-text">&#x3D;&#x3D; 操作符与equals 方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-操作符"><span class="toc-number">1.0.1.</span> <span class="toc-text">1. &#x3D;&#x3D; 操作符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-equals-方法"><span class="toc-number">1.0.2.</span> <span class="toc-text">2. equals() 方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-面试题：-和equals的区别"><span class="toc-number">1.0.3.</span> <span class="toc-text">3. 面试题：&#x3D;&#x3D; 和equals的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-代码举例"><span class="toc-number">1.0.4.</span> <span class="toc-text">4 代码举例</span></a></li></ol></li></ol></li></ol>	
         </div>
     
 </div>

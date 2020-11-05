@@ -10,7 +10,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="Fechin,"> 
-    <meta name="description" content="秃头小王子的个人博客,"> 
+    <meta name="description" content="秃头小王子的个人博客,instanceof  操作符1. 使用x instanceof A 
+
+检验x是否为类A的对象
+返回值为boolean
+判断对象x是否属于类A的子类，如果是，返回true；如果不是，返回false,"> 
     <meta name="author" content="John Doe"> 
     <link rel="alternative" href="atom.xml" title="秃头小王子" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -59,10 +63,21 @@
         <div class="stuff">
             <span>七月 31, 2020</span>
             
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Java%E5%9F%BA%E7%A1%80/" rel="tag">Java基础</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/instanceof/" rel="tag">instanceof</a></li></ul>
+
 
         </div>
         <div class="content markdown">
-            
+            <h2 id="instanceof-操作符"><a href="#instanceof-操作符" class="headerlink" title="instanceof  操作符"></a>instanceof  操作符</h2><h4 id="1-使用"><a href="#1-使用" class="headerlink" title="1. 使用"></a>1. 使用</h4><p>x instanceof A </p>
+<ul>
+<li>检验x是否为类A的对象</li>
+<li>返回值为boolean</li>
+<li>判断对象x是否属于类A的子类，如果是，返回true；如果不是，返回false。<h4 id="2-要求"><a href="#2-要求" class="headerlink" title="2. 要求"></a>2. 要求</h4></li>
+<li>x所属的类与类A必须是子类和父类的关系，否则编译错误。</li>
+<li>使用情境：为了避免在向下转型时出现ClassCastException的异常，我们在向下转型之前，先进行instanceof的判断，一旦返回true，就进行向下转型。如果返回false，不进行向下转型。<h4 id="3-示例"><a href="#3-示例" class="headerlink" title="3. 示例"></a>3. 示例</h4></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">public class Person extends Object &#123;…&#125;</span><br><span class="line">public class Student extends Person &#123;…&#125;</span><br><span class="line">public class Graduate extends Person &#123;…&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;-------------------------------------------------</span><br><span class="line"></span><br><span class="line">public void method1(Person e) &#123;</span><br><span class="line">&#x2F;&#x2F;在多态性的作用下，调用此方法时传入的参数可以时Person和子类Student和子类Graduate</span><br><span class="line">if (e instanceof Person)</span><br><span class="line">&#x2F;&#x2F;  处理Person 类及其子类对象</span><br><span class="line">if (e instanceof Student)</span><br><span class="line">&#x2F;&#x2F; 处理Student 类及其子类对象</span><br><span class="line">if (e instanceof Graduate)</span><br><span class="line">&#x2F;&#x2F; 处理Graduate 类及其子类对象</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
                 <source type="audio/mpeg" src="">
@@ -97,7 +112,7 @@
     </div>
     
         <div class='side'>
-				
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#instanceof-操作符"><span class="toc-number">1.</span> <span class="toc-text">instanceof  操作符</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-使用"><span class="toc-number">1.0.1.</span> <span class="toc-text">1. 使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-要求"><span class="toc-number">1.0.2.</span> <span class="toc-text">2. 要求</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-示例"><span class="toc-number">1.0.3.</span> <span class="toc-text">3. 示例</span></a></li></ol></li></ol></li></ol>	
         </div>
     
 </div>

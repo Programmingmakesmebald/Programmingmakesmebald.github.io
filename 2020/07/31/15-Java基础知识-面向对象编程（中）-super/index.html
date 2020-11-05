@@ -10,7 +10,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="Fechin,"> 
-    <meta name="description" content="秃头小王子的个人博客,"> 
+    <meta name="description" content="秃头小王子的个人博客,super在Java类中使用super来调用父类中的指定操作
+1. super调用父类结构
+super可以访问父类的属性
+super可以访问父类的方法
+super可以在子类构造器中调用父类构造器2.,"> 
     <meta name="author" content="John Doe"> 
     <link rel="alternative" href="atom.xml" title="秃头小王子" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -59,10 +63,24 @@
         <div class="stuff">
             <span>七月 31, 2020</span>
             
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Java%E5%9F%BA%E7%A1%80/" rel="tag">Java基础</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/super/" rel="tag">super</a></li></ul>
+
 
         </div>
         <div class="content markdown">
-            
+            <h2 id="super"><a href="#super" class="headerlink" title="super"></a>super</h2><p>在Java类中使用super来调用父类中的指定操作</p>
+<h4 id="1-super调用父类结构"><a href="#1-super调用父类结构" class="headerlink" title="1. super调用父类结构"></a>1. super调用父类结构</h4><ul>
+<li>super可以访问父类的属性</li>
+<li>super可以访问父类的方法</li>
+<li>super可以在子类构造器中调用父类构造器<h4 id="2-注意"><a href="#2-注意" class="headerlink" title="2. 注意"></a>2. 注意</h4></li>
+<li>子父类中出现同名的成员时，super代表调用的时父类的成员</li>
+<li>super的追溯不仅限于直接父类</li>
+<li>super代表父类的内存空间的标识，this代表当前类对象的引用<br><img src="http://wangzixuan.work/4727" alt=""><h4 id="3-调用父类构造器"><a href="#3-调用父类构造器" class="headerlink" title="3. 调用父类构造器"></a>3. 调用父类构造器</h4></li>
+<li>子类中所有的构造器默认都会访问父类中的空参构造器</li>
+<li>当父类中没有空参构造器时，子类的构造器必须通过this（参数列表）或者super（参数列表）调用父类或者父类中相应的构造器。this与super只能二选一，且只能放在构造器的首行</li>
+<li>如果子类构造器中既未显式的调用父类或本类的构造器，且父类中没有空参构造器，则编译出错</li>
+</ul>
+
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
                 <source type="audio/mpeg" src="">
@@ -97,7 +115,7 @@
     </div>
     
         <div class='side'>
-				
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#super"><span class="toc-number">1.</span> <span class="toc-text">super</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-super调用父类结构"><span class="toc-number">1.0.1.</span> <span class="toc-text">1. super调用父类结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-注意"><span class="toc-number">1.0.2.</span> <span class="toc-text">2. 注意</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-调用父类构造器"><span class="toc-number">1.0.3.</span> <span class="toc-text">3. 调用父类构造器</span></a></li></ol></li></ol></li></ol>	
         </div>
     
 </div>

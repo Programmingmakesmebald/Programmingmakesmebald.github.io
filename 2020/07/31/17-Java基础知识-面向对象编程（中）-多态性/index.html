@@ -10,7 +10,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="Fechin,"> 
-    <meta name="description" content="秃头小王子的个人博客,"> 
+    <meta name="description" content="秃头小王子的个人博客,多态性1. 什么是多态性对象的多态性：父类对象指向子类引用（或子类的对象赋给父类的引用）（可以直接应用在抽象类和接口上）
+2. 多态的使用：
+父类对象指向子类引用
+多态作用
+提高了代码的通用性，常称,"> 
     <meta name="author" content="John Doe"> 
     <link rel="alternative" href="atom.xml" title="秃头小王子" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -59,10 +63,71 @@
         <div class="stuff">
             <span>七月 31, 2020</span>
             
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Java%E5%9F%BA%E7%A1%80/" rel="tag">Java基础</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E5%A4%9A%E6%80%81%E6%80%A7/" rel="tag">多态性</a></li></ul>
+
 
         </div>
         <div class="content markdown">
-            
+            <h2 id="多态性"><a href="#多态性" class="headerlink" title="多态性"></a>多态性</h2><h4 id="1-什么是多态性"><a href="#1-什么是多态性" class="headerlink" title="1. 什么是多态性"></a>1. 什么是多态性</h4><p>对象的多态性：父类对象指向子类引用（或子类的对象赋给父类的引用）（可以直接应用在抽象类和接口上）</p>
+<h4 id="2-多态的使用："><a href="#2-多态的使用：" class="headerlink" title="2. 多态的使用："></a>2. 多态的使用：</h4><ul>
+<li>父类对象指向子类引用</li>
+<li>多态作用<ul>
+<li>提高了代码的通用性，常称作接口重用</li>
+</ul>
+</li>
+<li>使用前提：① 类的继承关系② 方法的重写</li>
+<li>对象的多态性<ul>
+<li>只适用于方法（编译，看左边；运行，看右边。）</li>
+<li>不适用于属性（编译和运行都看左边）</li>
+</ul>
+</li>
+<li>成员方法：<ul>
+<li>编译时：要查看引用变量所声明的类中是否有所调用的方法。</li>
+<li>运行时：调用实际new的对象所属的类中的重写方法。</li>
+</ul>
+</li>
+<li>成员变量：<ul>
+<li>不具备多态性，只看引用变量所声明的类。</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-虚拟方法调用-Virtual-Method-Invocation"><a href="#3-虚拟方法调用-Virtual-Method-Invocation" class="headerlink" title="3. 虚拟方法调用(Virtual Method Invocation)"></a>3. 虚拟方法调用(Virtual Method Invocation)</h4><p>有了对象的多态性以后，我们在编译期，只能调用父类中声明的方法，但在运行期，我们实际执行的是子类重写父类的方法。</p>
+<p>总结：编译，看左边；运行，看右边。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;正常的方法调用</span><br><span class="line">Person e &#x3D; new Person();</span><br><span class="line">e.getInfo();</span><br><span class="line">Student e &#x3D; new Student();</span><br><span class="line">e.getInfo();</span><br><span class="line">&#x2F;&#x2F;虚拟方法调用( 多态情况下)</span><br><span class="line">Person e &#x3D; new Student();</span><br><span class="line">e.getInfo(); &#x2F;&#x2F; 调用Student 类的getInfo() 方法</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>虚拟方法调用( 多态情况下)<br>子类中定义了与父类同名同参数的方法，在多态情况下，将此时父类的方法称为虚拟方法，父类根据赋给它的不同子类对象，动态调用属于子类的该方法。这样的方法调用在编译期是无法确定的。</li>
+<li>编译时类型和运行时类型<br>编译时e 为Person类型，而方法的调用是在运行时确定的，所以调用的是Student类的getInfo() 方法。——动态绑定<h4 id="4-Java引用变量的两个类型"><a href="#4-Java引用变量的两个类型" class="headerlink" title="4. Java引用变量的两个类型"></a>4. Java引用变量的两个类型</h4>编译时类型和运行时类型。编译时类型由声明该变量时使用的类型决定，运行时类型由实际赋给该变量的对象决定。简称：编译时，看左边；运行时，看右边。</li>
+<li>若编译时类型和运行时类型不一致，就出现了对象的多态性 (Polymorphism)</li>
+<li>多态情况下<ul>
+<li>“看左边”：看的是父类的引用（父类中不具备子类特有的方法）</li>
+<li>“看右边”：看的是子类的对象（实际运行的是子类重写父类的方法）<h4 id="5-对象的多态"><a href="#5-对象的多态" class="headerlink" title="5. 对象的多态"></a>5. 对象的多态</h4>在Java中,子类的对象可以替代父类的对象使用</li>
+</ul>
+</li>
+<li>一个变量只能有一种确定的数据类型</li>
+<li>一个引用类型变量可能指向(引用)多种不同类型的对象</li>
+<li>示例</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Person p &#x3D; new Student();</span><br><span class="line">Object o &#x3D; new Person();&#x2F;&#x2F;Object类型的变量o，指向Person类型的对象</span><br><span class="line">o &#x3D; new Student(); &#x2F;&#x2F;Object类型的变量o，指向Student类型的对象</span><br></pre></td></tr></table></figure>
+<ul>
+<li>这里子类可看做是特殊的父类，所以父类类型的引用可以指向子类的对象：向型上转型(upcasting)。<h4 id="6-多态不适用于属性"><a href="#6-多态不适用于属性" class="headerlink" title="6. 多态不适用于属性"></a>6. 多态不适用于属性</h4>一个引用类型变量如果声明为父类的类型，但实际引用的是子类对象，那么该变量就不能再访问子类中添加的属性和方法</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Student m &#x3D; new Student();</span><br><span class="line">m.school &#x3D; “pku”;  &#x2F;&#x2F; 合法,Student 类有school 成员变量</span><br><span class="line">Person e &#x3D; new Student();</span><br><span class="line">e.school &#x3D; “pku”; &#x2F;&#x2F; 非法,Person 类没有school</span><br></pre></td></tr></table></figure>
+<p>属性是在编译时确定的，编译时e为Person类型，没有school 成员变量，因而编译错误。</p>
+<h4 id="7-面试题"><a href="#7-面试题" class="headerlink" title="7. 面试题"></a>7. 面试题</h4><ul>
+<li>谈谈你对多态的理解？<ol>
+<li>实现代码的通用性</li>
+<li>object类中定义的public boolean equals(Object obj){}</li>
+<li>JDBC:使用java程序操作(获取数据库连接、CRUD)数据 库(MySQL、Oracle、DB2、SQL Server)</li>
+<li>抽象类、接口的使用肯定体现了多态性。(抽象类、接口不能实例化)</li>
+</ol>
+</li>
+<li>多态时编译时行为还是运行时行为？<ul>
+<li>运行时行为</li>
+</ul>
+</li>
+</ul>
+
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
                 <source type="audio/mpeg" src="">
@@ -97,7 +162,7 @@
     </div>
     
         <div class='side'>
-				
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#多态性"><span class="toc-number">1.</span> <span class="toc-text">多态性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-什么是多态性"><span class="toc-number">1.0.1.</span> <span class="toc-text">1. 什么是多态性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-多态的使用："><span class="toc-number">1.0.2.</span> <span class="toc-text">2. 多态的使用：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-虚拟方法调用-Virtual-Method-Invocation"><span class="toc-number">1.0.3.</span> <span class="toc-text">3. 虚拟方法调用(Virtual Method Invocation)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-Java引用变量的两个类型"><span class="toc-number">1.0.4.</span> <span class="toc-text">4. Java引用变量的两个类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-对象的多态"><span class="toc-number">1.0.5.</span> <span class="toc-text">5. 对象的多态</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-多态不适用于属性"><span class="toc-number">1.0.6.</span> <span class="toc-text">6. 多态不适用于属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-面试题"><span class="toc-number">1.0.7.</span> <span class="toc-text">7. 面试题</span></a></li></ol></li></ol></li></ol>	
         </div>
     
 </div>
