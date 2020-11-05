@@ -3260,4 +3260,719 @@
         <tag>异常处理</tag>
       </tags>
   </entry>
+  <entry>
+    <title>40.Java基础知识-集合</title>
+    <url>/2020/11/05/40-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E9%9B%86%E5%90%88/</url>
+    <content><![CDATA[<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><p>集合、数组都是对多个数据进行存储操作的结构，简称Java容器。</p>
+<ul>
+<li>说明：此时的存储，主要指的是内存层面的存储，不涉及到持久化的存储（.txt,.jpg,.avi，数据库中）<h4 id="2-数组在存储多个数据方面的优缺点"><a href="#2-数组在存储多个数据方面的优缺点" class="headerlink" title="2.数组在存储多个数据方面的优缺点"></a>2.数组在存储多个数据方面的优缺点</h4></li>
+<li>特点<ul>
+<li>一旦初始化以后，其长度就确定了。</li>
+<li>数组一旦定义好，其元素的类型也就确定了。我们也就只能操作指定类型的数据了。</li>
+<li>比如：String[] arr;int[] arr1;Object[] arr2;</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>一旦初始化以后，其长度就不可修改。</li>
+<li>数组中提供的方法非常有限，对于添加、删除、插入数据等操作，非常不便，同时效率不高。</li>
+<li>获取数组中实际元素的个数的需求，数组没有现成的属性或方法可用</li>
+<li>数组存储数据的特点：有序、可重复。对于无序、不可重复的需求，不能满足。<h4 id="3-集合框架"><a href="#3-集合框架" class="headerlink" title="3.集合框架"></a>3.集合框架</h4>Java集合可分为Collection和Map两种体系</li>
+</ul>
+</li>
+<li>Collection接口：单列集合，用来存储一个一个的对象<br><img src="http://wangzixuan.work/5472" alt=""><ul>
+<li>List接口：存储有序、可重复的数据（动态数组）<ul>
+<li>ArrayList：ArrayList：作为List接口的主要实现类；线程不安全的，效率高；底层使用Object[] elementData存储</li>
+<li>LinkedList：对于频繁的插入、删除操作，使用此类效率比ArrayList高；底层使用双向链表存储</li>
+<li>Vector：作为List接口的古老实现类；线程安全的，效率低；底层使用Object[] elementData存储</li>
+</ul>
+</li>
+<li>Set接口：存储无序、不可重复的数据（高中的集合）<ul>
+<li>HashSet、LinkedHashSet、TreeSet</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Map接口：双列集合，用来存储一对(key - value)一对的数据<br><img src="http://wangzixuan.work/5474" alt=""><ul>
+<li>HashMap:作为Map的主要实现类；线程不安全的，效率高；存储null的key和value<ul>
+<li>LinkedHashMap:保证在遍历map元素时，可以按照添加的顺序实现遍历。<ul>
+<li>原因：在原有的HashMap底层结构基础上，添加了一对指针，指向前一个和后一个元素。对于频繁的遍历操作，此类执行效率高于HashMap。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>TreeMap:保证按照添加的key-value对进行排序，实现排序遍历。此时考虑key的自然排序或定制排序底层使用红黑树</li>
+<li>Hashtable:作为古老的实现类；线程安全的，效率低；不能存储null的key和value<ul>
+<li>Properties:常用来处理配置文件。key和value都是String类型</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+        <tag>集合</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>43.Java基础知识-Iterator迭代器接口</title>
+    <url>/2020/11/05/43-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-Iterator%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%8E%A5%E5%8F%A3/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+        <tag>Iterator</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>45.Java基础知识-IO流</title>
+    <url>/2020/11/05/45-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-IO%E6%B5%81/</url>
+    <content><![CDATA[<h2 id="IO流"><a href="#IO流" class="headerlink" title="IO流"></a>IO流</h2><h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><ul>
+<li>流是用来处理数据的。</li>
+<li>处理数据时，一定要先明确数据源，与数据目的地<ul>
+<li>数据源可以是文件，可以是键盘。</li>
+<li>数据目的地可以是文件、显示器或者其他设备。</li>
+</ul>
+</li>
+<li>而流只是在帮助数据进行传输,并对传输的数据进行处理，比如过滤处理、<br>转换处理等。</li>
+</ul>
+<h4 id="Java-IO原理"><a href="#Java-IO原理" class="headerlink" title="Java IO原理"></a>Java IO原理</h4><ul>
+<li>I/O是Input/Output的缩写，I/O技术是非常实用的技术，用于处理设备之间的数据传输。如读/写文件，网络通讯等。</li>
+<li>Java程序中，对于数据的输入/输出操作以“流(stream)” ” 的方式进行。</li>
+<li>java.io包下提供了各种“流”类和接口，用以获取不同种类的数据，并通过 标准的方法输入或输出数据。</li>
+<li>输入input：读取外部数据（磁盘、光盘等存储设备的数据）到程序（内存）中。</li>
+<li>输出output：将程序（内存）数据输出到磁盘、光盘等存储设备中。<br><img src="http://wangzixuan.work/5705" alt=""><h4 id="IO-流体系"><a href="#IO-流体系" class="headerlink" title="IO 流体系"></a>IO 流体系</h4><img src="http://wangzixuan.work/5725" alt=""></li>
+</ul>
+<h4 id="流的分类"><a href="#流的分类" class="headerlink" title="流的分类"></a>流的分类</h4><ul>
+<li>操作数据单位：字节流(8 bit) ，字符流(16 bit)</li>
+<li>数据流的向为： 输入流，输出流</li>
+<li>流的角色： 节点流，处理流<br><img src="http://wangzixuan.work/5767" alt="image"><table>
+<thead>
+<tr>
+<th>( 抽象基类)</th>
+<th>字节流</th>
+<th>字符流</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>输入流</td>
+<td>InputStream</td>
+<td>Reader</td>
+</tr>
+<tr>
+<td>输出流</td>
+<td>OutputStream</td>
+<td>Writer</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>由基类派生的常用流</p>
+<table>
+<thead>
+<tr>
+<th>抽象基类</th>
+<th>节点流（或文件流）</th>
+<th>缓冲流（处理流的一种）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>InputStream</td>
+<td>FileInputStream</td>
+<td>BufferedInputStream</td>
+</tr>
+<tr>
+<td>OutputStream</td>
+<td>FileOutputStream</td>
+<td>BufferedOutputStream</td>
+</tr>
+<tr>
+<td>Reader</td>
+<td>FileReader</td>
+<td>BufferedReader</td>
+</tr>
+<tr>
+<td>Writer</td>
+<td>FileWriter</td>
+<td>Buffered</td>
+</tr>
+</tbody></table>
+<h4 id="节点流和处理流"><a href="#节点流和处理流" class="headerlink" title="节点流和处理流"></a>节点流和处理流</h4><h6 id="节点流：直接在硬盘读取数据到内存或者直接在内存写数据到硬盘"><a href="#节点流：直接在硬盘读取数据到内存或者直接在内存写数据到硬盘" class="headerlink" title="节点流：直接在硬盘读取数据到内存或者直接在内存写数据到硬盘"></a>节点流：直接在硬盘读取数据到内存或者直接在内存写数据到硬盘</h6><p>直接从数据源或目的地读写数据<br><img src="http://wangzixuan.work/5784" alt="image"></p>
+<h6 id="处理流：在节点流或者处理流的基础上处理之后在进行读写操作"><a href="#处理流：在节点流或者处理流的基础上处理之后在进行读写操作" class="headerlink" title="处理流：在节点流或者处理流的基础上处理之后在进行读写操作"></a>处理流：在节点流或者处理流的基础上处理之后在进行读写操作</h6><p>不直接连接到数据源或目的地，而是“连接”在已存在的流（节点流或处理流）之上，通过对数据的处理为程序提供更为强大的读写功能<br><img src="http://wangzixuan.work/5786" alt="image"></p>
+<h4 id="输入流和输出流基类"><a href="#输入流和输出流基类" class="headerlink" title="输入流和输出流基类"></a>输入流和输出流基类</h4><h5 id="输入流InputStream-amp-Reader"><a href="#输入流InputStream-amp-Reader" class="headerlink" title="输入流InputStream &amp; Reader"></a>输入流InputStream &amp; Reader</h5><ul>
+<li>InputStream 和 Reader 是所有 输入流的基类。</li>
+<li>程序中打开的文件IO资源不属于内存里的资源，垃圾回收机制无法回收该资源，所以应该件 显式关闭文件 IO </li>
+</ul>
+<h5 id="InputStream（字节输入流基类）方法"><a href="#InputStream（字节输入流基类）方法" class="headerlink" title="InputStream（字节输入流基类）方法"></a>InputStream（字节输入流基类）方法</h5><ul>
+<li>FileInputStream从文件系统中的某个文件中获得输入字节。</li>
+<li>FileInputStream用于读取非文本数据（非文本文件(.jpg,.mp3,.mp4,.avi,.doc,.ppt,…)）之类的原始字节流。</li>
+</ul>
+<h6 id="int-read"><a href="#int-read" class="headerlink" title="int read()"></a>int read()</h6><p>从输入流中读取数据的下一个字节。返回 0 到 255 范围内的 int 字节值。如果因<br>为已经到达流末尾而没有可用的字节，则返回值 -1。</p>
+<h6 id="int-read-byte-b"><a href="#int-read-byte-b" class="headerlink" title="int read(byte[] b)"></a>int read(byte[] b)</h6><p>从此输入流中将最多 b.length 个字节的数据读入一个 byte 数组中。如果因为已<br>经到达流末尾而没有可用的字节，则返回值 -1。否则以整数形式返回实际读取<br>的字节数。</p>
+<h6 id="int-read-byte-b-int-off-int-len"><a href="#int-read-byte-b-int-off-int-len" class="headerlink" title="int read(byte[] b, int off,int len)"></a>int read(byte[] b, int off,int len)</h6><p>将输入流中最多 len 个数据字节读入 byte 数组。尝试读取 len 个字节，但读取<br>的字节也可能小于该值。以整数形式返回实际读取的字节数。如果因为流位于<br>文件末尾而没有可用的字节，则返回值 -1。</p>
+<h6 id="public-void-close-throws-IOException"><a href="#public-void-close-throws-IOException" class="headerlink" title="public void close() throws IOException"></a>public void close() throws IOException</h6><p>关闭此输入流并释放与该流关联的所有系统资源。</p>
+<h5 id="Reader（字符输入流基类）方法"><a href="#Reader（字符输入流基类）方法" class="headerlink" title="Reader（字符输入流基类）方法"></a>Reader（字符输入流基类）方法</h5><ul>
+<li>FileReader从文件系统中的某个文件中获得输入字符。</li>
+<li>FileReader用于读取文本数据（文本文件(.txt,.java,.c,.cpp,…)）之类的原始字符流</li>
+</ul>
+<h6 id="int-read-1"><a href="#int-read-1" class="headerlink" title="int read()"></a>int read()</h6><p>读取单个字符。作为整数读取的字符，范围在 0 到 65535 之间 (0x00-0xffff)（2个<br>字节的Unicode码），如果已到达流的末尾，则返回 -1</p>
+<h6 id="int-read-char-cbuf"><a href="#int-read-char-cbuf" class="headerlink" title="int read(char[] cbuf)"></a>int read(char[] cbuf)</h6><p>将字符读入数组。如果已到达流的末尾，则返回 -1。否则返回本次读取的字符数。</p>
+<h6 id="int-read-char-cbuf-int-off-int-len"><a href="#int-read-char-cbuf-int-off-int-len" class="headerlink" title="int read(char[] cbuf,int off,int len)"></a>int read(char[] cbuf,int off,int len)</h6><p>将字符读入数组的某一部分。存到数组cbuf中，从off处开始存储，最多读len个字<br>符。如果已到达流的末尾，则返回 -1。否则返回本次读取的字符数。</p>
+<h6 id="public-void-close-throws-IOException-1"><a href="#public-void-close-throws-IOException-1" class="headerlink" title="public void close() throws IOException"></a>public void close() throws IOException</h6><p>关闭此输入流并释放与该流关联的所有系统资源。</p>
+<h5 id="输出流OutputStream-amp-Writer"><a href="#输出流OutputStream-amp-Writer" class="headerlink" title="输出流OutputStream &amp; Writer"></a>输出流OutputStream &amp; Writer</h5><ul>
+<li>OutputStream和Writer是所有 输入流的基类。</li>
+<li>程序中打开的文件IO资源不属于内存里的资源，垃圾回收机制无法回收该资源，所以应该件显式关闭文件 IO  </li>
+</ul>
+<h5 id="OutputStream（字节输出流基类）方法"><a href="#OutputStream（字节输出流基类）方法" class="headerlink" title="OutputStream（字节输出流基类）方法"></a>OutputStream（字节输出流基类）方法</h5><ul>
+<li>FileOutputStream从文件系统中的某个文件中获得输出字节。</li>
+<li>FileOutputStream用于写出非文本数据（非文本文件(.jpg,.mp3,.mp4,.avi,.doc,.ppt,…)）之类的原始字节流。</li>
+</ul>
+<h6 id="void-write-int-b"><a href="#void-write-int-b" class="headerlink" title="void write(int b)"></a>void write(int b)</h6><p>将指定的字节写入此输出流。write 的常规协定是：向输出流写入一个字节。要写<br>入的字节是参数 b 的八个低位。b 的 24 个高位将被忽略。 即写入0~255范围的。</p>
+<h6 id="void-write-byte-b"><a href="#void-write-byte-b" class="headerlink" title="void write(byte[] b)"></a>void write(byte[] b)</h6><p>将 b.length 个字节从指定的 byte 数组写入此输出流。write(b) 的常规协定是：应该<br>与调用 write(b, 0, b.length) 的效果完全相同。</p>
+<h6 id="void-write-byte-b-int-off-int-len"><a href="#void-write-byte-b-int-off-int-len" class="headerlink" title="void write(byte[] b,int off,int len)"></a>void write(byte[] b,int off,int len)</h6><p>将指定 byte 数组中从偏移量 off 开始的 len 个字节写入此输出流。</p>
+<h6 id="public-void-flush-throws-IOException"><a href="#public-void-flush-throws-IOException" class="headerlink" title="public void flush()throws IOException"></a>public void flush()throws IOException</h6><p>刷新此输出流并强制写出所有缓冲的输出字节，调用此方法指示应将这些字节立<br>即写入它们预期的目标。</p>
+<h6 id="public-void-close-throws-IOException-2"><a href="#public-void-close-throws-IOException-2" class="headerlink" title="public void close() throws IOException"></a>public void close() throws IOException</h6><p>关闭此输出流并释放与该流关联的所有系统资源。</p>
+<h5 id="Writer（字符输出流基类）方法"><a href="#Writer（字符输出流基类）方法" class="headerlink" title="Writer（字符输出流基类）方法"></a>Writer（字符输出流基类）方法</h5><ul>
+<li>FileWriter从文件系统中的某个文件中获得输出字符。</li>
+<li>FileWriter用于写出文本数据（文本文件(.txt,.java,.c,.cpp,…)）之类的原始字符流</li>
+</ul>
+<h6 id="void-write-int-c"><a href="#void-write-int-c" class="headerlink" title="void write(int c)"></a>void write(int c)</h6><p>写入单个字符。要写入的字符包含在给定整数值的 16 个低位中，16 高位被忽略。 即<br>写入0 到 65535 之间的Unicode码。</p>
+<h6 id="void-write-char-cbuf"><a href="#void-write-char-cbuf" class="headerlink" title="void write(char[] cbuf)"></a>void write(char[] cbuf)</h6><p>写入字符数组。</p>
+<h6 id="void-write-char-cbuf-int-off-int-len"><a href="#void-write-char-cbuf-int-off-int-len" class="headerlink" title="void write(char[] cbuf,int off,int len)"></a>void write(char[] cbuf,int off,int len)</h6><p>写入字符数组的某一部分。从off开始，写入len个字符</p>
+<h6 id="void-write-String-str"><a href="#void-write-String-str" class="headerlink" title="void write(String str)"></a>void write(String str)</h6><p>写入字符串。</p>
+<h6 id="void-write-String-str-int-off-int-len"><a href="#void-write-String-str-int-off-int-len" class="headerlink" title="void write(String str,int off,int len)"></a>void write(String str,int off,int len)</h6><p>写入字符串的某一部分。</p>
+<h6 id="void-flush"><a href="#void-flush" class="headerlink" title="void flush()"></a>void flush()</h6><p>刷新该流的缓冲，则立即将它们写入预期目标。</p>
+<h6 id="public-void-close-throws-IOException-3"><a href="#public-void-close-throws-IOException-3" class="headerlink" title="public void close() throws IOException"></a>public void close() throws IOException</h6><p>关闭此输出流并释放与该流关联的所有系统资源。</p>
+<h4 id="节点流-或文件流"><a href="#节点流-或文件流" class="headerlink" title="节点流(或文件流)"></a>节点流(或文件流)</h4><h5 id="读取文件"><a href="#读取文件" class="headerlink" title="读取文件"></a>读取文件</h5><ol>
+<li>建立一个流对象，将已存在的一个文件加载进流。<br>FileReader fr = new FileReader(new File(“Test.txt”));</li>
+<li>创建一个临时存放数据的数组。<br>char[] ch = new char[1024];</li>
+<li>调用流对象的读取方法将流中的数据读入到数组中。<br>fr.read(ch);</li>
+<li>关闭资源。<br>fr.close();</li>
+</ol>
+<h6 id="FileReader读取文件"><a href="#FileReader读取文件" class="headerlink" title="FileReader读取文件"></a>FileReader读取文件</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@Test</span><br><span class="line">public void testFileReader1()  &#123;</span><br><span class="line">    FileReader fr &#x3D; null;</span><br><span class="line">    try &#123;</span><br><span class="line">        &#x2F;&#x2F;1.File类的实例化</span><br><span class="line">        File file &#x3D; new File(&quot;hello.txt&quot;);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;2.FileReader流的实例化</span><br><span class="line">        fr &#x3D; new FileReader(file);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;3.读入的操作</span><br><span class="line">        &#x2F;&#x2F;read(char[] cbuf):返回每次读入cbuf数组中的字符的个数。如果达到文件末尾，返回-1</span><br><span class="line">        char[] cbuf &#x3D; new char[5];</span><br><span class="line">        int len;</span><br><span class="line">        while((len &#x3D; fr.read(cbuf)) !&#x3D; -1)&#123;</span><br><span class="line">            &#x2F;&#x2F;方式一：</span><br><span class="line">            &#x2F;&#x2F;错误的写法</span><br><span class="line">&#x2F;&#x2F;                for(int i &#x3D; 0;i &lt; cbuf.length;i++)&#123;</span><br><span class="line">&#x2F;&#x2F;                    System.out.print(cbuf[i]);</span><br><span class="line">&#x2F;&#x2F;                &#125;</span><br><span class="line">            &#x2F;&#x2F;正确的写法</span><br><span class="line">&#x2F;&#x2F;                for(int i &#x3D; 0;i &lt; len;i++)&#123;</span><br><span class="line">&#x2F;&#x2F;                    System.out.print(cbuf[i]);</span><br><span class="line">&#x2F;&#x2F;                &#125;</span><br><span class="line">            &#x2F;&#x2F;方式二：</span><br><span class="line">            &#x2F;&#x2F;错误的写法,对应着方式一的错误的写法</span><br><span class="line">&#x2F;&#x2F;                String str &#x3D; new String(cbuf);</span><br><span class="line">&#x2F;&#x2F;                System.out.print(str);</span><br><span class="line">            &#x2F;&#x2F;正确的写法</span><br><span class="line">            String str &#x3D; new String(cbuf,0,len);</span><br><span class="line">            System.out.print(str);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; catch (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; finally &#123;</span><br><span class="line">        if(fr !&#x3D; null)&#123;</span><br><span class="line">            &#x2F;&#x2F;4.资源的关闭</span><br><span class="line">            try &#123;</span><br><span class="line">                fr.close();</span><br><span class="line">            &#125; catch (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h6 id="FileInputStream读取文件"><a href="#FileInputStream读取文件" class="headerlink" title="FileInputStream读取文件"></a>FileInputStream读取文件</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@Test</span><br><span class="line">public void testFileInputStream() &#123;</span><br><span class="line">    FileInputStream fis &#x3D; null;</span><br><span class="line">    try &#123;</span><br><span class="line">        &#x2F;&#x2F;1. 造文件</span><br><span class="line">        File file &#x3D; new File(&quot;hello.txt&quot;);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;2.造流</span><br><span class="line">        fis &#x3D; new FileInputStream(file);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;3.读数据</span><br><span class="line">        byte[] buffer &#x3D; new byte[5];</span><br><span class="line">        int len;&#x2F;&#x2F;记录每次读取的字节的个数</span><br><span class="line">        while((len &#x3D; fis.read(buffer)) !&#x3D; -1)&#123;</span><br><span class="line"></span><br><span class="line">            String str &#x3D; new String(buffer,0,len);</span><br><span class="line">            System.out.print(str);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125; catch (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; finally &#123;</span><br><span class="line">        if(fis !&#x3D; null)&#123;</span><br><span class="line">            &#x2F;&#x2F;4.关闭资源</span><br><span class="line">            try &#123;</span><br><span class="line">                fis.close();</span><br><span class="line">            &#125; catch (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h5 id="写入文件"><a href="#写入文件" class="headerlink" title="写入文件"></a>写入文件</h5><ol>
+<li>创建流对象，建立数据存放文件<br>FileWriter fw = new FileWriter(new File(“Test.txt”));</li>
+<li>调用流对象的写入方法，将数据写入流<br>fw.write(“atguigu-songhongkang”);</li>
+<li>关闭流资源，并将流中的数据清空到文件中。<br>fw.close();</li>
+</ol>
+<h6 id="FileWriter写文件"><a href="#FileWriter写文件" class="headerlink" title="FileWriter写文件"></a>FileWriter写文件</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@Test</span><br><span class="line">public void testFileWriter() &#123;</span><br><span class="line">    FileWriter fw &#x3D; null;</span><br><span class="line">    try &#123;</span><br><span class="line">        &#x2F;&#x2F;1.提供File类的对象，指明写出到的文件</span><br><span class="line">        File file &#x3D; new File(&quot;hello1.txt&quot;);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;2.提供FileWriter的对象，用于数据的写出</span><br><span class="line">        fw &#x3D; new FileWriter(file,false);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;3.写出的操作</span><br><span class="line">        fw.write(&quot;I have a dream!\n&quot;);</span><br><span class="line">        fw.write(&quot;you need to have a dream!&quot;);</span><br><span class="line">    &#125; catch (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; finally &#123;</span><br><span class="line">        &#x2F;&#x2F;4.流资源的关闭</span><br><span class="line">        if(fw !&#x3D; null)&#123;</span><br><span class="line"></span><br><span class="line">            try &#123;</span><br><span class="line">                fw.close();</span><br><span class="line">            &#125; catch (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h6 id="FileOutputStream写文件"><a href="#FileOutputStream写文件" class="headerlink" title="FileOutputStream写文件"></a>FileOutputStream写文件</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@Test</span><br><span class="line">public void testFileOutputStream()&#123;</span><br><span class="line">    FileOutputStream fos &#x3D; null;</span><br><span class="line">    try &#123;</span><br><span class="line">        File file &#x3D; new File(&quot;hi.txt&quot;);</span><br><span class="line">        fos &#x3D; new FileOutputStream(file);</span><br><span class="line">        fos.write(&quot;hello world&quot;.getBytes());</span><br><span class="line">    &#125; catch (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; finally &#123;</span><br><span class="line">        if(fos !&#x3D; null)&#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                fos.close();</span><br><span class="line">            &#125; catch (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125; finally &#123;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h5><ul>
+<li>定义文件路径时，注意：可以用“/”或者“\”。</li>
+<li>在写入一个文件时，如果使用构造器FileOutputStream(file)，则 目录 下有同名文<br>件将被 覆盖。</li>
+<li>如果使用构造器FileOutputStream(file,true)，则目录下的同名文件不会被覆盖，<br>在文件内容末尾追加内容。</li>
+<li>在读取文件时，必须保证该文件已存在，否则报异常。</li>
+<li>字节流操作字节，比如：.mp3，.avi，.rmvb，mp4，.jpg，.doc，.ppt</li>
+<li>字符流操作字符，只能操作普通文本文件。最常见的文本文<br>件：.txt，.java，.c，.cpp 等语言的源代码。尤其注意.doc,excel,ppt这些不是文本文件。</li>
+</ul>
+<h5 id="文件复制（读写）"><a href="#文件复制（读写）" class="headerlink" title="文件复制（读写）"></a>文件复制（读写）</h5><h6 id="FileReaderWriter复制文件"><a href="#FileReaderWriter复制文件" class="headerlink" title="FileReaderWriter复制文件"></a>FileReaderWriter复制文件</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@Test</span><br><span class="line">public void testFileReaderFileWriter() &#123;</span><br><span class="line">    FileReader fr &#x3D; null;</span><br><span class="line">    FileWriter fw &#x3D; null;</span><br><span class="line">    try &#123;</span><br><span class="line">        &#x2F;&#x2F;1.创建File类的对象，指明读入和写出的文件</span><br><span class="line">        File srcFile &#x3D; new File(&quot;hello.txt&quot;);</span><br><span class="line">        File destFile &#x3D; new File(&quot;hello2.txt&quot;);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;不能使用字符流来处理图片等字节数据</span><br><span class="line">&#x2F;&#x2F;            File srcFile &#x3D; new File(&quot;爱情与友情.jpg&quot;);</span><br><span class="line">&#x2F;&#x2F;            File destFile &#x3D; new File(&quot;爱情与友情1.jpg&quot;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;2.创建输入流和输出流的对象</span><br><span class="line">        fr &#x3D; new FileReader(srcFile);</span><br><span class="line">        fw &#x3D; new FileWriter(destFile);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;3.数据的读入和写出操作</span><br><span class="line">        char[] cbuf &#x3D; new char[5];</span><br><span class="line">        int len;&#x2F;&#x2F;记录每次读入到cbuf数组中的字符的个数</span><br><span class="line">        while((len &#x3D; fr.read(cbuf)) !&#x3D; -1)&#123;</span><br><span class="line">            &#x2F;&#x2F;每次写出len个字符</span><br><span class="line">            fw.write(cbuf,0,len);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125; catch (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; finally &#123;</span><br><span class="line">        &#x2F;&#x2F;4.关闭流资源</span><br><span class="line">        try &#123;</span><br><span class="line">            if(fw !&#x3D; null)</span><br><span class="line">                fw.close();</span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        try &#123;</span><br><span class="line">            if(fr !&#x3D; null)</span><br><span class="line">                fr.close();</span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h6 id="FileInputOutputStream复制文件"><a href="#FileInputOutputStream复制文件" class="headerlink" title="FileInputOutputStream复制文件"></a>FileInputOutputStream复制文件</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@Test</span><br><span class="line">public void testFileInputOutputStream()  &#123;</span><br><span class="line">    FileInputStream fis &#x3D; null;</span><br><span class="line">    FileOutputStream fos &#x3D; null;</span><br><span class="line">    try &#123;</span><br><span class="line">        &#x2F;&#x2F;</span><br><span class="line">        File srcFile &#x3D; new File(&quot;爱情与友情.jpg&quot;);</span><br><span class="line">        File destFile &#x3D; new File(&quot;爱情与友情2.jpg&quot;);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;</span><br><span class="line">        fis &#x3D; new FileInputStream(srcFile);</span><br><span class="line">        fos &#x3D; new FileOutputStream(destFile);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;复制的过程</span><br><span class="line">        byte[] buffer &#x3D; new byte[5];</span><br><span class="line">        int len;</span><br><span class="line">        while((len &#x3D; fis.read(buffer)) !&#x3D; -1)&#123;</span><br><span class="line">            fos.write(buffer,0,len);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125; catch (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; finally &#123;</span><br><span class="line">        if(fos !&#x3D; null)&#123;</span><br><span class="line">            &#x2F;&#x2F;</span><br><span class="line">            try &#123;</span><br><span class="line">                fos.close();</span><br><span class="line">            &#125; catch (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if(fis !&#x3D; null)&#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                fis.close();</span><br><span class="line">            &#125; catch (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="缓冲流（处理流的一种）"><a href="#缓冲流（处理流的一种）" class="headerlink" title="缓冲流（处理流的一种）"></a>缓冲流（处理流的一种）</h4><h6 id="作用：提供流的读取、写入的速度"><a href="#作用：提供流的读取、写入的速度" class="headerlink" title="作用：提供流的读取、写入的速度"></a>作用：提供流的读取、写入的速度</h6><h6 id="提高读写速度的原因：内部提供了一个缓冲区"><a href="#提高读写速度的原因：内部提供了一个缓冲区" class="headerlink" title="提高读写速度的原因：内部提供了一个缓冲区"></a>提高读写速度的原因：内部提供了一个缓冲区</h6><ul>
+<li><p>为了提高数据读写的速度，JavaAPI提供了带缓冲功能的流类，在使用这些流类时，会创建一个内部缓冲区数组，缺省使用8192个字节(8Kb)的缓冲区。</p>
+</li>
+<li><p>缓冲流要“套接”在相应的节点流之上，根据数据操作单位可以把缓冲流分为： </p>
+<ul>
+<li>BufferedInputStream 和 BufferedOutputStream</li>
+<li>BufferedReader 和 BufferedWriter</li>
+</ul>
+</li>
+<li><p>当读取数据时，数据按块读入缓冲区，其后的读操作则直接访问缓冲区</p>
+</li>
+<li><p>当使用BufferedInputStream读取字节文件时，BufferedInputStream会一次性从文件中读取8192个(8Kb)，存在缓冲区中，直到缓冲区装满了，才重新从文件中读取下一个8192个字节数组。</p>
+</li>
+<li><p>向流中写入字节时，不会直接写到文件，先写到缓冲区中直到缓冲区写满，BufferedOutputStream才会把缓冲区中的数据一次性写到文件里。使用方法flush()可以强制将缓冲区的内容全部写入输出流</p>
+</li>
+<li><p>关闭流的顺序和打开流的顺序相反。只要关闭最外层流即可，关闭最外层流会自动关闭相应的内层节点流</p>
+</li>
+<li><p>flush()方法的使用：手动将buffer中内容写入文件</p>
+</li>
+<li><p>如果是带缓冲区的流对象的close()方法，不但会关闭流，还会在关闭流之前刷新缓冲区，关闭后不能再写出</p>
+</li>
+</ul>
+<p><img src="http://wangzixuan.work/5904" alt="image"></p>
+<h5 id="BufferedInputStream和BufferedOutputStream实现非文本文件的复制"><a href="#BufferedInputStream和BufferedOutputStream实现非文本文件的复制" class="headerlink" title="BufferedInputStream和BufferedOutputStream实现非文本文件的复制"></a>BufferedInputStream和BufferedOutputStream实现非文本文件的复制</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@Test</span><br><span class="line">public void BufferedStreamTest() &#123;</span><br><span class="line">    BufferedInputStream bis &#x3D; null;</span><br><span class="line">    BufferedOutputStream bos &#x3D; null;</span><br><span class="line"></span><br><span class="line">    try &#123;</span><br><span class="line">        &#x2F;&#x2F;1.造文件</span><br><span class="line">        File srcFile &#x3D; new File(&quot;爱情与友情.jpg&quot;);</span><br><span class="line">        File destFile &#x3D; new File(&quot;爱情与友情3.jpg&quot;);</span><br><span class="line">        &#x2F;&#x2F;2.造流</span><br><span class="line">        &#x2F;&#x2F;2.1 造节点流</span><br><span class="line">        FileInputStream fis &#x3D; new FileInputStream((srcFile));</span><br><span class="line">        FileOutputStream fos &#x3D; new FileOutputStream(destFile);</span><br><span class="line">        &#x2F;&#x2F;2.2 造缓冲流</span><br><span class="line">        bis &#x3D; new BufferedInputStream(fis);</span><br><span class="line">        bos &#x3D; new BufferedOutputStream(fos);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;3.复制的细节：读取、写入</span><br><span class="line">        byte[] buffer &#x3D; new byte[10];</span><br><span class="line">        int len;</span><br><span class="line">        while((len &#x3D; bis.read(buffer)) !&#x3D; -1)&#123;</span><br><span class="line">            bos.write(buffer,0,len);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;                bos.flush();&#x2F;&#x2F;刷新缓冲区</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125; catch (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; finally &#123;</span><br><span class="line">        &#x2F;&#x2F;4.资源关闭</span><br><span class="line">        &#x2F;&#x2F;要求：先关闭外层的流，再关闭内层的流</span><br><span class="line">        &#x2F;&#x2F;说明：关闭外层流的同时，内层流也会自动的进行关闭。关于内层流的关闭，我们可以省略.</span><br><span class="line">        if(bos !&#x3D; null)&#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                bos.close();</span><br><span class="line">            &#125; catch (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        if(bis !&#x3D; null)&#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                bis.close();</span><br><span class="line">            &#125; catch (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="使用BufferedReader和BufferedWriter实现文本文件的复制"><a href="#使用BufferedReader和BufferedWriter实现文本文件的复制" class="headerlink" title="使用BufferedReader和BufferedWriter实现文本文件的复制"></a>使用BufferedReader和BufferedWriter实现文本文件的复制</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@Test</span><br><span class="line">public void testBufferedReaderBufferedWriter()&#123;</span><br><span class="line">    BufferedReader br &#x3D; null;</span><br><span class="line">    BufferedWriter bw &#x3D; null;</span><br><span class="line">    try &#123;</span><br><span class="line">        &#x2F;&#x2F;创建文件和相应的流</span><br><span class="line">        br &#x3D; new BufferedReader(new FileReader(new File(&quot;dbcp.txt&quot;)));</span><br><span class="line">        bw &#x3D; new BufferedWriter(new FileWriter(new File(&quot;dbcp1.txt&quot;)));</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;读写操作</span><br><span class="line">        &#x2F;&#x2F;方式一：使用char[]数组</span><br><span class="line">&#x2F;&#x2F;            char[] cbuf &#x3D; new char[1024];</span><br><span class="line">&#x2F;&#x2F;            int len;</span><br><span class="line">&#x2F;&#x2F;            while((len &#x3D; br.read(cbuf)) !&#x3D; -1)&#123;</span><br><span class="line">&#x2F;&#x2F;                bw.write(cbuf,0,len);</span><br><span class="line">&#x2F;&#x2F;    &#x2F;&#x2F;            bw.flush();</span><br><span class="line">&#x2F;&#x2F;            &#125;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;方式二：使用String</span><br><span class="line">        String data;</span><br><span class="line">        while((data &#x3D; br.readLine()) !&#x3D; null)&#123;</span><br><span class="line">            &#x2F;&#x2F;方法一：</span><br><span class="line">&#x2F;&#x2F;                bw.write(data + &quot;\n&quot;);&#x2F;&#x2F;data中不包含换行符</span><br><span class="line">            &#x2F;&#x2F;方法二：</span><br><span class="line">            bw.write(data);&#x2F;&#x2F;data中不包含换行符</span><br><span class="line">            bw.newLine();&#x2F;&#x2F;提供换行的操作</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125; catch (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; finally &#123;</span><br><span class="line">        &#x2F;&#x2F;关闭资源</span><br><span class="line">        if(bw !&#x3D; null)&#123;</span><br><span class="line"></span><br><span class="line">            try &#123;</span><br><span class="line">                bw.close();</span><br><span class="line">            &#125; catch (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if(br !&#x3D; null)&#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                br.close();</span><br><span class="line">            &#125; catch (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="转换流（处理流的一种）"><a href="#转换流（处理流的一种）" class="headerlink" title="转换流（处理流的一种）"></a>转换流（处理流的一种）</h4><ul>
+<li>转换流：属于字符流（后缀）</li>
+<li>InputStreamReader：将一个字节的输入流转换为字符的输入流</li>
+<li>OutputStreamWriter：将一个字符的输出流转换为字节的输出流</li>
+<li>作用：提供了字符流与字节流的转换</li>
+<li>解码：字节、字节数组   —&gt;  字符数组、字符串</li>
+<li>编码：字符数组、字符串 —&gt;  字节、字节数组</li>
+</ul>
+<h5 id="InputStreamReader"><a href="#InputStreamReader" class="headerlink" title="InputStreamReader"></a>InputStreamReader</h5><ul>
+<li>实现将字节的输入流按指定字符集转换为字符的输入流。</li>
+<li>需要和InputStream“套接”。</li>
+<li>构造器<h6 id="public-InputStreamReader-InputStream-in"><a href="#public-InputStreamReader-InputStream-in" class="headerlink" title="public InputStreamReader(InputStream in)"></a>public InputStreamReader(InputStream in)</h6><h6 id="public-InputSreamReader-InputStream-in-String-charsetName"><a href="#public-InputSreamReader-InputStream-in-String-charsetName" class="headerlink" title="public InputSreamReader(InputStream in,String charsetName)"></a>public InputSreamReader(InputStream in,String charsetName)</h6></li>
+</ul>
+<h5 id="OutputStreamWriter"><a href="#OutputStreamWriter" class="headerlink" title="OutputStreamWriter"></a>OutputStreamWriter</h5><ul>
+<li>实现将字符的输出流按指定字符集转换为字节的输出流。</li>
+<li>需要和OutputStream“套接”。</li>
+<li>构造器<h6 id="public-OutputStreamWriter-OutputStream-out"><a href="#public-OutputStreamWriter-OutputStream-out" class="headerlink" title="public OutputStreamWriter(OutputStream out)"></a>public OutputStreamWriter(OutputStream out)</h6><h6 id="public-OutputSreamWriter-OutputStream-out-String-charsetName"><a href="#public-OutputSreamWriter-OutputStream-out-String-charsetName" class="headerlink" title="public OutputSreamWriter(OutputStream out,String charsetName)"></a>public OutputSreamWriter(OutputStream out,String charsetName)</h6></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@Test</span><br><span class="line">public void test2() &#123;</span><br><span class="line">    InputStreamReader isr &#x3D; null;</span><br><span class="line">    OutputStreamWriter osw &#x3D; null;</span><br><span class="line">    try &#123;</span><br><span class="line">        &#x2F;&#x2F;1.造文件、造流</span><br><span class="line">        File file1 &#x3D; new File(&quot;dbcp.txt&quot;);</span><br><span class="line">        File file2 &#x3D; new File(&quot;dbcp_gbk.txt&quot;);</span><br><span class="line"></span><br><span class="line">        FileInputStream fis &#x3D; new FileInputStream(file1);</span><br><span class="line">        FileOutputStream fos &#x3D; new FileOutputStream(file2);</span><br><span class="line"></span><br><span class="line">        isr &#x3D; new InputStreamReader(fis,&quot;utf-8&quot;);</span><br><span class="line">        osw &#x3D; new OutputStreamWriter(fos,&quot;gbk&quot;);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;2.读写过程</span><br><span class="line">        char[] cbuf &#x3D; new char[20];</span><br><span class="line">        int len;</span><br><span class="line">        while((len &#x3D; isr.read(cbuf)) !&#x3D; -1)&#123;</span><br><span class="line">            osw.write(cbuf,0,len);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; catch (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; finally &#123;</span><br><span class="line">        &#x2F;&#x2F;3.关闭资源</span><br><span class="line">        if(isr !&#x3D; null)&#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                isr.close();</span><br><span class="line">            &#125; catch (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if (osw !&#x3D; null) &#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                osw.close();</span><br><span class="line">            &#125; catch (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="标准输入、输出流"><a href="#标准输入、输出流" class="headerlink" title="标准输入、输出流"></a>标准输入、输出流</h4><h6 id="System-in-标准的输入流，默认从键盘输入"><a href="#System-in-标准的输入流，默认从键盘输入" class="headerlink" title="System.in:标准的输入流，默认从键盘输入"></a>System.in:标准的输入流，默认从键盘输入</h6><p>InputStream类型</p>
+<h6 id="System-out-标准的输出流，默认从控制台输出"><a href="#System-out-标准的输出流，默认从控制台输出" class="headerlink" title="System.out:标准的输出流，默认从控制台输出"></a>System.out:标准的输出流，默认从控制台输出</h6><p>PrintStream类型，其是OutputStream的子类<br>FilterOutputStream 的子类</p>
+<h5 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h5><p>通过System类的setIn，setOut方法对默认设备进行改变。</p>
+<h6 id="public-static-void-setIn-InputStream-in"><a href="#public-static-void-setIn-InputStream-in" class="headerlink" title="public static void setIn(InputStream in)"></a>public static void setIn(InputStream in)</h6><h6 id="public-static-void-setOut-PrintStream-out"><a href="#public-static-void-setOut-PrintStream-out" class="headerlink" title="public static void setOut(PrintStream out)"></a>public static void setOut(PrintStream out)</h6><h4 id="练习题"><a href="#练习题" class="headerlink" title="练习题"></a>练习题</h4><p>从键盘输入字符串，要求将读取到的整行字符串转成大写输出。然后继续进行输入操作，直至当输入“e”或者“exit”时，退出程序。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    BufferedReader br &#x3D; null;</span><br><span class="line">    try &#123;</span><br><span class="line">        &#x2F;&#x2F;转换流：把标准输入流（字节流）转换成字符流</span><br><span class="line">        InputStreamReader isr &#x3D; new InputStreamReader(System.in);</span><br><span class="line">        &#x2F;&#x2F;缓冲流：处理字符流</span><br><span class="line">        br &#x3D; new BufferedReader(isr);</span><br><span class="line"></span><br><span class="line">        while (true) &#123;</span><br><span class="line">            System.out.println(&quot;请输入字符串：&quot;);</span><br><span class="line">            String data &#x3D; br.readLine();</span><br><span class="line">            if (&quot;e&quot;.equalsIgnoreCase(data) || &quot;exit&quot;.equalsIgnoreCase(data)) &#123;</span><br><span class="line">                System.out.println(&quot;程序结束&quot;);</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            String upperCase &#x3D; data.toUpperCase();</span><br><span class="line">            System.out.println(upperCase);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125; catch (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; finally &#123;</span><br><span class="line">        if (br !&#x3D; null) &#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                br.close();</span><br><span class="line">            &#125; catch (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="打印流"><a href="#打印流" class="headerlink" title="打印流"></a>打印流</h4><p>实现将基本数据类型的数据格式转化为字符串输出</p>
+<h5 id="PrintStream和PrintWriter"><a href="#PrintStream和PrintWriter" class="headerlink" title="PrintStream和PrintWriter"></a>PrintStream和PrintWriter</h5><ul>
+<li>提供了一系列重载的print()和println()方法，用于多种数据类型的输出</li>
+<li>PrintStream和PrintWriter的输出不会抛出IOException异常</li>
+<li>PrintStream和PrintWriter有自动flush功能.</li>
+<li>PrintStream 打印的所有字符都使用平台的默认字符编码转换为字节。<br>在需要写入字符而不是写入字节的情况下，应该使用 PrintWriter 类。</li>
+<li>System.out返回的是PrintStream的实例</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@Test</span><br><span class="line">public void test2() &#123;</span><br><span class="line">    PrintStream ps &#x3D; null;</span><br><span class="line">    try &#123;</span><br><span class="line">        FileOutputStream fos &#x3D; new FileOutputStream(new File(&quot;D:\\IO\\text.txt&quot;));</span><br><span class="line">        &#x2F;&#x2F; 创建打印输出流,设置为自动刷新模式(写入换行符或字节 &#39;\n&#39; 时都会刷新输出缓冲区)</span><br><span class="line">        ps &#x3D; new PrintStream(fos, true);</span><br><span class="line">        if (ps !&#x3D; null) &#123;&#x2F;&#x2F; 把标准输出流(控制台输出)改成文件</span><br><span class="line">            System.setOut(ps);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        for (int i &#x3D; 0; i &lt;&#x3D; 255; i++) &#123; &#x2F;&#x2F; 输出ASCII字符</span><br><span class="line">            System.out.print((char) i);</span><br><span class="line">            if (i % 50 &#x3D;&#x3D; 0) &#123; &#x2F;&#x2F; 每50个数据一行</span><br><span class="line">                System.out.println(); &#x2F;&#x2F; 换行</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125; catch (FileNotFoundException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; finally &#123;</span><br><span class="line">        if (ps !&#x3D; null) &#123;</span><br><span class="line">            ps.close();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="数据流"><a href="#数据流" class="headerlink" title="数据流"></a>数据流</h4><p>DataInputStream 和 DataOutputStream分别“套接”在 InputStream 和 OutputStream 子类的流</p>
+<h5 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h5><h6 id="从文件中读取基本数据类型的变量或字符串"><a href="#从文件中读取基本数据类型的变量或字符串" class="headerlink" title="从文件中读取基本数据类型的变量或字符串"></a>从文件中读取基本数据类型的变量或字符串</h6><h6 id="将基本数据类型的变量或字符串写出到文件中"><a href="#将基本数据类型的变量或字符串写出到文件中" class="headerlink" title="将基本数据类型的变量或字符串写出到文件中"></a>将基本数据类型的变量或字符串写出到文件中</h6><h5 id="DataInputStream中的方法"><a href="#DataInputStream中的方法" class="headerlink" title="DataInputStream中的方法"></a>DataInputStream中的方法</h5><ul>
+<li>boolean readBoolean()</li>
+<li>byte readByte()</li>
+<li>char readChar()</li>
+<li>float readFloat()</li>
+<li>double readDouble()</li>
+<li>short readShort()</li>
+<li>long readLong()</li>
+<li>int readInt()</li>
+<li>String readUTF()</li>
+<li>void readFully(byte[] b)</li>
+</ul>
+<h5 id="DataOutputStream-中的方法"><a href="#DataOutputStream-中的方法" class="headerlink" title="DataOutputStream 中的方法"></a>DataOutputStream 中的方法</h5><p> 将上述的方法的read改为相应的write即可</p>
+<h5 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h5><p>将内存中的字符串、基本数据类型的变量写出到文件中。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@Test</span><br><span class="line">public void test3() &#123;</span><br><span class="line">    DataOutputStream dos &#x3D; null;</span><br><span class="line">    try &#123; &#x2F;&#x2F; 创建连接到指定文件的数据输出流对象</span><br><span class="line">        dos &#x3D; new DataOutputStream(new FileOutputStream(&quot;destData.dat&quot;));</span><br><span class="line">        dos.writeUTF(&quot;我爱北京天安门&quot;); &#x2F;&#x2F; 写UTF字符串</span><br><span class="line">        dos.writeBoolean(false); &#x2F;&#x2F; 写入布尔值</span><br><span class="line">        dos.writeLong(1234567890L); &#x2F;&#x2F; 写入长整数</span><br><span class="line">        System.out.println(&quot;写文件成功!&quot;);</span><br><span class="line">    &#125; catch (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; finally &#123; &#x2F;&#x2F; 关闭流对象</span><br><span class="line">        try &#123;</span><br><span class="line">            if (dos !&#x3D; null) &#123;</span><br><span class="line">            &#x2F;&#x2F; 关闭过滤流时,会自动关闭它包装的底层节点流</span><br><span class="line">            dos.close();</span><br><span class="line">        &#125;</span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>将文件中存储的基本数据类型变量和字符串读取到内存中，保存在变量中。</p>
+<h6 id="注意点：读取不同类型的数据的顺序要与当初写入文件时，保存的数据的顺序一致！"><a href="#注意点：读取不同类型的数据的顺序要与当初写入文件时，保存的数据的顺序一致！" class="headerlink" title="注意点：读取不同类型的数据的顺序要与当初写入文件时，保存的数据的顺序一致！"></a>注意点：读取不同类型的数据的顺序要与当初写入文件时，保存的数据的顺序一致！</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@Test</span><br><span class="line">public void test4()&#123;</span><br><span class="line">    DataInputStream dis &#x3D; null;</span><br><span class="line">    try &#123;</span><br><span class="line">        dis &#x3D; new DataInputStream(new FileInputStream(&quot;destData.dat&quot;));</span><br><span class="line">        String info &#x3D; dis.readUTF();</span><br><span class="line">        boolean flag &#x3D; dis.readBoolean();</span><br><span class="line">        long time &#x3D; dis.readLong();</span><br><span class="line">        System.out.println(info);</span><br><span class="line">        System.out.println(flag);</span><br><span class="line">        System.out.println(time);</span><br><span class="line">    &#125; catch (Exception e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; finally &#123;</span><br><span class="line">        if (dis !&#x3D; null) &#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                dis.close();</span><br><span class="line">            &#125; catch (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="对象流"><a href="#对象流" class="headerlink" title="对象流"></a>对象流</h4><p>ObjectInputStream 和 ObjectOutputStream</p>
+<h5 id="作用-1"><a href="#作用-1" class="headerlink" title="作用"></a>作用</h5><p>用于存储和读取基本数据类型数据或对象的处理流。</p>
+<p>它的强大之处就是可以把Java中的对象写入到数据源中，也能把对象从数据源中还原回来。</p>
+<h5 id="序列化和反序列化"><a href="#序列化和反序列化" class="headerlink" title="序列化和反序列化"></a>序列化和反序列化</h5><p>ObjectOutputStream和ObjectInputStream不能序列化static和transient修饰的成员变量（对象的属性可以序列化和反序列化，类的的属性不可以）</p>
+<h5 id="对象的序列化"><a href="#对象的序列化" class="headerlink" title="对象的序列化"></a>对象的序列化</h5><p>对象序列化机制</p>
+<ul>
+<li>序列化允许把内存中的Java对象转换成平台无关的二进制流，从而允许把这种二进制流持久地保存在磁盘上，或通过网络将这种二进制流传输到另一个网络节点。</li>
+<li>反序列化当其它程序获取了这种二进制流，就可以恢复成原来的Java对象</li>
+<li>序列化的好处在于可将任何实现了Serializable接口的对象转化为字节数据，使其在保存和传输时可被还原</li>
+<li>序列化是 RMI（Remote Method Invoke – 远程方法调用）过程的参数和返<br>回值都必须实现的机制，而 RMI 是 JavaEE 的基础。因此序列化机制是<br>JavaEE 平台的基础</li>
+<li>如果需要让某个对象支持序列化机制，则必须让对象所属的类及其属性是可<br>序列化的，为了让某个类是可序列化的，该类必须实现如下两个接口之一。<br>否则，会抛出NotSerializableException异常<ul>
+<li>Serializable（最常用）</li>
+<li>Externalizable</li>
+</ul>
+</li>
+<li>凡是实现Serializable接口的类都有一个表示序列化版本标识符的静态变量：</li>
+<li>private static final long serialVersionUID;</li>
+<li>serialVersionUID用来表明类的不同版本间的兼容性。 简言之，其目的是以序列化对象<br>进行版本控制，有关各版本反序列化时是否兼容。</li>
+<li>如果类没有显示定义这个静态常量，Java将会根据类的内部细节自动生成一个版本号。如果类的属性等发生变化，则自动生成的版本号将与之前不同，会导致在类修改之前进行的序列化无法在修改之后进行反序列化，故建议，显示声明。</li>
+<li>简单来说，Java的序列化机制是通过在运行时判断类的serialVersionUID来验<br>证版本一致性的。在进行反序列化时，JVM会把传来的字节流中的<br>serialVersionUID与本地相应实体类的serialVersionUID进行比较，如果相同<br>就认为是一致的，可以进行反序列化，否则就会出现序列化版本不一致的异<br>常。(InvalidCastException)</li>
+</ul>
+<h5 id="使用对象流序列化对象"><a href="#使用对象流序列化对象" class="headerlink" title="使用对象流序列化对象"></a>使用对象流序列化对象</h5><ul>
+<li>若某个类实现了 Serializable 接口，该类的对象就是可序列化的：<ul>
+<li>创建一个 ObjectOutputStream</li>
+<li>调用 ObjectOutputStream  对象的 writeObject( 对象)  方法输出可 序列化对象</li>
+<li>注意写出一次，操作flush()</li>
+</ul>
+</li>
+<li>反序列化<ul>
+<li>创建一个 ObjectInputStream</li>
+<li>调用 readObject()  方法读取流中的对象</li>
+</ul>
+</li>
+<li>强调：如果某个类的属性不是基本数据类型或 String 类型，而是另一个<br>引用类型，那么这个引用类型必须是可序列化的，否则拥有该类型的<br>Field 的类也不能序列化</li>
+</ul>
+<h5 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h5><p>Person.java</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class Person implements Serializable&#123;</span><br><span class="line"></span><br><span class="line">    public static final long serialVersionUID &#x3D; 475463534532L;</span><br><span class="line"></span><br><span class="line">    private String name;</span><br><span class="line">    private int age;</span><br><span class="line">    private int id;</span><br><span class="line">    private Account acct;</span><br><span class="line"></span><br><span class="line">    public Person(String name, int age, int id) &#123;</span><br><span class="line">        this.name &#x3D; name;</span><br><span class="line">        this.age &#x3D; age;</span><br><span class="line">        this.id &#x3D; id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Person(String name, int age, int id, Account acct) &#123;</span><br><span class="line">        this.name &#x3D; name;</span><br><span class="line">        this.age &#x3D; age;</span><br><span class="line">        this.id &#x3D; id;</span><br><span class="line">        this.acct &#x3D; acct;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public String toString() &#123;</span><br><span class="line">        return &quot;Person&#123;&quot; +</span><br><span class="line">                &quot;name&#x3D;&#39;&quot; + name + &#39;\&#39;&#39; +</span><br><span class="line">                &quot;, age&#x3D;&quot; + age +</span><br><span class="line">                &quot;, id&#x3D;&quot; + id +</span><br><span class="line">                &quot;, acct&#x3D;&quot; + acct +</span><br><span class="line">                &#39;&#125;&#39;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public int getId() &#123;</span><br><span class="line">        return id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setId(int id) &#123;</span><br><span class="line">        this.id &#x3D; id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public String getName() &#123;</span><br><span class="line">        return name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setName(String name) &#123;</span><br><span class="line">        this.name &#x3D; name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public int getAge() &#123;</span><br><span class="line">        return age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setAge(int age) &#123;</span><br><span class="line">        this.age &#x3D; age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Person(String name, int age) &#123;</span><br><span class="line"></span><br><span class="line">        this.name &#x3D; name;</span><br><span class="line">        this.age &#x3D; age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Person() &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>序列化与反序列户</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;*</span><br><span class="line">序列化过程：将内存中的java对象保存到磁盘中或通过网络传输出去</span><br><span class="line">使用ObjectOutputStream实现</span><br><span class="line"> *&#x2F;</span><br><span class="line">@Test</span><br><span class="line">public void testObjectOutputStream()&#123;</span><br><span class="line">    ObjectOutputStream oos &#x3D; null;</span><br><span class="line"></span><br><span class="line">    try &#123;</span><br><span class="line">        &#x2F;&#x2F;1.</span><br><span class="line">        oos &#x3D; new ObjectOutputStream(new FileOutputStream(&quot;object.dat&quot;));</span><br><span class="line">        &#x2F;&#x2F;2.</span><br><span class="line">        oos.writeObject(new String(&quot;我爱北京天安门&quot;));</span><br><span class="line">        oos.flush();&#x2F;&#x2F;刷新操作</span><br><span class="line"></span><br><span class="line">        oos.writeObject(new Person(&quot;王铭&quot;,23));</span><br><span class="line">        oos.flush();</span><br><span class="line"></span><br><span class="line">        oos.writeObject(new Person(&quot;张学良&quot;,23,1001,new Account(5000)));</span><br><span class="line">        oos.flush();</span><br><span class="line"></span><br><span class="line">    &#125; catch (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; finally &#123;</span><br><span class="line">        if(oos !&#x3D; null)&#123;</span><br><span class="line">            &#x2F;&#x2F;3.</span><br><span class="line">            try &#123;</span><br><span class="line">                oos.close();</span><br><span class="line">            &#125; catch (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line">反序列化：将磁盘文件中的对象还原为内存中的一个java对象</span><br><span class="line">使用ObjectInputStream来实现</span><br><span class="line"> *&#x2F;</span><br><span class="line">@Test</span><br><span class="line">public void testObjectInputStream()&#123;</span><br><span class="line">    ObjectInputStream ois &#x3D; null;</span><br><span class="line">    try &#123;</span><br><span class="line">        ois &#x3D; new ObjectInputStream(new FileInputStream(&quot;object.dat&quot;));</span><br><span class="line"></span><br><span class="line">        Object obj &#x3D; ois.readObject();</span><br><span class="line">        String str &#x3D; (String) obj;</span><br><span class="line"></span><br><span class="line">        Person p &#x3D; (Person) ois.readObject();</span><br><span class="line">        Person p1 &#x3D; (Person) ois.readObject();</span><br><span class="line"></span><br><span class="line">        System.out.println(str);</span><br><span class="line">        System.out.println(p);</span><br><span class="line">        System.out.println(p1);</span><br><span class="line"></span><br><span class="line">    &#125; catch (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; catch (ClassNotFoundException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; finally &#123;</span><br><span class="line">        if(ois !&#x3D; null)&#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                ois.close();</span><br><span class="line">            &#125; catch (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+        <tag>多线程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>46.Java基础知识-字符编码</title>
+    <url>/2020/11/05/46-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+        <tag>字符编码</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>47.Java基础知识-Serializable 接口</title>
+    <url>/2020/11/05/47-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-Serializable-%E6%8E%A5%E5%8F%A3/</url>
+    <content><![CDATA[<h2 id="Serializable-接口"><a href="#Serializable-接口" class="headerlink" title="Serializable 接口"></a>Serializable 接口</h2><p>谈谈你对java.io.Serializable 接口的理解，我们知道它用于序列化，<br>是空方法接口，还有其它认识吗？</p>
+<ul>
+<li>实现了Serializable 接口的对象，可将它们转换成一系列字节，并可在以后<br>完全恢复回原来的样子。 这一过程亦可通过网络进行。这意味着序列化机<br>制能自动补偿操作系统间的差异。在 换句话说，可以先在Windows 机器上创<br>台 建一个对象，对其序列化，然后通过网络发给一台Unix 机器，然后在那里<br>准确无误地重新“装配”。不必关心数据在不同机器上如何表示，也不必<br>关心字节的顺序或者其他任何细节。</li>
+<li>由于大部分作为参数的类如String 、Integer 等都实现了<br>java.io.Serializable 的接口，也可以利用多态的性质，作为参数使接口更<br>灵活。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+        <tag>Serializable 接口</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>41.Java基础知识-Collection</title>
+    <url>/2020/11/05/41-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-Collection/</url>
+    <content><![CDATA[<h2 id="Map接口中的方法"><a href="#Map接口中的方法" class="headerlink" title="Map接口中的方法"></a>Map接口中的方法</h2><h4 id="1-Map接口概述"><a href="#1-Map接口概述" class="headerlink" title="1.Map接口概述"></a>1.Map接口概述</h4><p>Map与Collection并列存在。用于保存具有 映射关系的数据:key-value</p>
+<ul>
+<li>Map 中的 key 和 value 都可以是任何引用类型的数据</li>
+<li>Map 中的 key 用Set来存放， 不允许重复，即同一个 Map 对象所对应<br>的类，须重写hashCode()和equals()方法</li>
+<li>常用String类作为Map的“键”</li>
+<li>key 和 value 之间存在单向一对一关系，即通过指定的 key 总能找到<br>唯一的、确定的 value</li>
+<li>Map接口的常用实现类：HashMap、TreeMap、LinkedHashMap和<br>Properties。其中，HashMap是 Map 接口使用频率最高的实现类<h4 id="2-Map接口方法"><a href="#2-Map接口方法" class="headerlink" title="2.Map接口方法"></a>2.Map接口方法</h4></li>
+<li>添加、删除、修改操作：<ul>
+<li>Object put(Object key,Object value)：将指定key-value添加到(或修改)当前map对象中</li>
+<li>void putAll(Map m):将m中的所有key-value对存放到当前map中</li>
+<li>Object remove(Object key)：移除指定key的key-value对，并返回value</li>
+<li>void clear()：清空当前map中的所有数据</li>
+</ul>
+</li>
+<li>元素查询的操作：<ul>
+<li>Object get(Object key)：获取指定key对应的value</li>
+<li>boolean containsKey(Object key)：是否包含指定的key</li>
+<li>boolean containsValue(Object value)：是否包含指定的value</li>
+<li>int size()：返回map中key-value对的个数</li>
+<li>boolean isEmpty()：判断当前map是否为空</li>
+<li>boolean equals(Object obj)：判断当前map和参数对象obj是否相等</li>
+</ul>
+</li>
+<li>元视图操作的方法：<ul>
+<li>Set keySet()：返回所有key构成的Set集合</li>
+<li>Collection values()：返回所有value构成的Collection集合</li>
+<li>Set entrySet()：返回所有key-value对构成的Set集合<h4 id="3-常用方法"><a href="#3-常用方法" class="headerlink" title="3.常用方法"></a>3.常用方法</h4></li>
+</ul>
+</li>
+<li>添加：put(Object key,Object value)</li>
+<li>删除：remove(Object key)</li>
+<li>修改：put(Object key,Object value)</li>
+<li>查询：get(Object key)</li>
+<li>长度：size()</li>
+<li>遍历：keySet() / values() / entrySet()</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+        <tag>Collection</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>42.Java基础知识-Map</title>
+    <url>/2020/11/05/42-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-Map/</url>
+    <content><![CDATA[<h2 id="Map接口中的方法"><a href="#Map接口中的方法" class="headerlink" title="Map接口中的方法"></a>Map接口中的方法</h2><h4 id="1-Map接口概述"><a href="#1-Map接口概述" class="headerlink" title="1.Map接口概述"></a>1.Map接口概述</h4><p>Map与Collection并列存在。用于保存具有 映射关系的数据:key-value</p>
+<ul>
+<li>Map 中的 key 和 value 都可以是任何引用类型的数据</li>
+<li>Map 中的 key 用Set来存放， 不允许重复，即同一个 Map 对象所对应<br>的类，须重写hashCode()和equals()方法</li>
+<li>常用String类作为Map的“键”</li>
+<li>key 和 value 之间存在单向一对一关系，即通过指定的 key 总能找到<br>唯一的、确定的 value</li>
+<li>Map接口的常用实现类：HashMap、TreeMap、LinkedHashMap和<br>Properties。其中，HashMap是 Map 接口使用频率最高的实现类<h4 id="2-Map接口方法"><a href="#2-Map接口方法" class="headerlink" title="2.Map接口方法"></a>2.Map接口方法</h4></li>
+<li>添加、删除、修改操作：<ul>
+<li>Object put(Object key,Object value)：将指定key-value添加到(或修改)当前map对象中</li>
+<li>void putAll(Map m):将m中的所有key-value对存放到当前map中</li>
+<li>Object remove(Object key)：移除指定key的key-value对，并返回value</li>
+<li>void clear()：清空当前map中的所有数据</li>
+</ul>
+</li>
+<li>元素查询的操作：<ul>
+<li>Object get(Object key)：获取指定key对应的value</li>
+<li>boolean containsKey(Object key)：是否包含指定的key</li>
+<li>boolean containsValue(Object value)：是否包含指定的value</li>
+<li>int size()：返回map中key-value对的个数</li>
+<li>boolean isEmpty()：判断当前map是否为空</li>
+<li>boolean equals(Object obj)：判断当前map和参数对象obj是否相等</li>
+</ul>
+</li>
+<li>元视图操作的方法：<ul>
+<li>Set keySet()：返回所有key构成的Set集合</li>
+<li>Collection values()：返回所有value构成的Collection集合</li>
+<li>Set entrySet()：返回所有key-value对构成的Set集合<h4 id="3-常用方法"><a href="#3-常用方法" class="headerlink" title="3.常用方法"></a>3.常用方法</h4></li>
+</ul>
+</li>
+<li>添加：put(Object key,Object value)</li>
+<li>删除：remove(Object key)</li>
+<li>修改：put(Object key,Object value)</li>
+<li>查询：get(Object key)</li>
+<li>长度：size()</li>
+<li>遍历：keySet() / values() / entrySet()</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+        <tag>Map</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>48.Java基础知识-网络编程</title>
+    <url>/2020/11/05/48-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</url>
+    <content><![CDATA[<h2 id="网络编程"><a href="#网络编程" class="headerlink" title="网络编程"></a>网络编程</h2><h4 id="网络编程的目的："><a href="#网络编程的目的：" class="headerlink" title="网络编程的目的："></a>网络编程的目的：</h4><ul>
+<li>直接或间接地通过网络协议与 其它 计算机实现数据交换，进行 通讯。<h4 id="网络编程中有两个主要的问题："><a href="#网络编程中有两个主要的问题：" class="headerlink" title="网络编程中有两个主要的问题："></a>网络编程中有两个主要的问题：</h4><h6 id="如何准确地定位网络上一台或多台主机"><a href="#如何准确地定位网络上一台或多台主机" class="headerlink" title="如何准确地定位网络上一台或多台主机"></a>如何准确地定位网络上一台或多台主机</h6>IP地址<h6 id="如何定位主机上的特定的应用"><a href="#如何定位主机上的特定的应用" class="headerlink" title="如何定位主机上的特定的应用"></a>如何定位主机上的特定的应用</h6>端口号<h6 id="找到主机后如何可靠高效地进行数据传输"><a href="#找到主机后如何可靠高效地进行数据传输" class="headerlink" title="找到主机后如何可靠高效地进行数据传输"></a>找到主机后如何可靠高效地进行数据传输</h6>网络通信协议</li>
+<li>OSI参考模型：模型过于理想化，未能在因特网上进行广泛推广</li>
+<li>TCP/IP参考模型(或TCP/IP协议)：事实上的国际标准。</li>
+</ul>
+<p><img src="http://wangzixuan.work/6202" alt="image"><br><img src="http://wangzixuan.work/6205" alt="image"></p>
+<h4 id="IP地址：InetAddress"><a href="#IP地址：InetAddress" class="headerlink" title="IP地址：InetAddress"></a>IP地址：InetAddress</h4><ul>
+<li>唯一的标识 Internet 上的计算机（通信实体）</li>
+<li>本地回环地址(hostAddress)：127.0.0.1 主机名(hostName)：localhost</li>
+<li>域名：可以表示地址，DNS（域名服务器）将域名转换成IP地址</li>
+<li>IP地址分类方式1：IPV4 和 IPV6</li>
+<li>IPV4：4个字节组成，4个0-255。大概42亿，30亿都在北美，亚洲4亿。2011年初已经用尽。以点分十进制表示，如192.168.0.1</li>
+<li>IPV6：128位（16个字节），写成8个无符号整数，每个整数用四个十六进制位表示，数之间用冒号（：）分开，如：3ffe:3201:1401:1280:c8ff:fe4d:db39:1984</li>
+<li>IP地址分类方式2： 公网地址( 万维网使用)和 私有地址( 局域网使用)。192.168.开头的就是私有址址，范围即为192.168.0.0–192.168.255.255，专门为组织机构内部使用</li>
+<li>特点：不易记忆</li>
+</ul>
+<h4 id="InetAdress类"><a href="#InetAdress类" class="headerlink" title="InetAdress类"></a>InetAdress类</h4><h5 id="对象获取"><a href="#对象获取" class="headerlink" title="对象获取"></a>对象获取</h5><p>InetAddress 类没有提供公共的构造器，而是提供了如下几个静态方法来获取InetAddress</p>
+<h6 id="public-static-InetAddress-getLocalHost"><a href="#public-static-InetAddress-getLocalHost" class="headerlink" title="public static InetAddress getLocalHost()"></a>public static InetAddress getLocalHost()</h6><p>获取本机的InetAddress对象（域名和IP地址）</p>
+<h6 id="public-static-InetAddress-getByName-String-host"><a href="#public-static-InetAddress-getByName-String-host" class="headerlink" title="public static InetAddress getByName(String host)"></a>public static InetAddress getByName(String host)</h6><p>根据地址（IP地址或域名）获取对应主机的InetAddress对象（域名和IP地址）</p>
+<h5 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h5><h6 id="public-String-getHostAddress"><a href="#public-String-getHostAddress" class="headerlink" title="public String getHostAddress()"></a>public String getHostAddress()</h6><p>返回 IP 地址字符串（以文本表现形式）。</p>
+<h6 id="public-String-getHostName"><a href="#public-String-getHostName" class="headerlink" title="public String getHostName()"></a>public String getHostName()</h6><p>获取此 IP 地址的主机名</p>
+<h6 id="public-boolean-isReachable-int-timeout"><a href="#public-boolean-isReachable-int-timeout" class="headerlink" title="public boolean isReachable(int timeout)"></a>public boolean isReachable(int timeout)</h6><p>测试是否可以达到该地址</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    try &#123;</span><br><span class="line">        InetAddress inet1 &#x3D; InetAddress.getByName(&quot;192.168.10.14&quot;);</span><br><span class="line">        </span><br><span class="line">        &#x2F;&#x2F;获取InetAddress对象的域名和IP地址</span><br><span class="line">        System.out.println(inet1);</span><br><span class="line"></span><br><span class="line">        InetAddress inet2 &#x3D; InetAddress.getByName(&quot;www.atguigu.com&quot;);</span><br><span class="line">        </span><br><span class="line">        &#x2F;&#x2F;获取InetAddress对象的域名和IP地址</span><br><span class="line">        System.out.println(inet2);</span><br><span class="line">        </span><br><span class="line">        &#x2F;&#x2F;获取InetAddress对象的域名</span><br><span class="line">        System.out.println(inet2.getHostName());</span><br><span class="line">        </span><br><span class="line">        &#x2F;&#x2F;获取InetAddress对象的IP地址</span><br><span class="line">        System.out.println(inet2.getHostAddress());</span><br><span class="line"></span><br><span class="line">        InetAddress inet3 &#x3D; InetAddress.getByName(&quot;127.0.0.1&quot;);</span><br><span class="line">        </span><br><span class="line">        &#x2F;&#x2F;获取InetAddress对象的域名和IP地址</span><br><span class="line">        System.out.println(inet3);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;获取本机的InetAddress对象的域名和IP地址</span><br><span class="line">        InetAddress inet4 &#x3D; InetAddress.getLocalHost();</span><br><span class="line">        System.out.println(inet4);</span><br><span class="line"></span><br><span class="line">    &#125; catch (UnknownHostException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="端口号"><a href="#端口号" class="headerlink" title="端口号"></a>端口号</h4><ul>
+<li>标识正在计算机上运行的进程（程序）</li>
+<li>不同的进程有不同的端口号</li>
+<li>被规定为一个 16 位的整数 0~65535。</li>
+<li>端口分类：<ul>
+<li>公认端口：0~1023。被预先定义的服务通信占用（如：HTTP占用端口80，FTP占用端口21，Telnet占用端口23）</li>
+<li>注册端口：1024~49151。分配给用户进程或应用程序。（如：Tomcat占用端口8080，MySQL占用端口3306，Oracle占用端口1521等）。</li>
+<li>动态/私有端口：49152~65535。</li>
+</ul>
+</li>
+</ul>
+<h4 id="网络通信协议TCP-和-UDP"><a href="#网络通信协议TCP-和-UDP" class="headerlink" title="网络通信协议TCP 和 UDP"></a>网络通信协议TCP 和 UDP</h4><h5 id="TCP-协议"><a href="#TCP-协议" class="headerlink" title="TCP 协议"></a>TCP 协议</h5><ul>
+<li>使用TCP协议前，须先建立TCP连接，形成传输数据通道</li>
+<li>传输前，采用“ 三次握手”方式，点对点通信，<strong>是可靠的</strong></li>
+<li>TCP协议进行通信的两个应用进程：客户端、服务端。</li>
+<li>在连接中可<strong>进行大数据量的传输</strong></li>
+<li>传输完毕，需<strong>释放已建立的连接，效率低</strong></li>
+</ul>
+<h5 id="UDP-协议"><a href="#UDP-协议" class="headerlink" title="UDP 协议"></a>UDP 协议</h5><ul>
+<li>将数据、源、目的封装成数据包，<strong>不需要建立连接</strong></li>
+<li>每个数据报的大小限制在64K内</li>
+<li>发送不管对方是否准备好，接收方收到也不确认，故<strong>是不可靠的</strong></li>
+<li>可以广播发送</li>
+<li>发送数据结束时<strong>无需释放资源，开销小，速度快</strong></li>
+</ul>
+<h4 id="Socket"><a href="#Socket" class="headerlink" title="Socket"></a>Socket</h4><ul>
+<li>网络上具有唯一标识的IP地址和端口号组合在一起才能构成唯一能识别的标识符套接字。</li>
+<li>通信的两端都要有Socket，是两台机器间通信的端点。</li>
+<li>网络通信其实就是Socket间的通信。</li>
+<li>Socket允许程序把网络连接当成一个流，数据在两个Socket间通过IO传输。</li>
+<li>一般主动发起通信的应用程序属客户端，等待通信请求的为服务端。</li>
+<li>Socket分类：<ul>
+<li>流套接字（stream socket）：使用TCP提供可依赖的字节流服务</li>
+<li>数据报套接字（datagram socket）：使用UDP提供“尽力而为”的数据报服务</li>
+</ul>
+</li>
+</ul>
+<h5 id="常用构造器"><a href="#常用构造器" class="headerlink" title="常用构造器"></a>常用构造器</h5><h6 id="public-Socket-InetAddress-address-int-port"><a href="#public-Socket-InetAddress-address-int-port" class="headerlink" title="public Socket(InetAddress address,int port)"></a>public Socket(InetAddress address,int port)</h6><p>创建一个流套接字并将其连接到指定IP地址的指定端口号。</p>
+<h6 id="public-Socket-String-host-int-port"><a href="#public-Socket-String-host-int-port" class="headerlink" title="public Socket(String host,int port)"></a>public Socket(String host,int port)</h6><p>创建一个流套接字并将其连接到指定主机上的指定端口号。</p>
+<h5 id="常用方法-1"><a href="#常用方法-1" class="headerlink" title="常用方法"></a>常用方法</h5><h6 id="public-InputStream-getInputStream"><a href="#public-InputStream-getInputStream" class="headerlink" title="public InputStream getInputStream()"></a>public InputStream getInputStream()</h6><p>返回此套接字的输入流。可以用于接收网络消息。</p>
+<h6 id="public-OutputStream-getOutputStream"><a href="#public-OutputStream-getOutputStream" class="headerlink" title="public OutputStream getOutputStream()"></a>public OutputStream getOutputStream()</h6><p>返回此套接字的输出流。可以用于发送网络消息。</p>
+<h6 id="public-InetAddress-getInetAddress"><a href="#public-InetAddress-getInetAddress" class="headerlink" title="public InetAddress getInetAddress()"></a>public InetAddress getInetAddress()</h6><p>此套接字连接到的远程IP地址；</p>
+<p>如果套接字是未连接的，则返回 null。</p>
+<h6 id="public-InetAddress-getLocalAddress"><a href="#public-InetAddress-getLocalAddress" class="headerlink" title="public InetAddress getLocalAddress()"></a>public InetAddress getLocalAddress()</h6><p>获取套接字绑定的本地地址。 即本端的IP地址。</p>
+<h6 id="public-int-getPort"><a href="#public-int-getPort" class="headerlink" title="public int getPort()"></a>public int getPort()</h6><p>此套接字连接到的远程端口号；</p>
+<p>如果尚未连接套接字，则返回0。</p>
+<h6 id="public-int-getLocalPort"><a href="#public-int-getLocalPort" class="headerlink" title="public int getLocalPort()"></a>public int getLocalPort()</h6><p>返回此套接字绑定到的本地端口。</p>
+<p>如果尚未绑定套接字，则返回 -1。</p>
+<h6 id="public-void-close"><a href="#public-void-close" class="headerlink" title="public void close()"></a>public void close()</h6><p>关闭此套接字。</p>
+<p>套接字被关闭后，便不可在以后的网络连接中使用（即无法重新连接或重新绑定）。需要创建新的套接字对象。</p>
+<p>关闭此套接字也将会关闭该套接字的 InputStream 和 OutputStream。</p>
+<h6 id="public-void-shutdownInput"><a href="#public-void-shutdownInput" class="headerlink" title="public void shutdownInput()"></a>public void shutdownInput()</h6><p>如果在套接字上调用shutdownInput()后从套接字输入流读取内容，则流将返回EOF（文件结束符）。即不能在从此套接字的输入流中接收任何数据。</p>
+<h6 id="public-void-shutdownOutput"><a href="#public-void-shutdownOutput" class="headerlink" title="public void shutdownOutput()"></a>public void shutdownOutput()</h6><p>禁用此套接字的输出流。对于TCP套接字，任何以前写入的数据都将被发送，并且后跟TCP的正常连接终止序列。 </p>
+<p>如果在套接字上调用 shutdownOutput() 后写入套接字输出流，则该流将抛出 IOException。 即不能通过此套接字的输出流发送任何数据。</p>
+<h4 id="TCP网络编程-基于Socket"><a href="#TCP网络编程-基于Socket" class="headerlink" title="TCP网络编程-基于Socket"></a>TCP网络编程-基于Socket</h4><h5 id="客户端Socket-的工作过程包含以下四个基本的步骤"><a href="#客户端Socket-的工作过程包含以下四个基本的步骤" class="headerlink" title="客户端Socket 的工作过程包含以下四个基本的步骤"></a>客户端Socket 的工作过程包含以下四个基本的步骤</h5><ul>
+<li>创建 Socket ：根据指定服务端的 IP 地址或端口号构造 Socket 类对象。若服务器端响应，则建立客户端到服务器的通信线路。若连接失败，会出现异常。</li>
+<li>打开连接到 Socket  的输入/ 出流： 使用 getInputStream()方法获得输入流，使用<br>getOutputStream()方法获得输出流，进行数据传输</li>
+<li>按照一定的协议对 Socket 进行读/ 写操作：通过输入流读取服务器放入线路的信息<br>（但不能读取自己放入线路的信息），通过输出流将信息写入线程。</li>
+<li>关闭 Socket： ：断开客户端到服务器的连接，释放线路</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;客户端</span><br><span class="line">@Test</span><br><span class="line">public void client()  &#123;</span><br><span class="line">    Socket socket &#x3D; null;</span><br><span class="line">    OutputStream os &#x3D; null;</span><br><span class="line">    try &#123;</span><br><span class="line">        &#x2F;&#x2F;1.创建Socket对象，指明服务器端的ip和端口号</span><br><span class="line">        InetAddress inet &#x3D; InetAddress.getByName(&quot;192.168.14.100&quot;);</span><br><span class="line">        socket &#x3D; new Socket(inet,8899);</span><br><span class="line">        &#x2F;&#x2F;2.获取一个输出流，用于输出数据</span><br><span class="line">        os &#x3D; socket.getOutputStream();</span><br><span class="line">        &#x2F;&#x2F;3.写出数据的操作</span><br><span class="line">        os.write(&quot;你好，我是客户端mm&quot;.getBytes());</span><br><span class="line">    &#125; catch (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; finally &#123;</span><br><span class="line">        &#x2F;&#x2F;4.资源的关闭</span><br><span class="line">        if(os !&#x3D; null)&#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                os.close();</span><br><span class="line">            &#125; catch (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        if(socket !&#x3D; null)&#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                socket.close();</span><br><span class="line">            &#125; catch (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h5 id="服务器端程序的工作过程包含以下四个基本的"><a href="#服务器端程序的工作过程包含以下四个基本的" class="headerlink" title="服务器端程序的工作过程包含以下四个基本的"></a>服务器端程序的工作过程包含以下四个基本的</h5><ul>
+<li>调用 ServerSocket(int port) ：创建一个服务器端套接字，并绑定到指定端口<br>上。用于监听客户端的请求。</li>
+<li>调用 accept()：监听连接请求，如果客户端请求连接，则接受连接，返回通信套接字对象。</li>
+<li>调用该Socket 类对象的 getOutputStream() 和 getInputStream ()：获取输出流和输入流，开始网络数据的发送和接收。</li>
+<li>关闭ServerSocket 和Socket 对象：客户端访问结束，关闭通信套接字。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;服务端</span><br><span class="line">@Test</span><br><span class="line">public void server()  &#123;</span><br><span class="line"></span><br><span class="line">    ServerSocket ss &#x3D; null;</span><br><span class="line">    Socket socket &#x3D; null;</span><br><span class="line">    InputStream is &#x3D; null;</span><br><span class="line">    ByteArrayOutputStream baos &#x3D; null;</span><br><span class="line">    try &#123;</span><br><span class="line">        &#x2F;&#x2F;1.创建服务器端的ServerSocket，指明自己的端口号</span><br><span class="line">        ss &#x3D; new ServerSocket(8899);</span><br><span class="line">        &#x2F;&#x2F;2.调用accept()表示接收来自于客户端的socket</span><br><span class="line">        socket &#x3D; ss.accept();</span><br><span class="line">        &#x2F;&#x2F;3.获取输入流</span><br><span class="line">        is &#x3D; socket.getInputStream();</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;不建议这样写，可能会有乱码</span><br><span class="line">&#x2F;&#x2F;        byte[] buffer &#x3D; new byte[1024];</span><br><span class="line">&#x2F;&#x2F;        int len;</span><br><span class="line">&#x2F;&#x2F;        while((len &#x3D; is.read(buffer)) !&#x3D; -1)&#123;</span><br><span class="line">&#x2F;&#x2F;            String str &#x3D; new String(buffer,0,len);</span><br><span class="line">&#x2F;&#x2F;            System.out.print(str);</span><br><span class="line">&#x2F;&#x2F;        &#125;</span><br><span class="line">        &#x2F;&#x2F;4.读取输入流中的数据</span><br><span class="line">        baos &#x3D; new ByteArrayOutputStream();</span><br><span class="line">        byte[] buffer &#x3D; new byte[5];</span><br><span class="line">        int len;</span><br><span class="line">        while((len &#x3D; is.read(buffer)) !&#x3D; -1)&#123;</span><br><span class="line">            baos.write(buffer,0,len);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        System.out.println(baos.toString());</span><br><span class="line"></span><br><span class="line">        System.out.println(&quot;收到了来自于：&quot; + socket.getInetAddress().getHostAddress() + &quot;的数据&quot;);</span><br><span class="line"></span><br><span class="line">    &#125; catch (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; finally &#123;</span><br><span class="line">        &#x2F;&#x2F;5.关闭资源</span><br><span class="line">        if(baos !&#x3D; null)&#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                baos.close();</span><br><span class="line">            &#125; catch (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if(is !&#x3D; null)&#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                is.close();</span><br><span class="line">            &#125; catch (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if(socket !&#x3D; null)&#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                socket.close();</span><br><span class="line">            &#125; catch (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if(ss !&#x3D; null)&#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                ss.close();</span><br><span class="line">            &#125; catch (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h5><p>从客户端发送文件给服务端，服务端保存到本地。并返回“发送成功”给客户端。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;*</span><br><span class="line">    这里涉及到的异常，应该使用try-catch-finally处理</span><br><span class="line">     *&#x2F;</span><br><span class="line">@Test</span><br><span class="line">public void client() throws IOException &#123;</span><br><span class="line">    &#x2F;&#x2F;1.</span><br><span class="line">    Socket socket &#x3D; new Socket(InetAddress.getByName(&quot;127.0.0.1&quot;),9090);</span><br><span class="line">    &#x2F;&#x2F;2.</span><br><span class="line">    OutputStream os &#x3D; socket.getOutputStream();</span><br><span class="line">    &#x2F;&#x2F;3.</span><br><span class="line">    FileInputStream fis &#x3D; new FileInputStream(new File(&quot;beauty.jpg&quot;));</span><br><span class="line">    &#x2F;&#x2F;4.</span><br><span class="line">    byte[] buffer &#x3D; new byte[1024];</span><br><span class="line">    int len;</span><br><span class="line">    while((len &#x3D; fis.read(buffer)) !&#x3D; -1)&#123;</span><br><span class="line">        os.write(buffer,0,len);</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F;关闭数据的输出</span><br><span class="line">    socket.shutdownOutput();</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;5.接收来自于服务器端的数据，并显示到控制台上</span><br><span class="line">    InputStream is &#x3D; socket.getInputStream();</span><br><span class="line">    ByteArrayOutputStream baos &#x3D; new ByteArrayOutputStream();</span><br><span class="line">    byte[] bufferr &#x3D; new byte[20];</span><br><span class="line">    int len1;</span><br><span class="line">    while((len1 &#x3D; is.read(buffer)) !&#x3D; -1)&#123;</span><br><span class="line">        baos.write(buffer,0,len1);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    System.out.println(baos.toString());</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;6.</span><br><span class="line">    fis.close();</span><br><span class="line">    os.close();</span><br><span class="line">    socket.close();</span><br><span class="line">    baos.close();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line">这里涉及到的异常，应该使用try-catch-finally处理</span><br><span class="line"> *&#x2F;</span><br><span class="line">@Test</span><br><span class="line">public void server() throws IOException &#123;</span><br><span class="line">    &#x2F;&#x2F;1.</span><br><span class="line">    ServerSocket ss &#x3D; new ServerSocket(9090);</span><br><span class="line">    &#x2F;&#x2F;2.</span><br><span class="line">    Socket socket &#x3D; ss.accept();</span><br><span class="line">    &#x2F;&#x2F;3.</span><br><span class="line">    InputStream is &#x3D; socket.getInputStream();</span><br><span class="line">    &#x2F;&#x2F;4.</span><br><span class="line">    FileOutputStream fos &#x3D; new FileOutputStream(new File(&quot;beauty2.jpg&quot;));</span><br><span class="line">    &#x2F;&#x2F;5.</span><br><span class="line">    byte[] buffer &#x3D; new byte[1024];</span><br><span class="line">    int len;</span><br><span class="line">    while((len &#x3D; is.read(buffer)) !&#x3D; -1)&#123;</span><br><span class="line">        fos.write(buffer,0,len);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    System.out.println(&quot;图片传输完成&quot;);</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;6.服务器端给予客户端反馈</span><br><span class="line">    OutputStream os &#x3D; socket.getOutputStream();</span><br><span class="line">    os.write(&quot;你好，美女，照片我已收到，非常漂亮！&quot;.getBytes());</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;7.</span><br><span class="line">    fos.close();</span><br><span class="line">    is.close();</span><br><span class="line">    socket.close();</span><br><span class="line">    ss.close();</span><br><span class="line">    os.close();</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="UDP网络编程"><a href="#UDP网络编程" class="headerlink" title="UDP网络编程"></a>UDP网络编程</h4><ul>
+<li>类 DatagramSocket 和 DatagramPacket 实现了基于 UDP 协议网络程序。</li>
+<li>UDP数据报通过数据报套接字 DatagramSocket 发送和接收，系统不保证<br>UDP数据报一定能够安全送到目的地，也不能确定什么时候可以抵达。</li>
+<li>DatagramPacket 对象封装了UDP数据报，在数据报中包含了发送端的IP<br>地址和端口号以及接收端的IP地址和端口号。</li>
+<li>UDP协议中每个数据报都给出了完整的地址信息，因此无须建立发送方和接收方的连接。如同发快递包裹一样。</li>
+</ul>
+<h5 id="DatagramSocket-类的常用方法"><a href="#DatagramSocket-类的常用方法" class="headerlink" title="DatagramSocket  类的常用方法"></a>DatagramSocket  类的常用方法</h5><h6 id="public-DatagramSocket-int-port"><a href="#public-DatagramSocket-int-port" class="headerlink" title="public DatagramSocket(int port)"></a>public DatagramSocket(int port)</h6><p>创建数据报套接字并将其绑定到本地主机上的指定端口。套接字将被绑定到通配符地址，IP 地址由内核来选择。</p>
+<h6 id="public-DatagramSocket-int-port-InetAddress-laddr"><a href="#public-DatagramSocket-int-port-InetAddress-laddr" class="headerlink" title="public DatagramSocket(int port,InetAddress laddr)"></a>public DatagramSocket(int port,InetAddress laddr)</h6><p>创建数据报套接字，将其绑定到指定的本地地址。</p>
+<p>本地端口必须在 0 到 65535 之间（包括两者）。</p>
+<p>如果 IP 地址为 0.0.0.0，套接字将被绑定到通配符地址，IP 地址由内核选择。</p>
+<h6 id="public-void-close-1"><a href="#public-void-close-1" class="headerlink" title="public void close()"></a>public void close()</h6><p>关闭此数据报套接字。</p>
+<h6 id="public-void-send-DatagramPacket-p"><a href="#public-void-send-DatagramPacket-p" class="headerlink" title="public void send(DatagramPacket p)"></a>public void send(DatagramPacket p)</h6><p>从此套接字发送数据报包。</p>
+<p>DatagramPacket包含的信息指示：将要发送的数据、其长度、远程主机的IP 地址和远程主机的端口号。</p>
+<h6 id="public-void-receive-DatagramPacket-p"><a href="#public-void-receive-DatagramPacket-p" class="headerlink" title="public void receive(DatagramPacket p)"></a>public void receive(DatagramPacket p)</h6><p>从此套接字接收数据报包。</p>
+<p>当此方法返回时，DatagramPacket的缓冲区填充了接收的数据。数据报包也包含发送方的 IP 地址和发送方机器上的端口号。 </p>
+<p>此方法在接收到数据报前一直阻塞。数据报包对象的 length 字段包含所接收信息的长度。如果信息比包的<br>长度长，该信息将被截短。</p>
+<h6 id="public-InetAddress-getLocalAddress-1"><a href="#public-InetAddress-getLocalAddress-1" class="headerlink" title="public InetAddress getLocalAddress()"></a>public InetAddress getLocalAddress()</h6><p>获取套接字绑定的本地地址。</p>
+<h6 id="public-int-getLocalPort-1"><a href="#public-int-getLocalPort-1" class="headerlink" title="public int getLocalPort()"></a>public int getLocalPort()</h6><p>返回此套接字绑定的本地主机上的端口号。</p>
+<h6 id="public-InetAddress-getInetAddress-1"><a href="#public-InetAddress-getInetAddress-1" class="headerlink" title="public InetAddress getInetAddress()"></a>public InetAddress getInetAddress()</h6><p>返回此套接字连接的地址。如果套接字未连接，则返回null。</p>
+<h6 id="public-int-getPort-1"><a href="#public-int-getPort-1" class="headerlink" title="public int getPort()"></a>public int getPort()</h6><p>返回此套接字的端口。如果套接字未连接，则返回-1。</p>
+<h5 id="DatagramPacket-类的常用方式"><a href="#DatagramPacket-类的常用方式" class="headerlink" title="DatagramPacket 类的常用方式"></a>DatagramPacket 类的常用方式</h5><h6 id="public-DatagramPacket-byte-buf-int-length"><a href="#public-DatagramPacket-byte-buf-int-length" class="headerlink" title="public DatagramPacket(byte[] buf,int length)"></a>public DatagramPacket(byte[] buf,int length)</h6><p>构造 DatagramPacket，用来接收长度为 length 的数据包。 length 参数必须小于等于 buf.length。</p>
+<h6 id="public-DatagramPacket-byte-buf-int-length-InetAddress-address-int-port"><a href="#public-DatagramPacket-byte-buf-int-length-InetAddress-address-int-port" class="headerlink" title="public DatagramPacket(byte[] buf,int length,InetAddress address,int port)"></a>public DatagramPacket(byte[] buf,int length,InetAddress address,int port)</h6><p>构造数据报包，用来将长度为 length 的包发送到指定主机上的指定端口号。length<br>参数必须小于等于 buf.length。</p>
+<h6 id="public-InetAddress-getAddress"><a href="#public-InetAddress-getAddress" class="headerlink" title="public InetAddress getAddress()"></a>public InetAddress getAddress()</h6><p>返回某台机器的 IP 地址，此数据报将要发往该机器或者是从该机器接收到的。</p>
+<h6 id="public-int-getPort-2"><a href="#public-int-getPort-2" class="headerlink" title="public int getPort()"></a>public int getPort()</h6><p>返回某台远程主机的端口号，此数据报将要发往该主机或<br>者是从该主机接收到的。</p>
+<h6 id="public-byte-getData"><a href="#public-byte-getData" class="headerlink" title="public byte[] getData()"></a>public byte[] getData()</h6><p>返回数据缓冲区。接收到的或将要发送的数据从缓冲区中的偏移量 offset 处开始，持续 length 长度。</p>
+<h6 id="public-int-getLength"><a href="#public-int-getLength" class="headerlink" title="public int getLength()"></a>public int getLength()</h6><p>返回将要发送或接收到的数据的长度。</p>
+<h4 id="UDP-网络编程"><a href="#UDP-网络编程" class="headerlink" title="UDP 网络编程"></a>UDP 网络编程</h4><h5 id="流-程："><a href="#流-程：" class="headerlink" title="流 程："></a>流 程：</h5><ol>
+<li>DatagramSocket与DatagramPacket</li>
+<li>建立发送端，接收端</li>
+<li>建立数据包</li>
+<li>调用Socket的发送、接收方法</li>
+<li>关闭Socket</li>
+</ol>
+<h6 id="发送端与接收端是两个独立的运行程序"><a href="#发送端与接收端是两个独立的运行程序" class="headerlink" title="发送端与接收端是两个独立的运行程序"></a>发送端与接收端是两个独立的运行程序</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;发送端</span><br><span class="line">@Test</span><br><span class="line">public void sender() throws IOException &#123;</span><br><span class="line">    DatagramSocket ds &#x3D; null;</span><br><span class="line">    try &#123;</span><br><span class="line">        ds &#x3D; new DatagramSocket();</span><br><span class="line">        byte[] by &#x3D; &quot;我是UDP方式发送的导弹&quot;.getBytes();</span><br><span class="line">        DatagramPacket dp &#x3D; new DatagramPacket(by, 0, by.length,</span><br><span class="line">        InetAddress.getByName(&quot;127.0.0.1&quot;), 10000);</span><br><span class="line">        ds.send(dp);</span><br><span class="line">    &#125; catch (Exception e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; finally &#123;</span><br><span class="line">        if (ds !&#x3D; null)</span><br><span class="line">            ds.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;接收端</span><br><span class="line">@Test</span><br><span class="line">public void receiver() throws IOException &#123;</span><br><span class="line">    DatagramSocket ds &#x3D; null;</span><br><span class="line">    try &#123;</span><br><span class="line">        ds &#x3D; new DatagramSocket(10000);</span><br><span class="line">        byte[] by &#x3D; new byte[1024];</span><br><span class="line">        </span><br><span class="line">        DatagramPacket dp &#x3D; new DatagramPacket(by, by.length);</span><br><span class="line">        </span><br><span class="line">        ds.receive(dp);</span><br><span class="line">        </span><br><span class="line">        String str &#x3D; new String(dp.getData(), 0, dp.getLength());</span><br><span class="line">        </span><br><span class="line">        System.out.println(str + &quot;--&quot; + dp.getAddress());</span><br><span class="line">    &#125; catch (Exception e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; finally &#123;</span><br><span class="line">        if (ds !&#x3D; null)</span><br><span class="line">          ds.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="URL-编程"><a href="#URL-编程" class="headerlink" title="URL 编程"></a>URL 编程</h4><h5 id="URL类"><a href="#URL类" class="headerlink" title="URL类"></a>URL类</h5><h6 id="URL-Uniform-Resource-Locator"><a href="#URL-Uniform-Resource-Locator" class="headerlink" title="URL(Uniform Resource Locator)"></a>URL(Uniform Resource Locator)</h6><p>统一资源定位符，对应着互联网的某一资源地址</p>
+<h6 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h6><p>&lt; 传输协议&gt;://&lt; 主机名&gt;:&lt; 端口号&gt;/&lt; 文件名&gt;# 片段名? 参数列表</p>
+<p><a href="http://localhost:8080/examples/beauty.jpg?username=Tom" target="_blank" rel="noopener">http://localhost:8080/examples/beauty.jpg?username=Tom</a></p>
+<h5 id="URL-类构造器"><a href="#URL-类构造器" class="headerlink" title="URL 类构造器"></a>URL 类构造器</h5><p>URL类的构造器都声明抛出非运行时异常，必须要对这一异常进行处理，通常是用try-catch语句进行捕获。</p>
+<h6 id="public-URL-String-spec"><a href="#public-URL-String-spec" class="headerlink" title="public URL (String spec);"></a>public URL (String spec);</h6><p>通过一个表示URL地址的字符串可以构造一个URL对象。</p>
+<p>例如：URL url = new URL (“<a href="http://www" target="_blank" rel="noopener">http://www</a>. baidu.com/“);</p>
+<h6 id="public-URL-URL-context-String-spec"><a href="#public-URL-URL-context-String-spec" class="headerlink" title="public URL(URL context, String spec)"></a>public URL(URL context, String spec)</h6><p>通过基 URL 和相对 URL 构造一个 URL 对象。</p>
+<p>例如：URL downloadUrl = new URL(url, “download.html”)</p>
+<h6 id="public-URL-String-protocol-String-host-String-file"><a href="#public-URL-String-protocol-String-host-String-file" class="headerlink" title="public URL(String protocol, String host, String file);"></a>public URL(String protocol, String host, String file);</h6><p>例如：new URL(“http”,<br>“<a href="http://www.baidu.com&quot;" target="_blank" rel="noopener">www.baidu.com&quot;</a>, “download. html”);</p>
+<h6 id="public-URL-String-protocol-String-host-int-port-String-file"><a href="#public-URL-String-protocol-String-host-int-port-String-file" class="headerlink" title="public URL(String protocol, String host, int port, String file);"></a>public URL(String protocol, String host, int port, String file);</h6><p>例如: URL gamelan = new<br>URL(“http”, “<a href="http://www.baidu.com&quot;" target="_blank" rel="noopener">www.baidu.com&quot;</a>, 80, “download.html”);</p>
+<h5 id="URL-类常用方法"><a href="#URL-类常用方法" class="headerlink" title="URL 类常用方法"></a>URL 类常用方法</h5><p>URL对象生成后，其属性是不能被改变的</p>
+<h6 id="public-String-getProtocol"><a href="#public-String-getProtocol" class="headerlink" title="public String getProtocol( )"></a>public String getProtocol( )</h6><p>获取该URL的协议名</p>
+<h6 id="public-String-getHost"><a href="#public-String-getHost" class="headerlink" title="public String getHost( )"></a>public String getHost( )</h6><p>获取该URL的主机名</p>
+<h6 id="public-String-getPort"><a href="#public-String-getPort" class="headerlink" title="public String getPort( )"></a>public String getPort( )</h6><p>获取该URL的端口号</p>
+<h6 id="public-String-getPath"><a href="#public-String-getPath" class="headerlink" title="public String getPath( )"></a>public String getPath( )</h6><p>获取该URL的文件路径</p>
+<h6 id="public-String-getFile"><a href="#public-String-getFile" class="headerlink" title="public String getFile( )"></a>public String getFile( )</h6><p>获取该URL的文件名</p>
+<h6 id="public-String-getQuery"><a href="#public-String-getQuery" class="headerlink" title="public String getQuery( )"></a>public String getQuery( )</h6><p>获取该URL的查询名</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">    try &#123;</span><br><span class="line"></span><br><span class="line">        URL url &#x3D; new URL(&quot;http:&#x2F;&#x2F;localhost:8080&#x2F;examples&#x2F;beauty.jpg?username&#x3D;Tom&quot;);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;获取该URL的协议名</span><br><span class="line">        System.out.println(url.getProtocol());</span><br><span class="line">        &#x2F;&#x2F;获取该URL的主机名</span><br><span class="line">        System.out.println(url.getHost());</span><br><span class="line">        &#x2F;&#x2F;获取该URL的端口号</span><br><span class="line">        System.out.println(url.getPort());</span><br><span class="line">        &#x2F;&#x2F;获取该URL的文件路径</span><br><span class="line">        System.out.println(url.getPath());</span><br><span class="line">        &#x2F;&#x2F;获取该URL的文件名</span><br><span class="line">        System.out.println(url.getFile());</span><br><span class="line">        &#x2F;&#x2F;获取该URL的查询名</span><br><span class="line">        System.out.println(url.getQuery());</span><br><span class="line">        </span><br><span class="line">    &#125; catch (MalformedURLException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="URLConnection类"><a href="#URLConnection类" class="headerlink" title="URLConnection类"></a>URLConnection类</h4><ul>
+<li>URL的方法 openStream()：能从网络上读取数据</li>
+<li>若希望输出数据，例如向服务器端的 CGI （公共网关接口-Common Gateway<br>Interface-的简称，是用户浏览器和服务器端的应用程序进行连接的接口）程序发送一些数据，则必须先与URL建立连接，然后才能对其进行读写，此时需要使用<br>URLConnection 。</li>
+<li>URLConnection：表示到URL所引用的远程对象的连接。当与一个URL建立连接时，首先要在一个 URL 对象上通过方法 openConnection() 生成对应的 URLConnection对象。如果连接过程失败，将产生IOException.</li>
+<li>通过URLConnection对象获取的输入流和输出流，即可以与现有的CGI程序进行交互。<ul>
+<li>public Object getContent( ) throws IOException</li>
+<li>public int getContentLength( )</li>
+<li>public String getContentType( )</li>
+<li>public long getDate( )</li>
+<li>public long getLastModified( )</li>
+<li>public InputStream getInputStream( )throws IOException</li>
+<li>public OutputSteram getOutputStream( )throws IOException</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">    HttpURLConnection urlConnection &#x3D; null;</span><br><span class="line">    InputStream is &#x3D; null;</span><br><span class="line">    FileOutputStream fos &#x3D; null;</span><br><span class="line">    try &#123;</span><br><span class="line">        URL url &#x3D; new URL(&quot;http:&#x2F;&#x2F;localhost:8080&#x2F;examples&#x2F;beauty.jpg&quot;);</span><br><span class="line"></span><br><span class="line">        urlConnection &#x3D; (HttpURLConnection) url.openConnection();</span><br><span class="line"></span><br><span class="line">        urlConnection.connect();</span><br><span class="line"></span><br><span class="line">        is &#x3D; urlConnection.getInputStream();</span><br><span class="line">        fos &#x3D; new FileOutputStream(&quot;day10\\beauty3.jpg&quot;);</span><br><span class="line"></span><br><span class="line">        byte[] buffer &#x3D; new byte[1024];</span><br><span class="line">        int len;</span><br><span class="line">        while((len &#x3D; is.read(buffer)) !&#x3D; -1)&#123;</span><br><span class="line">            fos.write(buffer,0,len);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        System.out.println(&quot;下载完成&quot;);</span><br><span class="line">    &#125; catch (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; finally &#123;</span><br><span class="line">        &#x2F;&#x2F;关闭资源</span><br><span class="line">        if(is !&#x3D; null)&#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                is.close();</span><br><span class="line">            &#125; catch (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if(fos !&#x3D; null)&#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                fos.close();</span><br><span class="line">            &#125; catch (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if(urlConnection !&#x3D; null)&#123;</span><br><span class="line">            urlConnection.disconnect();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="小-结"><a href="#小-结" class="headerlink" title="小 结"></a>小 结</h4><ul>
+<li>网络中的计算机具有唯一的IP地址，这样不同的主机可以互相区分。</li>
+<li>客户端－服务器是一种最常见的网络应用程序模型。</li>
+<li>服务器是一个为其客户端提供某种特定服务的硬件或软件。</li>
+<li>客户机是一个用户应用程序，用于访问某台服务器提供的服务。</li>
+<li>端口号是对一个服务的访问场所，它用于区分同一物理计算机上的多个服务。</li>
+<li>套接字用于连接客户端和服务器，客户端和服务器之间的每个通信会话使用一个不同的套接字。TCP协议用于实现面向连接的会话。</li>
+<li>Java 中有关网络方面的功能都定义在 java.net 程序包中。</li>
+<li>Java 用 InetAddress 对象表示 IP<br>地址，该对象里有两个字段：主机名(String) 和 IP 地址(int)。</li>
+<li>类 Socket 和 ServerSocket 实现了基于TCP协议的客户端－服务器程序。</li>
+<li>Socket是客户端和服务器之间的一个连接，连接创建的细节被隐藏了。这个连接提供了一个安全的数据传输通道，这是因为 TCP 协议可以解决数据在传送过程中的丢失、损坏、重复、乱序以及网络拥挤等问题，它保证数据可靠的传送。</li>
+<li>类 URL 和 URLConnection 提供了最高级网络应用。</li>
+<li>URL 的网络资源的位置来同一表示<br>Internet 上各种网络资源。通过URL对象可以创建当前应用程序和 URL 表示的网络资源之<br>间的连接，这样当前程序就可以读取网络资源数据，或者把自己的数据传送到网络上去。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+        <tag>多线程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>44.Java基础知识-File类</title>
+    <url>/2020/11/05/44-Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-File%E7%B1%BB/</url>
+    <content><![CDATA[<h2 id="File类"><a href="#File类" class="headerlink" title="File类"></a>File类</h2><ul>
+<li>File类声明在java.io包下</li>
+<li>File类的一个对象，代表一个文件或一个文件目录(俗称：文件夹)。</li>
+<li>File类中涉及到关于文件或文件目录的创建、删除、重命名、修改时间、文件大小等方法，并未涉及到写入或读取文件内容的操作。如果需要读取或写入文件内容，必须使用IO流来完成。</li>
+<li>后续File类的对象常会作为IO流的构造器中的参数</li>
+</ul>
+<h4 id="常用构造器"><a href="#常用构造器" class="headerlink" title="常用构造器"></a>常用构造器</h4><h6 id="public-File-String-pathname"><a href="#public-File-String-pathname" class="headerlink" title="public File(String pathname)"></a>public File(String pathname)</h6><p>以pathname为路径创建File对象，可以是绝对路径或者相对路径，如果pathname是相对路径，则默认的当前路径在系统属性user.dir中存储</p>
+<ul>
+<li>main方法下的相对路径为src（当前工程路径）</li>
+<li>@Test测试下的相对路径为module（当前模块）<h6 id="public-File-String-parent-String-child"><a href="#public-File-String-parent-String-child" class="headerlink" title="public File(String parent,String child)"></a>public File(String parent,String child)</h6>以parent为父路径，child为子路径创建File对象。<h6 id="public-File-File-parent-String-child"><a href="#public-File-File-parent-String-child" class="headerlink" title="public File(File parent,String child)"></a>public File(File parent,String child)</h6>根据一个父File对象和子文件路径创建File对象<h4 id="路径分隔符"><a href="#路径分隔符" class="headerlink" title="路径分隔符"></a>路径分隔符</h4></li>
+<li>windows:  \和/</li>
+<li>unix: /</li>
+<li>File类常量：File.separator</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">File file2 &#x3D; new File(&quot;d:&quot; + File.separator + &quot;atguigu&quot; + File.separator + &quot;info.txt&quot;);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test1</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="comment">//构造器1</span></span><br><span class="line">    <span class="comment">//相对路径</span></span><br><span class="line">    File file1 = <span class="keyword">new</span> File(<span class="string">"hello.txt"</span>);<span class="comment">//相对于当前module</span></span><br><span class="line">    <span class="comment">//绝对路径</span></span><br><span class="line">    File file2 =  <span class="keyword">new</span> File(<span class="string">"D:\\workspace_idea1\\JavaSenior\\day08\\he.txt"</span>);</span><br><span class="line"></span><br><span class="line">    System.out.println(file1);</span><br><span class="line">    System.out.println(file2);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//构造器2：</span></span><br><span class="line">    File file3 = <span class="keyword">new</span> File(<span class="string">"D:\\workspace_idea1"</span>,<span class="string">"JavaSenior"</span>);</span><br><span class="line">    System.out.println(file3);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//构造器3：</span></span><br><span class="line">    File file4 = <span class="keyword">new</span> File(file3,<span class="string">"hi.txt"</span>);</span><br><span class="line">    System.out.println(file4);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="File类常用方法"><a href="#File类常用方法" class="headerlink" title="File类常用方法"></a>File类常用方法</h4><h5 id="File-类的获取功能"><a href="#File-类的获取功能" class="headerlink" title="File 类的获取功能"></a>File 类的获取功能</h5><h6 id="public-String-getAbsolutePath-：获取绝对路径"><a href="#public-String-getAbsolutePath-：获取绝对路径" class="headerlink" title="public String getAbsolutePath()：获取绝对路径"></a>public String getAbsolutePath()：获取绝对路径</h6><h6 id="public-String-getPath-：获取路径"><a href="#public-String-getPath-：获取路径" class="headerlink" title="public String getPath() ：获取路径"></a>public String getPath() ：获取路径</h6><h6 id="public-String-getName-：获取名称"><a href="#public-String-getName-：获取名称" class="headerlink" title="public String getName() ：获取名称"></a>public String getName() ：获取名称</h6><h6 id="public-String-getParent-：获取上层文件目录路径。若无，返回null"><a href="#public-String-getParent-：获取上层文件目录路径。若无，返回null" class="headerlink" title="public String getParent()：获取上层文件目录路径。若无，返回null"></a>public String getParent()：获取上层文件目录路径。若无，返回null</h6><h6 id="public-long-length-：获取文件长度（即：字节数）。不能获取目录的长度。"><a href="#public-long-length-：获取文件长度（即：字节数）。不能获取目录的长度。" class="headerlink" title="public long length() ：获取文件长度（即：字节数）。不能获取目录的长度。"></a>public long length() ：获取文件长度（即：字节数）。不能获取目录的长度。</h6><h6 id="public-long-lastModified-：获取最后一次的修改时间，毫秒值"><a href="#public-long-lastModified-：获取最后一次的修改时间，毫秒值" class="headerlink" title="public long lastModified() ：获取最后一次的修改时间，毫秒值"></a>public long lastModified() ：获取最后一次的修改时间，毫秒值</h6><p>如下的两个方法适用于文件目录：</p>
+<h6 id="public-String-list-：获取指定目录下的所有文件或者文件目录的名称数组"><a href="#public-String-list-：获取指定目录下的所有文件或者文件目录的名称数组" class="headerlink" title="public String[] list() ：获取指定目录下的所有文件或者文件目录的名称数组"></a>public String[] list() ：获取指定目录下的所有文件或者文件目录的名称数组</h6><h6 id="public-File-listFiles-：获取指定目录下的所有文件或者文件目录的File数组"><a href="#public-File-listFiles-：获取指定目录下的所有文件或者文件目录的File数组" class="headerlink" title="public File[] listFiles() ：获取指定目录下的所有文件或者文件目录的File数组"></a>public File[] listFiles() ：获取指定目录下的所有文件或者文件目录的File数组</h6><h5 id="File-类的重命名功能"><a href="#File-类的重命名功能" class="headerlink" title="File 类的重命名功能"></a>File 类的重命名功能</h5><h6 id="public-boolean-renameTo-File-dest-把文件重命名为指定的文件路径"><a href="#public-boolean-renameTo-File-dest-把文件重命名为指定的文件路径" class="headerlink" title="public boolean renameTo(File dest):把文件重命名为指定的文件路径"></a>public boolean renameTo(File dest):把文件重命名为指定的文件路径</h6><p>比如：file1.renameTo(file2)为例：<br>要想保证返回true,需要file1在硬盘中是存在的，且file2不能在硬盘中存在。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@Test</span><br><span class="line">    public void test4()&#123;</span><br><span class="line">        File file1 &#x3D; new File(&quot;hello.txt&quot;);</span><br><span class="line">        File file2 &#x3D; new File(&quot;D:\\io\\hi.txt&quot;);</span><br><span class="line"></span><br><span class="line">        boolean renameTo &#x3D; file2.renameTo(file1);</span><br><span class="line">        System.out.println(renameTo);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="File-类的判断功能"><a href="#File-类的判断功能" class="headerlink" title="File 类的判断功能"></a>File 类的判断功能</h5><h6 id="public-boolean-isDirectory-：判断是否是文件目录"><a href="#public-boolean-isDirectory-：判断是否是文件目录" class="headerlink" title="public boolean isDirectory()：判断是否是文件目录"></a>public boolean isDirectory()：判断是否是文件目录</h6><h6 id="public-boolean-isFile-：判断是否是文件"><a href="#public-boolean-isFile-：判断是否是文件" class="headerlink" title="public boolean isFile() ：判断是否是文件"></a>public boolean isFile() ：判断是否是文件</h6><h6 id="public-boolean-exists-：判断是否存在"><a href="#public-boolean-exists-：判断是否存在" class="headerlink" title="public boolean exists() ：判断是否存在"></a>public boolean exists() ：判断是否存在</h6><h6 id="public-boolean-canRead-：判断是否可读"><a href="#public-boolean-canRead-：判断是否可读" class="headerlink" title="public boolean canRead() ：判断是否可读"></a>public boolean canRead() ：判断是否可读</h6><h6 id="public-boolean-canWrite-：判断是否可写"><a href="#public-boolean-canWrite-：判断是否可写" class="headerlink" title="public boolean canWrite() ：判断是否可写"></a>public boolean canWrite() ：判断是否可写</h6><h6 id="public-boolean-isHidden-：判断是否隐藏"><a href="#public-boolean-isHidden-：判断是否隐藏" class="headerlink" title="public boolean isHidden() ：判断是否隐藏"></a>public boolean isHidden() ：判断是否隐藏</h6><h5 id="File-类的创建功能"><a href="#File-类的创建功能" class="headerlink" title="File 类的创建功能"></a>File 类的创建功能</h5><h6 id="public-boolean-createNewFile-：创建文件。若文件存在，则不创建，返回false"><a href="#public-boolean-createNewFile-：创建文件。若文件存在，则不创建，返回false" class="headerlink" title="public boolean createNewFile() ：创建文件。若文件存在，则不创建，返回false"></a>public boolean createNewFile() ：创建文件。若文件存在，则不创建，返回false</h6><h6 id="public-boolean-mkdir-：创建文件目录。如果此文件目录存在，就不创建了。如果此文件目录的上层目录不存在，也不创建。"><a href="#public-boolean-mkdir-：创建文件目录。如果此文件目录存在，就不创建了。如果此文件目录的上层目录不存在，也不创建。" class="headerlink" title="public boolean mkdir() ：创建文件目录。如果此文件目录存在，就不创建了。如果此文件目录的上层目录不存在，也不创建。"></a>public boolean mkdir() ：创建文件目录。如果此文件目录存在，就不创建了。如果此文件目录的上层目录不存在，也不创建。</h6><h6 id="public-boolean-mkdirs-：创建文件目录。如果此文件目录存在，就不创建了。如果上层文件目录不存在，一并创建"><a href="#public-boolean-mkdirs-：创建文件目录。如果此文件目录存在，就不创建了。如果上层文件目录不存在，一并创建" class="headerlink" title="public boolean mkdirs() ：创建文件目录。如果此文件目录存在，就不创建了。如果上层文件目录不存在，一并创建"></a>public boolean mkdirs() ：创建文件目录。如果此文件目录存在，就不创建了。如果上层文件目录不存在，一并创建</h6><h6 id="注意事项：如果你创建文件或者文件目录没有写盘符路径，那么，默认在项目路径下。（即没指定绝对路径就是按着相对路径创建的）"><a href="#注意事项：如果你创建文件或者文件目录没有写盘符路径，那么，默认在项目路径下。（即没指定绝对路径就是按着相对路径创建的）" class="headerlink" title="注意事项：如果你创建文件或者文件目录没有写盘符路径，那么，默认在项目路径下。（即没指定绝对路径就是按着相对路径创建的）"></a>注意事项：如果你创建文件或者文件目录没有写盘符路径，那么，默认在项目路径下。（即没指定绝对路径就是按着相对路径创建的）</h6><h5 id="File-类的删除功能"><a href="#File-类的删除功能" class="headerlink" title="File 类的删除功能"></a>File 类的删除功能</h5><h6 id="public-boolean-delete-：删除文件或者文件夹"><a href="#public-boolean-delete-：删除文件或者文件夹" class="headerlink" title="public boolean delete()：删除文件或者文件夹"></a>public boolean delete()：删除文件或者文件夹</h6><h6 id="注意事项：Java中的删除不走回收站。"><a href="#注意事项：Java中的删除不走回收站。" class="headerlink" title="注意事项：Java中的删除不走回收站。"></a>注意事项：Java中的删除不走回收站。</h6><h6 id="注意事项：要删除的文件目录内不能包含文件或者文件目录"><a href="#注意事项：要删除的文件目录内不能包含文件或者文件目录" class="headerlink" title="注意事项：要删除的文件目录内不能包含文件或者文件目录"></a>注意事项：要删除的文件目录内不能包含文件或者文件目录</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@Test</span><br><span class="line">public void test6() throws IOException &#123;</span><br><span class="line">    File file1 &#x3D; new File(&quot;hi.txt&quot;);</span><br><span class="line">    if(!file1.exists())&#123;</span><br><span class="line">        &#x2F;&#x2F;文件的创建</span><br><span class="line">        file1.createNewFile();</span><br><span class="line">        System.out.println(&quot;创建成功&quot;);</span><br><span class="line">    &#125;else&#123;&#x2F;&#x2F;文件存在</span><br><span class="line">        file1.delete();</span><br><span class="line">        System.out.println(&quot;删除成功&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">@Test</span><br><span class="line">public void test7()&#123;</span><br><span class="line">    &#x2F;&#x2F;文件目录的创建</span><br><span class="line">    File file1 &#x3D; new File(&quot;d:\\io\\io1\\io3&quot;);</span><br><span class="line"></span><br><span class="line">    boolean mkdir &#x3D; file1.mkdir();</span><br><span class="line">    if(mkdir)&#123;</span><br><span class="line">        System.out.println(&quot;创建成功1&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    File file2 &#x3D; new File(&quot;d:\\io\\io1\\io4&quot;);</span><br><span class="line"></span><br><span class="line">    boolean mkdir1 &#x3D; file2.mkdirs();</span><br><span class="line">    if(mkdir1)&#123;</span><br><span class="line">        System.out.println(&quot;创建成功2&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F;要想删除成功，io4文件目录下不能有子目录或文件</span><br><span class="line">    File file3 &#x3D; new File(&quot;D:\\io\\io1\\io4&quot;);</span><br><span class="line">    file3 &#x3D; new File(&quot;D:\\io\\io1&quot;);</span><br><span class="line">    System.out.println(file3.delete());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+        <tag>File类</tag>
+      </tags>
+  </entry>
 </search>

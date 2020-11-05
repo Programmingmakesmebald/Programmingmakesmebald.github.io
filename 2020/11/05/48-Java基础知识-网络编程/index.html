@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hans" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>48.Java基础知识-网络编程 - 秃头小王子</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="秃头小王子的个人博客,网络编程网络编程的目的：
+直接或间接地通过网络协议与 其它 计算机实现数据交换，进行 通讯。网络编程中有两个主要的问题：如何准确地定位网络上一台或多台主机IP地址如何定位主机上的特定的应用端口号找到,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="秃头小王子" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">秃头小王子</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://yoursite.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">48.Java基础知识-网络编程</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">48.Java基础知识-网络编程</h1>
+        <div class="stuff">
+            <span>十一月 05, 2020</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Java%E5%9F%BA%E7%A1%80/" rel="tag">Java基础</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" rel="tag">多线程</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h2 id="网络编程"><a href="#网络编程" class="headerlink" title="网络编程"></a>网络编程</h2><h4 id="网络编程的目的："><a href="#网络编程的目的：" class="headerlink" title="网络编程的目的："></a>网络编程的目的：</h4><ul>
+<li>直接或间接地通过网络协议与 其它 计算机实现数据交换，进行 通讯。<h4 id="网络编程中有两个主要的问题："><a href="#网络编程中有两个主要的问题：" class="headerlink" title="网络编程中有两个主要的问题："></a>网络编程中有两个主要的问题：</h4><h6 id="如何准确地定位网络上一台或多台主机"><a href="#如何准确地定位网络上一台或多台主机" class="headerlink" title="如何准确地定位网络上一台或多台主机"></a>如何准确地定位网络上一台或多台主机</h6>IP地址<h6 id="如何定位主机上的特定的应用"><a href="#如何定位主机上的特定的应用" class="headerlink" title="如何定位主机上的特定的应用"></a>如何定位主机上的特定的应用</h6>端口号<h6 id="找到主机后如何可靠高效地进行数据传输"><a href="#找到主机后如何可靠高效地进行数据传输" class="headerlink" title="找到主机后如何可靠高效地进行数据传输"></a>找到主机后如何可靠高效地进行数据传输</h6>网络通信协议</li>
+<li>OSI参考模型：模型过于理想化，未能在因特网上进行广泛推广</li>
+<li>TCP/IP参考模型(或TCP/IP协议)：事实上的国际标准。</li>
+</ul>
+<p><img src="http://wangzixuan.work/6202" alt="image"><br><img src="http://wangzixuan.work/6205" alt="image"></p>
+<h4 id="IP地址：InetAddress"><a href="#IP地址：InetAddress" class="headerlink" title="IP地址：InetAddress"></a>IP地址：InetAddress</h4><ul>
+<li>唯一的标识 Internet 上的计算机（通信实体）</li>
+<li>本地回环地址(hostAddress)：127.0.0.1 主机名(hostName)：localhost</li>
+<li>域名：可以表示地址，DNS（域名服务器）将域名转换成IP地址</li>
+<li>IP地址分类方式1：IPV4 和 IPV6</li>
+<li>IPV4：4个字节组成，4个0-255。大概42亿，30亿都在北美，亚洲4亿。2011年初已经用尽。以点分十进制表示，如192.168.0.1</li>
+<li>IPV6：128位（16个字节），写成8个无符号整数，每个整数用四个十六进制位表示，数之间用冒号（：）分开，如：3ffe:3201:1401:1280:c8ff:fe4d:db39:1984</li>
+<li>IP地址分类方式2： 公网地址( 万维网使用)和 私有地址( 局域网使用)。192.168.开头的就是私有址址，范围即为192.168.0.0–192.168.255.255，专门为组织机构内部使用</li>
+<li>特点：不易记忆</li>
+</ul>
+<h4 id="InetAdress类"><a href="#InetAdress类" class="headerlink" title="InetAdress类"></a>InetAdress类</h4><h5 id="对象获取"><a href="#对象获取" class="headerlink" title="对象获取"></a>对象获取</h5><p>InetAddress 类没有提供公共的构造器，而是提供了如下几个静态方法来获取InetAddress</p>
+<h6 id="public-static-InetAddress-getLocalHost"><a href="#public-static-InetAddress-getLocalHost" class="headerlink" title="public static InetAddress getLocalHost()"></a>public static InetAddress getLocalHost()</h6><p>获取本机的InetAddress对象（域名和IP地址）</p>
+<h6 id="public-static-InetAddress-getByName-String-host"><a href="#public-static-InetAddress-getByName-String-host" class="headerlink" title="public static InetAddress getByName(String host)"></a>public static InetAddress getByName(String host)</h6><p>根据地址（IP地址或域名）获取对应主机的InetAddress对象（域名和IP地址）</p>
+<h5 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h5><h6 id="public-String-getHostAddress"><a href="#public-String-getHostAddress" class="headerlink" title="public String getHostAddress()"></a>public String getHostAddress()</h6><p>返回 IP 地址字符串（以文本表现形式）。</p>
+<h6 id="public-String-getHostName"><a href="#public-String-getHostName" class="headerlink" title="public String getHostName()"></a>public String getHostName()</h6><p>获取此 IP 地址的主机名</p>
+<h6 id="public-boolean-isReachable-int-timeout"><a href="#public-boolean-isReachable-int-timeout" class="headerlink" title="public boolean isReachable(int timeout)"></a>public boolean isReachable(int timeout)</h6><p>测试是否可以达到该地址</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    try &#123;</span><br><span class="line">        InetAddress inet1 &#x3D; InetAddress.getByName(&quot;192.168.10.14&quot;);</span><br><span class="line">        </span><br><span class="line">        &#x2F;&#x2F;获取InetAddress对象的域名和IP地址</span><br><span class="line">        System.out.println(inet1);</span><br><span class="line"></span><br><span class="line">        InetAddress inet2 &#x3D; InetAddress.getByName(&quot;www.atguigu.com&quot;);</span><br><span class="line">        </span><br><span class="line">        &#x2F;&#x2F;获取InetAddress对象的域名和IP地址</span><br><span class="line">        System.out.println(inet2);</span><br><span class="line">        </span><br><span class="line">        &#x2F;&#x2F;获取InetAddress对象的域名</span><br><span class="line">        System.out.println(inet2.getHostName());</span><br><span class="line">        </span><br><span class="line">        &#x2F;&#x2F;获取InetAddress对象的IP地址</span><br><span class="line">        System.out.println(inet2.getHostAddress());</span><br><span class="line"></span><br><span class="line">        InetAddress inet3 &#x3D; InetAddress.getByName(&quot;127.0.0.1&quot;);</span><br><span class="line">        </span><br><span class="line">        &#x2F;&#x2F;获取InetAddress对象的域名和IP地址</span><br><span class="line">        System.out.println(inet3);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;获取本机的InetAddress对象的域名和IP地址</span><br><span class="line">        InetAddress inet4 &#x3D; InetAddress.getLocalHost();</span><br><span class="line">        System.out.println(inet4);</span><br><span class="line"></span><br><span class="line">    &#125; catch (UnknownHostException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="端口号"><a href="#端口号" class="headerlink" title="端口号"></a>端口号</h4><ul>
+<li>标识正在计算机上运行的进程（程序）</li>
+<li>不同的进程有不同的端口号</li>
+<li>被规定为一个 16 位的整数 0~65535。</li>
+<li>端口分类：<ul>
+<li>公认端口：0~1023。被预先定义的服务通信占用（如：HTTP占用端口80，FTP占用端口21，Telnet占用端口23）</li>
+<li>注册端口：1024~49151。分配给用户进程或应用程序。（如：Tomcat占用端口8080，MySQL占用端口3306，Oracle占用端口1521等）。</li>
+<li>动态/私有端口：49152~65535。</li>
+</ul>
+</li>
+</ul>
+<h4 id="网络通信协议TCP-和-UDP"><a href="#网络通信协议TCP-和-UDP" class="headerlink" title="网络通信协议TCP 和 UDP"></a>网络通信协议TCP 和 UDP</h4><h5 id="TCP-协议"><a href="#TCP-协议" class="headerlink" title="TCP 协议"></a>TCP 协议</h5><ul>
+<li>使用TCP协议前，须先建立TCP连接，形成传输数据通道</li>
+<li>传输前，采用“ 三次握手”方式，点对点通信，<strong>是可靠的</strong></li>
+<li>TCP协议进行通信的两个应用进程：客户端、服务端。</li>
+<li>在连接中可<strong>进行大数据量的传输</strong></li>
+<li>传输完毕，需<strong>释放已建立的连接，效率低</strong></li>
+</ul>
+<h5 id="UDP-协议"><a href="#UDP-协议" class="headerlink" title="UDP 协议"></a>UDP 协议</h5><ul>
+<li>将数据、源、目的封装成数据包，<strong>不需要建立连接</strong></li>
+<li>每个数据报的大小限制在64K内</li>
+<li>发送不管对方是否准备好，接收方收到也不确认，故<strong>是不可靠的</strong></li>
+<li>可以广播发送</li>
+<li>发送数据结束时<strong>无需释放资源，开销小，速度快</strong></li>
+</ul>
+<h4 id="Socket"><a href="#Socket" class="headerlink" title="Socket"></a>Socket</h4><ul>
+<li>网络上具有唯一标识的IP地址和端口号组合在一起才能构成唯一能识别的标识符套接字。</li>
+<li>通信的两端都要有Socket，是两台机器间通信的端点。</li>
+<li>网络通信其实就是Socket间的通信。</li>
+<li>Socket允许程序把网络连接当成一个流，数据在两个Socket间通过IO传输。</li>
+<li>一般主动发起通信的应用程序属客户端，等待通信请求的为服务端。</li>
+<li>Socket分类：<ul>
+<li>流套接字（stream socket）：使用TCP提供可依赖的字节流服务</li>
+<li>数据报套接字（datagram socket）：使用UDP提供“尽力而为”的数据报服务</li>
+</ul>
+</li>
+</ul>
+<h5 id="常用构造器"><a href="#常用构造器" class="headerlink" title="常用构造器"></a>常用构造器</h5><h6 id="public-Socket-InetAddress-address-int-port"><a href="#public-Socket-InetAddress-address-int-port" class="headerlink" title="public Socket(InetAddress address,int port)"></a>public Socket(InetAddress address,int port)</h6><p>创建一个流套接字并将其连接到指定IP地址的指定端口号。</p>
+<h6 id="public-Socket-String-host-int-port"><a href="#public-Socket-String-host-int-port" class="headerlink" title="public Socket(String host,int port)"></a>public Socket(String host,int port)</h6><p>创建一个流套接字并将其连接到指定主机上的指定端口号。</p>
+<h5 id="常用方法-1"><a href="#常用方法-1" class="headerlink" title="常用方法"></a>常用方法</h5><h6 id="public-InputStream-getInputStream"><a href="#public-InputStream-getInputStream" class="headerlink" title="public InputStream getInputStream()"></a>public InputStream getInputStream()</h6><p>返回此套接字的输入流。可以用于接收网络消息。</p>
+<h6 id="public-OutputStream-getOutputStream"><a href="#public-OutputStream-getOutputStream" class="headerlink" title="public OutputStream getOutputStream()"></a>public OutputStream getOutputStream()</h6><p>返回此套接字的输出流。可以用于发送网络消息。</p>
+<h6 id="public-InetAddress-getInetAddress"><a href="#public-InetAddress-getInetAddress" class="headerlink" title="public InetAddress getInetAddress()"></a>public InetAddress getInetAddress()</h6><p>此套接字连接到的远程IP地址；</p>
+<p>如果套接字是未连接的，则返回 null。</p>
+<h6 id="public-InetAddress-getLocalAddress"><a href="#public-InetAddress-getLocalAddress" class="headerlink" title="public InetAddress getLocalAddress()"></a>public InetAddress getLocalAddress()</h6><p>获取套接字绑定的本地地址。 即本端的IP地址。</p>
+<h6 id="public-int-getPort"><a href="#public-int-getPort" class="headerlink" title="public int getPort()"></a>public int getPort()</h6><p>此套接字连接到的远程端口号；</p>
+<p>如果尚未连接套接字，则返回0。</p>
+<h6 id="public-int-getLocalPort"><a href="#public-int-getLocalPort" class="headerlink" title="public int getLocalPort()"></a>public int getLocalPort()</h6><p>返回此套接字绑定到的本地端口。</p>
+<p>如果尚未绑定套接字，则返回 -1。</p>
+<h6 id="public-void-close"><a href="#public-void-close" class="headerlink" title="public void close()"></a>public void close()</h6><p>关闭此套接字。</p>
+<p>套接字被关闭后，便不可在以后的网络连接中使用（即无法重新连接或重新绑定）。需要创建新的套接字对象。</p>
+<p>关闭此套接字也将会关闭该套接字的 InputStream 和 OutputStream。</p>
+<h6 id="public-void-shutdownInput"><a href="#public-void-shutdownInput" class="headerlink" title="public void shutdownInput()"></a>public void shutdownInput()</h6><p>如果在套接字上调用shutdownInput()后从套接字输入流读取内容，则流将返回EOF（文件结束符）。即不能在从此套接字的输入流中接收任何数据。</p>
+<h6 id="public-void-shutdownOutput"><a href="#public-void-shutdownOutput" class="headerlink" title="public void shutdownOutput()"></a>public void shutdownOutput()</h6><p>禁用此套接字的输出流。对于TCP套接字，任何以前写入的数据都将被发送，并且后跟TCP的正常连接终止序列。 </p>
+<p>如果在套接字上调用 shutdownOutput() 后写入套接字输出流，则该流将抛出 IOException。 即不能通过此套接字的输出流发送任何数据。</p>
+<h4 id="TCP网络编程-基于Socket"><a href="#TCP网络编程-基于Socket" class="headerlink" title="TCP网络编程-基于Socket"></a>TCP网络编程-基于Socket</h4><h5 id="客户端Socket-的工作过程包含以下四个基本的步骤"><a href="#客户端Socket-的工作过程包含以下四个基本的步骤" class="headerlink" title="客户端Socket 的工作过程包含以下四个基本的步骤"></a>客户端Socket 的工作过程包含以下四个基本的步骤</h5><ul>
+<li>创建 Socket ：根据指定服务端的 IP 地址或端口号构造 Socket 类对象。若服务器端响应，则建立客户端到服务器的通信线路。若连接失败，会出现异常。</li>
+<li>打开连接到 Socket  的输入/ 出流： 使用 getInputStream()方法获得输入流，使用<br>getOutputStream()方法获得输出流，进行数据传输</li>
+<li>按照一定的协议对 Socket 进行读/ 写操作：通过输入流读取服务器放入线路的信息<br>（但不能读取自己放入线路的信息），通过输出流将信息写入线程。</li>
+<li>关闭 Socket： ：断开客户端到服务器的连接，释放线路</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;客户端</span><br><span class="line">@Test</span><br><span class="line">public void client()  &#123;</span><br><span class="line">    Socket socket &#x3D; null;</span><br><span class="line">    OutputStream os &#x3D; null;</span><br><span class="line">    try &#123;</span><br><span class="line">        &#x2F;&#x2F;1.创建Socket对象，指明服务器端的ip和端口号</span><br><span class="line">        InetAddress inet &#x3D; InetAddress.getByName(&quot;192.168.14.100&quot;);</span><br><span class="line">        socket &#x3D; new Socket(inet,8899);</span><br><span class="line">        &#x2F;&#x2F;2.获取一个输出流，用于输出数据</span><br><span class="line">        os &#x3D; socket.getOutputStream();</span><br><span class="line">        &#x2F;&#x2F;3.写出数据的操作</span><br><span class="line">        os.write(&quot;你好，我是客户端mm&quot;.getBytes());</span><br><span class="line">    &#125; catch (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; finally &#123;</span><br><span class="line">        &#x2F;&#x2F;4.资源的关闭</span><br><span class="line">        if(os !&#x3D; null)&#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                os.close();</span><br><span class="line">            &#125; catch (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        if(socket !&#x3D; null)&#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                socket.close();</span><br><span class="line">            &#125; catch (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h5 id="服务器端程序的工作过程包含以下四个基本的"><a href="#服务器端程序的工作过程包含以下四个基本的" class="headerlink" title="服务器端程序的工作过程包含以下四个基本的"></a>服务器端程序的工作过程包含以下四个基本的</h5><ul>
+<li>调用 ServerSocket(int port) ：创建一个服务器端套接字，并绑定到指定端口<br>上。用于监听客户端的请求。</li>
+<li>调用 accept()：监听连接请求，如果客户端请求连接，则接受连接，返回通信套接字对象。</li>
+<li>调用该Socket 类对象的 getOutputStream() 和 getInputStream ()：获取输出流和输入流，开始网络数据的发送和接收。</li>
+<li>关闭ServerSocket 和Socket 对象：客户端访问结束，关闭通信套接字。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;服务端</span><br><span class="line">@Test</span><br><span class="line">public void server()  &#123;</span><br><span class="line"></span><br><span class="line">    ServerSocket ss &#x3D; null;</span><br><span class="line">    Socket socket &#x3D; null;</span><br><span class="line">    InputStream is &#x3D; null;</span><br><span class="line">    ByteArrayOutputStream baos &#x3D; null;</span><br><span class="line">    try &#123;</span><br><span class="line">        &#x2F;&#x2F;1.创建服务器端的ServerSocket，指明自己的端口号</span><br><span class="line">        ss &#x3D; new ServerSocket(8899);</span><br><span class="line">        &#x2F;&#x2F;2.调用accept()表示接收来自于客户端的socket</span><br><span class="line">        socket &#x3D; ss.accept();</span><br><span class="line">        &#x2F;&#x2F;3.获取输入流</span><br><span class="line">        is &#x3D; socket.getInputStream();</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;不建议这样写，可能会有乱码</span><br><span class="line">&#x2F;&#x2F;        byte[] buffer &#x3D; new byte[1024];</span><br><span class="line">&#x2F;&#x2F;        int len;</span><br><span class="line">&#x2F;&#x2F;        while((len &#x3D; is.read(buffer)) !&#x3D; -1)&#123;</span><br><span class="line">&#x2F;&#x2F;            String str &#x3D; new String(buffer,0,len);</span><br><span class="line">&#x2F;&#x2F;            System.out.print(str);</span><br><span class="line">&#x2F;&#x2F;        &#125;</span><br><span class="line">        &#x2F;&#x2F;4.读取输入流中的数据</span><br><span class="line">        baos &#x3D; new ByteArrayOutputStream();</span><br><span class="line">        byte[] buffer &#x3D; new byte[5];</span><br><span class="line">        int len;</span><br><span class="line">        while((len &#x3D; is.read(buffer)) !&#x3D; -1)&#123;</span><br><span class="line">            baos.write(buffer,0,len);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        System.out.println(baos.toString());</span><br><span class="line"></span><br><span class="line">        System.out.println(&quot;收到了来自于：&quot; + socket.getInetAddress().getHostAddress() + &quot;的数据&quot;);</span><br><span class="line"></span><br><span class="line">    &#125; catch (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; finally &#123;</span><br><span class="line">        &#x2F;&#x2F;5.关闭资源</span><br><span class="line">        if(baos !&#x3D; null)&#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                baos.close();</span><br><span class="line">            &#125; catch (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if(is !&#x3D; null)&#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                is.close();</span><br><span class="line">            &#125; catch (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if(socket !&#x3D; null)&#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                socket.close();</span><br><span class="line">            &#125; catch (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if(ss !&#x3D; null)&#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                ss.close();</span><br><span class="line">            &#125; catch (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h5><p>从客户端发送文件给服务端，服务端保存到本地。并返回“发送成功”给客户端。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*</span><br><span class="line">    这里涉及到的异常，应该使用try-catch-finally处理</span><br><span class="line">     *&#x2F;</span><br><span class="line">@Test</span><br><span class="line">public void client() throws IOException &#123;</span><br><span class="line">    &#x2F;&#x2F;1.</span><br><span class="line">    Socket socket &#x3D; new Socket(InetAddress.getByName(&quot;127.0.0.1&quot;),9090);</span><br><span class="line">    &#x2F;&#x2F;2.</span><br><span class="line">    OutputStream os &#x3D; socket.getOutputStream();</span><br><span class="line">    &#x2F;&#x2F;3.</span><br><span class="line">    FileInputStream fis &#x3D; new FileInputStream(new File(&quot;beauty.jpg&quot;));</span><br><span class="line">    &#x2F;&#x2F;4.</span><br><span class="line">    byte[] buffer &#x3D; new byte[1024];</span><br><span class="line">    int len;</span><br><span class="line">    while((len &#x3D; fis.read(buffer)) !&#x3D; -1)&#123;</span><br><span class="line">        os.write(buffer,0,len);</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F;关闭数据的输出</span><br><span class="line">    socket.shutdownOutput();</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;5.接收来自于服务器端的数据，并显示到控制台上</span><br><span class="line">    InputStream is &#x3D; socket.getInputStream();</span><br><span class="line">    ByteArrayOutputStream baos &#x3D; new ByteArrayOutputStream();</span><br><span class="line">    byte[] bufferr &#x3D; new byte[20];</span><br><span class="line">    int len1;</span><br><span class="line">    while((len1 &#x3D; is.read(buffer)) !&#x3D; -1)&#123;</span><br><span class="line">        baos.write(buffer,0,len1);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    System.out.println(baos.toString());</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;6.</span><br><span class="line">    fis.close();</span><br><span class="line">    os.close();</span><br><span class="line">    socket.close();</span><br><span class="line">    baos.close();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line">这里涉及到的异常，应该使用try-catch-finally处理</span><br><span class="line"> *&#x2F;</span><br><span class="line">@Test</span><br><span class="line">public void server() throws IOException &#123;</span><br><span class="line">    &#x2F;&#x2F;1.</span><br><span class="line">    ServerSocket ss &#x3D; new ServerSocket(9090);</span><br><span class="line">    &#x2F;&#x2F;2.</span><br><span class="line">    Socket socket &#x3D; ss.accept();</span><br><span class="line">    &#x2F;&#x2F;3.</span><br><span class="line">    InputStream is &#x3D; socket.getInputStream();</span><br><span class="line">    &#x2F;&#x2F;4.</span><br><span class="line">    FileOutputStream fos &#x3D; new FileOutputStream(new File(&quot;beauty2.jpg&quot;));</span><br><span class="line">    &#x2F;&#x2F;5.</span><br><span class="line">    byte[] buffer &#x3D; new byte[1024];</span><br><span class="line">    int len;</span><br><span class="line">    while((len &#x3D; is.read(buffer)) !&#x3D; -1)&#123;</span><br><span class="line">        fos.write(buffer,0,len);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    System.out.println(&quot;图片传输完成&quot;);</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;6.服务器端给予客户端反馈</span><br><span class="line">    OutputStream os &#x3D; socket.getOutputStream();</span><br><span class="line">    os.write(&quot;你好，美女，照片我已收到，非常漂亮！&quot;.getBytes());</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;7.</span><br><span class="line">    fos.close();</span><br><span class="line">    is.close();</span><br><span class="line">    socket.close();</span><br><span class="line">    ss.close();</span><br><span class="line">    os.close();</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="UDP网络编程"><a href="#UDP网络编程" class="headerlink" title="UDP网络编程"></a>UDP网络编程</h4><ul>
+<li>类 DatagramSocket 和 DatagramPacket 实现了基于 UDP 协议网络程序。</li>
+<li>UDP数据报通过数据报套接字 DatagramSocket 发送和接收，系统不保证<br>UDP数据报一定能够安全送到目的地，也不能确定什么时候可以抵达。</li>
+<li>DatagramPacket 对象封装了UDP数据报，在数据报中包含了发送端的IP<br>地址和端口号以及接收端的IP地址和端口号。</li>
+<li>UDP协议中每个数据报都给出了完整的地址信息，因此无须建立发送方和接收方的连接。如同发快递包裹一样。</li>
+</ul>
+<h5 id="DatagramSocket-类的常用方法"><a href="#DatagramSocket-类的常用方法" class="headerlink" title="DatagramSocket  类的常用方法"></a>DatagramSocket  类的常用方法</h5><h6 id="public-DatagramSocket-int-port"><a href="#public-DatagramSocket-int-port" class="headerlink" title="public DatagramSocket(int port)"></a>public DatagramSocket(int port)</h6><p>创建数据报套接字并将其绑定到本地主机上的指定端口。套接字将被绑定到通配符地址，IP 地址由内核来选择。</p>
+<h6 id="public-DatagramSocket-int-port-InetAddress-laddr"><a href="#public-DatagramSocket-int-port-InetAddress-laddr" class="headerlink" title="public DatagramSocket(int port,InetAddress laddr)"></a>public DatagramSocket(int port,InetAddress laddr)</h6><p>创建数据报套接字，将其绑定到指定的本地地址。</p>
+<p>本地端口必须在 0 到 65535 之间（包括两者）。</p>
+<p>如果 IP 地址为 0.0.0.0，套接字将被绑定到通配符地址，IP 地址由内核选择。</p>
+<h6 id="public-void-close-1"><a href="#public-void-close-1" class="headerlink" title="public void close()"></a>public void close()</h6><p>关闭此数据报套接字。</p>
+<h6 id="public-void-send-DatagramPacket-p"><a href="#public-void-send-DatagramPacket-p" class="headerlink" title="public void send(DatagramPacket p)"></a>public void send(DatagramPacket p)</h6><p>从此套接字发送数据报包。</p>
+<p>DatagramPacket包含的信息指示：将要发送的数据、其长度、远程主机的IP 地址和远程主机的端口号。</p>
+<h6 id="public-void-receive-DatagramPacket-p"><a href="#public-void-receive-DatagramPacket-p" class="headerlink" title="public void receive(DatagramPacket p)"></a>public void receive(DatagramPacket p)</h6><p>从此套接字接收数据报包。</p>
+<p>当此方法返回时，DatagramPacket的缓冲区填充了接收的数据。数据报包也包含发送方的 IP 地址和发送方机器上的端口号。 </p>
+<p>此方法在接收到数据报前一直阻塞。数据报包对象的 length 字段包含所接收信息的长度。如果信息比包的<br>长度长，该信息将被截短。</p>
+<h6 id="public-InetAddress-getLocalAddress-1"><a href="#public-InetAddress-getLocalAddress-1" class="headerlink" title="public InetAddress getLocalAddress()"></a>public InetAddress getLocalAddress()</h6><p>获取套接字绑定的本地地址。</p>
+<h6 id="public-int-getLocalPort-1"><a href="#public-int-getLocalPort-1" class="headerlink" title="public int getLocalPort()"></a>public int getLocalPort()</h6><p>返回此套接字绑定的本地主机上的端口号。</p>
+<h6 id="public-InetAddress-getInetAddress-1"><a href="#public-InetAddress-getInetAddress-1" class="headerlink" title="public InetAddress getInetAddress()"></a>public InetAddress getInetAddress()</h6><p>返回此套接字连接的地址。如果套接字未连接，则返回null。</p>
+<h6 id="public-int-getPort-1"><a href="#public-int-getPort-1" class="headerlink" title="public int getPort()"></a>public int getPort()</h6><p>返回此套接字的端口。如果套接字未连接，则返回-1。</p>
+<h5 id="DatagramPacket-类的常用方式"><a href="#DatagramPacket-类的常用方式" class="headerlink" title="DatagramPacket 类的常用方式"></a>DatagramPacket 类的常用方式</h5><h6 id="public-DatagramPacket-byte-buf-int-length"><a href="#public-DatagramPacket-byte-buf-int-length" class="headerlink" title="public DatagramPacket(byte[] buf,int length)"></a>public DatagramPacket(byte[] buf,int length)</h6><p>构造 DatagramPacket，用来接收长度为 length 的数据包。 length 参数必须小于等于 buf.length。</p>
+<h6 id="public-DatagramPacket-byte-buf-int-length-InetAddress-address-int-port"><a href="#public-DatagramPacket-byte-buf-int-length-InetAddress-address-int-port" class="headerlink" title="public DatagramPacket(byte[] buf,int length,InetAddress address,int port)"></a>public DatagramPacket(byte[] buf,int length,InetAddress address,int port)</h6><p>构造数据报包，用来将长度为 length 的包发送到指定主机上的指定端口号。length<br>参数必须小于等于 buf.length。</p>
+<h6 id="public-InetAddress-getAddress"><a href="#public-InetAddress-getAddress" class="headerlink" title="public InetAddress getAddress()"></a>public InetAddress getAddress()</h6><p>返回某台机器的 IP 地址，此数据报将要发往该机器或者是从该机器接收到的。</p>
+<h6 id="public-int-getPort-2"><a href="#public-int-getPort-2" class="headerlink" title="public int getPort()"></a>public int getPort()</h6><p>返回某台远程主机的端口号，此数据报将要发往该主机或<br>者是从该主机接收到的。</p>
+<h6 id="public-byte-getData"><a href="#public-byte-getData" class="headerlink" title="public byte[] getData()"></a>public byte[] getData()</h6><p>返回数据缓冲区。接收到的或将要发送的数据从缓冲区中的偏移量 offset 处开始，持续 length 长度。</p>
+<h6 id="public-int-getLength"><a href="#public-int-getLength" class="headerlink" title="public int getLength()"></a>public int getLength()</h6><p>返回将要发送或接收到的数据的长度。</p>
+<h4 id="UDP-网络编程"><a href="#UDP-网络编程" class="headerlink" title="UDP 网络编程"></a>UDP 网络编程</h4><h5 id="流-程："><a href="#流-程：" class="headerlink" title="流 程："></a>流 程：</h5><ol>
+<li>DatagramSocket与DatagramPacket</li>
+<li>建立发送端，接收端</li>
+<li>建立数据包</li>
+<li>调用Socket的发送、接收方法</li>
+<li>关闭Socket</li>
+</ol>
+<h6 id="发送端与接收端是两个独立的运行程序"><a href="#发送端与接收端是两个独立的运行程序" class="headerlink" title="发送端与接收端是两个独立的运行程序"></a>发送端与接收端是两个独立的运行程序</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;发送端</span><br><span class="line">@Test</span><br><span class="line">public void sender() throws IOException &#123;</span><br><span class="line">    DatagramSocket ds &#x3D; null;</span><br><span class="line">    try &#123;</span><br><span class="line">        ds &#x3D; new DatagramSocket();</span><br><span class="line">        byte[] by &#x3D; &quot;我是UDP方式发送的导弹&quot;.getBytes();</span><br><span class="line">        DatagramPacket dp &#x3D; new DatagramPacket(by, 0, by.length,</span><br><span class="line">        InetAddress.getByName(&quot;127.0.0.1&quot;), 10000);</span><br><span class="line">        ds.send(dp);</span><br><span class="line">    &#125; catch (Exception e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; finally &#123;</span><br><span class="line">        if (ds !&#x3D; null)</span><br><span class="line">            ds.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;接收端</span><br><span class="line">@Test</span><br><span class="line">public void receiver() throws IOException &#123;</span><br><span class="line">    DatagramSocket ds &#x3D; null;</span><br><span class="line">    try &#123;</span><br><span class="line">        ds &#x3D; new DatagramSocket(10000);</span><br><span class="line">        byte[] by &#x3D; new byte[1024];</span><br><span class="line">        </span><br><span class="line">        DatagramPacket dp &#x3D; new DatagramPacket(by, by.length);</span><br><span class="line">        </span><br><span class="line">        ds.receive(dp);</span><br><span class="line">        </span><br><span class="line">        String str &#x3D; new String(dp.getData(), 0, dp.getLength());</span><br><span class="line">        </span><br><span class="line">        System.out.println(str + &quot;--&quot; + dp.getAddress());</span><br><span class="line">    &#125; catch (Exception e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; finally &#123;</span><br><span class="line">        if (ds !&#x3D; null)</span><br><span class="line">          ds.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="URL-编程"><a href="#URL-编程" class="headerlink" title="URL 编程"></a>URL 编程</h4><h5 id="URL类"><a href="#URL类" class="headerlink" title="URL类"></a>URL类</h5><h6 id="URL-Uniform-Resource-Locator"><a href="#URL-Uniform-Resource-Locator" class="headerlink" title="URL(Uniform Resource Locator)"></a>URL(Uniform Resource Locator)</h6><p>统一资源定位符，对应着互联网的某一资源地址</p>
+<h6 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h6><p>&lt; 传输协议&gt;://&lt; 主机名&gt;:&lt; 端口号&gt;/&lt; 文件名&gt;# 片段名? 参数列表</p>
+<p><a href="http://localhost:8080/examples/beauty.jpg?username=Tom" target="_blank" rel="noopener">http://localhost:8080/examples/beauty.jpg?username=Tom</a></p>
+<h5 id="URL-类构造器"><a href="#URL-类构造器" class="headerlink" title="URL 类构造器"></a>URL 类构造器</h5><p>URL类的构造器都声明抛出非运行时异常，必须要对这一异常进行处理，通常是用try-catch语句进行捕获。</p>
+<h6 id="public-URL-String-spec"><a href="#public-URL-String-spec" class="headerlink" title="public URL (String spec);"></a>public URL (String spec);</h6><p>通过一个表示URL地址的字符串可以构造一个URL对象。</p>
+<p>例如：URL url = new URL (“<a href="http://www" target="_blank" rel="noopener">http://www</a>. baidu.com/“);</p>
+<h6 id="public-URL-URL-context-String-spec"><a href="#public-URL-URL-context-String-spec" class="headerlink" title="public URL(URL context, String spec)"></a>public URL(URL context, String spec)</h6><p>通过基 URL 和相对 URL 构造一个 URL 对象。</p>
+<p>例如：URL downloadUrl = new URL(url, “download.html”)</p>
+<h6 id="public-URL-String-protocol-String-host-String-file"><a href="#public-URL-String-protocol-String-host-String-file" class="headerlink" title="public URL(String protocol, String host, String file);"></a>public URL(String protocol, String host, String file);</h6><p>例如：new URL(“http”,<br>“<a href="http://www.baidu.com&quot;" target="_blank" rel="noopener">www.baidu.com&quot;</a>, “download. html”);</p>
+<h6 id="public-URL-String-protocol-String-host-int-port-String-file"><a href="#public-URL-String-protocol-String-host-int-port-String-file" class="headerlink" title="public URL(String protocol, String host, int port, String file);"></a>public URL(String protocol, String host, int port, String file);</h6><p>例如: URL gamelan = new<br>URL(“http”, “<a href="http://www.baidu.com&quot;" target="_blank" rel="noopener">www.baidu.com&quot;</a>, 80, “download.html”);</p>
+<h5 id="URL-类常用方法"><a href="#URL-类常用方法" class="headerlink" title="URL 类常用方法"></a>URL 类常用方法</h5><p>URL对象生成后，其属性是不能被改变的</p>
+<h6 id="public-String-getProtocol"><a href="#public-String-getProtocol" class="headerlink" title="public String getProtocol( )"></a>public String getProtocol( )</h6><p>获取该URL的协议名</p>
+<h6 id="public-String-getHost"><a href="#public-String-getHost" class="headerlink" title="public String getHost( )"></a>public String getHost( )</h6><p>获取该URL的主机名</p>
+<h6 id="public-String-getPort"><a href="#public-String-getPort" class="headerlink" title="public String getPort( )"></a>public String getPort( )</h6><p>获取该URL的端口号</p>
+<h6 id="public-String-getPath"><a href="#public-String-getPath" class="headerlink" title="public String getPath( )"></a>public String getPath( )</h6><p>获取该URL的文件路径</p>
+<h6 id="public-String-getFile"><a href="#public-String-getFile" class="headerlink" title="public String getFile( )"></a>public String getFile( )</h6><p>获取该URL的文件名</p>
+<h6 id="public-String-getQuery"><a href="#public-String-getQuery" class="headerlink" title="public String getQuery( )"></a>public String getQuery( )</h6><p>获取该URL的查询名</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">    try &#123;</span><br><span class="line"></span><br><span class="line">        URL url &#x3D; new URL(&quot;http:&#x2F;&#x2F;localhost:8080&#x2F;examples&#x2F;beauty.jpg?username&#x3D;Tom&quot;);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;获取该URL的协议名</span><br><span class="line">        System.out.println(url.getProtocol());</span><br><span class="line">        &#x2F;&#x2F;获取该URL的主机名</span><br><span class="line">        System.out.println(url.getHost());</span><br><span class="line">        &#x2F;&#x2F;获取该URL的端口号</span><br><span class="line">        System.out.println(url.getPort());</span><br><span class="line">        &#x2F;&#x2F;获取该URL的文件路径</span><br><span class="line">        System.out.println(url.getPath());</span><br><span class="line">        &#x2F;&#x2F;获取该URL的文件名</span><br><span class="line">        System.out.println(url.getFile());</span><br><span class="line">        &#x2F;&#x2F;获取该URL的查询名</span><br><span class="line">        System.out.println(url.getQuery());</span><br><span class="line">        </span><br><span class="line">    &#125; catch (MalformedURLException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="URLConnection类"><a href="#URLConnection类" class="headerlink" title="URLConnection类"></a>URLConnection类</h4><ul>
+<li>URL的方法 openStream()：能从网络上读取数据</li>
+<li>若希望输出数据，例如向服务器端的 CGI （公共网关接口-Common Gateway<br>Interface-的简称，是用户浏览器和服务器端的应用程序进行连接的接口）程序发送一些数据，则必须先与URL建立连接，然后才能对其进行读写，此时需要使用<br>URLConnection 。</li>
+<li>URLConnection：表示到URL所引用的远程对象的连接。当与一个URL建立连接时，首先要在一个 URL 对象上通过方法 openConnection() 生成对应的 URLConnection对象。如果连接过程失败，将产生IOException.</li>
+<li>通过URLConnection对象获取的输入流和输出流，即可以与现有的CGI程序进行交互。<ul>
+<li>public Object getContent( ) throws IOException</li>
+<li>public int getContentLength( )</li>
+<li>public String getContentType( )</li>
+<li>public long getDate( )</li>
+<li>public long getLastModified( )</li>
+<li>public InputStream getInputStream( )throws IOException</li>
+<li>public OutputSteram getOutputStream( )throws IOException</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">    HttpURLConnection urlConnection &#x3D; null;</span><br><span class="line">    InputStream is &#x3D; null;</span><br><span class="line">    FileOutputStream fos &#x3D; null;</span><br><span class="line">    try &#123;</span><br><span class="line">        URL url &#x3D; new URL(&quot;http:&#x2F;&#x2F;localhost:8080&#x2F;examples&#x2F;beauty.jpg&quot;);</span><br><span class="line"></span><br><span class="line">        urlConnection &#x3D; (HttpURLConnection) url.openConnection();</span><br><span class="line"></span><br><span class="line">        urlConnection.connect();</span><br><span class="line"></span><br><span class="line">        is &#x3D; urlConnection.getInputStream();</span><br><span class="line">        fos &#x3D; new FileOutputStream(&quot;day10\\beauty3.jpg&quot;);</span><br><span class="line"></span><br><span class="line">        byte[] buffer &#x3D; new byte[1024];</span><br><span class="line">        int len;</span><br><span class="line">        while((len &#x3D; is.read(buffer)) !&#x3D; -1)&#123;</span><br><span class="line">            fos.write(buffer,0,len);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        System.out.println(&quot;下载完成&quot;);</span><br><span class="line">    &#125; catch (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; finally &#123;</span><br><span class="line">        &#x2F;&#x2F;关闭资源</span><br><span class="line">        if(is !&#x3D; null)&#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                is.close();</span><br><span class="line">            &#125; catch (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if(fos !&#x3D; null)&#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                fos.close();</span><br><span class="line">            &#125; catch (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if(urlConnection !&#x3D; null)&#123;</span><br><span class="line">            urlConnection.disconnect();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="小-结"><a href="#小-结" class="headerlink" title="小 结"></a>小 结</h4><ul>
+<li>网络中的计算机具有唯一的IP地址，这样不同的主机可以互相区分。</li>
+<li>客户端－服务器是一种最常见的网络应用程序模型。</li>
+<li>服务器是一个为其客户端提供某种特定服务的硬件或软件。</li>
+<li>客户机是一个用户应用程序，用于访问某台服务器提供的服务。</li>
+<li>端口号是对一个服务的访问场所，它用于区分同一物理计算机上的多个服务。</li>
+<li>套接字用于连接客户端和服务器，客户端和服务器之间的每个通信会话使用一个不同的套接字。TCP协议用于实现面向连接的会话。</li>
+<li>Java 中有关网络方面的功能都定义在 java.net 程序包中。</li>
+<li>Java 用 InetAddress 对象表示 IP<br>地址，该对象里有两个字段：主机名(String) 和 IP 地址(int)。</li>
+<li>类 Socket 和 ServerSocket 实现了基于TCP协议的客户端－服务器程序。</li>
+<li>Socket是客户端和服务器之间的一个连接，连接创建的细节被隐藏了。这个连接提供了一个安全的数据传输通道，这是因为 TCP 协议可以解决数据在传送过程中的丢失、损坏、重复、乱序以及网络拥挤等问题，它保证数据可靠的传送。</li>
+<li>类 URL 和 URLConnection 提供了最高级网络应用。</li>
+<li>URL 的网络资源的位置来同一表示<br>Internet 上各种网络资源。通过URL对象可以创建当前应用程序和 URL 表示的网络资源之<br>间的连接，这样当前程序就可以读取网络资源数据，或者把自己的数据传送到网络上去。</li>
+</ul>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='true'
+        data-ae='true'
+        data-ci='98d8392c61bba8a9f87d'
+        data-cs='a5b47de553739830db015b176764355577df22bf'
+        data-r='Comment'
+        data-o='Programmingmakesmebald'
+        data-a='Programmingmakesmebald'
+        data-d='true'
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class='side'>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#网络编程"><span class="toc-number">1.</span> <span class="toc-text">网络编程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#网络编程的目的："><span class="toc-number">1.0.1.</span> <span class="toc-text">网络编程的目的：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#网络编程中有两个主要的问题："><span class="toc-number">1.0.2.</span> <span class="toc-text">网络编程中有两个主要的问题：</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#如何准确地定位网络上一台或多台主机"><span class="toc-number">1.0.2.0.1.</span> <span class="toc-text">如何准确地定位网络上一台或多台主机</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#如何定位主机上的特定的应用"><span class="toc-number">1.0.2.0.2.</span> <span class="toc-text">如何定位主机上的特定的应用</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#找到主机后如何可靠高效地进行数据传输"><span class="toc-number">1.0.2.0.3.</span> <span class="toc-text">找到主机后如何可靠高效地进行数据传输</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#IP地址：InetAddress"><span class="toc-number">1.0.3.</span> <span class="toc-text">IP地址：InetAddress</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#InetAdress类"><span class="toc-number">1.0.4.</span> <span class="toc-text">InetAdress类</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#对象获取"><span class="toc-number">1.0.4.1.</span> <span class="toc-text">对象获取</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#public-static-InetAddress-getLocalHost"><span class="toc-number">1.0.4.1.1.</span> <span class="toc-text">public static InetAddress getLocalHost()</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#public-static-InetAddress-getByName-String-host"><span class="toc-number">1.0.4.1.2.</span> <span class="toc-text">public static InetAddress getByName(String host)</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#常用方法"><span class="toc-number">1.0.4.2.</span> <span class="toc-text">常用方法</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#public-String-getHostAddress"><span class="toc-number">1.0.4.2.1.</span> <span class="toc-text">public String getHostAddress()</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#public-String-getHostName"><span class="toc-number">1.0.4.2.2.</span> <span class="toc-text">public String getHostName()</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#public-boolean-isReachable-int-timeout"><span class="toc-number">1.0.4.2.3.</span> <span class="toc-text">public boolean isReachable(int timeout)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#端口号"><span class="toc-number">1.0.5.</span> <span class="toc-text">端口号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#网络通信协议TCP-和-UDP"><span class="toc-number">1.0.6.</span> <span class="toc-text">网络通信协议TCP 和 UDP</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#TCP-协议"><span class="toc-number">1.0.6.1.</span> <span class="toc-text">TCP 协议</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#UDP-协议"><span class="toc-number">1.0.6.2.</span> <span class="toc-text">UDP 协议</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Socket"><span class="toc-number">1.0.7.</span> <span class="toc-text">Socket</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#常用构造器"><span class="toc-number">1.0.7.1.</span> <span class="toc-text">常用构造器</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#public-Socket-InetAddress-address-int-port"><span class="toc-number">1.0.7.1.1.</span> <span class="toc-text">public Socket(InetAddress address,int port)</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#public-Socket-String-host-int-port"><span class="toc-number">1.0.7.1.2.</span> <span class="toc-text">public Socket(String host,int port)</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#常用方法-1"><span class="toc-number">1.0.7.2.</span> <span class="toc-text">常用方法</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#public-InputStream-getInputStream"><span class="toc-number">1.0.7.2.1.</span> <span class="toc-text">public InputStream getInputStream()</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#public-OutputStream-getOutputStream"><span class="toc-number">1.0.7.2.2.</span> <span class="toc-text">public OutputStream getOutputStream()</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#public-InetAddress-getInetAddress"><span class="toc-number">1.0.7.2.3.</span> <span class="toc-text">public InetAddress getInetAddress()</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#public-InetAddress-getLocalAddress"><span class="toc-number">1.0.7.2.4.</span> <span class="toc-text">public InetAddress getLocalAddress()</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#public-int-getPort"><span class="toc-number">1.0.7.2.5.</span> <span class="toc-text">public int getPort()</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#public-int-getLocalPort"><span class="toc-number">1.0.7.2.6.</span> <span class="toc-text">public int getLocalPort()</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#public-void-close"><span class="toc-number">1.0.7.2.7.</span> <span class="toc-text">public void close()</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#public-void-shutdownInput"><span class="toc-number">1.0.7.2.8.</span> <span class="toc-text">public void shutdownInput()</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#public-void-shutdownOutput"><span class="toc-number">1.0.7.2.9.</span> <span class="toc-text">public void shutdownOutput()</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#TCP网络编程-基于Socket"><span class="toc-number">1.0.8.</span> <span class="toc-text">TCP网络编程-基于Socket</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#客户端Socket-的工作过程包含以下四个基本的步骤"><span class="toc-number">1.0.8.1.</span> <span class="toc-text">客户端Socket 的工作过程包含以下四个基本的步骤</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#服务器端程序的工作过程包含以下四个基本的"><span class="toc-number">1.0.8.2.</span> <span class="toc-text">服务器端程序的工作过程包含以下四个基本的</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#例题"><span class="toc-number">1.0.8.3.</span> <span class="toc-text">例题</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#UDP网络编程"><span class="toc-number">1.0.9.</span> <span class="toc-text">UDP网络编程</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#DatagramSocket-类的常用方法"><span class="toc-number">1.0.9.1.</span> <span class="toc-text">DatagramSocket  类的常用方法</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#public-DatagramSocket-int-port"><span class="toc-number">1.0.9.1.1.</span> <span class="toc-text">public DatagramSocket(int port)</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#public-DatagramSocket-int-port-InetAddress-laddr"><span class="toc-number">1.0.9.1.2.</span> <span class="toc-text">public DatagramSocket(int port,InetAddress laddr)</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#public-void-close-1"><span class="toc-number">1.0.9.1.3.</span> <span class="toc-text">public void close()</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#public-void-send-DatagramPacket-p"><span class="toc-number">1.0.9.1.4.</span> <span class="toc-text">public void send(DatagramPacket p)</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#public-void-receive-DatagramPacket-p"><span class="toc-number">1.0.9.1.5.</span> <span class="toc-text">public void receive(DatagramPacket p)</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#public-InetAddress-getLocalAddress-1"><span class="toc-number">1.0.9.1.6.</span> <span class="toc-text">public InetAddress getLocalAddress()</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#public-int-getLocalPort-1"><span class="toc-number">1.0.9.1.7.</span> <span class="toc-text">public int getLocalPort()</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#public-InetAddress-getInetAddress-1"><span class="toc-number">1.0.9.1.8.</span> <span class="toc-text">public InetAddress getInetAddress()</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#public-int-getPort-1"><span class="toc-number">1.0.9.1.9.</span> <span class="toc-text">public int getPort()</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#DatagramPacket-类的常用方式"><span class="toc-number">1.0.9.2.</span> <span class="toc-text">DatagramPacket 类的常用方式</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#public-DatagramPacket-byte-buf-int-length"><span class="toc-number">1.0.9.2.1.</span> <span class="toc-text">public DatagramPacket(byte[] buf,int length)</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#public-DatagramPacket-byte-buf-int-length-InetAddress-address-int-port"><span class="toc-number">1.0.9.2.2.</span> <span class="toc-text">public DatagramPacket(byte[] buf,int length,InetAddress address,int port)</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#public-InetAddress-getAddress"><span class="toc-number">1.0.9.2.3.</span> <span class="toc-text">public InetAddress getAddress()</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#public-int-getPort-2"><span class="toc-number">1.0.9.2.4.</span> <span class="toc-text">public int getPort()</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#public-byte-getData"><span class="toc-number">1.0.9.2.5.</span> <span class="toc-text">public byte[] getData()</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#public-int-getLength"><span class="toc-number">1.0.9.2.6.</span> <span class="toc-text">public int getLength()</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#UDP-网络编程"><span class="toc-number">1.0.10.</span> <span class="toc-text">UDP 网络编程</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#流-程："><span class="toc-number">1.0.10.1.</span> <span class="toc-text">流 程：</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#发送端与接收端是两个独立的运行程序"><span class="toc-number">1.0.10.1.1.</span> <span class="toc-text">发送端与接收端是两个独立的运行程序</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#URL-编程"><span class="toc-number">1.0.11.</span> <span class="toc-text">URL 编程</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#URL类"><span class="toc-number">1.0.11.1.</span> <span class="toc-text">URL类</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#URL-Uniform-Resource-Locator"><span class="toc-number">1.0.11.1.1.</span> <span class="toc-text">URL(Uniform Resource Locator)</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#格式"><span class="toc-number">1.0.11.1.2.</span> <span class="toc-text">格式</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#URL-类构造器"><span class="toc-number">1.0.11.2.</span> <span class="toc-text">URL 类构造器</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#public-URL-String-spec"><span class="toc-number">1.0.11.2.1.</span> <span class="toc-text">public URL (String spec);</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#public-URL-URL-context-String-spec"><span class="toc-number">1.0.11.2.2.</span> <span class="toc-text">public URL(URL context, String spec)</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#public-URL-String-protocol-String-host-String-file"><span class="toc-number">1.0.11.2.3.</span> <span class="toc-text">public URL(String protocol, String host, String file);</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#public-URL-String-protocol-String-host-int-port-String-file"><span class="toc-number">1.0.11.2.4.</span> <span class="toc-text">public URL(String protocol, String host, int port, String file);</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#URL-类常用方法"><span class="toc-number">1.0.11.3.</span> <span class="toc-text">URL 类常用方法</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#public-String-getProtocol"><span class="toc-number">1.0.11.3.1.</span> <span class="toc-text">public String getProtocol( )</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#public-String-getHost"><span class="toc-number">1.0.11.3.2.</span> <span class="toc-text">public String getHost( )</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#public-String-getPort"><span class="toc-number">1.0.11.3.3.</span> <span class="toc-text">public String getPort( )</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#public-String-getPath"><span class="toc-number">1.0.11.3.4.</span> <span class="toc-text">public String getPath( )</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#public-String-getFile"><span class="toc-number">1.0.11.3.5.</span> <span class="toc-text">public String getFile( )</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#public-String-getQuery"><span class="toc-number">1.0.11.3.6.</span> <span class="toc-text">public String getQuery( )</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#URLConnection类"><span class="toc-number">1.0.12.</span> <span class="toc-text">URLConnection类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#小-结"><span class="toc-number">1.0.13.</span> <span class="toc-text">小 结</span></a></li></ol></li></ol></li></ol>	
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
